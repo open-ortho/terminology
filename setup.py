@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='open-ortho-terminology',  # Package name, should be unique on PyPI
-    version='0.3.2',  # Package version
+    version='0.3.3',  # Package version
     author='Toni Magni',  # Your name or your organization's name
     author_email='open-ortho@case.edu',  # Your contact email
     description='A package for managing orthodontic codes and namespaces.',  # Short description
