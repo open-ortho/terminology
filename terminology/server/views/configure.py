@@ -2,8 +2,8 @@ from typing import cast
 import npyscreen
 from sqlalchemy.orm import Session
 
-from terminology_service.args_cache import ArgsCache
-from terminology_service.model import ExternalProcedure, RequestedProcedure, ScheduledProcedureStep, ScheduledProtocol, get_session, get_engine
+from server.args_cache import ArgsCache
+from server.model import ExternalProcedure, RequestedProcedure, ScheduledProcedureStep, ScheduledProtocol, get_session, get_engine
 
 engine = None
 session = None

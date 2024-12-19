@@ -1,5 +1,5 @@
 from fhir.resources.valueset import ValueSet
-from terminology.terminology.code_systems.open_ortho_code_system import OpenOrthoCodeSystem
+from terminology.resources.code_systems.open_ortho_code_system import OpenOrthoCodeSystem
 
 class DicomScheduledProtocol(ValueSet):
     """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """

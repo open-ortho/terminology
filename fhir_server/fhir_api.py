@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fhir.resources.valueset import ValueSet
-from terminology.terminology.value_sets.dicom_scheduled_protocol import DicomScheduledProtocol
+from terminology.resources.value_sets.dicom_scheduled_protocol import DicomScheduledProtocol
 
 app = FastAPI()
 

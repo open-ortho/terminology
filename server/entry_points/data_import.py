@@ -3,19 +3,19 @@ import sys
 import signal
 import logging
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(funcName)s: %(message)s')
-from terminology.terminology import Code, dentaleyepad, open_ortho, snomed
+from terminology.resources import Code, dentaleyepad, open_ortho, snomed
 
 from sqlalchemy import and_
 from topsserver_db.clinical import ProcedureTypeManager
 from topsserver_db.models.topsdb import ProcedureType
 
 # Used dynamically in the code via globals(). Do not remove.
-from terminology_service.model import ScheduledProtocol, ScheduledProcedureStep
+from server.model import ScheduledProtocol, ScheduledProcedureStep
 
-from terminology_service import logger, MWL_PREFIX
-from terminology_service.terminology import verbosity_mapping
-from terminology_service.model import ExternalProcedure, get_session, database_exists_and_valid, init_database
-from terminology_service.args_cache import ArgsCache
+from server import logger, MWL_PREFIX
+from server.terminology import verbosity_mapping
+from server.model import ExternalProcedure, get_session, database_exists_and_valid, init_database
+from server.args_cache import ArgsCache
 
 def import_procedures(session, topsdb_config):
     args = ArgsCache.get_arguments()

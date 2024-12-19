@@ -1,3 +1,8 @@
+""" Resources for the terminology module.
+
+This module contains classes that represent resources used to define terminologies, value sets, code systems, and codes.
+
+"""
 import json
 from fhir.resources.coding import Coding
 

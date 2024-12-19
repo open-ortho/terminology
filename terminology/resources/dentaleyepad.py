@@ -3,8 +3,8 @@
 Used whenever a code is necessary, for various implementations.
 """
 
-from terminology.terminology.vendors import DentalEyePad
-from terminology.terminology import Code
+from terminology.resources.vendors import DentalEyePad
+from terminology.resources import Code
 
 
 def make_code(s):

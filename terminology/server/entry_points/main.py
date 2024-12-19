@@ -7,16 +7,16 @@ import signal
 import threading
 from logging import DEBUG
 
-from terminology_service import logger, PROGRAM_VERSION_MESSAGE
-from terminology_service.entry_points import verbosity_mapping
-from terminology_service.args_cache import ArgsCache
-from terminology_service.fhir_api import app
+from server import logger, PROGRAM_VERSION_MESSAGE
+from server.entry_points import verbosity_mapping
+from server.args_cache import ArgsCache
+from server.fhir_api import app
 
 
 def run_admin_gui():
     logger.info(f"{PROGRAM_VERSION_MESSAGE}: Request to start Web Configurator.")
     args = ArgsCache.get_arguments()
-    from terminology_service.views.configurator_ui import flask_app
+    from server.views.configurator_ui import flask_app
     debug = False
     if args.verbose == 2:
         debug = True
