@@ -2,7 +2,7 @@ from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
 from fhir.resources.coding import Coding
 from datetime import datetime
 from typing import List
-from open_ortho_terminology.terminology.naming_systems import OpenOrthoNamingSystem
+from terminology.terminology.naming_systems import OpenOrthoNamingSystem
 
 
 def make_code(s):

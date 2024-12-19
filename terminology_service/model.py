@@ -12,7 +12,7 @@ from alembic.config import Config
 from alembic import command
 
 
-from open_ortho_terminology.terminology import Code
+from terminology.terminology import Code
 from topsserver_db.models.topsdb import ProcedureType
 from terminology_service import logger
 from terminology_service.args_cache import ArgsCache

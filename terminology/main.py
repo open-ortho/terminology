@@ -12,8 +12,8 @@ from pathlib import Path
 
 from fhir.resources.bundle import Bundle, BundleEntry
 
-from open_ortho_terminology.terminology import hl7, open_ortho, snomed, dentaleyepad, vendors
-from open_ortho_terminology.terminology import Code
+from terminology.terminology import hl7, open_ortho, snomed, dentaleyepad, vendors
+from terminology.terminology import Code
 
 import logging
 logger = logging.getLogger(__name__)

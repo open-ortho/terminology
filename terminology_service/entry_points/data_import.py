@@ -3,7 +3,7 @@ import sys
 import signal
 import logging
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(funcName)s: %(message)s')
-from open_ortho_terminology.terminology import Code, dentaleyepad, open_ortho, snomed
+from terminology.terminology import Code, dentaleyepad, open_ortho, snomed
 
 from sqlalchemy import and_
 from topsserver_db.clinical import ProcedureTypeManager
