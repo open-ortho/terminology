@@ -7,7 +7,7 @@ Argparse support was purposely removed, because it was creating too much trouble
 """
 import os
 from distutils.util import strtobool
-from server import * 
+from terminology.server import * 
 
 
 class Namespace:

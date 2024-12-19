@@ -1,9 +1,9 @@
-from server.model import (
+from terminology.server.model import (
     ExternalProcedure, RequestedProcedure, ScheduledProcedureStep, ScheduledProtocol, database_exists_and_valid, init_database
 )
-from server import logger
-from server.utils import generate_new_flask_secret_key
-from server.args_cache import ArgsCache
+from terminology.server import logger
+from terminology.server.utils import generate_new_flask_secret_key
+from terminology.server.args_cache import ArgsCache
 from sqlalchemy import or_, not_
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -13,7 +13,7 @@ from flask_admin.contrib.sqla.view import func
 from flask_admin.form.widgets import Select2Widget
 from wtforms_sqlalchemy.fields import QuerySelectMultipleField, QuerySelectField
 
-from server.model import get_engine_url
+from terminology.server.model import get_engine_url
 
 args = ArgsCache.get_arguments()
 flask_app = Flask(__name__)

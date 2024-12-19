@@ -10,12 +10,12 @@ from topsserver_db.clinical import ProcedureTypeManager
 from topsserver_db.models.topsdb import ProcedureType
 
 # Used dynamically in the code via globals(). Do not remove.
-from server.model import ScheduledProtocol, ScheduledProcedureStep
+from terminology.server.model import ScheduledProtocol, ScheduledProcedureStep
 
-from server import logger, MWL_PREFIX
-from server.terminology import verbosity_mapping
-from server.model import ExternalProcedure, get_session, database_exists_and_valid, init_database
-from server.args_cache import ArgsCache
+from terminology.server import logger, MWL_PREFIX
+from terminology.server import verbosity_mapping
+from terminology.server.model import ExternalProcedure, get_session, database_exists_and_valid, init_database
+from terminology.server.args_cache import ArgsCache
 
 def import_procedures(session, topsdb_config):
     args = ArgsCache.get_arguments()
