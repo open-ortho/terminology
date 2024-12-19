@@ -31,6 +31,9 @@ class ArgsCache:
         # Create an object similar to argparse.Namespace
         return Namespace(
             # The path of the SQLite DB file for the local mapping.
+            verbosity=os.getenv('OT_VERBOSITY', 0),
+
+            # The path of the SQLite DB file for the local mapping.
             database_file=os.getenv('OT_DATABASE_FILE', SQLITE3_DB),
 
             # Needs to be set to True for the /admin web server (configurator UI) to run.
@@ -45,6 +48,7 @@ class ArgsCache:
             web_port=os.getenv('OT_WEB_PORT', '5000'),
         
             # FHIR API server IP and port.
+            fhir_api=bool(strtobool(os.getenv('OT_FHIR_API', 'True'))),
             fhir_listen=os.getenv('OT_FHIR_LISTEN', ''),
-            fhir_port=os.getenv('OT_FHIR_PORT', '8000'),
+            fhir_port=int(os.getenv('OT_FHIR_PORT','8000')),
         )

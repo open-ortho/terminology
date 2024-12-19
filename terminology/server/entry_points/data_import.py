@@ -111,11 +111,11 @@ def import_terminology(session):
 def main():
     args = ArgsCache.get_arguments()
 
-    level = verbosity_mapping.get(args.verbose, logging.WARNING)
+    level = verbosity_mapping.get(args.verbosity, logging.WARNING)
     logging.getLogger().setLevel(level)  # Set the root logger level
     logger.setLevel(level)
     logger.propagate = True
-    logger.warning(f"effective level: {logger.getEffectiveLevel()}, LOG LEVEL: {level}, verbose: {args.verbose}")
+    logger.warning(f"effective level: {logger.getEffectiveLevel()}, LOG LEVEL: {level}, verbosity: {args.verbosity}")
 
 
     topsdb_config = {

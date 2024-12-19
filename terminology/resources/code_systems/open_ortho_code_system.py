@@ -21,24 +21,23 @@ def make_code(s):
 
 class OpenOrthoCodeSystem(CodeSystem):
 
-    OPOR = OpenOrthoNamingSystem()
 
     def __init__(self):
-        super().__init__()
-        self.url = "http://open-ortho.org/terminology/fhir/CodeSystem"
-        self.version = "1.0.0"
-        self.name = self.OPOR.name
-        self.title = "Open-Ortho Code System"
-        self.status = "draft"
-        self.experimental = True
-        self.date = datetime.now().isoformat()
-        self.publisher = "Open Ortho"
-        self.description = self.OPOR.description
-        self.caseSensitive = True
-        self.content = "complete"
-
-        # Automatically collect all CodeSystemConcept instances
-        self.concept = [value for name, value in globals().items() if isinstance(value, CodeSystemConcept)]
+        OPOR = OpenOrthoNamingSystem()
+        super().__init__(
+            url="http://open-ortho.org/terminology/fhir/CodeSystem",
+            version="1.0.0",
+            name=OPOR.name,
+            title="Open-Ortho Code System",
+            status="draft",
+            experimental=True,
+            date=datetime.now().isoformat(),
+            publisher="Open Ortho",
+            description=OPOR.description,
+            caseSensitive=True,
+            content="complete",
+            concept=[value for name, value in globals().items() if isinstance(value, CodeSystemConcept)]
+        )
 
 
 

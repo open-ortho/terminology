@@ -18,20 +18,20 @@ def run_admin_gui():
     args = ArgsCache.get_arguments()
     from terminology.server.views.configurator_ui import flask_app
     debug = False
-    if args.verbose == 2:
+    if args.verbosity == 2:
         debug = True
     flask_app.run(host=args.web_listen, port=int(args.web_port), debug=debug, use_reloader=False)
 
 def run_fhir_api():
     import uvicorn
-    *args, = ArgsCache.get_arguments()
+    args = ArgsCache.get_arguments()
     logger.info(f"{PROGRAM_VERSION_MESSAGE}: Request to start FHIR API.")
     uvicorn.run(app, host=args.fhir_listen, port=args.fhir_port)
 
 
 def main():  # IGNORE:C0111
     args = ArgsCache.get_arguments()
-    level = verbosity_mapping.get(args.verbose, DEBUG)
+    level = verbosity_mapping.get(args.verbosity, DEBUG)
     logger.setLevel(level)
     logger.propagate = True
 
