@@ -2,6 +2,7 @@ from fhir.resources.valueset import ValueSet
 from open_ortho_terminology.terminology.code_systems.open_ortho_code_system import OpenOrthoCodeSystem
 
 class DicomScheduledProtocol(ValueSet):
+    """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """
     def __init__(self):
         super().__init__()
         self.url = "http://dicom.nema.org/resources/ontology/DCM"

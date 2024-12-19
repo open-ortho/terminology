@@ -8,12 +8,11 @@ import threading
 from logging import DEBUG
 
 from terminology_service import logger, PROGRAM_VERSION_MESSAGE
-from terminology_service.terminology import verbosity_mapping
+from terminology_service.entry_points import verbosity_mapping
 from terminology_service.args_cache import ArgsCache
-from terminology_service.dicom_scp import SCP
 
 
-def run_flask():
+def run_admin_gui():
     logger.info(f"{PROGRAM_VERSION_MESSAGE}: Request to start Web Configurator.")
     args = ArgsCache.get_arguments()
     from terminology_service.views.configurator_ui import flask_app
@@ -22,10 +21,8 @@ def run_flask():
         debug = True
     flask_app.run(host=args.web_listen, port=int(args.web_port), debug=debug, use_reloader=False)
 
-def run_pynetdicom():
-    logger.info(f"{PROGRAM_VERSION_MESSAGE}: Request to start DICOM SCP.")
-    scp = SCP()
-    scp.start()
+def run_fhir_api():
+    logger.info(f"{PROGRAM_VERSION_MESSAGE}: Request to start FHIR API.")
 
 
 def main():  # IGNORE:C0111
@@ -37,21 +34,21 @@ def main():  # IGNORE:C0111
     logger.debug(("Logging Level is {}".format(
         logger.getEffectiveLevel())))
 
-    if args.dicom_scp and args.configurator_ui:
+    if args.fhir_api and args.configurator_ui:
         # Thread for Flask
-        flask_thread = threading.Thread(target=run_flask)
+        flask_thread = threading.Thread(target=run_admin_gui)
         flask_thread.start()
 
-        # Thread for pynetdicom
-        dicom_thread = threading.Thread(target=run_pynetdicom)
+        # Thread for FHIR API
+        dicom_thread = threading.Thread(target=run_fhir_api)
         dicom_thread.start()
 
         flask_thread.join()
         dicom_thread.join()
-    elif args.dicom_scp:
-        run_pynetdicom()
+    elif args.fhir_api:
+        run_fhir_api()
     elif args.configurator_ui:
-        run_flask()
+        run_admin_gui()
 
 
 def sigint_signal_handler(signal, frame):
