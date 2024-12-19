@@ -31,16 +31,20 @@ class ArgsCache:
         # Create an object similar to argparse.Namespace
         return Namespace(
             # The path of the SQLite DB file for the local mapping.
-            database_file=os.getenv('TD_DATABASE_FILE', SQLITE3_DB),
+            database_file=os.getenv('OT_DATABASE_FILE', SQLITE3_DB),
 
             # Needs to be set to True for the /admin web server (configurator UI) to run.
             configurator_ui=bool(
-                strtobool(os.getenv('TD_CONFIGURATOR_UI', 'False'))),
+                strtobool(os.getenv('OT_CONFIGURATOR_UI', 'False'))),
 
             # The secret key required for Flask to run properly (used for configurator UI)
-            flask_secret_key=os.getenv('TD_FLASK_SECRET_KEY', None),
+            flask_secret_key=os.getenv('OT_FLASK_SECRET_KEY', None),
 
             # IP and port for the Flask configurator UI server.
-            web_listen=os.getenv('TD_WEB_LISTEN', '0.0.0.0'),
-            web_port=os.getenv('TD_WEB_PORT', '5000'),
+            web_listen=os.getenv('OT_WEB_LISTEN', '0.0.0.0'),
+            web_port=os.getenv('OT_WEB_PORT', '5000'),
+        
+            # FHIR API server IP and port.
+            fhir_listen=os.getenv('OT_FHIR_LISTEN', ''),
+            fhir_port=os.getenv('OT_FHIR_PORT', '8000'),
         )
