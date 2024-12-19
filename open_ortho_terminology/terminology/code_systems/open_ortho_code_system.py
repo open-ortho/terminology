@@ -37,7 +37,9 @@ class OpenOrthoCodeSystem(CodeSystem):
         self.caseSensitive = True
         self.content = "complete"
 
-        self.concept = [EV07]
+        # Automatically collect all CodeSystemConcept instances
+        self.concept = [value for name, value in globals().items() if isinstance(value, CodeSystemConcept)]
+
 
 
 EV07 = CodeSystemConcept(
