@@ -31,7 +31,8 @@ setup(
     # package_data={'yourpackage': ['data/*.dat']},  # Include specific package data
     entry_points={  # Allows you to create command-line scripts
         'console_scripts': [
-            'oo-codes=open_ortho_terminology.main:main', 
+            'oo-codes=terminology.main:main',
+            'oo-terminology-server=terminology.server.entry_points.main:main',
         ],
     },
 )

@@ -1,4 +1,5 @@
 NAME = open_ortho_terminology
+VERSION = 0.0.1
 
 .PHONY: clean deploy
 
@@ -14,3 +15,6 @@ deploy: dist
 
 clean:
 	rm -rf build dist
+
+build_docker:
+    docker build -t open-ortho/terminology:$(VERSION) -t open-ortho/terminology:latest .
