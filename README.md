@@ -64,7 +64,7 @@ Just point your code to any of the following:
 ## Releases
 
 - Each new release must be git tagged with v*.*.*. This triggers the Github actions to publish to PyPi and release in GitHub releases.
-- 
+- Version should only be stored in the VERSION file, and imported accordingly when needed.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
