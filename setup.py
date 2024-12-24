@@ -1,15 +1,19 @@
 from setuptools import setup, find_packages
 
+# Read the version from the VERSION file
+with open('VERSION') as version_file:
+    version = version_file.read().strip()
+
 setup(
     name='open-ortho-terminology',  # Package name, should be unique on PyPI
-    version='0.3.3',  # Package version
+    version=version,  # Package version
     author='Toni Magni',  # Your name or your organization's name
     author_email='open-ortho@case.edu',  # Your contact email
     description='A package for managing orthodontic codes and namespaces.',  # Short description
     long_description=open('README.md').read(),  # Long description from README.md
     long_description_content_type='text/markdown',  # Specifies that the long description is in Markdown
     url='https://github.com/open-ortho/codes',  # Project home page or repository URL
-    packages=find_packages(),  # Automatically find and include all packages in the project
+    packages=find_packages(exclude=['tests*']),  # Automatically find and include all packages in the project
     classifiers=[  # Classifiers help users find your project based on its characteristics
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Healthcare Industry',
