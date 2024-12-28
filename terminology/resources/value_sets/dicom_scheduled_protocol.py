@@ -3,13 +3,13 @@ from terminology.resources.code_systems.open_ortho_code_system import OpenOrthoC
 
 class DicomScheduledProtocol(ValueSet):
     """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """
-    @property
+    @classmethod
     def static_url(cls) -> str:
         return "http://dicom.nema.org/resources/ontology/DCM"
 
     def __init__(self):
         super().__init__(
-            url=self.static_url,
+            url=self.static_url(),
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",

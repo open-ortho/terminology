@@ -34,14 +34,14 @@ class TestFHIRAPI(unittest.TestCase):
 
     def test_expand_valueset(self):
         # Test the GET request for expand_valueset
-        url = DicomScheduledProtocol.static_url
+        url = DicomScheduledProtocol.static_url()
         response = self.client.get(f"/ValueSet/$expand?url={url}")
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertIn("resourceType", data)
         self.assertEqual(data["resourceType"], "ValueSet")
         self.assertIn("url", data)
-        self.assertEqual(data["url"], DicomScheduledProtocol.static_url)
+        self.assertEqual(data["url"], DicomScheduledProtocol.static_url())
         self.assertIn("expansion", data)
         self.assertIn("contains", data["expansion"])
         expected_concepts = [

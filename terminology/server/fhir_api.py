@@ -48,7 +48,8 @@ def expand_valueset(url: str):
     # For now, return a mock response
     if not url:
         raise HTTPException(status_code=400, detail="URL parameter is required for GET request")
-    valueset = find_valueset_by_url(url)
+    ValueSetClass = find_valueset_by_url(url)
+    valueset = ValueSetClass() if ValueSetClass else None
     if not valueset:
         raise HTTPException(status_code=404, detail=f"ValueSet with URL {url} not found")
 
@@ -81,6 +82,6 @@ def find_valueset_by_url(url: str) -> ValueSet:
         module = importlib.import_module(f"terminology.resources.value_sets.{module_name}")
         for attr_name in dir(module):
             attr = getattr(module, attr_name)
-            if isinstance(attr, type) and issubclass(attr, ValueSet) and hasattr(attr, 'url') and attr.static_url == url:
-                return attr()
+            if isinstance(attr, type) and issubclass(attr, ValueSet) and hasattr(attr, 'static_url') and attr.static_url() == url:
+                return attr
     return None
