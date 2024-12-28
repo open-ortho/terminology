@@ -9,7 +9,7 @@ authors = [
     { name = "Toni Magni", email = "open-ortho@case.edu" }
 ]
 readme = "README.md"
-license = { text = "MIT" }
+license = {file = "LICENSE.md"}
 requires-python = ">=3.6"
 keywords = ["orthodontics", "codes", "fhir", "healthcare", "snomed"]
 classifiers = [
@@ -27,6 +27,13 @@ classifiers = [
     "Programming Language :: Python :: 3.12"
 ]
 dynamic = ["version"]
+
+dependencies = [
+    "fastapi>=0.115.6",
+    "pydantic>=1.8.2",
+    "fhir.resources>=7.1.0",
+    "httpx>=0.28.1"
+]
 
 [project.scripts]
 oo-codes = "terminology.main:main"
