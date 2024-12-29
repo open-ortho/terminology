@@ -1,7 +1,7 @@
 import unittest
 from fastapi.testclient import TestClient
 from terminology.server.fhir_api import app
-from terminology.resources.value_sets.dicom_scheduled_protocol import DicomScheduledProtocol
+from terminology.resources.value_sets.dicom_scheduled_protocol import OrthodonticPhotographViewsValueSet
 
 class TestFHIRAPI(unittest.TestCase):
     @classmethod
@@ -34,19 +34,19 @@ class TestFHIRAPI(unittest.TestCase):
 
     def test_expand_valueset(self):
         # Test the GET request for expand_valueset
-        url = DicomScheduledProtocol.static_url()
+        url = OrthodonticPhotographViewsValueSet.static_url()
         response = self.client.get(f"/ValueSet/$expand?url={url}")
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertIn("resourceType", data)
         self.assertEqual(data["resourceType"], "ValueSet")
         self.assertIn("url", data)
-        self.assertEqual(data["url"], DicomScheduledProtocol.static_url())
+        self.assertEqual(data["url"], OrthodonticPhotographViewsValueSet.static_url())
         self.assertIn("expansion", data)
         self.assertIn("contains", data["expansion"])
         expected_concepts = [
             {"system": concept["system"], "code": concept["code"], "display": concept["display"]}
-            for concept in DicomScheduledProtocol().compose["include"][0]["concept"]
+            for concept in OrthodonticPhotographViewsValueSet().compose["include"][0]["concept"]
         ]
         self.assertEqual(data["expansion"]["contains"], expected_concepts)
 

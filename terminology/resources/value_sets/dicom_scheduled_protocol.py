@@ -1,11 +1,11 @@
 from fhir.resources.valueset import ValueSet
-from terminology.resources.code_systems.open_ortho_code_system import OpenOrthoCodeSystem
+from terminology.resources.code_systems.open_ortho_code_system import OrthodonticPhotographViewsCodeSystem
 
-class DicomScheduledProtocol(ValueSet):
+class OrthodonticPhotographViewsValueSet(ValueSet):
     """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """
     @classmethod
     def static_url(cls) -> str:
-        return "http://dicom.nema.org/resources/ontology/DCM"
+        return "http://terminology.open-ortho.org/ValueSet/OrthodonticPhotographViews"
 
     def __init__(self):
         super().__init__(
@@ -16,32 +16,42 @@ class DicomScheduledProtocol(ValueSet):
                     "value": "urn:oid:1.2.840.10008.2.16.4"
                 }
             ],
-            version="2021-11-01",
-            name="DICOM Scheduled Protocol",
-            title="DICOM Scheduled Protocol",
+            version="0.1.0",
+            name="Orthodontic Photographic Views",
+            title="Orthodontic Photographic Views",
             status="active",
             experimental=False,
-            date="2021-11-01",
+            date="2024-12-29",
             publisher="NEMA",
             contact=[
                 {
-                    "name": "DICOM Standards Committee",
+                    "name": "Open-Ortho",
                     "telecom": [
                         {
                             "system": "url",
-                            "value": "http://dicom.nema.org"
+                            "value": "https://open-ortho.org"
                         }
                     ]
                 }
             ],
-            description="A set of codes for DICOM Scheduled Protocols",
+            description="A set of codes that describe Orhodontic Photographic Views for DICOM ",
             compose={
                 "include": [
                     {
-                        "system": OpenOrthoCodeSystem().url,
+                        "system": OrthodonticPhotographViewsCodeSystem().url,
                         "concept": [
                             {"code": concept.code, "display": concept.display}
-                            for concept in OpenOrthoCodeSystem().concept
+                            for concept in OrthodonticPhotographViewsCodeSystem().concept
+                        ]
+                    },
+                    {
+                        "system": "http://snomed.info/sct",
+                        "filter": [
+                            {
+                                "property": "concept",
+                                "op": "is-a",
+                                "value": "723394009"
+                            }
                         ]
                     }
                 ]

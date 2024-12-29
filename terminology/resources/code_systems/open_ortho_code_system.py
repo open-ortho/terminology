@@ -19,7 +19,7 @@ def make_code(s):
     return ''.join(str(ord(char)) for char in s)
 
 
-class OpenOrthoCodeSystem(CodeSystem):
+class OrthodonticPhotographViewsCodeSystem(CodeSystem):
 
 
     def __init__(self):
