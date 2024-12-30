@@ -1,7 +1,7 @@
 import unittest
 from fastapi.testclient import TestClient
 from terminology.server.fhir_api import app
-from terminology.resources.value_sets.dicom_scheduled_protocol import OrthodonticPhotographViewsValueSet
+from terminology.resources.value_sets.open_ortho_value_sets import OrthodonticPhotographViewsValueSet
 
 class TestFHIRAPI(unittest.TestCase):
     @classmethod
