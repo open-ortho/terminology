@@ -3,24 +3,29 @@ from fhir.resources.namingsystem import NamingSystem
 class MarcoRosaNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://marcorosa.it/fhir",
+            url="http://terminology.medoco.health/fhir",
             name="RSOMRC",
             title="Dr. Marco Rosa Naming System",
             description="""
-## Dr. Marco Rosa Naming System
+## medoco Health Naming System by Dr. Marco Rosa 
 
-A custom set of codes used in the practice of Dr. Marco Rosa, which may or may not have equivalents in other standard code systems.
+A custom set of codes used by various medoco Health products, as reccommended by Dr. Marco Rosa.
 """,
             status="draft",
             kind="codesystem",
             date="2025-01-01",
-            publisher="Dr. Marco Rosa",
+            publisher="medoco Health",
             responsible="medoco Health",
             uniqueId=[
                 {
+                    "type": "uri",
+                    "value": "http://terminology.medoco.health/fhir",
+                    "preferred": True
+                },
+                {
                     "type": "uuid",
                     "value": "1.3.6.1.4.1.62074.3.1",
-                    "preferred": True
+                    "preferred": False
                 }
             ]
         )
@@ -28,7 +33,7 @@ A custom set of codes used in the practice of Dr. Marco Rosa, which may or may n
 class OpenOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://open-ortho.org/terminology/fhir",
+            url="http://terminology.open-ortho.org/fhir",
             name="OPOR",
             title="Open-Ortho Naming System",
             description="""
@@ -38,13 +43,45 @@ A set of codes required to represent dental and orthodontic concepts for interop
 """,
             status="draft",
             kind="codesystem",
-            date="2021-01-01",
+            date="2025-01-01",
             publisher="OpenOrtho",
             responsible="OpenOrtho",
             uniqueId=[
                 {
+                    "type": "uri",
+                    "value": "http://terminology.open-ortho.org/fhir",
+                    "preferred": True
+                },
+                {
                     "type": "uuid",
-                    "value": "1.3.6.1.4.1.62074.3.1",
+                    "value": "1.3.6.1.4.1.61741.11.3",
+                    "preferred": False
+                }
+            ]
+        )
+
+class DentalEyePadNamingSystem(NamingSystem):
+    def __init__(self):
+        super().__init__(
+            url="http://terminology.dentaleyepad.de/fhir",
+            name="DEYE",
+            title="",
+            description="""
+# dentaleyepad image types
+
+The dentaleyepad knows which images are to be taken and makes all the necessary image settings automatically. The photo assistant automatically displays the image types in the correct order.
+
+This eliminates tedious intermediate steps such as connecting the camera, assigning patients and defining the image types.
+""",
+            status="draft",
+            kind="codesystem",
+            date="2024-12-30",
+            publisher="doctorseyes GmbH",
+            responsible="info@doctorseyes.de",
+            uniqueId=[
+                {
+                    "type": "uri",
+                    "value": "http://terminology.dentaleyepad.de/fhir",
                     "preferred": True
                 }
             ]
