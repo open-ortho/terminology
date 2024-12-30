@@ -25,7 +25,7 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
-            url="http://open-ortho.org/terminology/fhir/CodeSystem",
+            url="http://terminology.open-ortho.org/fhir/CodeSystem/OrthodonticPhotographViews",
             version="1.0.0",
             name=OPOR.name,
             title="Open-Ortho Code System",

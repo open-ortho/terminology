@@ -5,7 +5,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
     """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """
     @classmethod
     def static_url(cls) -> str:
-        return "http://terminology.open-ortho.org/ValueSet/OrthodonticPhotographViews"
+        return "http://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews"
 
     def __init__(self):
         super().__init__(
@@ -22,7 +22,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
             status="active",
             experimental=False,
             date="2024-12-29",
-            publisher="NEMA",
+            publisher="open-ortho",
             contact=[
                 {
                     "name": "Open-Ortho",
