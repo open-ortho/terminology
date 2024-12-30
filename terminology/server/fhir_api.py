@@ -42,10 +42,23 @@ def translate_code(code: str, system: str, targetsystem: str):
     logging.info(parameters.json(indent=2))  # Log the JSON representation of the resource
     return parameters.dict()
 
+@app.get("/ValueSet")
+def get_valueset(url: str):
+    # Implement the logic to return the ValueSet based on the URL
+    # Do not expand the ValueSet in this endpoint
+    if not url:
+        raise HTTPException(status_code=400, detail="URL parameter is required for GET request")
+    ValueSetClass = find_valueset_by_url(url)
+    valueset = ValueSetClass() if ValueSetClass else None
+    if not valueset:
+        raise HTTPException(status_code=404, detail=f"ValueSet with URL {url} not found")
+
+    logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
+    return valueset.dict()
+
 @app.get("/ValueSet/$expand")
 def expand_valueset(url: str):
     # Implement the logic to expand the ValueSet based on the URL
-    # For now, return a mock response
     if not url:
         raise HTTPException(status_code=400, detail="URL parameter is required for GET request")
     ValueSetClass = find_valueset_by_url(url)
@@ -85,3 +98,14 @@ def find_valueset_by_url(url: str) -> ValueSet:
             if isinstance(attr, type) and issubclass(attr, ValueSet) and hasattr(attr, 'static_url') and attr.static_url() == url:
                 return attr
     return None
+
+
+def expand_valueset(valueset: ValueSet) -> ValueSet:
+    """Expand a ValueSet."""
+    # Implement the logic to expand the ValueSet
+    if valueset.compose:
+        # For demonstration purposes, we will simply copy the compose element to the expansion element
+        if "include" in valueset.compose:
+
+            valueset.expansion = valueset.compose
+    return valueset
