@@ -1,11 +1,11 @@
 from fhir.resources.namingsystem import NamingSystem
 
-class MarcoRosaNamingSystem(NamingSystem):
+class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
             url="http://terminology.medoco.health/fhir",
-            name="RSOMRC",
-            title="Dr. Marco Rosa Naming System",
+            name="MDOC",
+            title="medoco Health Naming System",
             description="""
 ## medoco Health Naming System by Dr. Marco Rosa 
 

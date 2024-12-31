@@ -130,6 +130,7 @@ def expand_valueset(valueset: ValueSet) -> ValueSet:
                         if inc.concept:
                             expansion_contains.extend(inc.concept)
                 # Look for a CodeSystem by URL
+                # Expand all codes from included CodeSystem
                 IncludedCodeSystem = find_codesystem_by_url(system_url)
                 if IncludedCodeSystem:
                     included_codesystem:CodeSystem = IncludedCodeSystem()
