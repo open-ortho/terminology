@@ -8,8 +8,9 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
         return "http://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews"
 
     def __init__(self):
+        url=self.static_url()
         super().__init__(
-            url=self.static_url(),
+            url=url,
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",

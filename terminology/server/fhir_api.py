@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fhir.resources.parameters import Parameters
-from fhir.resources.valueset import ValueSet
-from fhir.resources.codesystem import CodeSystem
+from fhir.resources.valueset import ValueSet, ValueSetExpansionContains
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
 from datetime import datetime
 import pkgutil
 import importlib
@@ -130,9 +130,18 @@ def expand_valueset(valueset: ValueSet) -> ValueSet:
                         if inc.concept:
                             expansion_contains.extend(inc.concept)
                 # Look for a CodeSystem by URL
-                included_codesystem = find_codesystem_by_url(system_url)
-                if included_codesystem and included_codesystem.concept:
-                    expansion_contains.extend(included_codesystem.concept)
+                IncludedCodeSystem = find_codesystem_by_url(system_url)
+                if IncludedCodeSystem:
+                    included_codesystem:CodeSystem = IncludedCodeSystem()
+                    if included_codesystem.concept:
+                        expansion_contains.extend([
+                            ValueSetExpansionContains(
+                                system=included_codesystem.url,
+                                code=concept.code,
+                                display=concept.display
+                            )
+                            for concept in included_codesystem.concept
+                        ])
         valueset.expansion = {
             "timestamp": datetime.utcnow().isoformat(),
             "contains": expansion_contains
