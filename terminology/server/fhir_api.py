@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fhir.resources.parameters import Parameters
 from fhir.resources.valueset import ValueSet, ValueSetExpansionContains
 from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
-from datetime import datetime
+from datetime import datetime, timezone
 import pkgutil
 import importlib
 import terminology.resources.value_sets as value_sets
@@ -143,7 +143,7 @@ def expand_valueset(valueset: ValueSet) -> ValueSet:
                             for concept in included_codesystem.concept
                         ])
         valueset.expansion = {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "contains": expansion_contains
         }
     return valueset
