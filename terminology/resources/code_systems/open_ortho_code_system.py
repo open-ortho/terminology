@@ -21,11 +21,14 @@ def make_code(s):
 
 class OrthodonticPhotographViewsCodeSystem(CodeSystem):
 
+    @classmethod
+    def static_url(cls) -> str:
+        return "http://terminology.open-ortho.org/fhir/CodeSystem/OrthodonticPhotographViews",
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
-            url="http://terminology.open-ortho.org/fhir/CodeSystem/OrthodonticPhotographViews",
+            url=self.static_url(),
             version="1.0.0",
             name=OPOR.name,
             title="Open-Ortho Code System",

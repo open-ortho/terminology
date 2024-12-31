@@ -39,10 +39,6 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
                 "include": [
                     {
                         "system": OrthodonticPhotographViewsCodeSystem().url,
-                        "concept": [
-                            {"code": concept.code, "display": concept.display}
-                            for concept in OrthodonticPhotographViewsCodeSystem().concept
-                        ]
                     },
                     {
                         "system": "http://snomed.info/sct",

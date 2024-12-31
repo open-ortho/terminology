@@ -1,9 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fhir.resources.parameters import Parameters
 from fhir.resources.valueset import ValueSet
+from fhir.resources.codesystem import CodeSystem
+from datetime import datetime
 import pkgutil
 import importlib
 import terminology.resources.value_sets as value_sets
+import terminology.resources.code_systems as code_systems
 import logging
 
 app = FastAPI()
@@ -57,7 +60,7 @@ def get_valueset(url: str):
     return valueset.dict()
 
 @app.get("/ValueSet/$expand")
-def expand_valueset(url: str):
+def get_valueset(url: str):
     # Implement the logic to expand the ValueSet based on the URL
     if not url:
         raise HTTPException(status_code=400, detail="URL parameter is required for GET request")
@@ -65,12 +68,12 @@ def expand_valueset(url: str):
     valueset = ValueSetClass() if ValueSetClass else None
     if not valueset:
         raise HTTPException(status_code=404, detail=f"ValueSet with URL {url} not found")
-
+    valueset = expand_valueset(valueset)
     logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
     return valueset.dict()
 
 @app.get("/ValueSet/{id}/$expand")
-def expand_valueset_by_id(id: str):
+def get_valueset_by_id(id: str):
     # Implement the logic to expand the ValueSet based on the ID
     # For now, return a mock response
     valueset = ValueSet.construct(
@@ -85,6 +88,7 @@ def expand_valueset_by_id(id: str):
             ]
         }
     )
+    valueset = expand_valueset(valueset)
     logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
     return valueset.dict()
 
@@ -99,13 +103,38 @@ def find_valueset_by_url(url: str) -> ValueSet:
                 return attr
     return None
 
+def find_codesystem_by_url(url: str) -> CodeSystem:
+    """Find a CodeSystem instance by its URL."""
+    for _, module_name, _ in pkgutil.iter_modules(code_systems.__path__):
+        module = importlib.import_module(f"terminology.resources.code_systems.{module_name}")
+        for attr_name in dir(module):
+            attr = getattr(module, attr_name)
+            if isinstance(attr, type) and issubclass(attr, CodeSystem) and hasattr(attr, 'static_url') and attr.static_url() == url:
+                return attr
+    return None
 
 def expand_valueset(valueset: ValueSet) -> ValueSet:
-    """Expand a ValueSet."""
-    # Implement the logic to expand the ValueSet
-    if valueset.compose:
-        # For demonstration purposes, we will simply copy the compose element to the expansion element
-        if "include" in valueset.compose:
-
-            valueset.expansion = valueset.compose
+    """Expand a ValueSet using the compose element.
+    
+    Assume the compose element contains includes with valid URL in system, for a ValueSet or CodeSystem to include.
+    """
+    if valueset.compose and valueset.compose.include:
+        expansion_contains = []
+        for include in valueset.compose.include:
+            system_url = include.system
+            if system_url:
+                # Look for a ValueSet by URL
+                included_valueset = find_valueset_by_url(system_url)
+                if included_valueset and included_valueset.compose and included_valueset.compose.include:
+                    for inc in included_valueset.compose.include:
+                        if inc.concept:
+                            expansion_contains.extend(inc.concept)
+                # Look for a CodeSystem by URL
+                included_codesystem = find_codesystem_by_url(system_url)
+                if included_codesystem and included_codesystem.concept:
+                    expansion_contains.extend(included_codesystem.concept)
+        valueset.expansion = {
+            "timestamp": datetime.utcnow().isoformat(),
+            "contains": expansion_contains
+        }
     return valueset
