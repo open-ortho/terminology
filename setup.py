@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 # Read the version from the VERSION file
 with open('VERSION') as version_file:
@@ -6,6 +6,4 @@ with open('VERSION') as version_file:
 
 setup(
     version=version,
-    packages=find_packages(exclude=['tests*']),
-    include_package_data=True,
 )
