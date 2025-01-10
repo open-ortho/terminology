@@ -34,7 +34,7 @@ def save_to_fhir(module, filename):
             be.resource = code.to_fhir()
             b.entry.append(be)
 
-        data = b.dict()
+        data = b.model_dump()
 
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)

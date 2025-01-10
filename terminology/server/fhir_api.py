@@ -15,7 +15,7 @@ app = FastAPI()
 def lookup_code(code: str, system: str):
     # Implement the logic to lookup the code in the specified code system
     # For now, return a mock response
-    parameters = Parameters.construct(
+    parameters = Parameters.model_construct(
         resourceType="Parameters",
         parameter=[
             {"name": "code", "valueString": code},
@@ -23,14 +23,14 @@ def lookup_code(code: str, system: str):
             {"name": "display", "valueString": "Example Display"}
         ]
     )
-    logging.info(parameters.json(indent=2))  # Log the JSON representation of the resource
-    return parameters.dict()
+    logging.info(parameters.model_dump_json(indent=2))  # Log the JSON representation of the resource
+    return parameters.model_dump()
 
 @app.get("/ConceptMap/$translate")
 def translate_code(code: str, system: str, targetsystem: str):
     # Implement the logic to translate the code from the source system to the target system
     # For now, return a mock response
-    parameters = Parameters.construct(
+    parameters = Parameters.model_construct(
         resourceType="Parameters",
         parameter=[
             {"name": "result", "valueBoolean": True},
@@ -42,8 +42,8 @@ def translate_code(code: str, system: str, targetsystem: str):
             ]}
         ]
     )
-    logging.info(parameters.json(indent=2))  # Log the JSON representation of the resource
-    return parameters.dict()
+    logging.info(parameters.model_dump_json(indent=2))  # Log the JSON representation of the resource
+    return parameters.model_dump()
 
 @app.get("/ValueSet")
 def get_valueset(url: str):
@@ -56,8 +56,8 @@ def get_valueset(url: str):
     if not valueset:
         raise HTTPException(status_code=404, detail=f"ValueSet with URL {url} not found")
 
-    logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
-    return valueset.dict()
+    logging.info(valueset.model_dump_json(indent=2))  # Log the JSON representation of the resource
+    return valueset.model_dump()
 
 @app.get("/ValueSet/$expand")
 def get_valueset(url: str):
@@ -69,14 +69,14 @@ def get_valueset(url: str):
     if not valueset:
         raise HTTPException(status_code=404, detail=f"ValueSet with URL {url} not found")
     valueset = expand_valueset(valueset)
-    logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
-    return valueset.dict()
+    logging.info(valueset.model_dump_json(indent=2))  # Log the JSON representation of the resource
+    return valueset.model_dump()
 
 @app.get("/ValueSet/{id}/$expand")
 def get_valueset_by_id(id: str):
     # Implement the logic to expand the ValueSet based on the ID
     # For now, return a mock response
-    valueset = ValueSet.construct(
+    valueset = ValueSet.model_construct(
         resourceType="ValueSet",
         id=id,
         expansion={
@@ -89,8 +89,8 @@ def get_valueset_by_id(id: str):
         }
     )
     valueset = expand_valueset(valueset)
-    logging.info(valueset.json(indent=2))  # Log the JSON representation of the resource
-    return valueset.dict()
+    logging.info(valueset.model_dump_json(indent=2))  # Log the JSON representation of the resource
+    return valueset.model_dump()
 
 
 def find_valueset_by_url(url: str) -> ValueSet:

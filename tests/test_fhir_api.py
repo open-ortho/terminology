@@ -14,7 +14,7 @@ class TestFHIRAPI(unittest.TestCase):
     #     system = "http://example.org/fhir/CodeSystem/example-system"
     #     response = self.client.get(f"/CodeSystem/$lookup?code={code}&system={system}")
     #     self.assertEqual(response.status_code, 200)
-    #     data = response.json()
+    #     data = response.model_dump_json()
     #     self.assertIn("resourceType", data)
     #     self.assertEqual(data["resourceType"], "Parameters")
     #     self.assertIn("parameter", data)
@@ -26,7 +26,7 @@ class TestFHIRAPI(unittest.TestCase):
     #     target_system = "http://example.org/fhir/CodeSystem/target-system"
     #     response = self.client.get(f"/ConceptMap/$translate?code={code}&system={source_system}&targetsystem={target_system}")
     #     self.assertEqual(response.status_code, 200)
-    #     data = response.json()
+    #     data = response.model_dump_json()
     #     self.assertIn("resourceType", data)
     #     self.assertEqual(data["resourceType"], "Parameters")
     #     self.assertIn("parameter", data)
@@ -37,7 +37,7 @@ class TestFHIRAPI(unittest.TestCase):
         url = OrthodonticPhotographViewsValueSet.static_url()
         response = self.client.get(f"/ValueSet/$expand?url={url}")
         self.assertEqual(response.status_code, 200)
-        data = response.json()
+        data = response.model_dump_json()
         self.assertIn("resourceType", data)
         self.assertEqual(data["resourceType"], "ValueSet")
         self.assertIn("url", data)
