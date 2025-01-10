@@ -1,5 +1,5 @@
-NAME = open_ortho_terminology
-VERSION = $(shell cat VERSION)
+NAME = terminology
+VERSION = $(shell grep -oP '(?<=version = ")[^"]*' pyproject.toml)
 
 .PHONY: clean deploy
 
@@ -8,7 +8,7 @@ build:
 	python3 -m $(NAME).main
 
 dist:
-	python3 ./setup.py sdist bdist_wheel
+	python3 -m build 
 
 deploy: dist
 	twine upload dist/*
