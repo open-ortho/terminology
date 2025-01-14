@@ -78,7 +78,9 @@ Import the entire codesystem:
 ## Releases
 
 - Each new release must be git tagged with v*.*.*. This triggers the Github actions to publish to PyPi and release in GitHub releases.
-- Version should only be stored in the `pyproject.toml` file in `project.version`, and imported accordingly when needed.
+- Project version should only be stored in the `pyproject.toml` file in `project.version`, and imported accordingly when needed.
+- Each CodeSystem and CodeValue has its own version which depends on changes to that: remember to bump those individually.
+- No need for Github actions: just build with `make build`, which will build in `docs/` which is configured by github-pages to serve to http://terminology.open-ortho.org and http://open-ortho.org/terminology.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
