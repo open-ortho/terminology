@@ -17,13 +17,13 @@ class Intraoral2DPhotographicViewsCodeSystem(CodeSystem):
         super().__init__(
             url=self.static_url(),
             version="1.0.0",
-            name=OPOR.name,
-            title="Open-Ortho Code System",
+            name="Intraoral2DPhotographicViews",
+            title="Intraoral 2D Photographic Views",
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),
             publisher="Open Ortho",
-            description=OPOR.description,
+            description="Common intraoral 2D photographic views used in an orthodontic provider's practice",
             caseSensitive=True,
             content="complete",
             concept=[value for name, value in globals(

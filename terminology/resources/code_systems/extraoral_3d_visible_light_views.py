@@ -4,7 +4,7 @@ from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 
 
-class Extraoral3DPhotographicViewsCodeSystem(CodeSystem):
+class Extraoral3DVisibleLightViewsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
@@ -16,13 +16,13 @@ class Extraoral3DPhotographicViewsCodeSystem(CodeSystem):
         super().__init__(
             url=self.static_url(),
             version="1.0.0",
-            name=OPOR.name,
-            title="Open-Ortho Code System",
+            name="Extraoral3DVisibleLightViews",
+            title="Extraoral 3D Visible Light Views",
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),
             publisher="Open Ortho",
-            description=OPOR.description,
+            description="Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck",
             caseSensitive=True,
             content="complete",
             concept=[value for name, value in globals(

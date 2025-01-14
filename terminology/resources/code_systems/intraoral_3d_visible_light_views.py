@@ -16,13 +16,13 @@ class Intraoral3DVisibleLightViewsCodeSystem(CodeSystem):
         super().__init__(
             url=self.static_url(),
             version="1.0.0",
-            name=OPOR.name,
-            title="Open-Ortho Code System",
+            name="Intraoral3DVisibleLightViews",
+            title="Intraoral 3D Visible Light Views",
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),
             publisher="Open Ortho",
-            description=OPOR.description,
+            description="Common intraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the dentition",
             caseSensitive=True,
             content="complete",
             concept=[value for name, value in globals(
