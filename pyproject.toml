@@ -29,15 +29,12 @@ classifiers = [
 ]
 
 dependencies = [
-    "fastapi>=0.115.6",
     "pydantic>=1.8.2",
     "fhir.resources>=7.1.0",
-    "httpx>=0.28.1"
 ]
 
 [project.scripts]
 oo-codes = "terminology.main:main"
-oo-terminology-server = "terminology.server.entry_points.main:main"
 
 [tool.setuptools]
 include-package-data = true

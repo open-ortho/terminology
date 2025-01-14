@@ -32,7 +32,7 @@
 
 This project serves as a centralized repository for orthodontic software developers, offering a curated collection of essential codes required for implementing healthcare standards like DICOM or HL7. Navigating through various terminologies to find the right codes can be challenging. Our project aims to simplify this process by providing a go-to source for these codes, readily available in JSON and CSV formats. Users can access these directly through GitHub releases or utilize them as a Python package on PyPI.
 
-In addition, the repository can define its own codes in situations where the absence of specific codes in standardized nomenclatures and code sets impedes the development process. Codes generated here are temporary; as the inclusion process progresses, these codes may be replaced. Once officially approved by authoritative sources like HL7 or SNOMED, the terminology server will be updated accordingly, rendering these temporary codes obsolete and mapping them as synonyms to the newly approved codes.
+The primary aim of this project is to implement in FHIR Terminology the views and view sets defined in *AMERICAN NATIONAL STANDARD INSTITUTE/AMERICAN DENTAL ASSOCIATION STANDARD NO. 1100 – 2D and 3D Orthodontic/Craniofacial/Forensic Photographic Views and View Sets*. By adhering to the ADA1100 standard, we ensure that the codes and terminologies used in orthodontic software are consistent, accurate, and interoperable across different systems. This is not an official FHIR CodeSystem. The purpose for this site is to provide developers codes necessary to move forward with their development, while the codes get added and approved in official nomenclatures (like SNOMED-CT).
 
 ## Using The Codes
 
