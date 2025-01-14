@@ -1,6 +1,6 @@
 {
     "resourceType": "CodeSystem",
-    "url": "http://terminology.open-ortho.org/fhir/extraoral-3d-photographic-views",
+    "url": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views",
     "version": "1.0.0",
     "name": "Extraoral3DVisibleLightViews",
     "title": "Extraoral 3D Visible Light Views",

@@ -9,7 +9,7 @@ class Extraoral3DVisibleLightViewsCodeSystem(CodeSystem):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/extraoral-3d-photographic-views"
+        return f"{ns.url}/extraoral-3d-visible-light-views"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()

@@ -38,6 +38,13 @@ The primary aim of this project is to implement in FHIR Terminology the views an
 
 The codes systems and code values should be built by the Makefile and deployed in `/docs`, where github can serve them. This should serve as a static service, for CodeSystem definitions.
 
+The codesystems are availble through the following official URLs:
+
+- http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-views
+- http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-views
+- http://terminology.open-ortho.org/fhir/extraoral-3d-photographic-views
+- http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-views
+
 ### Python
 
 If you want to use the codes directly in your Python project:
