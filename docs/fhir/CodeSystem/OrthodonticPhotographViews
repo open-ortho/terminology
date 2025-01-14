@@ -13,910 +13,199 @@
     "content": "complete",
     "concept": [
         {
-            "code": "69864855",
+            "code": "EV07",
             "display": "EV-07 EO.RP.MD.PF",
             "definition": "Extraoral, Right Profile (subject is facing observer's right), Mandible Postured Forward"
         },
         {
-            "code": "69865056",
+            "code": "EV28",
             "display": "EV-28 EO.LP.MD.PF",
             "definition": "Extraoral, Left Profile (subject is facing observer's left), Mandible Postured Forward"
         },
         {
-            "code": "69865155",
+            "code": "EV37",
             "display": "EV-37 EO.OF.SV",
             "definition": "Extraoral, Other Face (viewed from above), Superior View (showing forehead, infraorbital rim contour, dorsum of nose, upper lip, chin)"
         },
         {
-            "code": "69865156",
+            "code": "EV38",
             "display": "EV-38 EO.OF.CS",
             "definition": "Extraoral, Other Face, Close-Up Smile (with lips)"
         },
         {
-            "code": "69865157",
+            "code": "EV39",
             "display": "EV-39 EO.OF.OC",
             "definition": "Extraoral, Other Face, Occlusal Cant (e.g., tongue depressor between the teeth)"
         },
         {
-            "code": "69865248",
+            "code": "EV40",
             "display": "EV-40 EO.OF.FI",
             "definition": "Extraoral, Other Face, Forensic Interest (tattoos, jewelry, scars)"
         },
         {
-            "code": "69865249",
+            "code": "EV41",
             "display": "EV-41 EO.OF.AN",
             "definition": "Extraoral, Other Face, Anomalies (ears, skin tags, etc.)"
         },
         {
-            "code": "69865250",
+            "code": "EV42",
             "display": "EV-42 EO.FF.MO",
-            "definition": "Extraoral, Full Face, Mouth Open",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "EV-42"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "EO.FF.MO"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Extraoral, Full Face, Mouth Open"
         },
         {
-            "code": "69865251",
+            "code": "EV43",
             "display": "EV-43 EO.FF.NW",
-            "definition": "Extraoral, Full Face, demonstrating Nerve Weakness",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "EV-43"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "EO.FF.NW"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Extraoral, Full Face, demonstrating Nerve Weakness"
         },
         {
-            "code": "73864849",
+            "code": "IV01",
             "display": "IV-01 IO.RB.CO",
-            "definition": "Intraoral Right Buccal Segment, Centric Occlusion, Direct View",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-01"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.RB.CO"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "DEYE-brr"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral Right Buccal Segment, Centric Occlusion, Direct View"
         },
         {
-            "code": "73864850",
+            "code": "IV02",
             "display": "IV-02 IO.RB.CO.WM",
-            "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-02"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.RB.CO.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror"
         },
         {
-            "code": "73864851",
+            "code": "IV03",
             "display": "IV-03 IO.RB.CO.WM.BC",
-            "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-03"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.RB.CO.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror, But Corrected"
         },
         {
-            "code": "73864852",
+            "code": "IV04",
             "display": "IV-04 IO.LB.CO",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, Direct View",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-04"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.LB.CO"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, Direct View"
         },
         {
-            "code": "73864853",
+            "code": "IV05",
             "display": "IV-05 IO.LB.CO.WM",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-05"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.LB.CO.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror"
         },
         {
-            "code": "73864854",
+            "code": "IV06",
             "display": "IV-06 IO.LB.CO.WM.BC",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-06"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.LB.CO.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected"
         },
         {
-            "code": "73864855",
+            "code": "IV07",
             "display": "IV-07 IO.AO",
-            "definition": "Intraoral, Anterior Occlusal, Direct View",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-07"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.AO"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Anterior Occlusal, Direct View"
         },
         {
-            "code": "73864856",
+            "code": "IV08",
             "display": "IV-08 IO.AO.WM",
-            "definition": "Intraoral, Anterior Occlusal, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-08"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.AO.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Anterior Occlusal, With Mirror"
         },
         {
-            "code": "73864857",
+            "code": "IV09",
             "display": "IV-09 IO.AO.WM.BC",
-            "definition": "Intraoral, Anterior Occlusal, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-09"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.AO.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Anterior Occlusal, With Mirror, But Corrected"
         },
         {
-            "code": "73864948",
+            "code": "IV10",
             "display": "IV-10 IO.MD.MO.OV",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-10"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MD.MO.OV"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View"
         },
         {
-            "code": "73864949",
+            "code": "IV11",
             "display": "IV-11 IO.MD.MO.OV.WM",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-11"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MD.MO.OV.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror"
         },
         {
-            "code": "73864950",
+            "code": "IV12",
             "display": "IV-12 IO.MD.MO.OV.WM.BC",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-12"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MD.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73864951",
+            "code": "IV13",
             "display": "IV-13 IO.MX.MO.OV",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-13"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View"
         },
         {
-            "code": "73864952",
+            "code": "IV14",
             "display": "IV-14 IO.MX.MO.OV.WM",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-14"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror"
         },
         {
-            "code": "73864953",
+            "code": "IV15",
             "display": "IV-15 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-15"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73864954",
+            "code": "IV16",
             "display": "IV-16 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-16"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73864955",
+            "code": "IV17",
             "display": "IV-17 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-17"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73864956",
+            "code": "IV18",
             "display": "IV-18 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-18"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73864957",
+            "code": "IV19",
             "display": "IV-19 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-19"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865048",
+            "code": "IV20",
             "display": "IV-20 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-20"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865049",
+            "code": "IV21",
             "display": "IV-21 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-21"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865050",
+            "code": "IV22",
             "display": "IV-22 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-22"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865051",
+            "code": "IV23",
             "display": "IV-23 IO.LB.CR.WM.BC",
-            "definition": "Intraoral, Left Buccal Segment, Centric Relation, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-23"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.LB.CR.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Left Buccal Segment, Centric Relation, With Mirror, But Corrected"
         },
         {
-            "code": "73865052",
+            "code": "IV24",
             "display": "IV-24 IO.MX.MO.OV.WM",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-24"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror"
         },
         {
-            "code": "73865053",
+            "code": "IV25",
             "display": "IV-25 IO.MX.MO.OV.WM.BC",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-25"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MX.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865054",
+            "code": "IV26",
             "display": "IV-26 IO.MD.MO.OV.WM",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-26"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MD.MO.OV.WM"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror"
         },
         {
-            "code": "73865055",
+            "code": "IV27",
             "display": "IV-27 IO.MD.MO.OV.WM.BC",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-27"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.MD.MO.OV.WM.BC"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected"
         },
         {
-            "code": "73865056",
+            "code": "IV28",
             "display": "IV-28 IO.GR.[tooth number]",
-            "definition": "Intraoral, showing Gingival Recession (ISO tooth numbers)",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-28"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.GR.[tooth number]"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, showing Gingival Recession (ISO tooth numbers)"
         },
         {
-            "code": "73865057",
+            "code": "IV29",
             "display": "IV-29 IO.FR.[tooth number]",
-            "definition": "Intraoral, showing Frenum (ISO tooth numbers)",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-29"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.FR.[tooth number]"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, showing Frenum (ISO tooth numbers)"
         },
         {
-            "code": "73865148",
+            "code": "IV30",
             "display": "IV-30 IO.[modifier].PA",
-            "definition": "Intraoral, any photo using a photo accessory device (modifiers)",
-            "designation": [
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IV-30"
-                },
-                {
-                    "use": {
-                        "system": "http://open-ortho.org/fhir/CodeSystem/term-designation-use",
-                        "code": "synonym"
-                    },
-                    "value": "IO.[modifier].PA"
-                }
-            ],
-            "property": [
-                {
-                    "code": "context",
-                    "valueString": "DICOM.ScheduledProtocol"
-                }
-            ]
+            "definition": "Intraoral, any photo using a photo accessory device (modifiers)"
         }
     ]
 }
