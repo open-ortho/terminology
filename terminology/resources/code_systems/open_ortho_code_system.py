@@ -45,24 +45,6 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
         )
 
 
-admin_staff = CodeSystemConcept(
-    code=f"{make_code('admin_staff')}",
-    display="Administrative healthcare staff",
-    definition="admin_staff"
-)
-
-clinical_staff = CodeSystemConcept(
-    code=f"{make_code('clinical_staff')}",
-    display="Dental assistant",
-    definition="clinical_staff"
-)
-
-dental_chair = CodeSystemConcept(
-    code=f"{make_code('dental_chair')}",
-    display="Dental examination/treatment chair",
-    definition="dental_chair"
-)
-
 EV01 = CodeSystemConcept(
     code=f"{make_code('EV01')}",
     display="EV-01, EO.RP.LR.CO",

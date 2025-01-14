@@ -13,14 +13,184 @@
     "content": "complete",
     "concept": [
         {
+            "code": "EV01",
+            "display": "EV-01, EO.RP.LR.CO",
+            "definition": "Photographic extraoral image of right half of face with lips relaxed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV02",
+            "display": "EV-02, EO.RP.LR.CR",
+            "definition": "Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV03",
+            "display": "EV-03, EO.RP.LC.CO, po1",
+            "definition": "Photographic extraoral image of right half of face with lips closed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV04",
+            "display": "EV-04, EO.RP.LC.CR",
+            "definition": "Photographic extraoral image of right half of face with lips closed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV05",
+            "display": "EV-05, EO.RP.FS.CO, prs",
+            "definition": "Photographic extraoral image of right half of face with full smile and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV06",
+            "display": "EV-06, EO.RP.FS.CR",
+            "definition": "Photographic extraoral image of right half of face with full smile and jaws in centric relation (record artifact)"
+        },
+        {
             "code": "EV07",
             "display": "EV-07 EO.RP.MD.PF",
             "definition": "Extraoral, Right Profile (subject is facing observer's right), Mandible Postured Forward"
         },
         {
+            "code": "EV08",
+            "display": "EV-08, EO.RP.LR.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with lips relaxed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV09",
+            "display": "EV-09, EO.RP.LR.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with lips relaxed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV10",
+            "display": "EV-10, EO.RP.LC.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with lips closed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV11",
+            "display": "EV-11, EO.RP.LC.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with lips closed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV12",
+            "display": "EV-12, EO.RP.FS.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with full smile and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV13",
+            "display": "EV-13, EO.RP.FS.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with full smile and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV14",
+            "display": "EV-14, EO.RP.MD.PF.45",
+            "definition": "Photographic extraoral image of 45 degree view of right half of face with mandible postured forward (record artifact)"
+        },
+        {
+            "code": "EV15",
+            "display": "EV-15, EO.FF.LR.CO",
+            "definition": "Photographic extraoral image of full face with lips relaxed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV16",
+            "display": "EV-16, EO.FF.LR.CR",
+            "definition": "Photographic extraoral image of full face with lips relaxed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV17",
+            "display": "EV-17, EO.FF.LC.CO, pfr",
+            "definition": "Photographic extraoral image of full face with lips closed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV18",
+            "display": "EV-18, EO.FF.LC.CR",
+            "definition": "Photographic extraoral image of full face with lips closed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV19",
+            "display": "EV-19, EO.FF.FS.CO, pfs",
+            "definition": "Photographic extraoral image of full face with full smile and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV20",
+            "display": "EV-20, EO.FF.FS.CR",
+            "definition": "Photographic extraoral image of full face with full smile and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV21",
+            "display": "EV-21, EO.FF.MD.PF",
+            "definition": "Photographic image extraoral with mandible postured forward (record artifact)"
+        },
+        {
+            "code": "EV22",
+            "display": "EV-22, EO.LP.LR.CO",
+            "definition": "Photographic extraoral image of left half of face with lips relaxed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV23",
+            "display": "EV-23, EO.LP.LR.CR",
+            "definition": "Photographic extraoral image of left half of face with lips relaxed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV24",
+            "display": "EV-24, EO.LP.LC.CO",
+            "definition": "Photographic extraoral image of left half of face with lips closed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV25",
+            "display": "EV-25, EO.LP.LC.CR",
+            "definition": "Photographic extraoral image of left half of face with lips closed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV26",
+            "display": "EV-26, EO.LP.FS.CO",
+            "definition": "Photographic extraoral image of left half of face with full smile and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV27",
+            "display": "EV-27, EO.LP.FS.CR",
+            "definition": "Photographic extraoral image of left half of face with full smile and jaws in centric relation (record artifact)"
+        },
+        {
             "code": "EV28",
             "display": "EV-28 EO.LP.MD.PF",
             "definition": "Extraoral, Left Profile (subject is facing observer's left), Mandible Postured Forward"
+        },
+        {
+            "code": "EV29",
+            "display": "EV-29, EO.LP.LR.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with lips relaxed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV30",
+            "display": "EV-30, EO.LP.LR.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with lips relaxed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV31",
+            "display": "EV-31, EO.LP.LC.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with lips closed and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV32",
+            "display": "EV-32, EO.LP.LC.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with lips closed and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV33",
+            "display": "EV-33, EO.LP.FS.CO.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with full smile and teeth in centric occlusion (record artifact)"
+        },
+        {
+            "code": "EV34",
+            "display": "EV-34, EO.LP.FS.CR.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with full smile and jaws in centric relation (record artifact)"
+        },
+        {
+            "code": "EV35",
+            "display": "EV-35, EO.LP.MD.PF.45",
+            "definition": "Photographic extraoral image of 45 degree view of left half of face with mandible postured forward (record artifact)"
+        },
+        {
+            "code": "EV36",
+            "display": "EV-36, EO.OF.IV",
+            "definition": "Photographic extraoral image of inferior view of face (record artifact)"
         },
         {
             "code": "EV37",
