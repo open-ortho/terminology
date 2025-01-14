@@ -1,0 +1,31 @@
+{
+    "resourceType": "CodeSystem",
+    "url": "http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-views",
+    "version": "1.0.0",
+    "name": "OPOR",
+    "title": "Open-Ortho Code System",
+    "status": "draft",
+    "experimental": true,
+    "date": "2025-01-14",
+    "publisher": "Open Ortho",
+    "description": "\n## OpenOrtho Naming System\n\nA set of codes required to represent dental and orthodontic concepts for interoperability purposes, which are not yet available in other standard code systems.\n",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "IV3D01",
+            "display": "IV3D-01 IO.MX",
+            "definition": "Intraoral 3D Surface of the Maxillary Dentition"
+        },
+        {
+            "code": "IV3D02",
+            "display": "IV3D-02 IO.MD",
+            "definition": "Intraoral 3D Surface of the Mandibular Dentition"
+        },
+        {
+            "code": "IV3D03",
+            "display": "IV3D-03 IO.BT",
+            "definition": "Intraoral 3D Surface of Occluding Maxillary and Mandibular Teeth (showing hot the teeth fir together, i.e. the bite)"
+        }
+    ]
+}

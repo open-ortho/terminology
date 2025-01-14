@@ -4,12 +4,12 @@ import json
 import os
 
 from terminology.main import save_code_system_to_fhir
-from terminology.resources.code_systems import open_ortho_code_system 
+from terminology.resources.code_systems import extraoral_2d_photographic_vews 
 
 class TestSaveCodeSystemToFhir(unittest.TestCase):
 
     def test_save_code_system_to_fhir(self):
-        module = open_ortho_code_system
+        module = extraoral_2d_photographic_vews
         filename = Path('test_output.json')
 
         # Call the function

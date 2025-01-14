@@ -1,5 +1,5 @@
 from fhir.resources.valueset import ValueSet
-from terminology.resources.code_systems.open_ortho_code_system import OrthodonticPhotographViewsCodeSystem
+from terminology.resources.code_systems.extraoral_2d_photographic_vews import Extraoral2DPhotographicViewsCodeSystem
 from terminology.resources.value_sets.open_ortho_value_sets import OrthodonticPhotographViewsValueSet as OpenOrthoOrthodonticPhotographViewsValueSet
 
 class OrthodonticPhotographViewsValueSet(ValueSet):

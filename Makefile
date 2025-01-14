@@ -5,7 +5,6 @@ DIST = docs
 .PHONY: clean deploy
 
 build:
-	mkdir -p $(DIST)/fhir/CodeSystem
 	oo-codes
 
 dist:
@@ -15,7 +14,7 @@ deploy: dist
 	twine upload $(DIST)/*
 
 clean:
-	rm -rf build $(DIST)
+	find $(DIST) -mindepth 1 ! -name 'CNAME' -delete
 	find . -name '*.pyc' -delete
 	find . -name '*.egg-info' -delete
 	rm -rf *.egg-info
