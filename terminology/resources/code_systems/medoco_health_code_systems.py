@@ -1,7 +1,5 @@
 from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
-from fhir.resources.coding import Coding
 from datetime import datetime, timezone
-from typing import List
 from terminology.resources.naming_systems import MedocoHealthNamingSystem
 
 
@@ -23,8 +21,8 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        naming_system_root = MedocoHealthNamingSystem().url
-        return f"{naming_system_root}/CodeSystem/OrthodonticPhotographViews"
+        ns = MedocoHealthNamingSystem()
+        return f"{ns.url}/{ns.name}/CodeSystem/OrthodonticPhotographViews"
 
     def __init__(self):
         MDOC = MedocoHealthNamingSystem()
@@ -35,7 +33,7 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
             title="medoco Health Orthodontic Photographic Views Code System",
             status="draft",
             experimental=True,
-            date=datetime.now(timezone.utc).isoformat(),
+            date=datetime.now().date().isoformat(),
             publisher="medoco Health",
             description=MDOC.description,
             caseSensitive=True,
@@ -45,8 +43,8 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
 
 
 
-# EV07 = CodeSystemConcept(
-#     code=f"{make_code('EV07')}",
-#     display="EV-07 EO.RP.MD.PF",
-#     definition="Extraoral, Right Profile (subject is facing observer's right), Mandible Postured Forward",
-# )
+EV07 = CodeSystemConcept(
+    code=f"{make_code('EV07')}",
+    display="EV-07 EO.RP.MD.PF",
+    definition="Extraoral, Right Profile (subject is facing observer's right), Mandible Postured Forward",
+)

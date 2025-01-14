@@ -24,7 +24,8 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        return "http://terminology.open-ortho.org/fhir/CodeSystem/OrthodonticPhotographViews"
+        ns = OpenOrthoNamingSystem()
+        return f"{ns.url}/CodeSystem/OrthodonticPhotographViews"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()

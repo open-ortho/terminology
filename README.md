@@ -36,6 +36,8 @@ In addition, the repository can define its own codes in situations where the abs
 
 ## Using The Codes
 
+The codes systems and code values should be built by the Makefile and deployed in `/docs`, where github can serve them. This should serve as a static service, for CodeSystem definitions.
+
 ### Python
 
 If you want to use the codes directly in your Python project:
