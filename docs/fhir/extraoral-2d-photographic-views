@@ -5,7 +5,7 @@
     "name": "Extraoral2DPhotographicViews",
     "title": "Extraoral 2D Photographic Views",
     "status": "draft",
-    "experimental": true,
+    "experimental": false,
     "date": "2025-01-14",
     "publisher": "Open Ortho",
     "description": "Common extraoral 2D photographic views used in an orthodontic provider's practice",

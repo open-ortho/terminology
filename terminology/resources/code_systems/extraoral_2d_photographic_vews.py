@@ -19,7 +19,7 @@ class Extraoral2DPhotographicViewsCodeSystem(CodeSystem):
             name="Extraoral2DPhotographicViews",
             title="Extraoral 2D Photographic Views",
             status="draft",
-            experimental=True,
+            experimental=False,
             date=datetime.now().date().isoformat(),
             publisher="Open Ortho",
             description="Common extraoral 2D photographic views used in an orthodontic provider's practice",

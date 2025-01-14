@@ -42,7 +42,7 @@ The codesystems are availble through the following official URLs:
 
 - http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-views
 - http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-views
-- http://terminology.open-ortho.org/fhir/extraoral-3d-photographic-views
+- http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views
 - http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-views
 
 ### Python
