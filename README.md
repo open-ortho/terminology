@@ -53,21 +53,26 @@ If you want to use the codes directly in your Python project:
 
 Then
 
-    from open_ortho_terminology.terminology import hl7 as codes_hl7
+    from terminology.resources.code_systems.extraoral_3d_visible_light_views import EV3D01, EV3D02, EV3D03 
 
-    print(f"{codes_hl7.orthodontic.system}")
-    print(codes_hl7.orthodontic.code)
-    print(codes_hl7.orthodontic.display)
+    print(EV3D01.code)
+    print(EV3D01.display)
+    print(EV3D01.definition)
 
 Convert codes to JSON
 
-    from open_ortho_terminology.terminology import hl7 as codes_hl7
+    print(EV3D01.model_dump())
 
-    print(f"{codes_hl7.orthodontic.to_json()}")
+Import the entire codesystem:
 
-### JSON
-
-Just point your code to any of the following:
+    >>> from terminology.resources.code_systems.extraoral_3d_visible_light_views import Extraoral3DVisibleLightViewsCodeSystem
+    >>> ev = Extraoral3DVisibleLightViewsCodeSystem()
+    >>> ev.model_dump()
+    {'resourceType': 'CodeSystem', 'url': 'http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views', 'version': '1.0.0', 'name': 'Extraoral3DVisibleLightViews', 'title': 'Extraoral 3D Visible Light Views', 'status': 'draft', 'experimental': True, 'date': '2025-01-14', 'publisher': 'Open Ortho', 'description': "Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck", 'caseSensitive': True, 'content': 'complete', 'concept': [{'code': 'EV3D01', 'display': 'EV3D-01 EO.WH.LC.CO', 'definition': 'Whole head, lips closed, centric occlusion'}, {'code': 'EV3D02', 'display': 'EV3D-02 EO.WH.LC.CR', 'definition': 'Whole head, lips closed, centric relation'}, {'code': 'EV3D03', 'display': 'EV3D-03 EO.WH.LR.CO', 'definition': 'Whole head, lips relaxed, centric occlusion'}, {'code': 'EV3D04', 'display': 'EV3D-04 EO.WH.LR.CR', 'definition': 'Whole head, lips relaxed, centric relation'}, {'code': 'EV3D05', 'display': 'EV3D-05 EO.WH.FS.CO', 'definition': 'Whole head, full smile, centric occlusion'}, {'code': 'EV3D06', 'display': 'EV3D-06 EO.WH.FS.CR', 'definition': 'Whole head, full smile, centric relation'}]}
+    >>> ev.concept[0].model_dump()
+    {'code': 'EV3D01', 'display': 'EV3D-01 EO.WH.LC.CO', 'definition': 'Whole head, lips closed, centric occlusion'}
+    >>> ev.concept
+    [CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D01', code__ext=None, concept=None, definition='Whole head, lips closed, centric occlusion', definition__ext=None, designation=None, display='EV3D-01 EO.WH.LC.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D02', code__ext=None, concept=None, definition='Whole head, lips closed, centric relation', definition__ext=None, designation=None, display='EV3D-02 EO.WH.LC.CR', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D03', code__ext=None, concept=None, definition='Whole head, lips relaxed, centric occlusion', definition__ext=None, designation=None, display='EV3D-03 EO.WH.LR.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D04', code__ext=None, concept=None, definition='Whole head, lips relaxed, centric relation', definition__ext=None, designation=None, display='EV3D-04 EO.WH.LR.CR', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D05', code__ext=None, concept=None, definition='Whole head, full smile, centric occlusion', definition__ext=None, designation=None, display='EV3D-05 EO.WH.FS.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D06', code__ext=None, concept=None, definition='Whole head, full smile, centric relation', definition__ext=None, designation=None, display='EV3D-06 EO.WH.FS.CR', display__ext=None, property=None)]
 
 
 ## Releases
