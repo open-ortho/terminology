@@ -3,7 +3,7 @@
 Used whenever a code is necessary, for various implementations.
 
 """
-from open_ortho_terminology.terminology import Code
+from terminology.resources import Code
 
 PREFIX = "SCT"
 SYSTEM = "http://snomed.info/sct"

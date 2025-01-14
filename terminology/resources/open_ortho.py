@@ -3,9 +3,9 @@
 Used whenever a code is necessary, for various implementations.
 """
 
-from open_ortho_terminology.terminology import Code
-from open_ortho_terminology.terminology.snomed import EV01, EV15, EV19
-from open_ortho_terminology.terminology.vendors import OpenOrtho
+from terminology.resources import Code
+from terminology.resources.snomed import EV01, EV15, EV19
+from terminology.resources.vendors import OpenOrtho
 
 
 def make_code(s):

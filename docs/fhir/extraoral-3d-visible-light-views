@@ -1,0 +1,46 @@
+{
+    "resourceType": "CodeSystem",
+    "url": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views",
+    "version": "1.0.0",
+    "name": "Extraoral3DVisibleLightViews",
+    "title": "Extraoral 3D Visible Light Views",
+    "status": "draft",
+    "experimental": true,
+    "date": "2025-01-14",
+    "publisher": "Open Ortho",
+    "description": "Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "EV3D01",
+            "display": "EV3D-01 EO.WH.LC.CO",
+            "definition": "Whole head, lips closed, centric occlusion"
+        },
+        {
+            "code": "EV3D02",
+            "display": "EV3D-02 EO.WH.LC.CR",
+            "definition": "Whole head, lips closed, centric relation"
+        },
+        {
+            "code": "EV3D03",
+            "display": "EV3D-03 EO.WH.LR.CO",
+            "definition": "Whole head, lips relaxed, centric occlusion"
+        },
+        {
+            "code": "EV3D04",
+            "display": "EV3D-04 EO.WH.LR.CR",
+            "definition": "Whole head, lips relaxed, centric relation"
+        },
+        {
+            "code": "EV3D05",
+            "display": "EV3D-05 EO.WH.FS.CO",
+            "definition": "Whole head, full smile, centric occlusion"
+        },
+        {
+            "code": "EV3D06",
+            "display": "EV3D-06 EO.WH.FS.CR",
+            "definition": "Whole head, full smile, centric relation"
+        }
+    ]
+}

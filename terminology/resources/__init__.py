@@ -1,9 +1,24 @@
+""" Resources for the terminology module.
+
+This module contains classes that represent resources used to define terminologies, value sets, code systems, and codes.
+
+"""
 import json
 from fhir.resources.coding import Coding
 
 class Code:
     """ A terminology code.
     
+    prefix: 
+
+    system:
+
+    code:
+
+    display:
+
+    synonyms:
+
     expansion: This refers to the process of expanding a value set, which means fully enumerating the set of codes that it contains. This is done to ensure that a value set is clearly and comprehensively defined, making it useful for validation, selection, and display. The term comes from FHIR.
 
     compose: This term is used within the definition of a value set, where the "compose" element specifies the set of codes that are included or excluded from the value set based on filters and value set inclusions. The term comes from FHIR.
