@@ -1,20 +1,21 @@
 NAME = terminology
 VERSION = $(shell grep -oP '(?<=version = ")[^"]*' pyproject.toml)
+DIST = docs
 
 .PHONY: clean deploy
 
 build:
-	mkdir -p build
-	python3 -m $(NAME).main
+	mkdir -p $(DIST)/fhir/CodeSystem
+	oo-codes
 
 dist:
 	python3 -m build 
 
 deploy: dist
-	twine upload dist/*
+	twine upload $(DIST)/*
 
 clean:
-	rm -rf build dist
+	rm -rf build $(DIST)
 	find . -name '*.pyc' -delete
 	find . -name '*.egg-info' -delete
 	rm -rf *.egg-info

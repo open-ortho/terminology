@@ -59,7 +59,7 @@ def save_code_system_to_fhir(module, filename: Path):
             logger.warning(f"CodeSystem {code_system_class.__name__} is not valid")
             continue
         print(f"Saving {code_system_class.__name__} to FHIR")
-        filename = filename / code_system_instance.url.split('/')[-1]
+        filename = filename / "CodeSystem" /code_system_instance.url.split('/')[-1]
         with open(filename, 'w') as f:
             json.dump(code_system_instance.model_dump(), f, indent=4)
 
