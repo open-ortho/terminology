@@ -1,4 +1,4 @@
-"""The topsServer DICOM Listener
+"""The entry point for the servers.
 
 """
 

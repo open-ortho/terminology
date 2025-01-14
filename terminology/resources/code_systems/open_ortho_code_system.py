@@ -1,6 +1,6 @@
 from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
 from fhir.resources.coding import Coding
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 
@@ -34,7 +34,7 @@ class OrthodonticPhotographViewsCodeSystem(CodeSystem):
             title="Open-Ortho Code System",
             status="draft",
             experimental=True,
-            date=datetime.now().isoformat(),
+            date=datetime.now().date().isoformat(),
             publisher="Open Ortho",
             description=OPOR.description,
             caseSensitive=True,
