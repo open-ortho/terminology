@@ -4,10 +4,10 @@ from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 
 
-id = "extraoral-2d-photographic-views"
+id = "extraoral-2d-photographic-scheduled-protocol"
 
 
-class Extraoral2DPhotographicViewsCodeSystem(CodeSystem):
+class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
@@ -20,8 +20,8 @@ class Extraoral2DPhotographicViewsCodeSystem(CodeSystem):
             id=id,
             url=self.static_url(),
             version="1.0.1",
-            name="Extraoral2DPhotographicViews",
-            title="Extraoral 2D Photographic Views",
+            name="Extraoral2DPhotographicScheduledProtocol",
+            title="Extraoral 2D Photographic Scheduled Protocol",
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),

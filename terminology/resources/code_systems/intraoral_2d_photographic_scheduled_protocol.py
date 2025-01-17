@@ -4,9 +4,9 @@ from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.resources.code_systems import add_meta_to_resource
 
-id = "intraoral-2d-photographic-views"
+id = "intraoral-2d-photographic-scheduled-protocol"
 
-class Intraoral2DPhotographicViewsCodeSystem(CodeSystem):
+class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
@@ -19,8 +19,8 @@ class Intraoral2DPhotographicViewsCodeSystem(CodeSystem):
             id=id,
             url=self.static_url(),
             version="1.0.1",
-            name="Intraoral2DPhotographicViews",
-            title="Intraoral 2D Photographic Views",
+            name="Intraoral2DPhotographicScheduledProtocol",
+            title="Intraoral 2D Photographic Scheduled Protocol",
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),

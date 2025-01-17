@@ -4,12 +4,12 @@ import json
 import os
 
 from terminology.main import save_code_system_to_fhir
-from terminology.resources.code_systems import extraoral_2d_photographic_vews 
+from terminology.resources.code_systems import extraoral_2d_photographic_scheduled_protocol 
 
 class TestSaveCodeSystemToFhir(unittest.TestCase):
 
     def test_save_code_system_to_fhir(self):
-        module = extraoral_2d_photographic_vews
+        module = extraoral_2d_photographic_scheduled_protocol
         filename = Path('test_output.json')
 
         # Call the function

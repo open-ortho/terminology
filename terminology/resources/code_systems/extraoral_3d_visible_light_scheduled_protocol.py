@@ -3,9 +3,9 @@ from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 
-id = "extraoral-3d-visible-light-views"
+id = "extraoral-3d-visible-light-scheduled-protocol"
 
-class Extraoral3DVisibleLightViewsCodeSystem(CodeSystem):
+class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
@@ -18,8 +18,8 @@ class Extraoral3DVisibleLightViewsCodeSystem(CodeSystem):
             id=id,
             url=self.static_url(),
             version="1.0.1",
-            name="Extraoral3DVisibleLightViews",
-            title="Extraoral 3D Visible Light Views",
+            name="Extraoral3DVisibleLightScheduledProtocol",
+            title="Extraoral 3D Visible Light Scheduled Protocol",
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),

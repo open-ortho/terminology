@@ -1,5 +1,5 @@
 from fhir.resources.valueset import ValueSet
-from terminology.resources.code_systems.extraoral_2d_photographic_vews import Extraoral2DPhotographicViewsCodeSystem
+from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import Extraoral2DPhotographicScheduledProtocolCodeSystem
 
 class OrthodonticPhotographViewsValueSet(ValueSet):
     """ Set of codes allowed for orthodontic photographs to be used in DICOM's ScheduledProtocol attribute. """
@@ -39,7 +39,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
             compose={
                 "include": [
                     {
-                        "system": Extraoral2DPhotographicViewsCodeSystem().url,
+                        "system": Extraoral2DPhotographicScheduledProtocolCodeSystem().url,
                     },
                     {
                         "system": "http://snomed.info/sct",
