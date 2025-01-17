@@ -19,7 +19,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             url=self.static_url(),
-            version="1.0.1",
+            version="1.1.0",
             name="Extraoral2DPhotographicScheduledProtocol",
             title="Extraoral 2D Photographic Scheduled Protocol",
             status="draft",

@@ -2,7 +2,7 @@
     "resourceType": "CodeSystem",
     "id": "extraoral-3d-visible-light-scheduled-protocol",
     "url": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-scheduled-protocol",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "name": "Extraoral3DVisibleLightScheduledProtocol",
     "title": "Extraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",

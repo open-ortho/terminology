@@ -17,7 +17,7 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             url=self.static_url(),
-            version="1.0.1",
+            version="1.1.0",
             name="Intraoral3DVisibleLightScheduledProtocol",
             title="Intraoral 3D Visible Light Scheduled Protocol",
             status="draft",

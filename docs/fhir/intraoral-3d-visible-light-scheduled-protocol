@@ -2,7 +2,7 @@
     "resourceType": "CodeSystem",
     "id": "intraoral-3d-visible-light-scheduled-protocol",
     "url": "http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "name": "Intraoral3DVisibleLightScheduledProtocol",
     "title": "Intraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",

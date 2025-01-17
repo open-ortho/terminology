@@ -18,7 +18,7 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             url=self.static_url(),
-            version="1.0.1",
+            version="1.1.0",
             name="Intraoral2DPhotographicScheduledProtocol",
             title="Intraoral 2D Photographic Scheduled Protocol",
             status="draft",
