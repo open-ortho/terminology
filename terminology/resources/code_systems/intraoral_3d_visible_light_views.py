@@ -17,7 +17,7 @@ class Intraoral3DVisibleLightViewsCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             url=self.static_url(),
-            version="1.0.0",
+            version="1.0.1",
             name="Intraoral3DVisibleLightViews",
             title="Intraoral 3D Visible Light Views",
             status="draft",

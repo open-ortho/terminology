@@ -18,7 +18,7 @@ class Intraoral2DPhotographicViewsCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             url=self.static_url(),
-            version="1.0.0",
+            version="1.0.1",
             name="Intraoral2DPhotographicViews",
             title="Intraoral 2D Photographic Views",
             status="draft",
