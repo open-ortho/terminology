@@ -11,7 +11,7 @@ authors = [
 ]
 readme = "README.md"
 license = {file = "LICENSE.md"}
-requires-python = ">=3.6"
+requires-python = ">=3.11"
 keywords = ["orthodontics", "codes", "fhir", "healthcare", "snomed"]
 classifiers = [
     "Development Status :: 3 - Alpha",
