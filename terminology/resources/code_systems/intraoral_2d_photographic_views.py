@@ -4,17 +4,19 @@ from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.resources.code_systems import add_meta_to_resource
 
+id = "intraoral-2d-photographic-views"
 
 class Intraoral2DPhotographicViewsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/intraoral-2d-photographic-views"
+        return f"{ns.url}/{id}"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
+            id=id,
             url=self.static_url(),
             version="1.0.0",
             name="Intraoral2DPhotographicViews",
