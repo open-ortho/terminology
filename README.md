@@ -40,10 +40,10 @@ The codes systems and code values should be built by the Makefile and deployed i
 
 The codesystems are availble through the following official URLs:
 
-- http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-views
-- http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-views
-- http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views
-- http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-views
+- http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol
+- http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol
+- http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-scheduled-protocol
+- http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol
 
 ### Python
 
