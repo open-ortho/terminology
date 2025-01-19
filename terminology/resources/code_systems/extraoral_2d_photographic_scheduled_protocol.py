@@ -18,6 +18,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
             id=id,
+            identifier=OPOR.identifier,
             url=self.static_url(),
             version="1.1.0",
             name="Extraoral2DPhotographicScheduledProtocol",

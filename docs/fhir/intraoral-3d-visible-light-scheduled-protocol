@@ -2,12 +2,18 @@
     "resourceType": "CodeSystem",
     "id": "intraoral-3d-visible-light-scheduled-protocol",
     "url": "http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99OPOR"
+        }
+    ],
     "version": "1.1.0",
     "name": "Intraoral3DVisibleLightScheduledProtocol",
     "title": "Intraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",
     "experimental": true,
-    "date": "2025-01-17",
+    "date": "2025-01-19",
     "publisher": "Open Ortho",
     "description": "Common intraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the dentition",
     "caseSensitive": true,

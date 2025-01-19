@@ -2,12 +2,18 @@
     "resourceType": "CodeSystem",
     "id": "extraoral-2d-photographic-scheduled-protocol",
     "url": "http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99OPOR"
+        }
+    ],
     "version": "1.1.0",
     "name": "Extraoral2DPhotographicScheduledProtocol",
     "title": "Extraoral 2D Photographic Scheduled Protocol",
     "status": "draft",
     "experimental": false,
-    "date": "2025-01-17",
+    "date": "2025-01-19",
     "publisher": "Open Ortho",
     "description": "Common extraoral 2D photographic views used in an orthodontic provider's practice",
     "caseSensitive": true,

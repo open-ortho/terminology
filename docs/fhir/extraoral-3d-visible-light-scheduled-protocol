@@ -2,12 +2,18 @@
     "resourceType": "CodeSystem",
     "id": "extraoral-3d-visible-light-scheduled-protocol",
     "url": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-scheduled-protocol",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99OPOR"
+        }
+    ],
     "version": "1.1.0",
     "name": "Extraoral3DVisibleLightScheduledProtocol",
     "title": "Extraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",
     "experimental": true,
-    "date": "2025-01-17",
+    "date": "2025-01-19",
     "publisher": "Open Ortho",
     "description": "Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck",
     "caseSensitive": true,

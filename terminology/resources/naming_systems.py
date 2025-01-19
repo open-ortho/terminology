@@ -1,4 +1,5 @@
 from fhir.resources.namingsystem import NamingSystem
+from fhir.resources.identifier import Identifier
 
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
@@ -34,8 +35,12 @@ class OpenOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
             url="http://terminology.open-ortho.org/fhir",
-            name="OPOR",
-            title="Open-Ortho Naming System",
+            name="OpenOrtho",
+            title="Open-Ortho",
+            identifier=[Identifier(
+                system="dicom",
+                value="99OPOR"
+            )],
             description="""
 ## OpenOrtho Naming System
 
@@ -50,12 +55,17 @@ A set of codes required to represent dental and orthodontic concepts for interop
                 {
                     "type": "uri",
                     "value": "http://terminology.open-ortho.org/fhir",
-                    "preferred": True
+                    "preferred": False
                 },
                 {
                     "type": "uuid",
                     "value": "1.3.6.1.4.1.61741.11.3",
                     "preferred": False
+                },
+                {
+                    "type": "dicom",
+                    "value": "99OPOR",
+                    "preferred": True
                 }
             ]
         )

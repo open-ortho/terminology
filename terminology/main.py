@@ -21,7 +21,7 @@ logger.setLevel(logging.DEBUG)
 
 # Create console handler and set level to debug
 ch = logging.StreamHandler()
-ch.setLevel(logging.INFO)
+ch.setLevel(logging.DEBUG)
 
 # Create formatter and add it to the handler
 formatter = logging.Formatter(
@@ -50,6 +50,7 @@ def save_code_system_to_fhir(module, filename: Path):
         try:
             code_system_instance = code_system_class()
         except ValidationError as e:
+            # logger.exception(e)
             logger.debug(
                 f"CodeSystem {code_system_class.__name__} is not valid")
             continue
