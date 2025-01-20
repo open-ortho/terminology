@@ -1,4 +1,4 @@
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
@@ -36,180 +36,720 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
 IV01 = CodeSystemConcept(
     code=f"{make_code('IV01')}",
-    display="IV-01 IO.RB.CO",
+    display="Intraoral photo, right buccal, centric occlusion",
     definition="Intraoral Right Buccal Segment, Centric Occlusion, Direct View",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-01",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.RB.CO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV02 = CodeSystemConcept(
     code=f"{make_code('IV02')}",
-    display="IV-02 IO.RB.CO.WM",
+    display="Intraoral photo, right buccal, centric occlusion, with mirror",
     definition="Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-02",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.RB.CO.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV03 = CodeSystemConcept(
     code=f"{make_code('IV03')}",
-    display="IV-03 IO.RB.CO.WM.BC",
+    display="Intraoral photo,right buccal,centric occlusion,mirror,corrected",
     definition="Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-03",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.RB.CO.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV04 = CodeSystemConcept(
     code=f"{make_code('IV04')}",
-    display="IV-04 IO.LB.CO",
+    display="Intraoral photo, left buccal, centric occlusion",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, Direct View",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-04",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.LB.CO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV05 = CodeSystemConcept(
     code=f"{make_code('IV05')}",
-    display="IV-05 IO.LB.CO.WM",
+    display="Intraoral photo, left buccal, centric occlusion, with mirror",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-05",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.LB.CO.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV06 = CodeSystemConcept(
     code=f"{make_code('IV06')}",
-    display="IV-06 IO.LB.CO.WM.BC",
+    display="Intraoral photo,left buccal,centric occlusion,mirror,corrected",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-06",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.LB.CO.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV07 = CodeSystemConcept(
     code=f"{make_code('IV07')}",
-    display="IV-07 IO.AO",
+    display="Intraoral photo, anterior occlusal",
     definition="Intraoral, Anterior Occlusal, Direct View",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-07",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.AO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV08 = CodeSystemConcept(
     code=f"{make_code('IV08')}",
-    display="IV-08 IO.AO.WM",
+    display="Intraoral photo, anterior occlusal, with mirror",
     definition="Intraoral, Anterior Occlusal, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-08",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.AO.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV09 = CodeSystemConcept(
     code=f"{make_code('IV09')}",
-    display="IV-09 IO.AO.WM.BC",
+    display="Intraoral photo, anterior occlusal, mirror, corrected",
     definition="Intraoral, Anterior Occlusal, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-09",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.AO.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV10 = CodeSystemConcept(
     code=f"{make_code('IV10')}",
-    display="IV-10 IO.MD.MO.OV",
+    display="Intraoral photo, mandibular, mouth open, occlusal view",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-10",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD.MO.OV",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV11 = CodeSystemConcept(
     code=f"{make_code('IV11')}",
-    display="IV-11 IO.MD.MO.OV.WM",
+    display="Intraoral photo, mandibular, mouth open, occlusal view, mirror",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-11",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD.MO.OV.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV12 = CodeSystemConcept(
     code=f"{make_code('IV12')}",
-    display="IV-12 IO.MD.MO.OV.WM.BC",
+    display="Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-12",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV13 = CodeSystemConcept(
     code=f"{make_code('IV13')}",
-    display="IV-13 IO.MX.MO.OV",
+    display="Intraoral photo, maxillary, mouth open, occlusal view",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-13",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV14 = CodeSystemConcept(
     code=f"{make_code('IV14')}",
-    display="IV-14 IO.MX.MO.OV.WM",
+    display="Intraoral photo, maxillary, mouth open, occlusal view, mirror",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-14",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV15 = CodeSystemConcept(
     code=f"{make_code('IV15')}",
-    display="IV-15 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-15",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV16 = CodeSystemConcept(
     code=f"{make_code('IV16')}",
-    display="IV-16 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-16",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV17 = CodeSystemConcept(
     code=f"{make_code('IV17')}",
-    display="IV-17 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-17",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV18 = CodeSystemConcept(
     code=f"{make_code('IV18')}",
-    display="IV-18 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-18",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV19 = CodeSystemConcept(
     code=f"{make_code('IV19')}",
-    display="IV-19 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-19",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV20 = CodeSystemConcept(
     code=f"{make_code('IV20')}",
-    display="IV-20 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-20",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV21 = CodeSystemConcept(
     code=f"{make_code('IV21')}",
-    display="IV-21 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-21",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV22 = CodeSystemConcept(
     code=f"{make_code('IV22')}",
-    display="IV-22 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-22",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV23 = CodeSystemConcept(
     code=f"{make_code('IV23')}",
-    display="IV-23 IO.LB.CR.WM.BC",
+    display="Intraoral photo,left buccal,centric relation,mirror,corrected",
     definition="Intraoral, Left Buccal Segment, Centric Relation, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-23",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.LB.CR.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV24 = CodeSystemConcept(
     code=f"{make_code('IV24')}",
-    display="IV-24 IO.MX.MO.OV.WM",
+    display="Intraoral photo, maxillary, mouth open, occlusal view, mirror",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-24",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV25 = CodeSystemConcept(
     code=f"{make_code('IV25')}",
-    display="IV-25 IO.MX.MO.OV.WM.BC",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-25",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV26 = CodeSystemConcept(
     code=f"{make_code('IV26')}",
-    display="IV-26 IO.MD.MO.OV.WM",
+    display="Intraoral photo, mandibular, mouth open, occlusal, mirror",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-26",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD.MO.OV.WM",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV27 = CodeSystemConcept(
     code=f"{make_code('IV27')}",
-    display="IV-27 IO.MD.MO.OV.WM.BC",
+    display="Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-27",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD.MO.OV.WM.BC",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV28 = CodeSystemConcept(
     code=f"{make_code('IV28')}",
-    display="IV-28 IO.GR.[tooth number]",
+    display="Intraoral photo, showing gingival recession",
     definition="Intraoral, showing Gingival Recession (ISO tooth numbers)",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-28",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.GR.[tooth number]",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV29 = CodeSystemConcept(
     code=f"{make_code('IV29')}",
-    display="IV-29 IO.FR.[tooth number]",
+    display="Intraoral photo, showing frenum",
     definition="Intraoral, showing Frenum (ISO tooth numbers)",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-29",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.FR.[tooth number]",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV30 = CodeSystemConcept(
     code=f"{make_code('IV30')}",
-    display="IV-30 IO.[modifier].PA",
+    display="Intraoral photo, using photo accessory",
     definition="Intraoral, any photo using a photo accessory device (modifiers)",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV-30",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.[modifier].PA",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
