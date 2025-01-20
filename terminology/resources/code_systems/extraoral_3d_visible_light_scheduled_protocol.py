@@ -18,7 +18,7 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
             id=id,
             identifier=OPOR.identifier,
             url=self.static_url(),
-            version="1.1.0",
+            version="1.2.0",
             name="Extraoral3DVisibleLightScheduledProtocol",
             title="Extraoral 3D Visible Light Scheduled Protocol",
             status="draft",
