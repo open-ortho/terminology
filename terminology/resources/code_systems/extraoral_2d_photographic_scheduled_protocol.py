@@ -20,7 +20,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
             id=id,
             identifier=OPOR.identifier,
             url=self.static_url(),
-            version="1.2.0",
+            version="1.2.1",
             name="Extraoral2DPhotographicScheduledProtocol",
             title="Extraoral 2D Photographic Scheduled Protocol",
             status="draft",
@@ -61,7 +61,7 @@ EV01 = CodeSystemConcept(
 
 EV02 = CodeSystemConcept(
     code=f"{make_code('EV02')}",
-    display="Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation",
+    display="Extraoral photo, right profile, lips relaxed, centric relation",
     definition="Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation (record artifact)",
     designation=[
         CodeSystemConceptDesignation(

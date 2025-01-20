@@ -8,7 +8,7 @@
             "value": "99OPOR"
         }
     ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "name": "Extraoral2DPhotographicScheduledProtocol",
     "title": "Extraoral 2D Photographic Scheduled Protocol",
     "status": "draft",
@@ -44,7 +44,7 @@
         },
         {
             "code": "EV02",
-            "display": "Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation",
+            "display": "Extraoral photo, right profile, lips relaxed, centric relation",
             "definition": "Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation (record artifact)",
             "designation": [
                 {
