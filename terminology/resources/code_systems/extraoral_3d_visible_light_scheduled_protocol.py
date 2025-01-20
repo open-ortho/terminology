@@ -1,4 +1,4 @@
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
@@ -35,36 +35,144 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
 EV3D01 = CodeSystemConcept(
     code=f"{make_code('EV3D01')}",
-    display="EV3D-01 EO.WH.LC.CO",
+    display="Extraoral 3D surface, full face",
     definition="Whole head, lips closed, centric occlusion",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-01",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.LC.CO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV3D02 = CodeSystemConcept(
     code=f"{make_code('EV3D02')}",
-    display="EV3D-02 EO.WH.LC.CR",
+    display="Extraoral 3D surface, right profile",
     definition="Whole head, lips closed, centric relation",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-02",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.LC.CR",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV3D03 = CodeSystemConcept(
     code=f"{make_code('EV3D03')}",
-    display="EV3D-03 EO.WH.LR.CO",
+    display="Extraoral 3D surface, left profile",
     definition="Whole head, lips relaxed, centric occlusion",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-03",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.LR.CO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV3D04 = CodeSystemConcept(
     code=f"{make_code('EV3D04')}",
-    display="EV3D-04 EO.WH.LR.CR",
+    display="Extraoral 3D surface, whole head, lips relaxed, centric relation",
     definition="Whole head, lips relaxed, centric relation",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-04",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.LR.CR",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV3D05 = CodeSystemConcept(
     code=f"{make_code('EV3D05')}",
-    display="EV3D-05 EO.WH.FS.CO",
+    display="Extraoral 3D surface, whole head, full smile, centric occlusion",
     definition="Whole head, full smile, centric occlusion",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-05",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.FS.CO",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV3D06 = CodeSystemConcept(
     code=f"{make_code('EV3D06')}",
-    display="EV3D-06 EO.WH.FS.CR",
+    display="Extraoral 3D surface, whole head, full smile, centric relation",
     definition="Whole head, full smile, centric relation",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV3D-06",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.WH.FS.CR",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
