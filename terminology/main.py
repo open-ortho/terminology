@@ -13,7 +13,12 @@ from pathlib import Path
 from fhir.resources.codesystem import CodeSystem
 from pydantic import ValidationError
 
-from terminology.resources.code_systems import extraoral_2d_photographic_scheduled_protocol, extraoral_3d_visible_light_scheduled_protocol, intraoral_3d_visible_light_scheduled_protocol, intraoral_2d_photographic_scheduled_protocol
+from terminology.resources.code_systems import \
+    extraoral_2d_photographic_scheduled_protocol, \
+    extraoral_3d_visible_light_scheduled_protocol, \
+    intraoral_3d_visible_light_scheduled_protocol,\
+    intraoral_2d_photographic_scheduled_protocol, \
+    ada_1100_enumerated_terms
 
 import logging
 logger = logging.getLogger(__name__)
@@ -66,7 +71,8 @@ def main():
             extraoral_2d_photographic_scheduled_protocol,
             extraoral_3d_visible_light_scheduled_protocol,
             intraoral_3d_visible_light_scheduled_protocol,
-            intraoral_2d_photographic_scheduled_protocol
+            intraoral_2d_photographic_scheduled_protocol,
+            ada_1100_enumerated_terms
     ):
         save_code_system_to_fhir(
             codes_system, build_path / 'fhir')
