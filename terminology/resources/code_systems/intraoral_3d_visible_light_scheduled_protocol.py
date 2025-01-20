@@ -1,4 +1,4 @@
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
@@ -35,18 +35,72 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
 IV3D01 = CodeSystemConcept(
     code=f"{make_code('IV3D01')}",
-    display="IV3D-01 IO.MX",
+    display="Intraoral 3D surface, maxillary dentition",
     definition="Intraoral 3D Surface of the Maxillary Dentition",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV3D-01",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MX",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV3D02 = CodeSystemConcept(
     code=f"{make_code('IV3D02')}",
-    display="IV3D-02 IO.MD",
+    display="Intraoral 3D surface, mandibular dentition",
     definition="Intraoral 3D Surface of the Mandibular Dentition",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV3D-02",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.MD",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 IV3D03 = CodeSystemConcept(
     code=f"{make_code('IV3D03')}",
-    display="IV3D-03 IO.BT",
-    definition="Intraoral 3D Surface of Occluding Maxillary and Mandibular Teeth (showing hot the teeth fir together, i.e. the bite)",
+    display="Intraoral 3D surface, occluding maxillary and mandibular teeth",
+    definition="Intraoral 3D Surface of Occluding Maxillary and Mandibular Teeth (showing how the teeth fit together, i.e. the bite)",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="IV3D-03",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="IO.BT",
+            use={
+                "system": "http://snomed.info/sct",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
