@@ -1,4 +1,4 @@
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
@@ -37,8 +37,26 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
 EV01 = CodeSystemConcept(
     code=f"{make_code('EV01')}",
-    display="EV-01, EO.RP.LR.CO",
-    definition="Photographic extraoral image of right half of face with lips relaxed and teeth in centric occlusion (record artifact)"
+    display="Extraoral photo, right profile, lips relaxed, centric occlusion",
+    definition="Photographic extraoral image of right half of face with lips relaxed and teeth in centric occlusion (record artifact)",
+    designation=[
+        CodeSystemConceptDesignation(
+            value="EV-01",
+            use={
+                "system": "http://snomed.info/sc",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+        CodeSystemConceptDesignation(
+            value="EO.RP.LR.CO",
+            use={
+                "system": "http://snomed.info/sc",
+                "code": "900000000000013009",
+                "display": "Synonym"
+            }
+        ),
+    ]
 )
 
 EV02 = CodeSystemConcept(
