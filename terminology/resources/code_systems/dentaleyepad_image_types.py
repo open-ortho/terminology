@@ -3,19 +3,74 @@
 Used whenever a code is necessary, for various implementations.
 """
 
-from terminology.resources.vendors import DentalEyePad
+from terminology.resources.naming_systems import DentalEyePadNamingSystem
 from terminology.resources import Code
+from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
+from datetime import datetime
 
-
+id = "dentaleyepad-image-types"
 def make_code(s):
     return s
 
+class DentalEyePadCodeSystem(CodeSystem):
+    
+    @classmethod
+    def static_url(cls) -> str:
+        ns = DentalEyePadNamingSystem()
+        return f"{ns.url}/{id}"
+
+    def __init__(self):
+        DEP = DentalEyePadNamingSystem()
+        
+        def convert_to_concept(code: DentaleyepadCode) -> CodeSystemConcept:
+            designations = []
+            if code.synonyms:
+                for synonym in code.synonyms:
+                    designations.append(
+                        CodeSystemConceptDesignation(
+                            value=synonym,
+                            use={
+                                "system": "http://snomed.info/sct",
+                                "code": "900000000000013009",
+                                "display": "Synonym"
+                            }
+                        )
+                    )
+            return CodeSystemConcept(
+                code=code.code,
+                display=code.display,
+                designation=designations
+            )
+
+        concepts = [
+            convert_to_concept(value) 
+            for name, value in globals().items() 
+            if isinstance(value, DentaleyepadCode)
+        ]
+
+        super().__init__(
+            id="dentaleyepad",
+            identifier=DEP.identifier,
+            url=self.static_url(),
+            version="1.0.0",
+            name="DentalEyePadCodeSystem",
+            title="DentalEyePad Image Types",
+            status="active",
+            experimental=False,
+            date=datetime.now().date().isoformat(),
+            publisher="DentalEyePad",
+            description="Collection of codes for dental photography as defined by DentalEyePad",
+            caseSensitive=True,
+            content="complete",
+            concept=concepts
+        )
 
 class DentaleyepadCode(Code):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.prefix = DentalEyePad.PREFIX
+        DentalEyePad = DentalEyePadNamingSystem()
+        self.prefix = DentalEyePad.name
         self.system = DentalEyePad.url
         self.contexts = [{'standard': 'DICOM', 'resource': 'ScheduledProtocol'}]
 

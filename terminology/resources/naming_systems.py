@@ -73,9 +73,9 @@ A set of codes required to represent dental and orthodontic concepts for interop
 class DentalEyePadNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://terminology.dentaleyepad.de/fhir",
-            name="DEYE",
-            title="",
+            url="https://dentaleyepad.de/en",
+            name="99DEYE",
+            title="Dental Eyepad Naming System",
             description="""
 # dentaleyepad image types
 
@@ -91,7 +91,7 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "http://terminology.dentaleyepad.de/fhir",
+                    "value": "https://dentaleyepad.de/en",
                     "preferred": True
                 }
             ]
