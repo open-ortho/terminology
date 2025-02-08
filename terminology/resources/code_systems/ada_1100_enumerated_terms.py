@@ -20,6 +20,7 @@ class ADA1100EnumeratedTermsCodeSystem(CodeSystem):
             version="1.0.0",
             name="ADA1100EnumeratedTerms",
             title="ADA 1100 Enumerated Terms",
+            copyright="MIT License",
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),
