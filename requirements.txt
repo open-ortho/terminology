@@ -1,7 +1,0 @@
-fhir.resources
-flask-admin
-flask
-flask-sqlalchemy
-wtforms
-wtforms-sqlalchemy
-alembic
