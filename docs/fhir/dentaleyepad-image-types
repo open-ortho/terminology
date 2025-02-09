@@ -2,12 +2,18 @@
     "resourceType": "CodeSystem",
     "id": "dentaleyepad",
     "url": "https://dentaleyepad.de/en/dentaleyepad-image-types",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99DEYE"
+        }
+    ],
     "version": "1.0.0",
     "name": "DentalEyePadCodeSystem",
     "title": "DentalEyePad Image Types",
     "status": "active",
     "experimental": false,
-    "date": "2025-02-08",
+    "date": "2025-02-09",
     "publisher": "DentalEyePad",
     "description": "Collection of codes for dental photography as defined by DentalEyePad",
     "caseSensitive": true,

@@ -74,7 +74,11 @@ class DentalEyePadNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
             url="https://dentaleyepad.de/en",
-            name="99DEYE",
+            name="DentalEyePad",
+            identifier=[Identifier(
+                system="dicom",
+                value="99DEYE"
+            )],
             title="Dental Eyepad Naming System",
             description="""
 # dentaleyepad image types
