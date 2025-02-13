@@ -1,0 +1,20 @@
+
+# Base UID for all OIDs in this project
+BASE_UID = "1.3.6.1.4.1.61741.11.3"
+
+# Code Systems (1.3.6.1.4.1.61741.11.3.2.*)
+CS_BASE_UID = f"{BASE_UID}.2"
+
+# Code System UIDs
+CS_EXTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.1"
+CS_EXTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.2"
+CS_INTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.3"
+CS_INTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.4"
+
+# Code System short name to UID mapping
+CODE_SYSTEM_UIDS = {
+    "extraoral-2d-photographic-scheduled-protocol": CS_EXTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID,
+    "extraoral-3d-visible-light-scheduled-protocol": CS_EXTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
+    "intraoral-2d-photographic-scheduled-protocol": CS_INTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID,
+    "intraoral-3d-visible-light-scheduled-protocol": CS_INTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
+}

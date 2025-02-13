@@ -2,6 +2,7 @@ from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemC
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
+from terminology.constants import CODE_SYSTEM_UIDS
 
 
 id = "extraoral-2d-photographic-scheduled-protocol"
@@ -18,7 +19,13 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
             id=id,
-            identifier=OPOR.identifier,
+            identifier=[
+                OPOR.identifier,
+                {
+                    "system": "urn:ietf:rfc:3986",
+                    "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
+                }
+            ],
             url=self.static_url(),
             version="1.2.1",
             name="Extraoral2DPhotographicScheduledProtocol",
@@ -26,7 +33,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),
-            publisher="Open Ortho",
+            publisher=OPOR.publisher,
             description="Common extraoral 2D photographic views used in an orthodontic provider's practice",
             caseSensitive=True,
             content="complete",

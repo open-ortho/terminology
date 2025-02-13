@@ -2,6 +2,7 @@ from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemC
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
+from terminology.constants import CODE_SYSTEM_UIDS
 
 id = "intraoral-3d-visible-light-scheduled-protocol"
 
@@ -16,7 +17,13 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
             id=id,
-            identifier=OPOR.identifier,
+            identifier=[
+                OPOR.identifier,
+                {
+                    "system": "urn:ietf:rfc:3986",
+                    "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
+                }
+            ],
             url=self.static_url(),
             version="1.1.0",
             name="Intraoral3DVisibleLightScheduledProtocol",
@@ -24,7 +31,7 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),
-            publisher="Open Ortho",
+            publisher=OPOR.publisher,
             description="Common intraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the dentition",
             caseSensitive=True,
             content="complete",

@@ -3,6 +3,7 @@ from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.resources.code_systems import add_meta_to_resource
+from terminology.constants import CODE_SYSTEM_UIDS
 
 id = "intraoral-2d-photographic-scheduled-protocol"
 
@@ -17,7 +18,13 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         OPOR = OpenOrthoNamingSystem()
         super().__init__(
             id=id,
-            identifier=OPOR.identifier,
+            identifier=[
+                OPOR.identifier,
+                {
+                    "system": "urn:ietf:rfc:3986",
+                    "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
+                }
+            ],
             url=self.static_url(),
             version="1.2.0",
             name="Intraoral2DPhotographicScheduledProtocol",
@@ -25,7 +32,7 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),
-            publisher="Open Ortho",
+            publisher=OPOR.publisher,
             description="Common intraoral 2D photographic views used in an orthodontic provider's practice",
             caseSensitive=True,
             content="complete",
