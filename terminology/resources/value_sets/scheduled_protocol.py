@@ -4,6 +4,7 @@ from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_prot
 from terminology.resources.code_systems.intraoral_2d_photographic_scheduled_protocol import Intraoral2DPhotographicScheduledProtocolCodeSystem
 from terminology.resources.code_systems.intraoral_3d_visible_light_scheduled_protocol import Intraoral3DVisibleLightScheduledProtocolCodeSystem
 from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import Extraoral3DVisibleLightScheduledProtocolCodeSystem
+from terminology.constants import VALUE_SET_UIDS
 
 
 id = "scheduled-protocol"
@@ -23,7 +24,7 @@ class ScheduledProtocolValueSet(ValueSet):
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",
-                    "value": "urn:oid:1.2.840.10008.2.16.4"
+                    "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
             version="0.1.0",

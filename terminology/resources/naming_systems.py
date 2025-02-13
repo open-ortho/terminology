@@ -1,5 +1,6 @@
 from fhir.resources.namingsystem import NamingSystem
 from fhir.resources.identifier import Identifier
+from terminology.constants import NAMING_SYSTEM_UIDS
 
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
@@ -24,8 +25,8 @@ A custom set of codes used by various medoco Health products, as reccommended by
                     "preferred": True
                 },
                 {
-                    "type": "uuid",
-                    "value": "1.3.6.1.4.1.62074.3.1",
+                    "type": "oid",
+                    "value": NAMING_SYSTEM_UIDS["medoco-health"],
                     "preferred": False
                 }
             ]
@@ -58,8 +59,8 @@ A set of codes required to represent dental and orthodontic concepts for interop
                     "preferred": False
                 },
                 {
-                    "type": "uuid",
-                    "value": "1.3.6.1.4.1.61741.11.3",
+                    "type": "oid",
+                    "value": NAMING_SYSTEM_UIDS["open-ortho"],
                     "preferred": False
                 },
                 {
@@ -93,6 +94,11 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
                     "type": "uri",
                     "value": "https://dentaleyepad.de/en",
                     "preferred": True
+                },
+                {
+                    "type": "oid",
+                    "value": NAMING_SYSTEM_UIDS["dental-eye-pad"],
+                    "preferred": False
                 }
             ]
         )

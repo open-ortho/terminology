@@ -19,7 +19,6 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
         super().__init__(
             id=id,
             identifier=[
-                OPOR.identifier,
                 {
                     "system": "urn:ietf:rfc:3986",
                     "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
