@@ -13,11 +13,11 @@ from pathlib import Path
 from typing import Any, Type, Dict
 import uuid
 import inspect
-from datetime import datetime
+from datetime import datetime, timezone
 
 from fhir.resources.resource import Resource
 from fhir.resources.codesystem import CodeSystem
-from fhir.resources.valueset import ValueSet
+from fhir.resources.valueset import ValueSet, ValueSetExpansion, ValueSetExpansionContains
 from pydantic import ValidationError
 
 from terminology.resources.code_systems import (
@@ -54,7 +54,7 @@ build_path = Path('.', 'docs')
 
 all_code_systems = None
 
-def expand_valueset(valueset: ValueSet, all_code_systems: Dict[str, CodeSystem]) -> Dict:
+def expand_valueset(valueset: ValueSet, all_code_systems: Dict[str, CodeSystem]) -> ValueSet:
     """Expand a ValueSet by including all codes from referenced CodeSystems.
     
     Args:
@@ -62,17 +62,13 @@ def expand_valueset(valueset: ValueSet, all_code_systems: Dict[str, CodeSystem])
         all_code_systems: Dictionary of all available CodeSystem resources
         
     Returns:
-        Dict containing the expanded ValueSet with all codes included
+        ValueSet containing the expanded ValueSet with all codes included
     """
-    expanded = valueset.model_dump()
+    # Create a new ValueSet for expansion
+    expanded = ValueSet(**valueset.model_dump())
     
-    # Add expansion section
-    expanded["expansion"] = {
-        "identifier": f"urn:uuid:{uuid.uuid4()}",
-        "timestamp": datetime.now().isoformat(),
-        "total": 0,
-        "contains": []
-    }
+    # Create expansion
+    contains = []
     
     # Process each included system
     for include in valueset.compose.include:
@@ -86,16 +82,24 @@ def expand_valueset(valueset: ValueSet, all_code_systems: Dict[str, CodeSystem])
         if cs_instance:
             # Add all concepts from this CodeSystem
             for concept in cs_instance.concept:
-                expanded["expansion"]["contains"].append({
-                    "system": system_url,
-                    "code": concept.code,
-                    "display": concept.display
-                })
+                contains.append(
+                    ValueSetExpansionContains(
+                        system=system_url,
+                        code=concept.code,
+                        display=concept.display
+                    )
+                )
         else:
             logger.warning(f"CodeSystem with URL {system_url} not found.")
-                
-    # Update total count
-    expanded["expansion"]["total"] = len(expanded["expansion"]["contains"])
+    
+    # Create and set the expansion
+    expanded.expansion = ValueSetExpansion(
+        identifier=f"urn:uuid:{uuid.uuid4()}",
+        timestamp=datetime.now().date().isoformat(),
+        total=len(contains),
+        contains=contains
+    )
+    
     return expanded
 
 def save_fhir_resource(module: Any, resource_type: Type[Resource], filename: Path) -> None:
@@ -120,6 +124,9 @@ def save_fhir_resource(module: Any, resource_type: Type[Resource], filename: Pat
         return
 
     for name, resource_class in resources.items():
+        if resource_class == resource_type:
+            # Skip the base classes
+            continue
         try:
             resource_instance = resource_class()
             
@@ -139,10 +146,11 @@ def save_fhir_resource(module: Any, resource_type: Type[Resource], filename: Pat
                 
                 expanded = expand_valueset(resource_instance, all_code_systems)
                 with open(expanded_filename, 'w') as f:
-                    json.dump(expanded, f, indent=4)
+                    json.dump(expanded.model_dump(), f, indent=4)
                     
         except ValidationError as e:
-            logger.debug(f"{resource_type.__name__} {resource_class.__name__} is not valid")
+            # logger.exception(e)
+            logger.error(f"{resource_type.__name__} {resource_class.__name__} is not valid: {e}")
             continue
 
 def get_all_code_systems() -> Dict[str, CodeSystem]:
@@ -175,14 +183,14 @@ def main():
     all_code_systems = get_all_code_systems()
     # Dictionary mapping resource types to modules containing them
     resources = {
-        # CodeSystem: [
-        #     extraoral_2d_photographic_scheduled_protocol,
-        #     extraoral_3d_visible_light_scheduled_protocol,
-        #     intraoral_3d_visible_light_scheduled_protocol,
-        #     intraoral_2d_photographic_scheduled_protocol,
-        #     dentaleyepad_image_types,
-        #     ada_1100_enumerated_terms
-        # ],
+        CodeSystem: [
+            extraoral_2d_photographic_scheduled_protocol,
+            extraoral_3d_visible_light_scheduled_protocol,
+            intraoral_3d_visible_light_scheduled_protocol,
+            intraoral_2d_photographic_scheduled_protocol,
+            dentaleyepad_image_types,
+            ada_1100_enumerated_terms
+        ],
         ValueSet: [
             scheduled_protocol
         ]
