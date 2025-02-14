@@ -1,3 +1,4 @@
+from datetime import datetime
 from fhir.resources.valueset import ValueSet
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import Extraoral2DPhotographicScheduledProtocolCodeSystem
@@ -19,6 +20,7 @@ class ScheduledProtocolValueSet(ValueSet):
 
     def __init__(self):
         url = self.static_url()
+        OPOR = OpenOrthoNamingSystem()
         super().__init__(
             url=url,
             identifier=[
@@ -32,20 +34,10 @@ class ScheduledProtocolValueSet(ValueSet):
             title="Orthodontic 2D and 3D Visible Light Scheduled Protocols",
             status="active",
             experimental=False,
-            date="2024-12-29",
-            publisher="open-ortho",
-            contact=[
-                {
-                    "name": "Open-Ortho",
-                    "telecom": [
-                        {
-                            "system": "url",
-                            "value": "https://open-ortho.org"
-                        }
-                    ]
-                }
-            ],
-            description="A set of codes that describe Orhodontic Photographic Views for DICOM ",
+            date=datetime.now().date().isoformat(),
+            publisher=OPOR.publisher,
+            contact=[OPOR.contact[0]],
+            description="Scheduled protocols for orthodontic photographs and intraoral scans according to ADA-1100.",
             compose={
                 "include": [
                     {"system": Intraoral2DPhotographicScheduledProtocolCodeSystem().url,

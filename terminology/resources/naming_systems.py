@@ -52,6 +52,17 @@ A set of codes required to represent dental and orthodontic concepts for interop
             date="2025-01-01",
             publisher="OpenOrtho",
             responsible="OpenOrtho",
+            contact=[
+                {
+                    "name": "Open-Ortho",
+                    "telecom": [
+                        {
+                            "system": "url",
+                            "value": "https://open-ortho.org"
+                        }
+                    ]
+                }
+            ],
             uniqueId=[
                 {
                     "type": "uri",

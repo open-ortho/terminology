@@ -12,8 +12,8 @@
     "title": "Orthodontic 2D and 3D Visible Light Scheduled Protocols",
     "status": "active",
     "experimental": false,
-    "date": "2024-12-29",
-    "publisher": "open-ortho",
+    "date": "2025-02-15",
+    "publisher": "OpenOrtho",
     "contact": [
         {
             "name": "Open-Ortho",
@@ -43,7 +43,7 @@
         ]
     },
     "expansion": {
-        "identifier": "urn:uuid:401c18ab-a8af-4ba0-bb1d-d3fea025221e",
+        "identifier": "urn:uuid:b4813678-f0a5-4a83-989c-c06a610b1c87",
         "timestamp": "2025-02-15",
         "total": 82,
         "contains": [
