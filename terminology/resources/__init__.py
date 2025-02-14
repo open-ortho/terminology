@@ -61,4 +61,3 @@ class Code:
             return f"{self.prefix}-{self.code}"
         else:
             return self.code
-        

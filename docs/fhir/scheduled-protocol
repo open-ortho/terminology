@@ -1,0 +1,45 @@
+{
+    "resourceType": "ValueSet",
+    "url": "http://terminology.open-ortho.org/fhir/scheduled-protocol",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.1"
+        }
+    ],
+    "version": "0.1.0",
+    "name": "Orthodontic2Dand3DVisibleLightScheduledProtocols",
+    "title": "Orthodontic 2D and 3D Visible Light Scheduled Protocols",
+    "status": "active",
+    "experimental": false,
+    "date": "2024-12-29",
+    "publisher": "open-ortho",
+    "contact": [
+        {
+            "name": "Open-Ortho",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://open-ortho.org"
+                }
+            ]
+        }
+    ],
+    "description": "A set of codes that describe Orhodontic Photographic Views for DICOM ",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol"
+            },
+            {
+                "system": "http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol"
+            },
+            {
+                "system": "http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol"
+            },
+            {
+                "system": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-scheduled-protocol"
+            }
+        ]
+    }
+}

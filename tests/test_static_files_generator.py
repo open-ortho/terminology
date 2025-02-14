@@ -3,30 +3,16 @@ from pathlib import Path
 import json
 import os
 
-from terminology.main import save_code_system_to_fhir
+from terminology.main import get_all_code_systems
 from terminology.resources.code_systems import extraoral_2d_photographic_scheduled_protocol 
 
-class TestSaveCodeSystemToFhir(unittest.TestCase):
+class TestMain(unittest.TestCase):
 
-    def test_save_code_system_to_fhir(self):
-        module = extraoral_2d_photographic_scheduled_protocol
-        filename = Path('test_output.json')
-
-        # Call the function
-        save_code_system_to_fhir(module, filename)
-
-        # Verify the file was created
-        self.assertTrue(filename.exists())
-
-        # Verify the content of the file
-        with open(filename, 'r') as f:
-            data = json.load(f)
-            self.assertIsInstance(data, list)
-            self.assertGreater(len(data), 0)
-            self.assertEqual(data[0]['resourceType'], 'CodeSystem')
-
-        # Clean up
-        os.remove(filename)
+    def test_get_all_code_systems(self):
+        all_code_systems = get_all_code_systems()
+        self.assertIsInstance(all_code_systems, dict)
+        self.assertTrue(all_code_systems)
+        self.assertTrue(all_code_systems.get(extraoral_2d_photographic_scheduled_protocol.Extraoral2DPhotographicScheduledProtocolCodeSystem().url))
 
 if __name__ == '__main__':
     unittest.main()
