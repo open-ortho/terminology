@@ -2,6 +2,12 @@
     "resourceType": "CodeSystem",
     "id": "dentaleyepad",
     "url": "https://dentaleyepad.de/en/dentaleyepad-image-types",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99DEYE"
+        }
+    ],
     "version": "1.0.0",
     "name": "DentalEyePadCodeSystem",
     "title": "DentalEyePad Image Types",
