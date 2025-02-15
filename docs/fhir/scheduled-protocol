@@ -25,7 +25,7 @@
             ]
         }
     ],
-    "description": "A set of codes that describe Orhodontic Photographic Views for DICOM ",
+    "description": "Scheduled protocols for orthodontic photographs and intraoral scans according to ADA-1100.",
     "compose": {
         "include": [
             {

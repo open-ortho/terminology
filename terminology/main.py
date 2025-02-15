@@ -94,7 +94,6 @@ def expand_valueset(valueset: ValueSet, all_code_systems: Dict[str, CodeSystem])
     
     # Create and set the expansion
     expanded.expansion = ValueSetExpansion(
-        identifier=f"urn:uuid:{uuid.uuid4()}",
         timestamp=datetime.now().date().isoformat(),
         total=len(contains),
         contains=contains
