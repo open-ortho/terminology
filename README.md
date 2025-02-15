@@ -46,6 +46,8 @@ The codesystems are availble through the following official URLs:
 - http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol
 - http://terminology.open-ortho.org/fhir/ada-1100-enumerated-terms
 - http://terminology.open-ortho.org/fhir/dentaleyepad-image-types
+- http://terminology.open-ortho.org/fhir/scheduled-protocol-expanded
+- http://terminology.open-ortho.org/fhir/scheduled-protocol
 
 ### Python
 
