@@ -79,7 +79,7 @@
             {
                 "system": "http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol",
                 "code": "IV07",
-                "display": "Intraoral photo,front ,centric occl.,no mirror"
+                "display": "Intraoral photo,frontal,centric occl.,no mirror"
             },
             {
                 "system": "http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol",

@@ -186,7 +186,7 @@ IV06 = CodeSystemConcept(
 
 IV07 = CodeSystemConcept(
     code=f"{make_code('IV07')}",
-    display="Intraoral photo,front ,centric occl.,no mirror",
+    display="Intraoral photo,frontal,centric occl.,no mirror",
     definition="Intraoral, Frontal View, Centric Occlusion, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
