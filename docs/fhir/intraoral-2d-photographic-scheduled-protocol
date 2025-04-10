@@ -8,12 +8,12 @@
             "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.3"
         }
     ],
-    "version": "1.2.0",
+    "version": "1.3.0",
     "name": "Intraoral2DPhotographicScheduledProtocol",
     "title": "Intraoral 2D Photographic Scheduled Protocol",
     "status": "draft",
     "experimental": false,
-    "date": "2025-02-15",
+    "date": "2025-04-10",
     "publisher": "OpenOrtho",
     "description": "Common intraoral 2D photographic views used in an orthodontic provider's practice",
     "caseSensitive": true,
@@ -21,8 +21,8 @@
     "concept": [
         {
             "code": "IV01",
-            "display": "Intraoral photo, right buccal, centric occlusion",
-            "definition": "Intraoral Right Buccal Segment, Centric Occlusion, Direct View",
+            "display": "Intraoral photo,right buccal,centric occl.,no mirror",
+            "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -38,13 +38,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.RB.CO"
+                    "value": "IO.RB.CO.NM"
                 }
             ]
         },
         {
             "code": "IV02",
-            "display": "Intraoral photo, right buccal, centric occlusion, with mirror",
+            "display": "Intraoral photo,right buccal,centric occl.,with mirror",
             "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror",
             "designation": [
                 {
@@ -67,7 +67,7 @@
         },
         {
             "code": "IV03",
-            "display": "Intraoral photo,right buccal,centric occlusion,mirror,corrected",
+            "display": "Intraoral photo,right buccal,centric occl.,mirror,corrected",
             "definition": "Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
             "designation": [
                 {
@@ -90,8 +90,8 @@
         },
         {
             "code": "IV04",
-            "display": "Intraoral photo, left buccal, centric occlusion",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, Direct View",
+            "display": "Intraoral photo,right buccal,centric relation,no mirror",
+            "definition": "Intraoral, Right Buccal Segment, Centric Relation, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -107,14 +107,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.LB.CO"
+                    "value": "IO.RB.CR.NM"
                 }
             ]
         },
         {
             "code": "IV05",
-            "display": "Intraoral photo, left buccal, centric occlusion, with mirror",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror",
+            "display": "Intraoral photo,right buccal,centric relation,with mirror",
+            "definition": "Intraoral, Right Buccal Segment, Centric Relation, With Mirror",
             "designation": [
                 {
                     "use": {
@@ -130,14 +130,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.LB.CO.WM"
+                    "value": "IO.RB.CR.WM"
                 }
             ]
         },
         {
             "code": "IV06",
-            "display": "Intraoral photo,left buccal,centric occlusion,mirror,corrected",
-            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
+            "display": "Intraoral photo,right buccal,centric relation,mirror,corrected",
+            "definition": "Intraoral, Right Buccal Segment, Centric Relation, With Mirror, But Corrected",
             "designation": [
                 {
                     "use": {
@@ -153,14 +153,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.LB.CO.WM.BC"
+                    "value": "IO.RB.CR.WM.BC"
                 }
             ]
         },
         {
             "code": "IV07",
-            "display": "Intraoral photo, anterior occlusal",
-            "definition": "Intraoral, Anterior Occlusal, Direct View",
+            "display": "Intraoral photo,front ,centric occl.,no mirror",
+            "definition": "Intraoral, Frontal View, Centric Occlusion, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -176,14 +176,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.AO"
+                    "value": "IO.FV.CO.NM"
                 }
             ]
         },
         {
             "code": "IV08",
-            "display": "Intraoral photo, anterior occlusal, with mirror",
-            "definition": "Intraoral, Anterior Occlusal, With Mirror",
+            "display": "Intraoral photo,frontal,centric relation,no mirror",
+            "definition": "Intraoral, Frontal View, Centric Relation, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -199,14 +199,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.AO.WM"
+                    "value": "IO.FV.CR.NM"
                 }
             ]
         },
         {
             "code": "IV09",
-            "display": "Intraoral photo, anterior occlusal, mirror, corrected",
-            "definition": "Intraoral, Anterior Occlusal, With Mirror, But Corrected",
+            "display": "Intraoral photo,frontal,teeth apart,no mirror",
+            "definition": "Intraoral, Frontal View, Teeth Apart, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -222,14 +222,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.AO.WM.BC"
+                    "value": "IO.FV.TA.NM"
                 }
             ]
         },
         {
             "code": "IV10",
-            "display": "Intraoral photo, mandibular, mouth open, occlusal view",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View",
+            "display": "Intraoral photo,frontal,mouth open,no mirror",
+            "definition": "Intraoral, Frontal View, Mouth Open, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -245,14 +245,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MD.MO.OV"
+                    "value": "IO.FV.MO.NM"
                 }
             ]
         },
         {
             "code": "IV11",
-            "display": "Intraoral photo, mandibular, mouth open, occlusal view, mirror",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
+            "display": "Intraoral photo,front view inferior,centric occl.,no mirror",
+            "definition": "Intraoral, Frontal View Inferior (showing depth of bite and overjet), Centric Occlusion, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -268,14 +268,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MD.MO.OV.WM"
+                    "value": "IO.FV.IV.CO.NM"
                 }
             ]
         },
         {
             "code": "IV12",
-            "display": "Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,front view inferior,centric relation,no mirror",
+            "definition": "Intraoral, Frontal View Inferior (showing depth of bite and overjet), Centric Relation, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -291,14 +291,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MD.MO.OV.WM.BC"
+                    "value": "IO.FV.IV.CR.NM"
                 }
             ]
         },
         {
             "code": "IV13",
-            "display": "Intraoral photo, maxillary, mouth open, occlusal view",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View",
+            "display": "Intraoral photo,frontal,tongue thrust,no mirror",
+            "definition": "Intraoral, Frontal View, showing Tongue Thrust, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -314,14 +314,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV"
+                    "value": "IO.FV.TT.NM"
                 }
             ]
         },
         {
             "code": "IV14",
-            "display": "Intraoral photo, maxillary, mouth open, occlusal view, mirror",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
+            "display": "Intraoral photo,right lateral,centric occl.,overjet,no mirror",
+            "definition": "Intraoral, Right Lateral View, Centric Occlusion, showing Overjet, No Mirror (Direct View showing overjet from the side)",
             "designation": [
                 {
                     "use": {
@@ -337,14 +337,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM"
+                    "value": "IO.RL.CO.OJ.NM"
                 }
             ]
         },
         {
             "code": "IV15",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,right lateral,centric relation,overjet,no mirror",
+            "definition": "Intraoral, Right Lateral View, Centric Relation, showing Overjet, No Mirror (Direct View showing overjet from the side)",
             "designation": [
                 {
                     "use": {
@@ -360,14 +360,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.RL.CR.OJ.NM"
                 }
             ]
         },
         {
             "code": "IV16",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left lateral,centric occl.,overjet,no mirror",
+            "definition": "Intraoral, Left Lateral View, Centric Occlusion, showing Overjet, No Mirror (Direct View showing overjet from the side)",
             "designation": [
                 {
                     "use": {
@@ -383,14 +383,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LL.CO.OJ.NM"
                 }
             ]
         },
         {
             "code": "IV17",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left lateral,centric relation,overjet,no mirror",
+            "definition": "Intraoral, Left Lateral View, Centric Relation, showing Overjet, No Mirror (Direct View showing overjet from the side)",
             "designation": [
                 {
                     "use": {
@@ -406,14 +406,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LL.CR.OJ.NM"
                 }
             ]
         },
         {
             "code": "IV18",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left buccal,centric occl.,no mirror",
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -429,14 +429,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LB.CO.NM"
                 }
             ]
         },
         {
             "code": "IV19",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left buccal,centric occl.,with mirror",
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror",
             "designation": [
                 {
                     "use": {
@@ -452,14 +452,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LB.CO.WM"
                 }
             ]
         },
         {
             "code": "IV20",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left buccal,centric occl.,mirror,corrected",
+            "definition": "Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
             "designation": [
                 {
                     "use": {
@@ -475,14 +475,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LB.CO.WM.BC"
                 }
             ]
         },
         {
             "code": "IV21",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left buccal,centric relation,no mirror",
+            "definition": "Intraoral, Left Buccal Segment, Centric Relation, No Mirror (Direct View)",
             "designation": [
                 {
                     "use": {
@@ -498,14 +498,14 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LB.CR.NM"
                 }
             ]
         },
         {
             "code": "IV22",
-            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
-            "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
+            "display": "Intraoral photo,left buccal,centric relation,with mirror",
+            "definition": "Intraoral, Left Buccal Segment, Centric Relation, With Mirror",
             "designation": [
                 {
                     "use": {
@@ -521,7 +521,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "IO.MX.MO.OV.WM.BC"
+                    "value": "IO.LB.CR.WM"
                 }
             ]
         },
@@ -550,7 +550,7 @@
         },
         {
             "code": "IV24",
-            "display": "Intraoral photo, maxillary, mouth open, occlusal view, mirror",
+            "display": "Intraoral photo,maxillary,mouth open,occlusal,with mirror",
             "definition": "Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
             "designation": [
                 {
@@ -596,7 +596,7 @@
         },
         {
             "code": "IV26",
-            "display": "Intraoral photo, mandibular, mouth open, occlusal, mirror",
+            "display": "Intraoral photo,mandibular,mouth open,occlusal,with mirror",
             "definition": "Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
             "designation": [
                 {
@@ -642,8 +642,8 @@
         },
         {
             "code": "IV28",
-            "display": "Intraoral photo, showing gingival recession",
-            "definition": "Intraoral, showing Gingival Recession (ISO tooth numbers)",
+            "display": "Intraoral photo,showing gingival recession",
+            "definition": "Intraoral, showing Gingival Recession. May include ISO tooth numbers of the affected teeth.",
             "designation": [
                 {
                     "use": {
@@ -665,8 +665,8 @@
         },
         {
             "code": "IV29",
-            "display": "Intraoral photo, showing frenum",
-            "definition": "Intraoral, showing Frenum (ISO tooth numbers)",
+            "display": "Intraoral photo,showing frenum",
+            "definition": "Intraoral, showing Frenum. May include ISO tooth numbers designating frenum's location.",
             "designation": [
                 {
                     "use": {
@@ -688,8 +688,8 @@
         },
         {
             "code": "IV30",
-            "display": "Intraoral photo, using photo accessory",
-            "definition": "Intraoral, any photo using a photo accessory device (modifiers)",
+            "display": "Intraoral photo,using photo accessory",
+            "definition": "Intraoral, any view using a photo accessory device such as a contraster to provide a solid background or black mirror ([modifier] is any set of IO modifier as specified above)",
             "designation": [
                 {
                     "use": {
