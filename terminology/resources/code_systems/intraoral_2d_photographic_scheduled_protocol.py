@@ -42,7 +42,7 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
 IV01 = CodeSystemConcept(
     code=f"{make_code('IV01')}",
-    display="Intraoral photo, right buccal, centric occlusion, no mirror",
+    display="Intraoral photo,right buccal,centric occl.,no mirror",
     definition="Intraoral, Right Buccal Segment, Centric Occlusion, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -66,7 +66,7 @@ IV01 = CodeSystemConcept(
 
 IV02 = CodeSystemConcept(
     code=f"{make_code('IV02')}",
-    display="Intraoral photo, right buccal, centric occlusion, with mirror",
+    display="Intraoral photo,right buccal,centric occl.,with mirror",
     definition="Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -90,7 +90,7 @@ IV02 = CodeSystemConcept(
 
 IV03 = CodeSystemConcept(
     code=f"{make_code('IV03')}",
-    display="Intraoral photo, right buccal, centric occlusion, mirror, corrected",
+    display="Intraoral photo,right buccal,centric occl.,mirror,corrected",
     definition="Intraoral, Right Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -114,7 +114,7 @@ IV03 = CodeSystemConcept(
 
 IV04 = CodeSystemConcept(
     code=f"{make_code('IV04')}",
-    display="Intraoral photo, right buccal, centric relation, no mirror",
+    display="Intraoral photo,right buccal,centric relation,no mirror",
     definition="Intraoral, Right Buccal Segment, Centric Relation, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -138,7 +138,7 @@ IV04 = CodeSystemConcept(
 
 IV05 = CodeSystemConcept(
     code=f"{make_code('IV05')}",
-    display="Intraoral photo, right buccal, centric relation, with mirror",
+    display="Intraoral photo,right buccal,centric relation,with mirror",
     definition="Intraoral, Right Buccal Segment, Centric Relation, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -162,7 +162,7 @@ IV05 = CodeSystemConcept(
 
 IV06 = CodeSystemConcept(
     code=f"{make_code('IV06')}",
-    display="Intraoral photo, right buccal, centric relation, mirror, corrected",
+    display="Intraoral photo,right buccal,centric relation,mirror,corrected",
     definition="Intraoral, Right Buccal Segment, Centric Relation, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -186,7 +186,7 @@ IV06 = CodeSystemConcept(
 
 IV07 = CodeSystemConcept(
     code=f"{make_code('IV07')}",
-    display="Intraoral photo, frontal view, centric occlusion, no mirror",
+    display="Intraoral photo,front ,centric occl.,no mirror",
     definition="Intraoral, Frontal View, Centric Occlusion, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -210,7 +210,7 @@ IV07 = CodeSystemConcept(
 
 IV08 = CodeSystemConcept(
     code=f"{make_code('IV08')}",
-    display="Intraoral photo, frontal view, centric relation, no mirror",
+    display="Intraoral photo,frontal,centric relation,no mirror",
     definition="Intraoral, Frontal View, Centric Relation, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -234,7 +234,7 @@ IV08 = CodeSystemConcept(
 
 IV09 = CodeSystemConcept(
     code=f"{make_code('IV09')}",
-    display="Intraoral photo, frontal view, teeth apart, no mirror",
+    display="Intraoral photo,frontal,teeth apart,no mirror",
     definition="Intraoral, Frontal View, Teeth Apart, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -258,7 +258,7 @@ IV09 = CodeSystemConcept(
 
 IV10 = CodeSystemConcept(
     code=f"{make_code('IV10')}",
-    display="Intraoral photo, frontal view, mouth open, no mirror",
+    display="Intraoral photo,frontal,mouth open,no mirror",
     definition="Intraoral, Frontal View, Mouth Open, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -282,7 +282,7 @@ IV10 = CodeSystemConcept(
 
 IV11 = CodeSystemConcept(
     code=f"{make_code('IV11')}",
-    display="Intraoral photo, frontal view inferior, centric occlusion, no mirror",
+    display="Intraoral photo,front view inferior,centric occl.,no mirror",
     definition="Intraoral, Frontal View Inferior (showing depth of bite and overjet), Centric Occlusion, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -306,7 +306,7 @@ IV11 = CodeSystemConcept(
 
 IV12 = CodeSystemConcept(
     code=f"{make_code('IV12')}",
-    display="Intraoral photo, frontal view inferior, centric relation, no mirror",
+    display="Intraoral photo,front view inferior,centric relation,no mirror",
     definition="Intraoral, Frontal View Inferior (showing depth of bite and overjet), Centric Relation, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -330,7 +330,7 @@ IV12 = CodeSystemConcept(
 
 IV13 = CodeSystemConcept(
     code=f"{make_code('IV13')}",
-    display="Intraoral photo, frontal view, showing tongue thrust, no mirror",
+    display="Intraoral photo,frontal,tongue thrust,no mirror",
     definition="Intraoral, Frontal View, showing Tongue Thrust, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -354,7 +354,7 @@ IV13 = CodeSystemConcept(
 
 IV14 = CodeSystemConcept(
     code=f"{make_code('IV14')}",
-    display="Intraoral photo, right lateral view, centric occlusion, showing overjet, no mirror",
+    display="Intraoral photo,right lateral,centric occl.,overjet,no mirror",
     definition="Intraoral, Right Lateral View, Centric Occlusion, showing Overjet, No Mirror (Direct View showing overjet from the side)",
     designation=[
         CodeSystemConceptDesignation(
@@ -378,7 +378,7 @@ IV14 = CodeSystemConcept(
 
 IV15 = CodeSystemConcept(
     code=f"{make_code('IV15')}",
-    display="Intraoral photo, right lateral view, centric relation, showing overjet, no mirror",
+    display="Intraoral photo,right lateral,centric relation,overjet,no mirror",
     definition="Intraoral, Right Lateral View, Centric Relation, showing Overjet, No Mirror (Direct View showing overjet from the side)",
     designation=[
         CodeSystemConceptDesignation(
@@ -402,7 +402,7 @@ IV15 = CodeSystemConcept(
 
 IV16 = CodeSystemConcept(
     code=f"{make_code('IV16')}",
-    display="Intraoral photo, left lateral view, centric occlusion, showing overjet, no mirror",
+    display="Intraoral photo,left lateral,centric occl.,overjet,no mirror",
     definition="Intraoral, Left Lateral View, Centric Occlusion, showing Overjet, No Mirror (Direct View showing overjet from the side)",
     designation=[
         CodeSystemConceptDesignation(
@@ -426,7 +426,7 @@ IV16 = CodeSystemConcept(
 
 IV17 = CodeSystemConcept(
     code=f"{make_code('IV17')}",
-    display="Intraoral photo, left lateral view, centric relation, showing overjet, no mirror",
+    display="Intraoral photo,left lateral,centric relation,overjet,no mirror",
     definition="Intraoral, Left Lateral View, Centric Relation, showing Overjet, No Mirror (Direct View showing overjet from the side)",
     designation=[
         CodeSystemConceptDesignation(
@@ -450,7 +450,7 @@ IV17 = CodeSystemConcept(
 
 IV18 = CodeSystemConcept(
     code=f"{make_code('IV18')}",
-    display="Intraoral photo, left buccal, centric occlusion, no mirror",
+    display="Intraoral photo,left buccal,centric occl.,no mirror",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -474,7 +474,7 @@ IV18 = CodeSystemConcept(
 
 IV19 = CodeSystemConcept(
     code=f"{make_code('IV19')}",
-    display="Intraoral photo, left buccal, centric occlusion, with mirror",
+    display="Intraoral photo,left buccal,centric occl.,with mirror",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -498,7 +498,7 @@ IV19 = CodeSystemConcept(
 
 IV20 = CodeSystemConcept(
     code=f"{make_code('IV20')}",
-    display="Intraoral photo, left buccal, centric occlusion, mirror, corrected",
+    display="Intraoral photo,left buccal,centric occl.,mirror,corrected",
     definition="Intraoral, Left Buccal Segment, Centric Occlusion, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -522,7 +522,7 @@ IV20 = CodeSystemConcept(
 
 IV21 = CodeSystemConcept(
     code=f"{make_code('IV21')}",
-    display="Intraoral photo, left buccal, centric relation, no mirror",
+    display="Intraoral photo,left buccal,centric relation,no mirror",
     definition="Intraoral, Left Buccal Segment, Centric Relation, No Mirror (Direct View)",
     designation=[
         CodeSystemConceptDesignation(
@@ -546,7 +546,7 @@ IV21 = CodeSystemConcept(
 
 IV22 = CodeSystemConcept(
     code=f"{make_code('IV22')}",
-    display="Intraoral photo, left buccal, centric relation, with mirror",
+    display="Intraoral photo,left buccal,centric relation,with mirror",
     definition="Intraoral, Left Buccal Segment, Centric Relation, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -570,7 +570,7 @@ IV22 = CodeSystemConcept(
 
 IV23 = CodeSystemConcept(
     code=f"{make_code('IV23')}",
-    display="Intraoral photo, left buccal, centric relation, mirror, corrected",
+    display="Intraoral photo,left buccal,centric relation,mirror,corrected",
     definition="Intraoral, Left Buccal Segment, Centric Relation, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -594,7 +594,7 @@ IV23 = CodeSystemConcept(
 
 IV24 = CodeSystemConcept(
     code=f"{make_code('IV24')}",
-    display="Intraoral photo, maxillary, mouth open, occlusal view, with mirror",
+    display="Intraoral photo,maxillary,mouth open,occlusal,with mirror",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -618,7 +618,7 @@ IV24 = CodeSystemConcept(
 
 IV25 = CodeSystemConcept(
     code=f"{make_code('IV25')}",
-    display="Intraoral photo, maxillary, mouth open, occlusal view, mirror, corrected",
+    display="Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Maxillary, Mouth Open, Occlusal View, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -642,7 +642,7 @@ IV25 = CodeSystemConcept(
 
 IV26 = CodeSystemConcept(
     code=f"{make_code('IV26')}",
-    display="Intraoral photo, mandibular, mouth open, occlusal view, with mirror",
+    display="Intraoral photo,mandibular,mouth open,occlusal,with mirror",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror",
     designation=[
         CodeSystemConceptDesignation(
@@ -666,7 +666,7 @@ IV26 = CodeSystemConcept(
 
 IV27 = CodeSystemConcept(
     code=f"{make_code('IV27')}",
-    display="Intraoral photo, mandibular, mouth open, occlusal view, mirror, corrected",
+    display="Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
     definition="Intraoral, Mandibular, Mouth Open, Occlusal View, With Mirror, But Corrected",
     designation=[
         CodeSystemConceptDesignation(
@@ -690,7 +690,7 @@ IV27 = CodeSystemConcept(
 
 IV28 = CodeSystemConcept(
     code=f"{make_code('IV28')}",
-    display="Intraoral photo, showing gingival recession",
+    display="Intraoral photo,showing gingival recession",
     definition="Intraoral, showing Gingival Recession. May include ISO tooth numbers of the affected teeth.",
     designation=[
         CodeSystemConceptDesignation(
@@ -714,7 +714,7 @@ IV28 = CodeSystemConcept(
 
 IV29 = CodeSystemConcept(
     code=f"{make_code('IV29')}",
-    display="Intraoral photo, showing frenum",
+    display="Intraoral photo,showing frenum",
     definition="Intraoral, showing Frenum. May include ISO tooth numbers designating frenum's location.",
     designation=[
         CodeSystemConceptDesignation(
@@ -738,7 +738,7 @@ IV29 = CodeSystemConcept(
 
 IV30 = CodeSystemConcept(
     code=f"{make_code('IV30')}",
-    display="Intraoral photo, using photo accessory",
+    display="Intraoral photo,using photo accessory",
     definition="Intraoral, any view using a photo accessory device such as a contraster to provide a solid background or black mirror ([modifier] is any set of IO modifier as specified above)",
     designation=[
         CodeSystemConceptDesignation(
