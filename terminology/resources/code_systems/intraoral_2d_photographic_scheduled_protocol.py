@@ -25,7 +25,7 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
                 }
             ],
             url=self.static_url(),
-            version="1.2.0",
+            version="1.3.0",
             name="Intraoral2DPhotographicScheduledProtocol",
             title="Intraoral 2D Photographic Scheduled Protocol",
             status="draft",
