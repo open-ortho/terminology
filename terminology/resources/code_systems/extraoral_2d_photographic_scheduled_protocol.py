@@ -43,8 +43,8 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
 EV01 = CodeSystemConcept(
     code=f"{make_code('EV01')}",
-    display="Extraoral photo, right profile, lips relaxed, centric occlusion",
-    definition="Photographic extraoral image of right half of face with lips relaxed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,right profile,lips relaxed,centric occlusion",
+    definition="Extraoral, Right Profile (Subject is facing observer's right), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-01",
@@ -67,8 +67,8 @@ EV01 = CodeSystemConcept(
 
 EV02 = CodeSystemConcept(
     code=f"{make_code('EV02')}",
-    display="Extraoral photo, right profile, lips relaxed, centric relation",
-    definition="Photographic extraoral image of right half of face with lips relaxed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,right profile,lips relaxed,centric relation",
+    definition="Extraoral, Right Profile (Subject is facing observe right), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-02",
@@ -91,8 +91,8 @@ EV02 = CodeSystemConcept(
 
 EV03 = CodeSystemConcept(
     code=f"{make_code('EV03')}",
-    display="Extraoral photo, right profile, lips closed, centric occlusion",
-    definition="Photographic extraoral image of right half of face with lips closed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,right profile,lips closed,centric occlusion",
+    definition="Extraoral, Right Profile (Subject is facing observer's right), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-03",
@@ -115,8 +115,8 @@ EV03 = CodeSystemConcept(
 
 EV04 = CodeSystemConcept(
     code=f"{make_code('EV04')}",
-    display="Extraoral photo, right profile, lips closed, centric relation",
-    definition="Photographic extraoral image of right half of face with lips closed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,right profile,lips closed,centric relation",
+    definition="Extraoral, Right Profile (Patient is facing observer's right), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-04",
@@ -139,8 +139,8 @@ EV04 = CodeSystemConcept(
 
 EV05 = CodeSystemConcept(
     code=f"{make_code('EV05')}",
-    display="Extraoral photo, right profile, full smile, centric occlusion",
-    definition="Photographic extraoral image of right half of face with full smile and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,right profile,full smile,centric occlusion",
+    definition="Extraoral, Right profile (Patient is facing observer's right), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-05",
@@ -163,8 +163,8 @@ EV05 = CodeSystemConcept(
 
 EV06 = CodeSystemConcept(
     code=f"{make_code('EV06')}",
-    display="Extraoral photo, right profile, full smile, centric relation",
-    definition="Photographic extraoral image of right half of face with full smile and jaws in centric relation (record artifact)",
+    display="Extraoral photo,right profile,full smile,centric relation",
+    definition="Extraoral, Right Profile (Patient is facing observer's right), Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-06",
@@ -187,8 +187,8 @@ EV06 = CodeSystemConcept(
 
 EV07 = CodeSystemConcept(
     code=f"{make_code('EV07')}",
-    display="Extraoral, right profile, mandible postured forward",
-    definition="Extraoral, Right Profile (subject is facing observer's right), Mandible Postured Forward",
+    display="Extraoral photo,right profile,mandible postured forward",
+    definition="Extraoral, Right Profile (Patient is facing observer's right), Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-07",
@@ -212,7 +212,7 @@ EV07 = CodeSystemConcept(
 EV08 = CodeSystemConcept(
     code=f"{make_code('EV08')}",
     display="Extraoral photo,right profile,lips relaxed,centric occlusion,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with lips relaxed and teeth in centric occlusion (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-08",
@@ -236,7 +236,7 @@ EV08 = CodeSystemConcept(
 EV09 = CodeSystemConcept(
     code=f"{make_code('EV09')}",
     display="Extraoral photo,right profile,lips relaxed,centric relation,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with lips relaxed and jaws in centric relation (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-09",
@@ -260,7 +260,7 @@ EV09 = CodeSystemConcept(
 EV10 = CodeSystemConcept(
     code=f"{make_code('EV10')}",
     display="Extraoral photo,right profile,lips closed,centric occlusion,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with lips closed and teeth in centric occlusion (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-10",
@@ -284,7 +284,7 @@ EV10 = CodeSystemConcept(
 EV11 = CodeSystemConcept(
     code=f"{make_code('EV11')}",
     display="Extraoral photo,right profile,lips closed,centric relation,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with lips closed and jaws in centric relation (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-11",
@@ -308,7 +308,7 @@ EV11 = CodeSystemConcept(
 EV12 = CodeSystemConcept(
     code=f"{make_code('EV12')}",
     display="Extraoral photo,right profile,full smile,centric occlusion,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with full smile and teeth in centric occlusion (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-12",
@@ -332,7 +332,7 @@ EV12 = CodeSystemConcept(
 EV13 = CodeSystemConcept(
     code=f"{make_code('EV13')}",
     display="Extraoral photo,right profile,full smile,centric relation,45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with full smile and jaws in centric relation (record artifact)",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-13",
@@ -355,8 +355,8 @@ EV13 = CodeSystemConcept(
 
 EV14 = CodeSystemConcept(
     code=f"{make_code('EV14')}",
-    display="Extraoral photo, right profile, mandible postured forward, 45",
-    definition="Photographic extraoral image of 45 degree view of right half of face with mandible postured forward (record artifact)",
+    display="Extraoral photo,right profile,mandible postured forward,45",
+    definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-14",
@@ -379,8 +379,8 @@ EV14 = CodeSystemConcept(
 
 EV15 = CodeSystemConcept(
     code=f"{make_code('EV15')}",
-    display="Extraoral photo, full face, lips relaxed, centric occlusion",
-    definition="Photographic extraoral image of full face with lips relaxed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,full face,lips relaxed,centric occlusion",
+    definition="Extraoral, Full Face, Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-15",
@@ -403,8 +403,8 @@ EV15 = CodeSystemConcept(
 
 EV16 = CodeSystemConcept(
     code=f"{make_code('EV16')}",
-    display="Extraoral photo, full face, lips relaxed, centric relation",
-    definition="Photographic extraoral image of full face with lips relaxed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,full face,lips relaxed,centric relation",
+    definition="Extraoral, Full Face, Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-16",
@@ -427,8 +427,8 @@ EV16 = CodeSystemConcept(
 
 EV17 = CodeSystemConcept(
     code=f"{make_code('EV17')}",
-    display="Extraoral photo, full face, lips closed, centric occlusion",
-    definition="Photographic extraoral image of full face with lips closed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,full face,lips closed,centric occlusion",
+    definition="Extraoral, Full Face, Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-17",
@@ -451,8 +451,8 @@ EV17 = CodeSystemConcept(
 
 EV18 = CodeSystemConcept(
     code=f"{make_code('EV18')}",
-    display="Extraoral photo, full face, lips closed, centric relation",
-    definition="Photographic extraoral image of full face with lips closed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,full face,lips closed,centric relation",
+    definition="Extraoral, Full Face, Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-18",
@@ -475,8 +475,8 @@ EV18 = CodeSystemConcept(
 
 EV19 = CodeSystemConcept(
     code=f"{make_code('EV19')}",
-    display="Extraoral photo, full face, full smile, centric occlusion",
-    definition="Photographic extraoral image of full face with full smile and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,full face,full smile,centric occlusion",
+    definition="Extraoral, Full Face, Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-19",
@@ -499,8 +499,8 @@ EV19 = CodeSystemConcept(
 
 EV20 = CodeSystemConcept(
     code=f"{make_code('EV20')}",
-    display="Extraoral photo, full face, full smile, centric relation",
-    definition="Photographic extraoral image of full face with full smile and jaws in centric relation (record artifact)",
+    display="Extraoral photo,full face,full smile,centric relation",
+    definition="Extraoral, Full Face, Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-20",
@@ -523,8 +523,8 @@ EV20 = CodeSystemConcept(
 
 EV21 = CodeSystemConcept(
     code=f"{make_code('EV21')}",
-    display="Extraoral photo, full face, mandible postured forward",
-    definition="Photographic image extraoral with mandible postured forward (record artifact)",
+    display="Extraoral photo,full face,mandible postured forward",
+    definition="Extraoral, Full Face, Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-21",
@@ -547,8 +547,8 @@ EV21 = CodeSystemConcept(
 
 EV22 = CodeSystemConcept(
     code=f"{make_code('EV22')}",
-    display="Extraoral photo, left profile, lips relaxed, centric occlusion",
-    definition="Photographic extraoral image of left half of face with lips relaxed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,left profile,lips relaxed,centric occlusion",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-22",
@@ -571,8 +571,8 @@ EV22 = CodeSystemConcept(
 
 EV23 = CodeSystemConcept(
     code=f"{make_code('EV23')}",
-    display="Extraoral photo, left profile, lips relaxed, centric relation",
-    definition="Photographic extraoral image of left half of face with lips relaxed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,left profile,lips relaxed,centric relation",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-23",
@@ -595,8 +595,8 @@ EV23 = CodeSystemConcept(
 
 EV24 = CodeSystemConcept(
     code=f"{make_code('EV24')}",
-    display="Extraoral photo, left profile, lips closed, centric occlusion",
-    definition="Photographic extraoral image of left half of face with lips closed and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,left profile,lips closed,centric occlusion",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-24",
@@ -619,8 +619,8 @@ EV24 = CodeSystemConcept(
 
 EV25 = CodeSystemConcept(
     code=f"{make_code('EV25')}",
-    display="Extraoral photo, left profile, lips closed, centric relation",
-    definition="Photographic extraoral image of left half of face with lips closed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,left profile,lips closed,centric relation",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-25",
@@ -643,8 +643,8 @@ EV25 = CodeSystemConcept(
 
 EV26 = CodeSystemConcept(
     code=f"{make_code('EV26')}",
-    display="Extraoral photo, left profile, full smile, centric occlusion",
-    definition="Photographic extraoral image of left half of face with full smile and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,left profile,full smile,centric occlusion",
+    definition="Extraoral, Left profile (Patient is facing observer's left), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-26",
@@ -667,8 +667,8 @@ EV26 = CodeSystemConcept(
 
 EV27 = CodeSystemConcept(
     code=f"{make_code('EV27')}",
-    display="Extraoral photo, left profile, full smile, centric relation",
-    definition="Photographic extraoral image of left half of face with full smile and jaws in centric relation (record artifact)",
+    display="Extraoral photo,left profile,full smile,centric relation",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-27",
@@ -691,8 +691,8 @@ EV27 = CodeSystemConcept(
 
 EV28 = CodeSystemConcept(
     code=f"{make_code('EV28')}",
-    display="Extraoral, left profile, mandible postured forward",
-    definition="Extraoral, Left Profile (subject is facing observer's left), Mandible Postured Forward",
+    display="Extraoral photo,left profile,mandible postured forward",
+    definition="Extraoral, Left Profile (Patient is facing observer's left), Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-28",
@@ -716,7 +716,7 @@ EV28 = CodeSystemConcept(
 EV29 = CodeSystemConcept(
     code=f"{make_code('EV29')}",
     display="Extraoral photo,left profile,lips relaxed,centric occlusion,45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with lips relaxed and teeth in centric occlusion (record artifact)",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-29",
@@ -740,7 +740,7 @@ EV29 = CodeSystemConcept(
 EV30 = CodeSystemConcept(
     code=f"{make_code('EV30')}",
     display="Extraoral photo,left profile,lips relaxed,centric relation,45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with lips relaxed and jaws in centric relation (record artifact)",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-30",
@@ -764,7 +764,7 @@ EV30 = CodeSystemConcept(
 EV31 = CodeSystemConcept(
     code=f"{make_code('EV31')}",
     display="Extraoral photo,left profile,lips closed,centric occlusion,45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with lips closed and teeth in centric occlusion (record artifact)",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-31",
@@ -787,8 +787,8 @@ EV31 = CodeSystemConcept(
 
 EV32 = CodeSystemConcept(
     code=f"{make_code('EV32')}",
-    display="Extraoral photo, left profile, lips closed, centric relation, 45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with lips closed and jaws in centric relation (record artifact)",
+    display="Extraoral photo,left profile,lips closed,centric relation,45",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-32",
@@ -811,8 +811,8 @@ EV32 = CodeSystemConcept(
 
 EV33 = CodeSystemConcept(
     code=f"{make_code('EV33')}",
-    display="Extraoral photo, left profile, full smile, centric occlusion, 45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with full smile and teeth in centric occlusion (record artifact)",
+    display="Extraoral photo,left profile,full smile,centric occlusion,45",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-33",
@@ -835,8 +835,8 @@ EV33 = CodeSystemConcept(
 
 EV34 = CodeSystemConcept(
     code=f"{make_code('EV34')}",
-    display="Extraoral photo, left profile, full smile, centric relation, 45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with full smile and jaws in centric relation (record artifact)",
+    display="Extraoral photo,left profile,full smile,centric relation,45",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left, Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-34",
@@ -859,8 +859,8 @@ EV34 = CodeSystemConcept(
 
 EV35 = CodeSystemConcept(
     code=f"{make_code('EV35')}",
-    display="Extraoral photo, left profile, mandible postured forward, 45",
-    definition="Photographic extraoral image of 45 degree view of left half of face with mandible postured forward (record artifact)",
+    display="Extraoral photo,left profile,mandible postured forward,45",
+    definition="Extraoral, 45° Left Profile (Patient turns toward observer's left, Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-35",
@@ -883,8 +883,8 @@ EV35 = CodeSystemConcept(
 
 EV36 = CodeSystemConcept(
     code=f"{make_code('EV36')}",
-    display="Extraoral photo, other face, inferior view",
-    definition="Photographic extraoral image of inferior view of face (record artifact)",
+    display="Extraoral photo,other face,inferior view",
+    definition="Extraoral, Other Face (head tipped back), Inferior View (showing lower border of mandible, nares, infraorbital rim contours, forehead contours)",
     designation=[
         CodeSystemConceptDesignation(
             value="EV-36",
@@ -907,7 +907,7 @@ EV36 = CodeSystemConcept(
 
 EV37 = CodeSystemConcept(
     code=f"{make_code('EV37')}",
-    display="Extraoral photo, other face, superior view",
+    display="Extraoral photo,other face,superior view",
     definition="Extraoral, Other Face (viewed from above), Superior View (showing forehead, infraorbital rim contour, dorsum of nose, upper lip, chin)",
     designation=[
         CodeSystemConceptDesignation(
@@ -931,7 +931,7 @@ EV37 = CodeSystemConcept(
 
 EV38 = CodeSystemConcept(
     code=f"{make_code('EV38')}",
-    display="Extraoral photo, other face, close-up smile",
+    display="Extraoral photo,other face,close-up smile",
     definition="Extraoral, Other Face, Close-Up Smile (with lips)",
     designation=[
         CodeSystemConceptDesignation(
@@ -955,7 +955,7 @@ EV38 = CodeSystemConcept(
 
 EV39 = CodeSystemConcept(
     code=f"{make_code('EV39')}",
-    display="Extraoral photo, occlusal cant",
+    display="Extraoral photo,other face,occlusal cant",
     definition="Extraoral, Other Face, Occlusal Cant (e.g., tongue depressor between the teeth)",
     designation=[
         CodeSystemConceptDesignation(
@@ -979,7 +979,7 @@ EV39 = CodeSystemConcept(
 
 EV40 = CodeSystemConcept(
     code=f"{make_code('EV40')}",
-    display="Extraoral photo, forensic interest",
+    display="Extraoral photo,other face,forensic interest",
     definition="Extraoral, Other Face, Forensic Interest (tattoos, jewelry, scars)",
     designation=[
         CodeSystemConceptDesignation(
@@ -1003,7 +1003,7 @@ EV40 = CodeSystemConcept(
 
 EV41 = CodeSystemConcept(
     code=f"{make_code('EV41')}",
-    display="Extraoral photo, anomalies",
+    display="Extraoral photo,other face,anomalies",
     definition="Extraoral, Other Face, Anomalies (ears, skin tags, etc.)",
     designation=[
         CodeSystemConceptDesignation(
@@ -1027,7 +1027,7 @@ EV41 = CodeSystemConcept(
 
 EV42 = CodeSystemConcept(
     code=f"{make_code('EV42')}",
-    display="Extraoral photo, full face, mouth open",
+    display="Extraoral photo,full face,mouth open",
     definition="Extraoral, Full Face, Mouth Open",
     designation=[
         CodeSystemConceptDesignation(
@@ -1051,7 +1051,7 @@ EV42 = CodeSystemConcept(
 
 EV43 = CodeSystemConcept(
     code=f"{make_code('EV43')}",
-    display="Extraoral photo, full face, demonstrating nerve weakness",
+    display="Extraoral photo,full face,demonstrating nerve weakness",
     definition="Extraoral, Full Face, demonstrating Nerve Weakness",
     designation=[
         CodeSystemConceptDesignation(
