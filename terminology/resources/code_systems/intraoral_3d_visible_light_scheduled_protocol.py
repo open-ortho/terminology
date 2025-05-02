@@ -41,7 +41,7 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
 IV3D01 = CodeSystemConcept(
     code=f"{make_code('IV3D01')}",
-    display="Intraoral 3D surface, maxillary dentition",
+    display="Intraoral 3D surface,maxillary dentition",
     definition="Intraoral 3D Surface of the Maxillary Dentition",
     designation=[
         CodeSystemConceptDesignation(
@@ -65,7 +65,7 @@ IV3D01 = CodeSystemConcept(
 
 IV3D02 = CodeSystemConcept(
     code=f"{make_code('IV3D02')}",
-    display="Intraoral 3D surface, mandibular dentition",
+    display="Intraoral 3D surface,mandibular dentition",
     definition="Intraoral 3D Surface of the Mandibular Dentition",
     designation=[
         CodeSystemConceptDesignation(
@@ -89,7 +89,7 @@ IV3D02 = CodeSystemConcept(
 
 IV3D03 = CodeSystemConcept(
     code=f"{make_code('IV3D03')}",
-    display="Intraoral 3D surface, occluding maxillary and mandibular teeth",
+    display="Intraoral 3D surface,occluding maxillary and mandibular teeth",
     definition="Intraoral 3D Surface of Occluding Maxillary and Mandibular Teeth (showing how the teeth fit together, i.e. the bite)",
     designation=[
         CodeSystemConceptDesignation(
