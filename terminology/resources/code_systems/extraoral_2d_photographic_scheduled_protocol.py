@@ -26,7 +26,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
                 }
             ],
             url=self.static_url(),
-            version="1.2.1",
+            version="1.2.2",
             name="Extraoral2DPhotographicScheduledProtocol",
             title="Extraoral 2D Photographic Scheduled Protocol",
             status="draft",
@@ -211,7 +211,7 @@ EV07 = CodeSystemConcept(
 
 EV08 = CodeSystemConcept(
     code=f"{make_code('EV08')}",
-    display="Extraoral photo,right profile,lips relaxed,centric occlusion,45",
+    display="Extraoral photo,right profile 45,lips relaxed,centric occlusion",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -235,7 +235,7 @@ EV08 = CodeSystemConcept(
 
 EV09 = CodeSystemConcept(
     code=f"{make_code('EV09')}",
-    display="Extraoral photo,right profile,lips relaxed,centric relation,45",
+    display="Extraoral photo,right profile 45,lips relaxed,centric relation",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -259,7 +259,7 @@ EV09 = CodeSystemConcept(
 
 EV10 = CodeSystemConcept(
     code=f"{make_code('EV10')}",
-    display="Extraoral photo,right profile,lips closed,centric occlusion,45",
+    display="Extraoral photo,right profile 45,lips closed,centric occlusion",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -283,7 +283,7 @@ EV10 = CodeSystemConcept(
 
 EV11 = CodeSystemConcept(
     code=f"{make_code('EV11')}",
-    display="Extraoral photo,right profile,lips closed,centric relation,45",
+    display="Extraoral photo,right profile 45,lips closed,centric relation",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -307,7 +307,7 @@ EV11 = CodeSystemConcept(
 
 EV12 = CodeSystemConcept(
     code=f"{make_code('EV12')}",
-    display="Extraoral photo,right profile,full smile,centric occlusion,45",
+    display="Extraoral photo,right profile 45,full smile,centric occlusion",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -331,7 +331,7 @@ EV12 = CodeSystemConcept(
 
 EV13 = CodeSystemConcept(
     code=f"{make_code('EV13')}",
-    display="Extraoral photo,right profile,full smile,centric relation,45",
+    display="Extraoral photo,right profile 45,full smile,centric relation",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -355,7 +355,7 @@ EV13 = CodeSystemConcept(
 
 EV14 = CodeSystemConcept(
     code=f"{make_code('EV14')}",
-    display="Extraoral photo,right profile,mandible postured forward,45",
+    display="Extraoral photo,right profile 45,mandible postured forward",
     definition="Extraoral, 45° Right Profile (Patient turns toward observer's right), Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(
@@ -715,7 +715,7 @@ EV28 = CodeSystemConcept(
 
 EV29 = CodeSystemConcept(
     code=f"{make_code('EV29')}",
-    display="Extraoral photo,left profile,lips relaxed,centric occlusion,45",
+    display="Extraoral photo,left profile 45,lips relaxed,centric occlusion",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -739,7 +739,7 @@ EV29 = CodeSystemConcept(
 
 EV30 = CodeSystemConcept(
     code=f"{make_code('EV30')}",
-    display="Extraoral photo,left profile,lips relaxed,centric relation,45",
+    display="Extraoral photo,left profile 45,lips relaxed,centric relation",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -763,7 +763,7 @@ EV30 = CodeSystemConcept(
 
 EV31 = CodeSystemConcept(
     code=f"{make_code('EV31')}",
-    display="Extraoral photo,left profile,lips closed,centric occlusion,45",
+    display="Extraoral photo,left profile 45,lips closed,centric occlusion",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Closed, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -787,7 +787,7 @@ EV31 = CodeSystemConcept(
 
 EV32 = CodeSystemConcept(
     code=f"{make_code('EV32')}",
-    display="Extraoral photo,left profile,lips closed,centric relation,45",
+    display="Extraoral photo,left profile 45,lips closed,centric relation",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Lips Closed, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -811,7 +811,7 @@ EV32 = CodeSystemConcept(
 
 EV33 = CodeSystemConcept(
     code=f"{make_code('EV33')}",
-    display="Extraoral photo,left profile,full smile,centric occlusion,45",
+    display="Extraoral photo,left profile 45,full smile,centric occlusion",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left), Full Smile, Centric Occlusion",
     designation=[
         CodeSystemConceptDesignation(
@@ -835,7 +835,7 @@ EV33 = CodeSystemConcept(
 
 EV34 = CodeSystemConcept(
     code=f"{make_code('EV34')}",
-    display="Extraoral photo,left profile,full smile,centric relation,45",
+    display="Extraoral photo,left profile 45,full smile,centric relation",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left, Full Smile, Centric Relation",
     designation=[
         CodeSystemConceptDesignation(
@@ -859,7 +859,7 @@ EV34 = CodeSystemConcept(
 
 EV35 = CodeSystemConcept(
     code=f"{make_code('EV35')}",
-    display="Extraoral photo,left profile,mandible postured forward,45",
+    display="Extraoral photo,left profile 45,mandible postured forward",
     definition="Extraoral, 45° Left Profile (Patient turns toward observer's left, Mandible Postured Forward",
     designation=[
         CodeSystemConceptDesignation(

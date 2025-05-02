@@ -24,7 +24,7 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
                 }
             ],
             url=self.static_url(),
-            version="1.2.0",
+            version="1.2.1",
             name="Extraoral3DVisibleLightScheduledProtocol",
             title="Extraoral 3D Visible Light Scheduled Protocol",
             status="draft",
@@ -41,8 +41,8 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
 EV3D01 = CodeSystemConcept(
     code=f"{make_code('EV3D01')}",
-    display="Extraoral 3D surface, full face",
-    definition="Whole head, lips closed, centric occlusion",
+    display="Extraoral 3D surface,whole head,lips closed,centric occlusion",
+    definition="Extraoral Whole head - lips closed, CO",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-01",
@@ -65,8 +65,8 @@ EV3D01 = CodeSystemConcept(
 
 EV3D02 = CodeSystemConcept(
     code=f"{make_code('EV3D02')}",
-    display="Extraoral 3D surface, right profile",
-    definition="Whole head, lips closed, centric relation",
+    display="Extraoral 3D surface,whole head,lips closed,centric relation",
+    definition="Extraoral Whole head - lips closed, CR",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-02",
@@ -89,8 +89,8 @@ EV3D02 = CodeSystemConcept(
 
 EV3D03 = CodeSystemConcept(
     code=f"{make_code('EV3D03')}",
-    display="Extraoral 3D surface, left profile",
-    definition="Whole head, lips relaxed, centric occlusion",
+    display="Extraoral 3D surface,whole head,lips relaxed,centric occlusion",
+    definition="Extraoral Whole head - lips relaxed, CO",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-03",
@@ -113,8 +113,8 @@ EV3D03 = CodeSystemConcept(
 
 EV3D04 = CodeSystemConcept(
     code=f"{make_code('EV3D04')}",
-    display="Extraoral 3D surface, whole head, lips relaxed, centric relation",
-    definition="Whole head, lips relaxed, centric relation",
+    display="Extraoral 3D surface,whole head,lips relaxed,centric relation",
+    definition="Extraoral Whole head - lips relaxed, CR",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-04",
@@ -137,8 +137,8 @@ EV3D04 = CodeSystemConcept(
 
 EV3D05 = CodeSystemConcept(
     code=f"{make_code('EV3D05')}",
-    display="Extraoral 3D surface, whole head, full smile, centric occlusion",
-    definition="Whole head, full smile, centric occlusion",
+    display="Extraoral 3D surface,whole head,full smile,centric occlusion",
+    definition="Extraoral Whole head - smile, CO",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-05",
@@ -161,8 +161,8 @@ EV3D05 = CodeSystemConcept(
 
 EV3D06 = CodeSystemConcept(
     code=f"{make_code('EV3D06')}",
-    display="Extraoral 3D surface, whole head, full smile, centric relation",
-    definition="Whole head, full smile, centric relation",
+    display="Extraoral 3D surface,whole head,full smile,centric relation",
+    definition="Extraoral Whole head - smile, CR",
     designation=[
         CodeSystemConceptDesignation(
             value="EV3D-06",
