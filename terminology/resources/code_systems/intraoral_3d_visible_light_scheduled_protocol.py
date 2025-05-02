@@ -24,7 +24,7 @@ class Intraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
                 }
             ],
             url=self.static_url(),
-            version="1.1.0",
+            version="1.1.1",
             name="Intraoral3DVisibleLightScheduledProtocol",
             title="Intraoral 3D Visible Light Scheduled Protocol",
             status="draft",

@@ -8,12 +8,12 @@
             "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.2"
         }
     ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "name": "Extraoral3DVisibleLightScheduledProtocol",
     "title": "Extraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",
     "experimental": true,
-    "date": "2025-04-10",
+    "date": "2025-05-02",
     "publisher": "OpenOrtho",
     "description": "Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck",
     "caseSensitive": true,
@@ -21,8 +21,8 @@
     "concept": [
         {
             "code": "EV3D01",
-            "display": "Extraoral 3D surface, full face",
-            "definition": "Whole head, lips closed, centric occlusion",
+            "display": "Extraoral 3D surface,whole head,lips closed,centric occlusion",
+            "definition": "Extraoral Whole head - lips closed, CO",
             "designation": [
                 {
                     "use": {
@@ -44,8 +44,8 @@
         },
         {
             "code": "EV3D02",
-            "display": "Extraoral 3D surface, right profile",
-            "definition": "Whole head, lips closed, centric relation",
+            "display": "Extraoral 3D surface,whole head,lips closed,centric relation",
+            "definition": "Extraoral Whole head - lips closed, CR",
             "designation": [
                 {
                     "use": {
@@ -67,8 +67,8 @@
         },
         {
             "code": "EV3D03",
-            "display": "Extraoral 3D surface, left profile",
-            "definition": "Whole head, lips relaxed, centric occlusion",
+            "display": "Extraoral 3D surface,whole head,lips relaxed,centric occlusion",
+            "definition": "Extraoral Whole head - lips relaxed, CO",
             "designation": [
                 {
                     "use": {
@@ -90,8 +90,8 @@
         },
         {
             "code": "EV3D04",
-            "display": "Extraoral 3D surface, whole head, lips relaxed, centric relation",
-            "definition": "Whole head, lips relaxed, centric relation",
+            "display": "Extraoral 3D surface,whole head,lips relaxed,centric relation",
+            "definition": "Extraoral Whole head - lips relaxed, CR",
             "designation": [
                 {
                     "use": {
@@ -113,8 +113,8 @@
         },
         {
             "code": "EV3D05",
-            "display": "Extraoral 3D surface, whole head, full smile, centric occlusion",
-            "definition": "Whole head, full smile, centric occlusion",
+            "display": "Extraoral 3D surface,whole head,full smile,centric occlusion",
+            "definition": "Extraoral Whole head - smile, CO",
             "designation": [
                 {
                     "use": {
@@ -136,8 +136,8 @@
         },
         {
             "code": "EV3D06",
-            "display": "Extraoral 3D surface, whole head, full smile, centric relation",
-            "definition": "Whole head, full smile, centric relation",
+            "display": "Extraoral 3D surface,whole head,full smile,centric relation",
+            "definition": "Extraoral Whole head - smile, CR",
             "designation": [
                 {
                     "use": {
