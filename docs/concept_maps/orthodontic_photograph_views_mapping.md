@@ -33,6 +33,7 @@ Notes:
 | EV18    | Extraoral photo,full face,lips closed,centric relation          | 1306662009  | Photographic extraoral image of full face with lips closed and jaws in centric relation                               |
 | EV19    | Extraoral photo,full face,full smile,centric occlusion          | 1306664005  | Photographic extraoral image of full face with full smile and teeth in centric occlusion                              |
 | EV20    | Extraoral photo,full face,full smile,centric relation           | 1306665006  | Photographic extraoral image of full face with full smile and jaws in centric relation                                |
+| EV21    | Extraoral photo,full face,mandible postured forward             | 787611004   | Photographic image extraoral with mandible postured forward                                                            |
 | EV22    | Extraoral photo,left profile,lips relaxed,centric occlusion     | 1306656004  | Photographic extraoral image of left half of face with lips relaxed and teeth in centric occlusion                    |
 | EV23    | Extraoral photo,left profile,lips relaxed,centric relation      | 1306648002  | Photographic extraoral image of left half of face with lips relaxed and jaws in centric relation                      |
 | EV24    | Extraoral photo,left profile,lips closed,centric occlusion      | 1306649005  | Photographic extraoral image of left half of face with lips closed and teeth in centric occlusion                     |

@@ -52,6 +52,7 @@ PHOTO_VIEW_MAPPINGS = [
     ("extraoral_2d", "EV18", "1306662009"),
     ("extraoral_2d", "EV19", "1306664005"),
     ("extraoral_2d", "EV20", "1306665006"),
+    ("extraoral_2d", "EV21", "787611004"),
     ("extraoral_2d", "EV22", "1306656004"),
     ("extraoral_2d", "EV23", "1306648002"),
     ("extraoral_2d", "EV24", "1306649005"),
