@@ -9,7 +9,12 @@
 <br />
 <p align="center">
   <a href="https://github.com/open-ortho/terminology">
-    <img src="https://raw.githubusercontent.com/open-ortho/dicom4ortho/master/images/open-ortho.png" alt="Logo" width="80" height="80">
+    <img
+      src="https://raw.githubusercontent.com/open-ortho/dicom4ortho/master/images/open-ortho.png"
+      alt="Logo"
+      width="80"
+      height="80"
+    >
   </a>
 
   <h3 align="center">open-ortho terminology</h3>
@@ -34,11 +39,14 @@ This project serves as a centralized repository for orthodontic software develop
 
 The primary aim of this project is to implement in FHIR Terminology the views and view sets defined in *AMERICAN NATIONAL STANDARD INSTITUTE/AMERICAN DENTAL ASSOCIATION STANDARD NO. 1100 – 2D and 3D Orthodontic/Craniofacial/Forensic Photographic Views and View Sets*. By adhering to the ADA1100 standard, we ensure that the codes and terminologies used in orthodontic software are consistent, accurate, and interoperable across different systems. This is not an official FHIR CodeSystem. The purpose for this site is to provide developers codes necessary to move forward with their development, while the codes get added and approved in official nomenclatures (like SNOMED-CT).
 
+Historically, many of the photographic view codes defined by ADA-1100 were submitted to and added in SNOMED CT at the request of the American Dental Association to enable standards-compliant implementations. Those SNOMED concepts are clinically precise, but they do not include the concise, developer-friendly keywords used in ADA-1100 workflows. Open Ortho collected the ADA-1100 terminology, published it in these FHIR CodeSystems and ValueSets, and provides ConceptMaps to translate between the ADA-1100 identifiers and SNOMED CT codes. This keeps software-friendly keywords available while maintaining interoperability with SNOMED CT.
+
 ## Using The Codes
 
-The codes systems and code values should be built by the Makefile and deployed in `/docs`, where github can serve them. This should serve as a static service, for CodeSystem definitions.
+The code systems and code values are built by the Makefile and deployed in `docs/`,
+where GitHub Pages can serve them as static FHIR artifacts.
 
-The codesystems are availble through the following official URLs:
+The code systems, concept maps and value sets are available through the following official URLs:
 
 - http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol
 - http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol
@@ -48,35 +56,49 @@ The codesystems are availble through the following official URLs:
 - http://terminology.open-ortho.org/fhir/dentaleyepad-image-types
 - http://terminology.open-ortho.org/fhir/scheduled-protocol-expanded
 - http://terminology.open-ortho.org/fhir/scheduled-protocol
+- http://terminology.open-ortho.org/fhir/orthodontic-photograph-views
+- http://terminology.open-ortho.org/fhir/orthodontic-photograph-views-reverse
 
 ### Python
 
 If you want to use the codes directly in your Python project:
 
-    pip install open-ortho-terminology
+```bash
+pip install open-ortho-terminology
+```
 
-Then
+Then:
 
-    from terminology.resources.code_systems.extraoral_3d_visible_light_views import EV3D01, EV3D02, EV3D03 
+```python
+from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import (
+    EV3D01,
+    EV3D02,
+    EV3D03,
+)
 
-    print(EV3D01.code)
-    print(EV3D01.display)
-    print(EV3D01.definition)
+print(EV3D01.code)
+print(EV3D01.display)
+print(EV3D01.definition)
+```
 
-Convert codes to JSON
+Convert codes to JSON:
 
-    print(EV3D01.model_dump())
+```python
+print(EV3D01.model_dump())
+```
 
-Import the entire codesystem:
+Import the entire code system:
 
-    >>> from terminology.resources.code_systems.extraoral_3d_visible_light_views import Extraoral3DVisibleLightScheduledProtocolCodeSystem
-    >>> ev = Extraoral3DVisibleLightScheduledProtocolCodeSystem()
-    >>> ev.model_dump()
-    {'resourceType': 'CodeSystem', 'url': 'http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-views', 'version': '1.0.0', 'name': 'Extraoral3DVisibleLightViews', 'title': 'Extraoral 3D Visible Light Views', 'status': 'draft', 'experimental': True, 'date': '2025-01-14', 'publisher': 'Open Ortho', 'description': "Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck", 'caseSensitive': True, 'content': 'complete', 'concept': [{'code': 'EV3D01', 'display': 'EV3D-01 EO.WH.LC.CO', 'definition': 'Whole head, lips closed, centric occlusion'}, {'code': 'EV3D02', 'display': 'EV3D-02 EO.WH.LC.CR', 'definition': 'Whole head, lips closed, centric relation'}, {'code': 'EV3D03', 'display': 'EV3D-03 EO.WH.LR.CO', 'definition': 'Whole head, lips relaxed, centric occlusion'}, {'code': 'EV3D04', 'display': 'EV3D-04 EO.WH.LR.CR', 'definition': 'Whole head, lips relaxed, centric relation'}, {'code': 'EV3D05', 'display': 'EV3D-05 EO.WH.FS.CO', 'definition': 'Whole head, full smile, centric occlusion'}, {'code': 'EV3D06', 'display': 'EV3D-06 EO.WH.FS.CR', 'definition': 'Whole head, full smile, centric relation'}]}
-    >>> ev.concept[0].model_dump()
-    {'code': 'EV3D01', 'display': 'EV3D-01 EO.WH.LC.CO', 'definition': 'Whole head, lips closed, centric occlusion'}
-    >>> ev.concept
-    [CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D01', code__ext=None, concept=None, definition='Whole head, lips closed, centric occlusion', definition__ext=None, designation=None, display='EV3D-01 EO.WH.LC.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D02', code__ext=None, concept=None, definition='Whole head, lips closed, centric relation', definition__ext=None, designation=None, display='EV3D-02 EO.WH.LC.CR', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D03', code__ext=None, concept=None, definition='Whole head, lips relaxed, centric occlusion', definition__ext=None, designation=None, display='EV3D-03 EO.WH.LR.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D04', code__ext=None, concept=None, definition='Whole head, lips relaxed, centric relation', definition__ext=None, designation=None, display='EV3D-04 EO.WH.LR.CR', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D05', code__ext=None, concept=None, definition='Whole head, full smile, centric occlusion', definition__ext=None, designation=None, display='EV3D-05 EO.WH.FS.CO', display__ext=None, property=None), CodeSystemConcept(fhir_comments=None, extension=None, id=None, modifierExtension=None, code='EV3D06', code__ext=None, concept=None, definition='Whole head, full smile, centric relation', definition__ext=None, designation=None, display='EV3D-06 EO.WH.FS.CR', display__ext=None, property=None)]
+```python
+from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import (
+    Extraoral3DVisibleLightScheduledProtocolCodeSystem,
+)
+
+ev = Extraoral3DVisibleLightScheduledProtocolCodeSystem()
+print(ev.model_dump())
+print(ev.concept[0].model_dump())
+print(ev.concept)
+```
 
 
 ## Releases
@@ -84,7 +106,9 @@ Import the entire codesystem:
 - Each new release must be git tagged with v*.*.*. This triggers the Github actions to publish to PyPi and release in GitHub releases.
 - Project version should only be stored in the `pyproject.toml` file in `project.version`, and imported accordingly when needed.
 - Each CodeSystem and CodeValue has its own version which depends on changes to that: remember to bump those individually.
-- No need for Github actions: just build with `make build`, which will build in `docs/` which is configured by github-pages to serve to http://terminology.open-ortho.org and http://open-ortho.org/terminology.
+- No need for Github actions: just build with `make build`, which will build in `docs/`
+  and is configured by GitHub Pages to serve to http://terminology.open-ortho.org
+  and http://open-ortho.org/terminology.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

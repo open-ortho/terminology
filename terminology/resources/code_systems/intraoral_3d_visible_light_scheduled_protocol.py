@@ -1,4 +1,4 @@
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
+from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code

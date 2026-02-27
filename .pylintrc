@@ -1,0 +1,8 @@
+[MASTER]
+ignore-paths=^tests/.*
+
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+disable=too-many-lines

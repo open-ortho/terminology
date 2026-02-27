@@ -5,7 +5,7 @@ Used whenever a code is necessary, for various implementations.
 
 from terminology.resources.naming_systems import DentalEyePadNamingSystem
 from terminology.resources import Code
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
+from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 
 id = "dentaleyepad-image-types"

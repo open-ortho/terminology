@@ -1,5 +1,5 @@
 from datetime import datetime
-from fhir.resources.valueset import ValueSet
+from terminology.fhir_types import ValueSet
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import Extraoral2DPhotographicScheduledProtocolCodeSystem
 from terminology.resources.code_systems.intraoral_2d_photographic_scheduled_protocol import Intraoral2DPhotographicScheduledProtocolCodeSystem
@@ -21,6 +21,7 @@ class ScheduledProtocolValueSet(ValueSet):
     def __init__(self):
         url = self.static_url()
         OPOR = OpenOrthoNamingSystem()
+        contact = (OPOR.contact or [])[:1]  # Handle optional contacts; ValueSet expects a list
         super().__init__(
             url=url,
             identifier=[
@@ -36,7 +37,7 @@ class ScheduledProtocolValueSet(ValueSet):
             experimental=False,
             date=datetime.now().date().isoformat(),
             publisher=OPOR.publisher,
-            contact=[OPOR.contact[0]],
+            contact=contact,
             description="Scheduled protocols for orthodontic photographs and intraoral scans according to ADA-1100.",
             compose={
                 "include": [
