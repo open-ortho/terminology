@@ -176,7 +176,7 @@ class OrthodonticPhotographViewsConceptMap(ConceptMap):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/ConceptMap/OrthodonticPhotographViews"
+        return f"{ns.url}/ConceptMap/orthodontic-photograph-views"
 
     def __init__(self):
         url = self.static_url()
@@ -205,7 +205,7 @@ class OrthodonticPhotographViewsReverseConceptMap(ConceptMap):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/ConceptMap/OrthodonticPhotographViewsReverse"
+        return f"{ns.url}/ConceptMap/orthodontic-photograph-views-reverse"
 
     def __init__(self):
         url = self.static_url()

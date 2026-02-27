@@ -108,6 +108,7 @@ Guidance for coding agents working in this repository.
 - Constants: `UPPER_SNAKE_CASE`.
 - Domain concept constants (e.g., `EV01`, `IV3D01`) should remain stable.
 - Keep URL/id strings stable unless change is explicitly required.
+- Canonical URLs and filenames for FHIR artifacts use kebab-case (dash-delimited) slugs.
 
 ## FHIR Resource Patterns
 
