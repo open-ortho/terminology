@@ -1,5 +1,4 @@
-from fhir.resources.namingsystem import NamingSystem
-from fhir.resources.identifier import Identifier
+from terminology.fhir_types import NamingSystem, Identifier
 from terminology.constants import NAMING_SYSTEM_UIDS
 
 class MedocoHealthNamingSystem(NamingSystem):

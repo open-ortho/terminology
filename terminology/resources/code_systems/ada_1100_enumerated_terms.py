@@ -2,7 +2,7 @@
 
 """
 
-from fhir.resources.codesystem import CodeSystem, CodeSystemConcept
+from terminology.fhir_types import CodeSystem, CodeSystemConcept
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 
