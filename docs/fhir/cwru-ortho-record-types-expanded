@@ -1,0 +1,101 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://orthodontics.case.edu/fhir/cwru-ortho-record-types",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.2"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "CWRUOrthoRecordTypes",
+    "title": "CWRU Ortho Record Types",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-03-03",
+    "publisher": "CWRU Orthodontics",
+    "description": "All record types used in CWRU Bolton-Brush collections.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type"
+            }
+        ]
+    },
+    "expansion": {
+        "timestamp": "2026-03-03",
+        "total": 14,
+        "contains": [
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "L",
+                "display": "Lateral Cephalogram"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "F",
+                "display": "Frontal Cephalogram"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "P",
+                "display": "Radiograph of Left Hip and Pelvis"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "FA",
+                "display": "Radiograph of Foot & Ankle"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "H",
+                "display": "Radiograph of Hand & Wrist"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "CS",
+                "display": "Radiograph of Left Shoulder and Chest"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "E",
+                "display": "Radiograph of Elbow"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "K",
+                "display": "Radiograph of Left Knee"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "RE",
+                "display": "Record of Examination"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "RF",
+                "display": "Record of Facial and Jaw Examination"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "SM",
+                "display": "Complete Study Model"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "SU",
+                "display": "Upper Study Model"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "SL",
+                "display": "Lower Study Model"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "FM",
+                "display": "Facial Moulage"
+            }
+        ]
+    }
+}
