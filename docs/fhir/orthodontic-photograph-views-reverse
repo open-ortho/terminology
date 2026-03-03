@@ -6,7 +6,7 @@
     "title": "Orthodontic Photograph Views Reverse ConceptMap",
     "status": "draft",
     "experimental": true,
-    "date": "2026-02-27",
+    "date": "2026-03-03",
     "publisher": "OpenOrtho",
     "description": "Reverse mapping between SNOMED CT photographic concepts and Open Ortho photographic views.",
     "sourceScopeUri": "http://snomed.info/sct",
@@ -192,6 +192,15 @@
                     "target": [
                         {
                             "code": "EV20",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "787611004",
+                    "target": [
+                        {
+                            "code": "EV21",
                             "relationship": "equivalent"
                         }
                     ]
