@@ -38,6 +38,7 @@ from terminology.resources.code_systems import (
 from terminology.resources.concept_maps import orthodontic_photograph_views
 from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_record_types_value_sets
 from terminology.resources.value_sets import cwru_ortho_record_type_extra
+from terminology.resources.value_sets import open_ortho_value_sets
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -177,21 +178,23 @@ def expand_valueset(valueset: ValueSet, all_code_systems: dict[str, CodeSystem])
         system_url = include.system
         if not system_url:
             continue
-            
+
         # Find the referenced CodeSystem instance
         cs_instance = all_code_systems.get(system_url)
-        
+
         if cs_instance:
-            # Add all concepts from this CodeSystem
+            # If include.concept is non-empty, only include those specific codes
+            pinned_codes = {c.code for c in (include.concept or [])} if include.concept else set()
             concepts = cs_instance.concept or []
             for concept in concepts:
-                contains.append(
-                    ValueSetExpansionContains(
-                        system=system_url,
-                        code=concept.code,
-                        display=concept.display,
+                if not pinned_codes or concept.code in pinned_codes:
+                    contains.append(
+                        ValueSetExpansionContains(
+                            system=system_url,
+                            code=concept.code,
+                            display=concept.display,
+                        )
                     )
-                )
         else:
             logger.warning(f"CodeSystem with URL {system_url} not found.")
     
@@ -244,24 +247,33 @@ def save_fhir_resource(
                 continue
             
             # Generate base filename from resource URL
-            base_filename = filename / resource_instance.url.split("/")[-1]
-            base_filename.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Save the basic resource
-            logger.info(f"Saving {resource_class.__name__} to {base_filename}")
-            with open(base_filename, "w", encoding="utf-8") as f:
-                json.dump(resource_instance.model_dump(), f, indent=4)
-            
-            # If it's a ValueSet, also save expanded version
-            if isinstance(resource_instance, ValueSet):
-                expanded_filename = (
-                    filename / f"{resource_instance.url.split('/')[-1]}-expanded"
-                )
-                logger.info(f"Saving expanded {resource_class.__name__} to {expanded_filename}")
+            url_slug = resource_instance.url.split("/")[-1]
 
+            if isinstance(resource_instance, ValueSet):
+                # ValueSets: write into a subdirectory so that $expand can live alongside
+                # docs/fhir/<slug>/index.html  <- base resource (GitHub Pages serves at /slug/ and /slug)
+                # docs/fhir/<slug>/$expand     <- FHIR $expand response
+                vs_dir = filename / url_slug
+                vs_dir.mkdir(parents=True, exist_ok=True)
+
+                base_filename = vs_dir / "index.html"
+                logger.info(f"Saving {resource_class.__name__} to {base_filename}")
+                with open(base_filename, "w", encoding="utf-8") as f:
+                    json.dump(resource_instance.model_dump(), f, indent=4)
+
+                expand_filename = vs_dir / "$expand"
+                logger.info(f"Saving expanded {resource_class.__name__} to {expand_filename}")
                 expanded = expand_valueset(resource_instance, all_code_systems)
-                with open(expanded_filename, "w", encoding="utf-8") as f:
+                with open(expand_filename, "w", encoding="utf-8") as f:
                     json.dump(expanded.model_dump(), f, indent=4)
+            else:
+                base_filename = filename / url_slug
+                base_filename.parent.mkdir(parents=True, exist_ok=True)
+
+                # Save the basic resource
+                logger.info(f"Saving {resource_class.__name__} to {base_filename}")
+                with open(base_filename, "w", encoding="utf-8") as f:
+                    json.dump(resource_instance.model_dump(), f, indent=4)
                     
         except ValidationError as exc:
             # logger.exception(e)
@@ -320,7 +332,8 @@ def main() -> int:
         ValueSet: [
             scheduled_protocol,
             cwru_ortho_record_types_value_sets,
-            cwru_ortho_record_type_extra
+            cwru_ortho_record_type_extra,
+            open_ortho_value_sets,
         ],
         ConceptMap: [
             orthodontic_photograph_views

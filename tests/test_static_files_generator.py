@@ -1,8 +1,9 @@
+import json
 import unittest
 from pathlib import Path
 import tempfile
 
-from terminology.main import get_all_code_systems, generate_index
+from terminology.main import get_all_code_systems, generate_index, save_fhir_resource, expand_valueset
 from terminology.fhir_types import CodeSystem, ValueSet, ConceptMap
 from terminology.resources.code_systems import extraoral_2d_photographic_scheduled_protocol
 from terminology.resources.code_systems import (
@@ -13,9 +14,16 @@ from terminology.resources.code_systems import (
     intraoral_2d_photographic_scheduled_protocol,
     ada_1100_enumerated_terms,
 )
-from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types
+from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_record_types_value_sets
 from terminology.resources.value_sets import cwru_ortho_record_type_extra
+from terminology.resources.value_sets import open_ortho_value_sets
 from terminology.resources.concept_maps import orthodontic_photograph_views
+from terminology.resources.value_sets.cwru_ortho_record_type_extra import (
+    CWRUOrthoRecordTypesAcetateFilm,
+    CWRUOrthoRecordTypesPaper,
+    CWRUOrthoRecordTypesGypsum,
+)
+
 
 class TestMain(unittest.TestCase):
 
@@ -38,8 +46,9 @@ class TestMain(unittest.TestCase):
             ],
             ValueSet: [
                 scheduled_protocol,
-                cwru_ortho_image_types,
+                cwru_ortho_record_types_value_sets,
                 cwru_ortho_record_type_extra,
+                open_ortho_value_sets,
             ],
             ConceptMap: [
                 orthodontic_photograph_views,
@@ -59,6 +68,82 @@ class TestMain(unittest.TestCase):
                 "<a href=\"http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol\">http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol</a>",
                 content,
             )
+
+    def test_valueset_output_uses_directory_structure(self):
+        """ValueSets are written as <slug>/index.html and <slug>/$expand, not flat files."""
+        all_code_systems = get_all_code_systems()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fhir_dir = Path(temp_dir) / "fhir"
+            fhir_dir.mkdir()
+            save_fhir_resource(scheduled_protocol, ValueSet, fhir_dir, all_code_systems)
+
+            # The slug for ScheduledProtocolValueSet should be 'scheduled-protocol'
+            slug_dir = fhir_dir / "scheduled-protocol"
+            self.assertTrue(slug_dir.is_dir(), "Expected a directory at fhir/scheduled-protocol/")
+            self.assertTrue((slug_dir / "index.html").exists(), "Expected index.html inside the ValueSet directory")
+            self.assertTrue((slug_dir / "$expand").exists(), "Expected $expand file inside the ValueSet directory")
+
+            # Old flat file must NOT exist
+            self.assertFalse((fhir_dir / "scheduled-protocol-expanded").exists(),
+                             "Old -expanded file must not be generated")
+            self.assertFalse((fhir_dir / "scheduled-protocol").is_file(),
+                             "Base resource must not be a flat file anymore")
+
+    def test_expand_valueset_respects_concept_filter(self):
+        """Concept-filtered ValueSets expand to only their pinned codes, not all CS codes."""
+        all_code_systems = get_all_code_systems()
+
+        # AcetateFilm pins: L, F, P, FA, H, CS, E, K  (8 codes)
+        acetate = CWRUOrthoRecordTypesAcetateFilm()
+        expanded_acetate = expand_valueset(acetate, all_code_systems)
+        acetate_codes = {c.code for c in (expanded_acetate.expansion.contains or [])}
+        self.assertEqual(acetate_codes, {"L", "F", "P", "FA", "H", "CS", "E", "K"},
+                         "AcetateFilm expansion must contain exactly its 8 pinned codes")
+
+        # Paper pins: RE, RF  (2 codes)
+        paper = CWRUOrthoRecordTypesPaper()
+        expanded_paper = expand_valueset(paper, all_code_systems)
+        paper_codes = {c.code for c in (expanded_paper.expansion.contains or [])}
+        self.assertEqual(paper_codes, {"RE", "RF"},
+                         "Paper expansion must contain exactly its 2 pinned codes")
+
+        # Gypsum pins: SM, SU, SL, FM  (4 codes)
+        gypsum = CWRUOrthoRecordTypesGypsum()
+        expanded_gypsum = expand_valueset(gypsum, all_code_systems)
+        gypsum_codes = {c.code for c in (expanded_gypsum.expansion.contains or [])}
+        self.assertEqual(gypsum_codes, {"SM", "SU", "SL", "FM"},
+                         "Gypsum expansion must contain exactly its 4 pinned codes")
+
+    def test_expand_file_content_is_valid_json(self):
+        "$expand file must contain valid JSON with expansion.contains populated."
+        all_code_systems = get_all_code_systems()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fhir_dir = Path(temp_dir) / "fhir"
+            fhir_dir.mkdir()
+            save_fhir_resource(scheduled_protocol, ValueSet, fhir_dir, all_code_systems)
+
+            expand_file = fhir_dir / "scheduled-protocol" / "$expand"
+            self.assertTrue(expand_file.exists())
+            data = json.loads(expand_file.read_text(encoding="utf-8"))
+            self.assertIn("expansion", data)
+            self.assertIn("contains", data["expansion"])
+            self.assertGreater(len(data["expansion"]["contains"]), 0,
+                               "$expand must have at least one code in expansion.contains")
+
+    def test_ortho_photograph_views_valueset_generates_files(self):
+        """OrthodonticPhotographViewsValueSet generates index.html and $expand."""
+        all_code_systems = get_all_code_systems()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fhir_dir = Path(temp_dir) / "fhir"
+            fhir_dir.mkdir()
+            save_fhir_resource(open_ortho_value_sets, ValueSet, fhir_dir, all_code_systems)
+
+            # canonical URL ends in OrthodonticPhotographViews
+            slug_dir = fhir_dir / "OrthodonticPhotographViews"
+            self.assertTrue(slug_dir.is_dir(), "Expected directory for OrthodonticPhotographViews")
+            self.assertTrue((slug_dir / "index.html").exists())
+            self.assertTrue((slug_dir / "$expand").exists())
+
 
 if __name__ == '__main__':
     unittest.main()
