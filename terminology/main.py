@@ -69,11 +69,13 @@ def build_index_entry(resource: Resource) -> dict[str, str]:
     resource_type = getattr(resource, "resource_type", None) or getattr(
         resource, "__resource_type__", ""
     )
+    expand_url = f"{published_url}/$expand" if resource_type == "ValueSet" and published_url else ""
     return {
         "resource_type": resource_type,
         "title": title,
         "description": description,
         "url": published_url,
+        "expand_url": expand_url,
     }
 
 def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path) -> None:
@@ -137,13 +139,21 @@ def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path
             lines.append("<p>(None)</p>")
             continue
         lines.append("<table>")
-        lines.append("<tr><th>Title</th><th>URL</th><th>Description</th></tr>")
+        if section == "ValueSet":
+            lines.append("<tr><th>Title</th><th>URL</th><th>$expand</th><th>Description</th></tr>")
+        else:
+            lines.append("<tr><th>Title</th><th>URL</th><th>Description</th></tr>")
         for entry in entries:
             title = escape_html(entry["title"]) or entry["url"]
             desc = escape_html(entry["description"]) if entry["description"] else ""
             url = entry["url"]
             link = f'<a href="{url}">{url}</a>' if url else ""
-            lines.append(f"<tr><td>{title}</td><td>{link}</td><td>{desc}</td></tr>")
+            if section == "ValueSet":
+                expand_url = entry.get("expand_url", "")
+                expand_link = f'<a href="{expand_url}">{expand_url}</a>' if expand_url else ""
+                lines.append(f"<tr><td>{title}</td><td>{link}</td><td>{expand_link}</td><td>{desc}</td></tr>")
+            else:
+                lines.append(f"<tr><td>{title}</td><td>{link}</td><td>{desc}</td></tr>")
         lines.append("</table>")
 
     lines.append("</body>")
