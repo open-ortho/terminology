@@ -9,7 +9,7 @@ CS_EXTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.1"
 CS_EXTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.2"
 CS_INTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.3"
 CS_INTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID = f"{CS_BASE_UID}.4"
-CS_CWRU_ORTHO_IMAGE_TYPE_UID = f"{CS_BASE_UID}.5"
+CS_CWRU_ORTHO_RECORD_TYPE_UID = f"{CS_BASE_UID}.5"
 
 # Code System short name to UID mapping
 CODE_SYSTEM_UIDS = {
@@ -17,7 +17,7 @@ CODE_SYSTEM_UIDS = {
     "extraoral-3d-visible-light-scheduled-protocol": CS_EXTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
     "intraoral-2d-photographic-scheduled-protocol": CS_INTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID,
     "intraoral-3d-visible-light-scheduled-protocol": CS_INTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
-    "cwru-ortho-image-type": CS_CWRU_ORTHO_IMAGE_TYPE_UID,
+    "cwru-ortho-record-type": CS_CWRU_ORTHO_RECORD_TYPE_UID,
 }
 
 # Naming Systems (1.3.6.1.4.1.61741.11.3.1.*)
@@ -30,7 +30,12 @@ NS_CWRU_ORTHO_UID = f"{NS_BASE_UID}.4"
 # Value Sets (1.3.6.1.4.1.61741.11.3.3.*)
 VS_BASE_UID = f"{BASE_UID}.3"
 VS_SCHEDULED_PROTOCOL_UID = f"{VS_BASE_UID}.1"
-VS_CWRU_ORTHO_IMAGE_TYPE_UID = f"{VS_BASE_UID}.2"
+VS_CWRU_ORTHO_RECORD_TYPE_UID = f"{VS_BASE_UID}.2"
+
+# Additional ValueSets for CWRUOrtho Record Types
+VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID = f"{VS_BASE_UID}.3"
+VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID = f"{VS_BASE_UID}.4"
+VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID = f"{VS_BASE_UID}.5"
 
 # Naming System short name to UID mapping
 NAMING_SYSTEM_UIDS = {
@@ -43,5 +48,9 @@ NAMING_SYSTEM_UIDS = {
 # Value Set short name to UID mapping
 VALUE_SET_UIDS = {
     "scheduled-protocol": VS_SCHEDULED_PROTOCOL_UID,
-    "image-type-valueset": VS_CWRU_ORTHO_IMAGE_TYPE_UID
+    "cwru-ortho-record-types": VS_CWRU_ORTHO_RECORD_TYPE_UID,
+    "cwru-ortho-record-types-acetate-film": VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID,
+    "cwru-ortho-record-types-paper": VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID,
+    "cwru-ortho-record-types-gypsum": VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID
+
 }

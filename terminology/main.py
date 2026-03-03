@@ -36,7 +36,8 @@ from terminology.resources.code_systems import (
 )
 
 from terminology.resources.concept_maps import orthodontic_photograph_views
-from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_image_type_value_sets
+from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_record_types_value_sets
+from terminology.resources.value_sets import cwru_ortho_record_type_extra
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -225,7 +226,8 @@ def main() -> int:
         ],
         ValueSet: [
             scheduled_protocol,
-            cwru_ortho_image_type_value_sets
+            cwru_ortho_record_types_value_sets,
+            cwru_ortho_record_type_extra
         ],
         ConceptMap: [
             orthodontic_photograph_views

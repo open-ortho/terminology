@@ -6,11 +6,11 @@ from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.constants import CODE_SYSTEM_UIDS
 
 
-id = "cwru-ortho-image-type"
-canonical_path = "identifier-system/image-type"
+id = "cwru-ortho-record-type"
+canonical_path = "identifier-system/record-type"
 
 
-class CWRUOrthoRecordTypeCodeSystem(CodeSystem):
+class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compatibility, but id now reflects record-type
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()

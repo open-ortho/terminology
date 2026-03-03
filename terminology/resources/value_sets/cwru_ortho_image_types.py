@@ -7,11 +7,9 @@ from terminology.resources.code_systems.cwru_ortho_image_types import (
 )
 from terminology.constants import VALUE_SET_UIDS
 
+id = "cwru-ortho-record-types"
 
-id = "image-type-valueset"
-
-
-class CWRUOrthoImageTypeValueSet(ValueSet):
+class CWRUOrthoRecordTypesValueSet(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
@@ -29,16 +27,18 @@ class CWRUOrthoImageTypeValueSet(ValueSet):
                 }
             ],
             version="1.0.0",
-            name="CWRUOrthoImageTypes",
-            title="CWRU Orthodontics Image Types",
+            name="CWRUOrthoRecordTypes",
+            title="CWRU Ortho Record Types",
             status="active",
             experimental=False,
             date=datetime.now().date().isoformat(),
             publisher=ns.publisher,
-            description="Allowed CWRU Orthodontics image types for radiographic scans.",
+            description="All record types used in CWRU Bolton-Brush collections.",
             compose={
                 "include": [
                     {"system": CWRUOrthoRecordTypeCodeSystem().url}
                 ]
             }
         )
+
+__all__ = ["CWRUOrthoRecordTypesValueSet"]
