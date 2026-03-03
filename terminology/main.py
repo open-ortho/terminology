@@ -27,6 +27,7 @@ from terminology.fhir_types import (
 
 from terminology.resources.code_systems import (
     dentaleyepad_image_types,
+    cwru_ortho_image_types,
     extraoral_2d_photographic_scheduled_protocol,
     extraoral_3d_visible_light_scheduled_protocol,
     intraoral_3d_visible_light_scheduled_protocol,
@@ -35,7 +36,7 @@ from terminology.resources.code_systems import (
 )
 
 from terminology.resources.concept_maps import orthodontic_photograph_views
-from terminology.resources.value_sets import scheduled_protocol
+from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_image_type_value_sets
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -219,10 +220,12 @@ def main() -> int:
             intraoral_3d_visible_light_scheduled_protocol,
             intraoral_2d_photographic_scheduled_protocol,
             dentaleyepad_image_types,
+            cwru_ortho_image_types,
             ada_1100_enumerated_terms
         ],
         ValueSet: [
-            scheduled_protocol
+            scheduled_protocol,
+            cwru_ortho_image_type_value_sets
         ],
         ConceptMap: [
             orthodontic_photograph_views
