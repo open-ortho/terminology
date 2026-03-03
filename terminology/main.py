@@ -57,11 +57,14 @@ logger.addHandler(console_handler)
 
 
 build_path = Path(".", "docs")
+published_base_url = "http://terminology.open-ortho.org/fhir"
 
 def build_index_entry(resource: Resource) -> dict[str, str]:
     title = getattr(resource, "title", None) or getattr(resource, "name", None) or ""
     description = getattr(resource, "description", None) or ""
     url = str(getattr(resource, "url", ""))
+    filename = url.split("/")[-1] if url else ""
+    published_url = f"{published_base_url}/{filename}" if filename else ""
     resource_type = getattr(resource, "resource_type", None) or getattr(
         resource, "__resource_type__", ""
     )
@@ -69,7 +72,7 @@ def build_index_entry(resource: Resource) -> dict[str, str]:
         "resource_type": resource_type,
         "title": title,
         "description": description,
-        "url": url,
+        "url": published_url,
     }
 
 def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path) -> None:
@@ -111,14 +114,17 @@ def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path
             lines.append("- (none)")
             lines.append("")
             continue
-
+        lines.append("| Title | URL | Description |")
+        lines.append("| --- | --- | --- |")
         for entry in entries:
             title = entry["title"] or entry["url"]
             description = entry["description"]
+            url = entry["url"]
+            url_link = f"[{url}]({url})"
             if description:
-                lines.append(f"- **{title}** - `{entry['url']}` - {description}")
+                lines.append(f"| {title} | {url_link} | {description} |")
             else:
-                lines.append(f"- **{title}** - `{entry['url']}`")
+                lines.append(f"| {title} | {url_link} | |")
         lines.append("")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)

@@ -56,7 +56,7 @@ class TestMain(unittest.TestCase):
             self.assertIn("## ValueSets", content)
             self.assertIn("## ConceptMaps", content)
             self.assertIn(
-                "http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol",
+                "[http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol](http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol)",
                 content,
             )
 
