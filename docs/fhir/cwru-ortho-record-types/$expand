@@ -24,7 +24,7 @@
     },
     "expansion": {
         "timestamp": "2026-03-08",
-        "total": 18,
+        "total": 19,
         "contains": [
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -115,6 +115,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "FM",
                 "display": "Facial Moulage"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "UK",
+                "display": "Unknown Record Type"
             }
         ]
     }

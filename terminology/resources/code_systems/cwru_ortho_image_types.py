@@ -127,6 +127,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     code=f"{make_code('FM')}",
                     display="Facial Moulage",
                     definition="Scan of Facial Moulage"
+                ),
+                CodeSystemConcept(
+                    code=f"{make_code('UK')}",
+                    display="Unknown Record Type",
+                    definition="Scan of Unknown Record Type"
                 )
             ]
         )

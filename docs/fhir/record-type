@@ -108,6 +108,11 @@
             "code": "FM",
             "display": "Facial Moulage",
             "definition": "Scan of Facial Moulage"
+        },
+        {
+            "code": "UK",
+            "display": "Unknown Record Type",
+            "definition": "Scan of Unknown Record Type"
         }
     ]
 }
