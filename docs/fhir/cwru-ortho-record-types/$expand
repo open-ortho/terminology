@@ -24,7 +24,7 @@
     },
     "expansion": {
         "timestamp": "2026-03-08",
-        "total": 16,
+        "total": 18,
         "contains": [
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -78,6 +78,11 @@
             },
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "PH",
+                "display": "Photograph of Patient"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "RE",
                 "display": "Record of Examination"
             },
@@ -85,6 +90,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "RF",
                 "display": "Record of Facial and Jaw Examination"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "RT",
+                "display": "Record of Cephalometric Tracing"
             },
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",

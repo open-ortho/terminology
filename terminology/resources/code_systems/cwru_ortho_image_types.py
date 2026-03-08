@@ -89,6 +89,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     definition="Scan of Occlusal Dental Plain Radiograph"
                 ),
                 CodeSystemConcept(
+                    code=f"{make_code('PH')}",
+                    display="Photograph of Patient",
+                    definition="Scan of Photograph of Patient"
+                ),
+                CodeSystemConcept(
                     code=f"{make_code('RE')}",
                     display="Record of Examination",
                     definition="Scan of Record of Examination"
@@ -97,6 +102,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     code=f"{make_code('RF')}",
                     display="Record of Facial and Jaw Examination",
                     definition="Scan of Paper Record of Facial and Jaw Examination"
+                ),
+                CodeSystemConcept(
+                    code=f"{make_code('RT')}",
+                    display="Record of Cephalometric Tracing",
+                    definition="Scan of Paper Record of Cephalometric Tracing"
                 ),
                 CodeSystemConcept(
                     code=f"{make_code('SM')}",

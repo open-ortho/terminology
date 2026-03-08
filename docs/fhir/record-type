@@ -70,6 +70,11 @@
             "definition": "Scan of Occlusal Dental Plain Radiograph"
         },
         {
+            "code": "PH",
+            "display": "Photograph of Patient",
+            "definition": "Scan of Photograph of Patient"
+        },
+        {
             "code": "RE",
             "display": "Record of Examination",
             "definition": "Scan of Record of Examination"
@@ -78,6 +83,11 @@
             "code": "RF",
             "display": "Record of Facial and Jaw Examination",
             "definition": "Scan of Paper Record of Facial and Jaw Examination"
+        },
+        {
+            "code": "RT",
+            "display": "Record of Cephalometric Tracing",
+            "definition": "Scan of Paper Record of Cephalometric Tracing"
         },
         {
             "code": "SM",
