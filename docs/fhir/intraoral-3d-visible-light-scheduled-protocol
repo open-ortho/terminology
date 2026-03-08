@@ -13,7 +13,7 @@
     "title": "Intraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",
     "experimental": true,
-    "date": "2026-03-03",
+    "date": "2026-03-08",
     "publisher": "OpenOrtho",
     "description": "Common intraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the dentition",
     "caseSensitive": true,

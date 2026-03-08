@@ -13,7 +13,7 @@
     "title": "Bolton-Brush Growth Study Center Collection Record Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-03-03",
+    "date": "2026-03-08",
     "publisher": "CWRU Orthodontics",
     "description": "Types for records which compose parts of longitudinal collections curated by the Bolton-Brush Growth Study Center at Case Western Reserve University.",
     "caseSensitive": true,
@@ -28,6 +28,11 @@
             "code": "F",
             "display": "Frontal Cephalogram",
             "definition": "Scan of Postero-Anterior (Coronal) Cephalogram"
+        },
+        {
+            "code": "OB",
+            "display": "Oblique Cephalogram",
+            "definition": "Scan of Oblique Cephalogram"
         },
         {
             "code": "P",
@@ -58,6 +63,11 @@
             "code": "K",
             "display": "Radiograph of Left Knee",
             "definition": "Scan of Radiograph of Left Knee"
+        },
+        {
+            "code": "OC",
+            "display": "Occlusal Dental Plain Radiograph",
+            "definition": "Scan of Occlusal Dental Plain Radiograph"
         },
         {
             "code": "RE",

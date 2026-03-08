@@ -12,7 +12,7 @@
     "title": "CWRU Ortho Record Types - Acetate Film",
     "status": "active",
     "experimental": false,
-    "date": "2026-03-03",
+    "date": "2026-03-08",
     "publisher": "CWRU Orthodontics",
     "description": "Record types on acetate film for CWRU Bolton-Brush collections.",
     "compose": {
@@ -25,6 +25,12 @@
                     },
                     {
                         "code": "F"
+                    },
+                    {
+                        "code": "OB"
+                    },
+                    {
+                        "code": "OC"
                     },
                     {
                         "code": "P"
@@ -49,8 +55,8 @@
         ]
     },
     "expansion": {
-        "timestamp": "2026-03-03",
-        "total": 8,
+        "timestamp": "2026-03-08",
+        "total": 10,
         "contains": [
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -61,6 +67,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "F",
                 "display": "Frontal Cephalogram"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "OB",
+                "display": "Oblique Cephalogram"
             },
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -91,6 +102,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "K",
                 "display": "Radiograph of Left Knee"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "OC",
+                "display": "Occlusal Dental Plain Radiograph"
             }
         ]
     }

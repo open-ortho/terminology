@@ -49,6 +49,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     definition="Scan of Postero-Anterior (Coronal) Cephalogram"
                 ),
                 CodeSystemConcept(
+                    code=f"{make_code('OB')}",
+                    display="Oblique Cephalogram",
+                    definition="Scan of Oblique Cephalogram"
+                ),
+                CodeSystemConcept(
                     code=f"{make_code('P')}",
                     display="Radiograph of Left Hip and Pelvis",
                     definition="Scan of Radiograph of Left Hip and Pelvis"
@@ -77,6 +82,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     code=f"{make_code('K')}",
                     display="Radiograph of Left Knee",
                     definition="Scan of Radiograph of Left Knee"
+                ),
+                CodeSystemConcept(
+                    code=f"{make_code('OC')}",
+                    display="Occlusal Dental Plain Radiograph",
+                    definition="Scan of Occlusal Dental Plain Radiograph"
                 ),
                 CodeSystemConcept(
                     code=f"{make_code('RE')}",

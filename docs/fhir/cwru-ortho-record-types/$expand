@@ -12,7 +12,7 @@
     "title": "CWRU Ortho Record Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-03-03",
+    "date": "2026-03-08",
     "publisher": "CWRU Orthodontics",
     "description": "All record types used in CWRU Bolton-Brush collections.",
     "compose": {
@@ -23,8 +23,8 @@
         ]
     },
     "expansion": {
-        "timestamp": "2026-03-03",
-        "total": 14,
+        "timestamp": "2026-03-08",
+        "total": 16,
         "contains": [
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -35,6 +35,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "F",
                 "display": "Frontal Cephalogram"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "OB",
+                "display": "Oblique Cephalogram"
             },
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
@@ -65,6 +70,11 @@
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
                 "code": "K",
                 "display": "Radiograph of Left Knee"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "OC",
+                "display": "Occlusal Dental Plain Radiograph"
             },
             {
                 "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
