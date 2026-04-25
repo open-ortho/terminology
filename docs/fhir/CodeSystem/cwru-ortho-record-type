@@ -1,7 +1,7 @@
 {
     "resourceType": "CodeSystem",
     "id": "cwru-ortho-record-type",
-    "url": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+    "url": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
@@ -13,7 +13,7 @@
     "title": "Bolton-Brush Growth Study Center Collection Record Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-03-08",
+    "date": "2026-04-25",
     "publisher": "CWRU Orthodontics",
     "description": "Types for records which compose parts of longitudinal collections curated by the Bolton-Brush Growth Study Center at Case Western Reserve University.",
     "caseSensitive": true,
@@ -33,6 +33,11 @@
             "code": "OB",
             "display": "Oblique Cephalogram",
             "definition": "Scan of Oblique Cephalogram"
+        },
+        {
+            "code": "OC",
+            "display": "Occlusal Dental Plain Radiograph",
+            "definition": "Scan of Occlusal Dental Plain Radiograph"
         },
         {
             "code": "P",
@@ -63,11 +68,6 @@
             "code": "K",
             "display": "Radiograph of Left Knee",
             "definition": "Scan of Radiograph of Left Knee"
-        },
-        {
-            "code": "OC",
-            "display": "Occlusal Dental Plain Radiograph",
-            "definition": "Scan of Occlusal Dental Plain Radiograph"
         },
         {
             "code": "PH",

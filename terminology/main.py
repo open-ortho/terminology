@@ -58,23 +58,20 @@ logger.addHandler(console_handler)
 
 
 build_path = Path(".", "docs")
-published_base_url = "http://terminology.open-ortho.org/fhir"
 
 def build_index_entry(resource: Resource) -> dict[str, str]:
     title = getattr(resource, "title", None) or getattr(resource, "name", None) or ""
     description = getattr(resource, "description", None) or ""
     url = str(getattr(resource, "url", ""))
-    filename = url.split("/")[-1] if url else ""
-    published_url = f"{published_base_url}/{filename}" if filename else ""
     resource_type = getattr(resource, "resource_type", None) or getattr(
         resource, "__resource_type__", ""
     )
-    expand_url = f"{published_url}/$expand" if resource_type == "ValueSet" and published_url else ""
+    expand_url = f"{url}/$expand" if resource_type == "ValueSet" and url else ""
     return {
         "resource_type": resource_type,
         "title": title,
         "description": description,
-        "url": published_url,
+        "url": url,
         "expand_url": expand_url,
     }
 
@@ -353,7 +350,7 @@ def main() -> int:
     # Process each resource type and its modules
     for resource_type, modules in resources.items():
         for module in modules:
-            save_fhir_resource(module, resource_type, build_path / "fhir", all_code_systems)
+            save_fhir_resource(module, resource_type, build_path / "fhir" / resource_type.__name__, all_code_systems)
 
     generate_index(resources, build_path / "index.html")
 

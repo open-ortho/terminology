@@ -16,7 +16,7 @@ class CWRUOrthoRecordTypesAcetateFilm(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/cwru-ortho-record-types-acetate-film"
+        return f"{ns.url}/ValueSet/cwru-ortho-record-types-acetate-film"
 
     def __init__(self):
         url = self.static_url()
@@ -55,7 +55,7 @@ class CWRUOrthoRecordTypesPaper(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/cwru-ortho-record-types-paper"
+        return f"{ns.url}/ValueSet/cwru-ortho-record-types-paper"
 
     def __init__(self):
         url = self.static_url()
@@ -92,7 +92,7 @@ class CWRUOrthoRecordTypesGypsum(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/cwru-ortho-record-types-gypsum"
+        return f"{ns.url}/ValueSet/cwru-ortho-record-types-gypsum"
 
     def __init__(self):
         url = self.static_url()

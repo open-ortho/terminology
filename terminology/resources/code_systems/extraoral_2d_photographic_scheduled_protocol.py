@@ -13,7 +13,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/{id}"
+        return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()

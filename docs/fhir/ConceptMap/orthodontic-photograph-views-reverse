@@ -6,7 +6,7 @@
     "title": "Orthodontic Photograph Views Reverse ConceptMap",
     "status": "draft",
     "experimental": true,
-    "date": "2026-03-08",
+    "date": "2026-04-25",
     "publisher": "OpenOrtho",
     "description": "Reverse mapping between SNOMED CT photographic concepts and Open Ortho photographic views.",
     "sourceScopeUri": "http://snomed.info/sct",
@@ -14,7 +14,7 @@
     "group": [
         {
             "source": "http://snomed.info/sct",
-            "target": "http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol",
+            "target": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
             "element": [
                 {
                     "code": "1306623000",
@@ -407,7 +407,7 @@
         },
         {
             "source": "http://snomed.info/sct",
-            "target": "http://terminology.open-ortho.org/fhir/intraoral-2d-photographic-scheduled-protocol",
+            "target": "http://terminology.open-ortho.org/fhir/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
             "element": [
                 {
                     "code": "1365808006",
@@ -683,12 +683,12 @@
         },
         {
             "source": "http://snomed.info/sct",
-            "target": "http://terminology.open-ortho.org/fhir/extraoral-3d-visible-light-scheduled-protocol",
+            "target": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-3d-visible-light-scheduled-protocol",
             "element": []
         },
         {
             "source": "http://snomed.info/sct",
-            "target": "http://terminology.open-ortho.org/fhir/intraoral-3d-visible-light-scheduled-protocol",
+            "target": "http://terminology.open-ortho.org/fhir/CodeSystem/intraoral-3d-visible-light-scheduled-protocol",
             "element": []
         }
     ]

@@ -12,7 +12,7 @@ class ADA1100EnumeratedTermsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        return f"http://terminology.open-ortho.org/fhir/{id}"
+        return f"http://terminology.open-ortho.org/fhir/CodeSystem/{id}"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()

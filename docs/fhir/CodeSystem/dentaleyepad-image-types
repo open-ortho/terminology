@@ -1,28 +1,27 @@
 {
     "resourceType": "CodeSystem",
-    "id": "extraoral-2d-photographic-scheduled-protocol",
-    "url": "http://terminology.open-ortho.org/fhir/extraoral-2d-photographic-scheduled-protocol",
+    "id": "dentaleyepad",
+    "url": "https://dentaleyepad.de/en/dentaleyepad-image-types",
     "identifier": [
         {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.1"
+            "system": "dicom",
+            "value": "99DEYE"
         }
     ],
-    "version": "1.2.2",
-    "name": "Extraoral2DPhotographicScheduledProtocol",
-    "title": "Extraoral 2D Photographic Scheduled Protocol",
-    "status": "draft",
+    "version": "1.0.0",
+    "name": "DentalEyePadCodeSystem",
+    "title": "DentalEyePad Image Types",
+    "status": "active",
     "experimental": false,
-    "date": "2026-03-08",
-    "publisher": "OpenOrtho",
-    "description": "Common extraoral 2D photographic views used in an orthodontic provider's practice",
+    "date": "2026-04-25",
+    "publisher": "DentalEyePad",
+    "description": "Collection of codes for dental photography as defined by DentalEyePad",
     "caseSensitive": true,
     "content": "complete",
     "concept": [
         {
-            "code": "EV01",
-            "display": "Extraoral photo,right profile,lips relaxed,centric occlusion",
-            "definition": "Extraoral, Right Profile (Subject is facing observer's right), Lips Relaxed, Centric Occlusion",
+            "code": "sf0",
+            "display": "smile front closed",
             "designation": [
                 {
                     "use": {
@@ -30,7 +29,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-01"
+                    "value": "sf0"
                 },
                 {
                     "use": {
@@ -38,14 +37,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LR.CO"
+                    "value": "smile front closed"
                 }
             ]
         },
         {
-            "code": "EV02",
-            "display": "Extraoral photo,right profile,lips relaxed,centric relation",
-            "definition": "Extraoral, Right Profile (Subject is facing observe right), Lips Relaxed, Centric Relation",
+            "code": "sf1",
+            "display": "smile front slightly opened 1",
             "designation": [
                 {
                     "use": {
@@ -53,7 +51,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-02"
+                    "value": "sf1"
                 },
                 {
                     "use": {
@@ -61,14 +59,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LR.CR"
+                    "value": "smile front slightly opened 1"
                 }
             ]
         },
         {
-            "code": "EV03",
-            "display": "Extraoral photo,right profile,lips closed,centric occlusion",
-            "definition": "Extraoral, Right Profile (Subject is facing observer's right), Lips Closed, Centric Occlusion",
+            "code": "sf2",
+            "display": "smile front slightly opened 2",
             "designation": [
                 {
                     "use": {
@@ -76,7 +73,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-03"
+                    "value": "sf2"
                 },
                 {
                     "use": {
@@ -84,14 +81,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LC.CO"
+                    "value": "smile front slightly opened 2"
                 }
             ]
         },
         {
-            "code": "EV04",
-            "display": "Extraoral photo,right profile,lips closed,centric relation",
-            "definition": "Extraoral, Right Profile (Patient is facing observer's right), Lips Closed, Centric Relation",
+            "code": "sf3",
+            "display": "smile front opened 3",
             "designation": [
                 {
                     "use": {
@@ -99,7 +95,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-04"
+                    "value": "sf3"
                 },
                 {
                     "use": {
@@ -107,14 +103,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LC.CR"
+                    "value": "smile front opened 3"
                 }
             ]
         },
         {
-            "code": "EV05",
-            "display": "Extraoral photo,right profile,full smile,centric occlusion",
-            "definition": "Extraoral, Right profile (Patient is facing observer's right), Full Smile, Centric Occlusion",
+            "code": "sf4",
+            "display": "smile front opened 4",
             "designation": [
                 {
                     "use": {
@@ -122,7 +117,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-05"
+                    "value": "sf4"
                 },
                 {
                     "use": {
@@ -130,14 +125,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.FS.CO"
+                    "value": "smile front opened 4"
                 }
             ]
         },
         {
-            "code": "EV06",
-            "display": "Extraoral photo,right profile,full smile,centric relation",
-            "definition": "Extraoral, Right Profile (Patient is facing observer's right), Full Smile, Centric Relation",
+            "code": "sf5",
+            "display": "smile front gap 5",
             "designation": [
                 {
                     "use": {
@@ -145,7 +139,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-06"
+                    "value": "sf5"
                 },
                 {
                     "use": {
@@ -153,14 +147,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.FS.CR"
+                    "value": "smile front gap 5"
                 }
             ]
         },
         {
-            "code": "EV07",
-            "display": "Extraoral photo,right profile,mandible postured forward",
-            "definition": "Extraoral, Right Profile (Patient is facing observer's right), Mandible Postured Forward",
+            "code": "src",
+            "display": "smile right closed",
             "designation": [
                 {
                     "use": {
@@ -168,7 +161,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-07"
+                    "value": "src"
                 },
                 {
                     "use": {
@@ -176,14 +169,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.MD.PF"
+                    "value": "smile right closed"
                 }
             ]
         },
         {
-            "code": "EV08",
-            "display": "Extraoral photo,right profile 45,lips relaxed,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Occlusion",
+            "code": "srr",
+            "display": "smile right in repose",
             "designation": [
                 {
                     "use": {
@@ -191,7 +183,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-08"
+                    "value": "srr"
                 },
                 {
                     "use": {
@@ -199,14 +191,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LR.CO.45"
+                    "value": "smile right in repose"
                 }
             ]
         },
         {
-            "code": "EV09",
-            "display": "Extraoral photo,right profile 45,lips relaxed,centric relation",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Lips Relaxed, Centric Relation",
+            "code": "sro",
+            "display": "smile right open",
             "designation": [
                 {
                     "use": {
@@ -214,7 +205,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-09"
+                    "value": "sro"
                 },
                 {
                     "use": {
@@ -222,14 +213,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LR.CR.45"
+                    "value": "smile right open"
                 }
             ]
         },
         {
-            "code": "EV10",
-            "display": "Extraoral photo,right profile 45,lips closed,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Lips Closed, Centric Occlusion",
+            "code": "slc",
+            "display": "smile left closed",
             "designation": [
                 {
                     "use": {
@@ -237,7 +227,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-10"
+                    "value": "slc"
                 },
                 {
                     "use": {
@@ -245,14 +235,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LC.CO.45"
+                    "value": "smile left closed"
                 }
             ]
         },
         {
-            "code": "EV11",
-            "display": "Extraoral photo,right profile 45,lips closed,centric relation",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Lips Closed, Centric Relation",
+            "code": "slr",
+            "display": "smile left in repose",
             "designation": [
                 {
                     "use": {
@@ -260,7 +249,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-11"
+                    "value": "slr"
                 },
                 {
                     "use": {
@@ -268,14 +257,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.LC.CR.45"
+                    "value": "smile left in repose"
                 }
             ]
         },
         {
-            "code": "EV12",
-            "display": "Extraoral photo,right profile 45,full smile,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Full Smile, Centric Occlusion",
+            "code": "slo",
+            "display": "smile left open",
             "designation": [
                 {
                     "use": {
@@ -283,7 +271,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-12"
+                    "value": "slo"
                 },
                 {
                     "use": {
@@ -291,14 +279,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.FS.CO.45"
+                    "value": "smile left open"
                 }
             ]
         },
         {
-            "code": "EV13",
-            "display": "Extraoral photo,right profile 45,full smile,centric relation",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Full Smile, Centric Relation",
+            "code": "frc",
+            "display": "front retracted closed",
             "designation": [
                 {
                     "use": {
@@ -306,7 +293,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-13"
+                    "value": "frc"
                 },
                 {
                     "use": {
@@ -314,14 +301,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.FS.CR.45"
+                    "value": "front retracted closed"
                 }
             ]
         },
         {
-            "code": "EV14",
-            "display": "Extraoral photo,right profile 45,mandible postured forward",
-            "definition": "Extraoral, 45\u00b0 Right Profile (Patient turns toward observer's right), Mandible Postured Forward",
+            "code": "frg",
+            "display": "front retracted with gap",
             "designation": [
                 {
                     "use": {
@@ -329,7 +315,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-14"
+                    "value": "frg"
                 },
                 {
                     "use": {
@@ -337,14 +323,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.RP.MD.PF.45"
+                    "value": "front retracted with gap"
                 }
             ]
         },
         {
-            "code": "EV15",
-            "display": "Extraoral photo,full face,lips relaxed,centric occlusion",
-            "definition": "Extraoral, Full Face, Lips Relaxed, Centric Occlusion",
+            "code": "oua",
+            "display": "occlusal upper arch mirrored",
             "designation": [
                 {
                     "use": {
@@ -352,7 +337,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-15"
+                    "value": "oua"
                 },
                 {
                     "use": {
@@ -360,14 +345,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.LR.CO"
+                    "value": "occlusal upper arch mirrored"
                 }
             ]
         },
         {
-            "code": "EV16",
-            "display": "Extraoral photo,full face,lips relaxed,centric relation",
-            "definition": "Extraoral, Full Face, Lips Relaxed, Centric Relation",
+            "code": "ola",
+            "display": "occlusal lower arch mirrored",
             "designation": [
                 {
                     "use": {
@@ -375,7 +359,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-16"
+                    "value": "ola"
                 },
                 {
                     "use": {
@@ -383,14 +367,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.LR.CR"
+                    "value": "occlusal lower arch mirrored"
                 }
             ]
         },
         {
-            "code": "EV17",
-            "display": "Extraoral photo,full face,lips closed,centric occlusion",
-            "definition": "Extraoral, Full Face, Lips Closed, Centric Occlusion",
+            "code": "blr",
+            "display": "buccal left retracted",
             "designation": [
                 {
                     "use": {
@@ -398,7 +381,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-17"
+                    "value": "blr"
                 },
                 {
                     "use": {
@@ -406,14 +389,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.LC.CO"
+                    "value": "buccal left retracted"
                 }
             ]
         },
         {
-            "code": "EV18",
-            "display": "Extraoral photo,full face,lips closed,centric relation",
-            "definition": "Extraoral, Full Face, Lips Closed, Centric Relation",
+            "code": "brr",
+            "display": "buccal right retracted",
             "designation": [
                 {
                     "use": {
@@ -421,7 +403,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-18"
+                    "value": "brr"
                 },
                 {
                     "use": {
@@ -429,14 +411,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.LC.CR"
+                    "value": "buccal right retracted"
                 }
             ]
         },
         {
-            "code": "EV19",
-            "display": "Extraoral photo,full face,full smile,centric occlusion",
-            "definition": "Extraoral, Full Face, Full Smile, Centric Occlusion",
+            "code": "bls",
+            "display": "buccal left gap retracted",
             "designation": [
                 {
                     "use": {
@@ -444,7 +425,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-19"
+                    "value": "bls"
                 },
                 {
                     "use": {
@@ -452,14 +433,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.FS.CO"
+                    "value": "buccal left gap retracted"
                 }
             ]
         },
         {
-            "code": "EV20",
-            "display": "Extraoral photo,full face,full smile,centric relation",
-            "definition": "Extraoral, Full Face, Full Smile, Centric Relation",
+            "code": "brs",
+            "display": "buccal right gap retracted",
             "designation": [
                 {
                     "use": {
@@ -467,7 +447,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-20"
+                    "value": "brs"
                 },
                 {
                     "use": {
@@ -475,14 +455,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.FS.CR"
+                    "value": "buccal right gap retracted"
                 }
             ]
         },
         {
-            "code": "EV21",
-            "display": "Extraoral photo,full face,mandible postured forward",
-            "definition": "Extraoral, Full Face, Mandible Postured Forward",
+            "code": "blc",
+            "display": "buccal left closed mirrored",
             "designation": [
                 {
                     "use": {
@@ -490,7 +469,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-21"
+                    "value": "blc"
                 },
                 {
                     "use": {
@@ -498,14 +477,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.MD.PF"
+                    "value": "buccal left closed mirrored"
                 }
             ]
         },
         {
-            "code": "EV22",
-            "display": "Extraoral photo,left profile,lips relaxed,centric occlusion",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Lips Relaxed, Centric Occlusion",
+            "code": "brc",
+            "display": "buccal right closed mirrored",
             "designation": [
                 {
                     "use": {
@@ -513,7 +491,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-22"
+                    "value": "brc"
                 },
                 {
                     "use": {
@@ -521,14 +499,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LR.CO"
+                    "value": "buccal right closed mirrored"
                 }
             ]
         },
         {
-            "code": "EV23",
-            "display": "Extraoral photo,left profile,lips relaxed,centric relation",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Lips Relaxed, Centric Relation",
+            "code": "blg",
+            "display": "buccal left gap mirrored",
             "designation": [
                 {
                     "use": {
@@ -536,7 +513,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-23"
+                    "value": "blg"
                 },
                 {
                     "use": {
@@ -544,14 +521,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LR.CR"
+                    "value": "buccal left gap mirrored"
                 }
             ]
         },
         {
-            "code": "EV24",
-            "display": "Extraoral photo,left profile,lips closed,centric occlusion",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Lips Closed, Centric Occlusion",
+            "code": "brg",
+            "display": "buccal right gap mirrored",
             "designation": [
                 {
                     "use": {
@@ -559,7 +535,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-24"
+                    "value": "brg"
                 },
                 {
                     "use": {
@@ -567,14 +543,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LC.CO"
+                    "value": "buccal right gap mirrored"
                 }
             ]
         },
         {
-            "code": "EV25",
-            "display": "Extraoral photo,left profile,lips closed,centric relation",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Lips Closed, Centric Relation",
+            "code": "org",
+            "display": "oblique right gap",
             "designation": [
                 {
                     "use": {
@@ -582,7 +557,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-25"
+                    "value": "org"
                 },
                 {
                     "use": {
@@ -590,14 +565,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LC.CR"
+                    "value": "oblique right gap"
                 }
             ]
         },
         {
-            "code": "EV26",
-            "display": "Extraoral photo,left profile,full smile,centric occlusion",
-            "definition": "Extraoral, Left profile (Patient is facing observer's left), Full Smile, Centric Occlusion",
+            "code": "olg",
+            "display": "oblique left gap",
             "designation": [
                 {
                     "use": {
@@ -605,7 +579,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-26"
+                    "value": "olg"
                 },
                 {
                     "use": {
@@ -613,14 +587,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.FS.CO"
+                    "value": "oblique left gap"
                 }
             ]
         },
         {
-            "code": "EV27",
-            "display": "Extraoral photo,left profile,full smile,centric relation",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Full Smile, Centric Relation",
+            "code": "orc",
+            "display": "oblique right closed",
             "designation": [
                 {
                     "use": {
@@ -628,7 +601,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-27"
+                    "value": "orc"
                 },
                 {
                     "use": {
@@ -636,14 +609,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.FS.CR"
+                    "value": "oblique right closed"
                 }
             ]
         },
         {
-            "code": "EV28",
-            "display": "Extraoral photo,left profile,mandible postured forward",
-            "definition": "Extraoral, Left Profile (Patient is facing observer's left), Mandible Postured Forward",
+            "code": "olc",
+            "display": "oblique left closed",
             "designation": [
                 {
                     "use": {
@@ -651,7 +623,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-28"
+                    "value": "olc"
                 },
                 {
                     "use": {
@@ -659,14 +631,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.MD.PF"
+                    "value": "oblique left closed"
                 }
             ]
         },
         {
-            "code": "EV29",
-            "display": "Extraoral photo,left profile 45,lips relaxed,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Occlusion",
+            "code": "4uf",
+            "display": "upper jaw front",
             "designation": [
                 {
                     "use": {
@@ -674,7 +645,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-29"
+                    "value": "4uf"
                 },
                 {
                     "use": {
@@ -682,14 +653,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LR.CO.45"
+                    "value": "upper jaw front"
                 }
             ]
         },
         {
-            "code": "EV30",
-            "display": "Extraoral photo,left profile 45,lips relaxed,centric relation",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left), Lips Relaxed, Centric Relation",
+            "code": "4ul",
+            "display": "upper jaw anterior oblique left",
             "designation": [
                 {
                     "use": {
@@ -697,7 +667,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-30"
+                    "value": "4ul"
                 },
                 {
                     "use": {
@@ -705,14 +675,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LR.CR.45"
+                    "value": "upper jaw anterior oblique left"
                 }
             ]
         },
         {
-            "code": "EV31",
-            "display": "Extraoral photo,left profile 45,lips closed,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left), Lips Closed, Centric Occlusion",
+            "code": "4ur",
+            "display": "upper jaw anterior oblique right",
             "designation": [
                 {
                     "use": {
@@ -720,7 +689,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-31"
+                    "value": "4ur"
                 },
                 {
                     "use": {
@@ -728,14 +697,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LC.CO.45"
+                    "value": "upper jaw anterior oblique right"
                 }
             ]
         },
         {
-            "code": "EV32",
-            "display": "Extraoral photo,left profile 45,lips closed,centric relation",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left), Lips Closed, Centric Relation",
+            "code": "4lf",
+            "display": "lower jaw front",
             "designation": [
                 {
                     "use": {
@@ -743,7 +711,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-32"
+                    "value": "4lf"
                 },
                 {
                     "use": {
@@ -751,14 +719,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.LC.CR.45"
+                    "value": "lower jaw front"
                 }
             ]
         },
         {
-            "code": "EV33",
-            "display": "Extraoral photo,left profile 45,full smile,centric occlusion",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left), Full Smile, Centric Occlusion",
+            "code": "4ll",
+            "display": "lower jaw anterior oblique left",
             "designation": [
                 {
                     "use": {
@@ -766,7 +733,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-33"
+                    "value": "4ll"
                 },
                 {
                     "use": {
@@ -774,14 +741,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.FS.CO.45"
+                    "value": "lower jaw anterior oblique left"
                 }
             ]
         },
         {
-            "code": "EV34",
-            "display": "Extraoral photo,left profile 45,full smile,centric relation",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left, Full Smile, Centric Relation",
+            "code": "4lr",
+            "display": "lower jaw anterior oblique right",
             "designation": [
                 {
                     "use": {
@@ -789,7 +755,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-34"
+                    "value": "4lr"
                 },
                 {
                     "use": {
@@ -797,14 +763,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.FS.CR.45"
+                    "value": "lower jaw anterior oblique right"
                 }
             ]
         },
         {
-            "code": "EV35",
-            "display": "Extraoral photo,left profile 45,mandible postured forward",
-            "definition": "Extraoral, 45\u00b0 Left Profile (Patient turns toward observer's left, Mandible Postured Forward",
+            "code": "2uf",
+            "display": "detail upper jaw front",
             "designation": [
                 {
                     "use": {
@@ -812,7 +777,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-35"
+                    "value": "2uf"
                 },
                 {
                     "use": {
@@ -820,14 +785,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.LP.MD.PF.45"
+                    "value": "detail upper jaw front"
                 }
             ]
         },
         {
-            "code": "EV36",
-            "display": "Extraoral photo,other face,inferior view",
-            "definition": "Extraoral, Other Face (head tipped back), Inferior View (showing lower border of mandible, nares, infraorbital rim contours, forehead contours)",
+            "code": "2ur",
+            "display": "detail upper jaw oblique right",
             "designation": [
                 {
                     "use": {
@@ -835,7 +799,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-36"
+                    "value": "2ur"
                 },
                 {
                     "use": {
@@ -843,14 +807,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.IV"
+                    "value": "detail upper jaw oblique right"
                 }
             ]
         },
         {
-            "code": "EV37",
-            "display": "Extraoral photo,other face,superior view",
-            "definition": "Extraoral, Other Face (viewed from above), Superior View (showing forehead, infraorbital rim contour, dorsum of nose, upper lip, chin)",
+            "code": "2ul",
+            "display": "detail upper jaw front",
             "designation": [
                 {
                     "use": {
@@ -858,7 +821,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-37"
+                    "value": "2ul"
                 },
                 {
                     "use": {
@@ -866,14 +829,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.SV"
+                    "value": "detail upper jaw front"
                 }
             ]
         },
         {
-            "code": "EV38",
-            "display": "Extraoral photo,other face,close-up smile",
-            "definition": "Extraoral, Other Face, Close-Up Smile (with lips)",
+            "code": "pfr",
+            "display": "portrait front in repose",
             "designation": [
                 {
                     "use": {
@@ -881,7 +843,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-38"
+                    "value": "pfr"
                 },
                 {
                     "use": {
@@ -889,14 +851,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.CS"
+                    "value": "portrait front in repose"
                 }
             ]
         },
         {
-            "code": "EV39",
-            "display": "Extraoral photo,other face,occlusal cant",
-            "definition": "Extraoral, Other Face, Occlusal Cant (e.g., tongue depressor between the teeth)",
+            "code": "pfs",
+            "display": "portrait front smile",
             "designation": [
                 {
                     "use": {
@@ -904,7 +865,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-39"
+                    "value": "pfs"
                 },
                 {
                     "use": {
@@ -912,14 +873,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.OC"
+                    "value": "portrait front smile"
                 }
             ]
         },
         {
-            "code": "EV40",
-            "display": "Extraoral photo,other face,forensic interest",
-            "definition": "Extraoral, Other Face, Forensic Interest (tattoos, jewelry, scars)",
+            "code": "pfo",
+            "display": "portrait front own smile",
             "designation": [
                 {
                     "use": {
@@ -927,7 +887,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-40"
+                    "value": "pfo"
                 },
                 {
                     "use": {
@@ -935,14 +895,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.FI"
+                    "value": "portrait front own smile"
                 }
             ]
         },
         {
-            "code": "EV41",
-            "display": "Extraoral photo,other face,anomalies",
-            "definition": "Extraoral, Other Face, Anomalies (ears, skin tags, etc.)",
+            "code": "po1",
+            "display": "portrait oblique right in repose",
             "designation": [
                 {
                     "use": {
@@ -950,7 +909,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-41"
+                    "value": "po1"
                 },
                 {
                     "use": {
@@ -958,14 +917,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.OF.AN"
+                    "value": "portrait oblique right in repose"
                 }
             ]
         },
         {
-            "code": "EV42",
-            "display": "Extraoral photo,full face,mouth open",
-            "definition": "Extraoral, Full Face, Mouth Open",
+            "code": "po2",
+            "display": "portrait oblique right smile",
             "designation": [
                 {
                     "use": {
@@ -973,7 +931,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-42"
+                    "value": "po2"
                 },
                 {
                     "use": {
@@ -981,14 +939,13 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.MO"
+                    "value": "portrait oblique right smile"
                 }
             ]
         },
         {
-            "code": "EV43",
-            "display": "Extraoral photo,full face,demonstrating nerve weakness",
-            "definition": "Extraoral, Full Face, demonstrating Nerve Weakness",
+            "code": "po5",
+            "display": "portrait oblique right open smile",
             "designation": [
                 {
                     "use": {
@@ -996,7 +953,7 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EV-43"
+                    "value": "po5"
                 },
                 {
                     "use": {
@@ -1004,7 +961,469 @@
                         "code": "900000000000013009",
                         "display": "Synonym"
                     },
-                    "value": "EO.FF.NW"
+                    "value": "portrait oblique right open smile"
+                }
+            ]
+        },
+        {
+            "code": "prr",
+            "display": "profile right in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "prr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right in repose"
+                }
+            ]
+        },
+        {
+            "code": "prs",
+            "display": "profile right smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "prs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right smile"
+                }
+            ]
+        },
+        {
+            "code": "pro",
+            "display": "profile right open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pro"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right open smile"
+                }
+            ]
+        },
+        {
+            "code": "po3",
+            "display": "portrait oblique left in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po3"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique left in repose"
+                }
+            ]
+        },
+        {
+            "code": "po4",
+            "display": "portrait oblique left smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po4"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique left smile"
+                }
+            ]
+        },
+        {
+            "code": "po6",
+            "display": "portrait oblique right open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po6"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique right open smile"
+                }
+            ]
+        },
+        {
+            "code": "plr",
+            "display": "profile left in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "plr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left in repose"
+                }
+            ]
+        },
+        {
+            "code": "pls",
+            "display": "profile left smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pls"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left smile"
+                }
+            ]
+        },
+        {
+            "code": "plo",
+            "display": "profile left open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "plo"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left open smile"
+                }
+            ]
+        },
+        {
+            "code": "fob",
+            "display": "front oblique from below",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "fob"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "front oblique from below"
+                }
+            ]
+        },
+        {
+            "code": "s12",
+            "display": "smile from 12 o\u2018clock",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "s12"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile from 12 o\u2018clock"
+                }
+            ]
+        },
+        {
+            "code": "u90",
+            "display": "upper arch from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "u90"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "upper arch from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "ir9",
+            "display": "incisors right from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "ir9"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "incisors right from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "il9",
+            "display": "incisors left from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "il9"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "incisors left from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "ljd",
+            "display": "lower jaw direkt",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "ljd"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "lower jaw direkt"
+                }
+            ]
+        },
+        {
+            "code": "mls",
+            "display": "model left side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mls"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model left side"
+                }
+            ]
+        },
+        {
+            "code": "mmm",
+            "display": "model maxilla and mandibular",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mmm"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model maxilla and mandibular"
+                }
+            ]
+        },
+        {
+            "code": "muj",
+            "display": "model upper jaw",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "muj"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model upper jaw"
+                }
+            ]
+        },
+        {
+            "code": "mlj",
+            "display": "model lower jaw",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mlj"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model lower jaw"
+                }
+            ]
+        },
+        {
+            "code": "mfs",
+            "display": "model front side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mfs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model front side"
+                }
+            ]
+        },
+        {
+            "code": "mbs",
+            "display": "model back side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mbs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model back side"
                 }
             ]
         }
