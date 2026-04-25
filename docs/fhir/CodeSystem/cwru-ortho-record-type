@@ -1,0 +1,118 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "cwru-ortho-record-type",
+    "url": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.5"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "CWRUOrthoRecordType",
+    "title": "Bolton-Brush Growth Study Center Collection Record Types",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-25",
+    "publisher": "CWRU Orthodontics",
+    "description": "Types for records which compose parts of longitudinal collections curated by the Bolton-Brush Growth Study Center at Case Western Reserve University.",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "L",
+            "display": "Lateral Cephalogram",
+            "definition": "Scan of Latero-Lateral (Sagittal) Cephalogram"
+        },
+        {
+            "code": "F",
+            "display": "Frontal Cephalogram",
+            "definition": "Scan of Postero-Anterior (Coronal) Cephalogram"
+        },
+        {
+            "code": "OB",
+            "display": "Oblique Cephalogram",
+            "definition": "Scan of Oblique Cephalogram"
+        },
+        {
+            "code": "OC",
+            "display": "Occlusal Dental Plain Radiograph",
+            "definition": "Scan of Occlusal Dental Plain Radiograph"
+        },
+        {
+            "code": "P",
+            "display": "Radiograph of Left Hip and Pelvis",
+            "definition": "Scan of Radiograph of Left Hip and Pelvis"
+        },
+        {
+            "code": "FA",
+            "display": "Radiograph of Foot & Ankle",
+            "definition": "Scan of Radiograph of Foot & Ankle"
+        },
+        {
+            "code": "H",
+            "display": "Radiograph of Hand & Wrist",
+            "definition": "Scan of Radiograph of Hand & Wrist"
+        },
+        {
+            "code": "CS",
+            "display": "Radiograph of Left Shoulder and Chest",
+            "definition": "Scan of Radiograph of Left Shoulder and Chest"
+        },
+        {
+            "code": "E",
+            "display": "Radiograph of Elbow",
+            "definition": "Scan of Radiograph of Elbow"
+        },
+        {
+            "code": "K",
+            "display": "Radiograph of Left Knee",
+            "definition": "Scan of Radiograph of Left Knee"
+        },
+        {
+            "code": "PH",
+            "display": "Photograph of Patient",
+            "definition": "Scan of Photograph of Patient"
+        },
+        {
+            "code": "RE",
+            "display": "Record of Examination",
+            "definition": "Scan of Record of Examination"
+        },
+        {
+            "code": "RF",
+            "display": "Record of Facial and Jaw Examination",
+            "definition": "Scan of Paper Record of Facial and Jaw Examination"
+        },
+        {
+            "code": "RT",
+            "display": "Record of Cephalometric Tracing",
+            "definition": "Scan of Paper Record of Cephalometric Tracing"
+        },
+        {
+            "code": "SM",
+            "display": "Complete Study Model",
+            "definition": "Scan of Complete (both Maxillary and Mandibular) Study Model"
+        },
+        {
+            "code": "SU",
+            "display": "Upper Study Model",
+            "definition": "Scan of Study Model of the Maxillary (Upper) Dentition"
+        },
+        {
+            "code": "SL",
+            "display": "Lower Study Model",
+            "definition": "Scan of Study Model of the Mandibular (Lower) Dentition"
+        },
+        {
+            "code": "FM",
+            "display": "Facial Moulage",
+            "definition": "Scan of Facial Moulage"
+        },
+        {
+            "code": "UK",
+            "display": "Unknown Record Type",
+            "definition": "Scan of Unknown Record Type"
+        }
+    ]
+}

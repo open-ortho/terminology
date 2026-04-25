@@ -7,14 +7,13 @@ from terminology.constants import CODE_SYSTEM_UIDS
 
 
 id = "cwru-ortho-record-type"
-canonical_path = "identifier-system/record-type"
 
 
 class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compatibility, but id now reflects record-type
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/{canonical_path}"
+        return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
         ns = CWRUOrthoNamingSystem()

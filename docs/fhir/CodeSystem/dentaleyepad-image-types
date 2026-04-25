@@ -1,0 +1,1431 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "dentaleyepad",
+    "url": "https://dentaleyepad.de/en/dentaleyepad-image-types",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99DEYE"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "DentalEyePadCodeSystem",
+    "title": "DentalEyePad Image Types",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-25",
+    "publisher": "DentalEyePad",
+    "description": "Collection of codes for dental photography as defined by DentalEyePad",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "sf0",
+            "display": "smile front closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf0"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front closed"
+                }
+            ]
+        },
+        {
+            "code": "sf1",
+            "display": "smile front slightly opened 1",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf1"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front slightly opened 1"
+                }
+            ]
+        },
+        {
+            "code": "sf2",
+            "display": "smile front slightly opened 2",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf2"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front slightly opened 2"
+                }
+            ]
+        },
+        {
+            "code": "sf3",
+            "display": "smile front opened 3",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf3"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front opened 3"
+                }
+            ]
+        },
+        {
+            "code": "sf4",
+            "display": "smile front opened 4",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf4"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front opened 4"
+                }
+            ]
+        },
+        {
+            "code": "sf5",
+            "display": "smile front gap 5",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sf5"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile front gap 5"
+                }
+            ]
+        },
+        {
+            "code": "src",
+            "display": "smile right closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "src"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile right closed"
+                }
+            ]
+        },
+        {
+            "code": "srr",
+            "display": "smile right in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "srr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile right in repose"
+                }
+            ]
+        },
+        {
+            "code": "sro",
+            "display": "smile right open",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "sro"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile right open"
+                }
+            ]
+        },
+        {
+            "code": "slc",
+            "display": "smile left closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "slc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile left closed"
+                }
+            ]
+        },
+        {
+            "code": "slr",
+            "display": "smile left in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "slr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile left in repose"
+                }
+            ]
+        },
+        {
+            "code": "slo",
+            "display": "smile left open",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "slo"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile left open"
+                }
+            ]
+        },
+        {
+            "code": "frc",
+            "display": "front retracted closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "frc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "front retracted closed"
+                }
+            ]
+        },
+        {
+            "code": "frg",
+            "display": "front retracted with gap",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "frg"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "front retracted with gap"
+                }
+            ]
+        },
+        {
+            "code": "oua",
+            "display": "occlusal upper arch mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "oua"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "occlusal upper arch mirrored"
+                }
+            ]
+        },
+        {
+            "code": "ola",
+            "display": "occlusal lower arch mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "ola"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "occlusal lower arch mirrored"
+                }
+            ]
+        },
+        {
+            "code": "blr",
+            "display": "buccal left retracted",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "blr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal left retracted"
+                }
+            ]
+        },
+        {
+            "code": "brr",
+            "display": "buccal right retracted",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "brr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal right retracted"
+                }
+            ]
+        },
+        {
+            "code": "bls",
+            "display": "buccal left gap retracted",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "bls"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal left gap retracted"
+                }
+            ]
+        },
+        {
+            "code": "brs",
+            "display": "buccal right gap retracted",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "brs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal right gap retracted"
+                }
+            ]
+        },
+        {
+            "code": "blc",
+            "display": "buccal left closed mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "blc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal left closed mirrored"
+                }
+            ]
+        },
+        {
+            "code": "brc",
+            "display": "buccal right closed mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "brc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal right closed mirrored"
+                }
+            ]
+        },
+        {
+            "code": "blg",
+            "display": "buccal left gap mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "blg"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal left gap mirrored"
+                }
+            ]
+        },
+        {
+            "code": "brg",
+            "display": "buccal right gap mirrored",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "brg"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "buccal right gap mirrored"
+                }
+            ]
+        },
+        {
+            "code": "org",
+            "display": "oblique right gap",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "org"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "oblique right gap"
+                }
+            ]
+        },
+        {
+            "code": "olg",
+            "display": "oblique left gap",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "olg"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "oblique left gap"
+                }
+            ]
+        },
+        {
+            "code": "orc",
+            "display": "oblique right closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "orc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "oblique right closed"
+                }
+            ]
+        },
+        {
+            "code": "olc",
+            "display": "oblique left closed",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "olc"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "oblique left closed"
+                }
+            ]
+        },
+        {
+            "code": "4uf",
+            "display": "upper jaw front",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4uf"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "upper jaw front"
+                }
+            ]
+        },
+        {
+            "code": "4ul",
+            "display": "upper jaw anterior oblique left",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4ul"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "upper jaw anterior oblique left"
+                }
+            ]
+        },
+        {
+            "code": "4ur",
+            "display": "upper jaw anterior oblique right",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4ur"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "upper jaw anterior oblique right"
+                }
+            ]
+        },
+        {
+            "code": "4lf",
+            "display": "lower jaw front",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4lf"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "lower jaw front"
+                }
+            ]
+        },
+        {
+            "code": "4ll",
+            "display": "lower jaw anterior oblique left",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4ll"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "lower jaw anterior oblique left"
+                }
+            ]
+        },
+        {
+            "code": "4lr",
+            "display": "lower jaw anterior oblique right",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "4lr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "lower jaw anterior oblique right"
+                }
+            ]
+        },
+        {
+            "code": "2uf",
+            "display": "detail upper jaw front",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "2uf"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "detail upper jaw front"
+                }
+            ]
+        },
+        {
+            "code": "2ur",
+            "display": "detail upper jaw oblique right",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "2ur"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "detail upper jaw oblique right"
+                }
+            ]
+        },
+        {
+            "code": "2ul",
+            "display": "detail upper jaw front",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "2ul"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "detail upper jaw front"
+                }
+            ]
+        },
+        {
+            "code": "pfr",
+            "display": "portrait front in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pfr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait front in repose"
+                }
+            ]
+        },
+        {
+            "code": "pfs",
+            "display": "portrait front smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pfs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait front smile"
+                }
+            ]
+        },
+        {
+            "code": "pfo",
+            "display": "portrait front own smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pfo"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait front own smile"
+                }
+            ]
+        },
+        {
+            "code": "po1",
+            "display": "portrait oblique right in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po1"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique right in repose"
+                }
+            ]
+        },
+        {
+            "code": "po2",
+            "display": "portrait oblique right smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po2"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique right smile"
+                }
+            ]
+        },
+        {
+            "code": "po5",
+            "display": "portrait oblique right open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po5"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique right open smile"
+                }
+            ]
+        },
+        {
+            "code": "prr",
+            "display": "profile right in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "prr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right in repose"
+                }
+            ]
+        },
+        {
+            "code": "prs",
+            "display": "profile right smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "prs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right smile"
+                }
+            ]
+        },
+        {
+            "code": "pro",
+            "display": "profile right open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pro"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile right open smile"
+                }
+            ]
+        },
+        {
+            "code": "po3",
+            "display": "portrait oblique left in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po3"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique left in repose"
+                }
+            ]
+        },
+        {
+            "code": "po4",
+            "display": "portrait oblique left smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po4"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique left smile"
+                }
+            ]
+        },
+        {
+            "code": "po6",
+            "display": "portrait oblique right open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "po6"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "portrait oblique right open smile"
+                }
+            ]
+        },
+        {
+            "code": "plr",
+            "display": "profile left in repose",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "plr"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left in repose"
+                }
+            ]
+        },
+        {
+            "code": "pls",
+            "display": "profile left smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "pls"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left smile"
+                }
+            ]
+        },
+        {
+            "code": "plo",
+            "display": "profile left open smile",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "plo"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "profile left open smile"
+                }
+            ]
+        },
+        {
+            "code": "fob",
+            "display": "front oblique from below",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "fob"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "front oblique from below"
+                }
+            ]
+        },
+        {
+            "code": "s12",
+            "display": "smile from 12 o\u2018clock",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "s12"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "smile from 12 o\u2018clock"
+                }
+            ]
+        },
+        {
+            "code": "u90",
+            "display": "upper arch from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "u90"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "upper arch from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "ir9",
+            "display": "incisors right from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "ir9"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "incisors right from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "il9",
+            "display": "incisors left from 90\u00b0",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "il9"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "incisors left from 90\u00b0"
+                }
+            ]
+        },
+        {
+            "code": "ljd",
+            "display": "lower jaw direkt",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "ljd"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "lower jaw direkt"
+                }
+            ]
+        },
+        {
+            "code": "mls",
+            "display": "model left side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mls"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model left side"
+                }
+            ]
+        },
+        {
+            "code": "mmm",
+            "display": "model maxilla and mandibular",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mmm"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model maxilla and mandibular"
+                }
+            ]
+        },
+        {
+            "code": "muj",
+            "display": "model upper jaw",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "muj"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model upper jaw"
+                }
+            ]
+        },
+        {
+            "code": "mlj",
+            "display": "model lower jaw",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mlj"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model lower jaw"
+                }
+            ]
+        },
+        {
+            "code": "mfs",
+            "display": "model front side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mfs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model front side"
+                }
+            ]
+        },
+        {
+            "code": "mbs",
+            "display": "model back side",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "mbs"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "model back side"
+                }
+            ]
+        }
+    ]
+}

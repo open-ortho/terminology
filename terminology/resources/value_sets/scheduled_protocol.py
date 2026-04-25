@@ -16,7 +16,7 @@ class ScheduledProtocolValueSet(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/{id}"
+        return f"{ns.url}/ValueSet/{id}"
 
     def __init__(self):
         url = self.static_url()
