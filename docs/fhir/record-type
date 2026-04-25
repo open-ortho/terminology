@@ -13,7 +13,7 @@
     "title": "Bolton-Brush Growth Study Center Collection Record Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-03-03",
+    "date": "2026-03-08",
     "publisher": "CWRU Orthodontics",
     "description": "Types for records which compose parts of longitudinal collections curated by the Bolton-Brush Growth Study Center at Case Western Reserve University.",
     "caseSensitive": true,
@@ -28,6 +28,11 @@
             "code": "F",
             "display": "Frontal Cephalogram",
             "definition": "Scan of Postero-Anterior (Coronal) Cephalogram"
+        },
+        {
+            "code": "OB",
+            "display": "Oblique Cephalogram",
+            "definition": "Scan of Oblique Cephalogram"
         },
         {
             "code": "P",
@@ -60,6 +65,16 @@
             "definition": "Scan of Radiograph of Left Knee"
         },
         {
+            "code": "OC",
+            "display": "Occlusal Dental Plain Radiograph",
+            "definition": "Scan of Occlusal Dental Plain Radiograph"
+        },
+        {
+            "code": "PH",
+            "display": "Photograph of Patient",
+            "definition": "Scan of Photograph of Patient"
+        },
+        {
             "code": "RE",
             "display": "Record of Examination",
             "definition": "Scan of Record of Examination"
@@ -68,6 +83,11 @@
             "code": "RF",
             "display": "Record of Facial and Jaw Examination",
             "definition": "Scan of Paper Record of Facial and Jaw Examination"
+        },
+        {
+            "code": "RT",
+            "display": "Record of Cephalometric Tracing",
+            "definition": "Scan of Paper Record of Cephalometric Tracing"
         },
         {
             "code": "SM",
@@ -88,6 +108,11 @@
             "code": "FM",
             "display": "Facial Moulage",
             "definition": "Scan of Facial Moulage"
+        },
+        {
+            "code": "UK",
+            "display": "Unknown Record Type",
+            "definition": "Scan of Unknown Record Type"
         }
     ]
 }

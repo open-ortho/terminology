@@ -1,0 +1,49 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://orthodontics.case.edu/fhir/cwru-ortho-record-types-paper",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.4"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "CWRUOrthoRecordTypesPaper",
+    "title": "CWRU Ortho Record Types - Paper Records",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-03-08",
+    "publisher": "CWRU Orthodontics",
+    "description": "Paper-based record types for CWRU Bolton-Brush collections.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "concept": [
+                    {
+                        "code": "RE"
+                    },
+                    {
+                        "code": "RF"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "timestamp": "2026-03-08",
+        "total": 2,
+        "contains": [
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "RE",
+                "display": "Record of Examination"
+            },
+            {
+                "system": "https://orthodontics.case.edu/fhir/identifier-system/record-type",
+                "code": "RF",
+                "display": "Record of Facial and Jaw Examination"
+            }
+        ]
+    }
+}
