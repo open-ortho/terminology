@@ -43,7 +43,7 @@ class CWRUOrthoRecordTypesAcetateFilm(ValueSet):
                         "system": CWRUOrthoRecordTypeCodeSystem().url,
                         "concept": [
                             {"code": code} for code in [
-                                "L", "F", "P", "FA", "H", "CS", "E", "K"
+                                "L", "F", "OB", "OC", "P", "FA", "H", "CS", "E", "K"
                             ]
                         ]
                     }
