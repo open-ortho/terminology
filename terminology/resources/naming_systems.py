@@ -166,11 +166,45 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
         )
 
 
-class TopsorthoNamingSystem:
-    """Lightweight URL helper for topsortho practice-specific code systems.
+class TopsorthoNamingSystem(NamingSystem):
+    """NamingSystem for a specific topsOrtho server instance, identified by UUID.
 
-    Not a published NamingSystem resource — the UUID anonymously identifies
-    the practice without leaking any identifying information.
+    The UUID anonymously identifies the practice without leaking any identifying
+    information. The DICOM coding scheme is derived from the UUID per the 99TOPS
+    convention: 99TOPS + first 8 hex chars of the UUID (uppercase, no hyphens).
     """
     def __init__(self, uuid: str):
-        self.url = f"https://terminology.open-ortho.org/fhir/sid/topsortho/{uuid}"
+        dicom_scheme = f"99TOPS{uuid.replace('-', '').upper()[:8]}"
+        url = f"https://terminology.open-ortho.org/fhir/sid/topsortho/{uuid}"
+        super().__init__(
+            url=url,
+            name=f"TopsOrtho{uuid.replace('-', '').upper()[:8]}",
+            title=f"topsOrtho Server Instance {uuid}",
+            identifier=[Identifier(
+                system="dicom",
+                value=dicom_scheme
+            )],
+            description=(
+                f"Codes from topsOrtho server instance {uuid}. "
+                "These are practice-specific image label types defined locally "
+                "on a specific topsOrtho server installation. The UUID identifies "
+                "the server instance anonymously without revealing practice identity."
+            ),
+            status="active",
+            kind="codesystem",
+            date="2025-01-01",
+            publisher="topsOrtho",
+            responsible="topsOrtho",
+            uniqueId=[
+                {
+                    "type": "uri",
+                    "value": url,
+                    "preferred": True
+                },
+                {
+                    "type": "dicom",
+                    "value": dicom_scheme,
+                    "preferred": True
+                }
+            ]
+        )
