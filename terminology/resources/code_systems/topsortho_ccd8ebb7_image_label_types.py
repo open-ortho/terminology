@@ -9,7 +9,7 @@ id = "image-label-types"
 _PRACTICE_UUID = "CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE"
 
 
-class MRosaImageLabelTypesCodeSystem(CodeSystem):
+class TopsorthoCCD8EBB7ImageLabelTypesCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
