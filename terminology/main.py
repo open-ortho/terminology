@@ -77,20 +77,15 @@ def build_index_entry(resource: Resource) -> dict[str, str]:
         "expand_url": expand_url,
     }
 
-def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path) -> None:
+def collect_index_entries(
+    resources: dict[Type[Resource], list[Any]]
+) -> dict[str, list[dict[str, str]]]:
+    """Collect metadata for all resources — shared by index and tool generators."""
     index_entries: dict[str, list[dict[str, str]]] = {
         "CodeSystem": [],
         "ValueSet": [],
         "ConceptMap": [],
     }
-
-    def escape_html(text: str) -> str:
-        return (
-            text.replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-        )
-
     for resource_type, modules in resources.items():
         for module in modules:
             for name in dir(module):
@@ -103,6 +98,44 @@ def generate_index(resources: dict[Type[Resource], list[Any]], output_path: Path
                         continue
                     entry = build_index_entry(instance)
                     index_entries[entry["resource_type"]].append(entry)
+    return index_entries
+
+
+def generate_conceptmap_tool(
+    index_entries: dict[str, list[dict[str, str]]],
+    template_path: Path,
+    output_path: Path,
+) -> None:
+    """Generate the ConceptMap editor tool with known resources injected."""
+    import json as _json
+
+    known = []
+    for rt in ("CodeSystem", "ValueSet", "ConceptMap"):
+        for entry in sorted(index_entries[rt], key=lambda e: e["title"].lower()):
+            item = {"type": rt, "title": entry["title"] or entry["url"], "url": entry["url"]}
+            if entry.get("expand_url"):
+                item["expandUrl"] = entry["expand_url"]
+            known.append(item)
+
+    injection = f"const KNOWN_RESOURCES = {_json.dumps(known, indent=2)};"
+    template = template_path.read_text(encoding="utf-8")
+    output = template.replace("// @@KNOWN_RESOURCES@@", injection)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(output, encoding="utf-8")
+    logger.info(f"Generated ConceptMap tool at {output_path} ({len(known)} resources injected)")
+
+
+def generate_index(
+    index_entries: dict[str, list[dict[str, str]]],
+    output_path: Path,
+) -> None:
+    def escape_html(text: str) -> str:
+        return (
+            text.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+        )
 
     # HTML file content
     lines = [
@@ -356,7 +389,13 @@ def main() -> int:
         for module in modules:
             save_fhir_resource(module, resource_type, build_path / "fhir", all_code_systems)
 
-    generate_index(resources, build_path / "index.html")
+    index_entries = collect_index_entries(resources)
+    generate_index(index_entries, build_path / "index.html")
+    generate_conceptmap_tool(
+        index_entries,
+        Path("tools", "conceptmap-generator.html"),
+        build_path / "conceptmap-generator.html",
+    )
 
     return 0
 

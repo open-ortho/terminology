@@ -53,6 +53,12 @@ body { font-family: system-ui, sans-serif; font-size: 13px; margin: 0; backgroun
   border-radius: 3px; cursor: pointer; font-size: 11px; flex-shrink: 0;
 }
 .btn-small:hover { background: #1a3a5c; }
+.pick-select {
+  font-size: 11px; padding: 3px 6px; border: none; border-radius: 3px;
+  background: #0f2540; color: #aac; cursor: pointer; flex-shrink: 0;
+  max-width: 220px;
+}
+.pick-select option, .pick-select optgroup { background: #1a3a5c; color: #dde; }
 
 .setup-footer { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
 #buildBtn {
@@ -122,6 +128,9 @@ tr.unmapped td.code { color: #999; }
     <span class="sep">or URL</span>
     <input class="url-input" type="text" id="sourceUrl" placeholder="https://… or relative path">
     <button class="btn-load" onclick="loadUrl('source')">Fetch</button>
+    <select class="pick-select" onchange="pickResource(this,'source')" id="sourcePick">
+      <option value="">— pick published —</option>
+    </select>
     <span class="status-badge empty" id="sourceStatus">not loaded</span>
   </div>
 
@@ -177,6 +186,35 @@ tr.unmapped td.code { color: #999; }
 </div>
 
 <script>
+// ── Published resources (injected at build time) ──────────────────────────────
+// @@KNOWN_RESOURCES@@
+
+// ── Quick-pick helpers ────────────────────────────────────────────────────────
+function buildPickOptions(types) {
+  let html = '<option value="">— pick published —</option>';
+  for (const rt of types) {
+    const items = (typeof KNOWN_RESOURCES !== 'undefined')
+      ? KNOWN_RESOURCES.filter(r => r.type === rt) : [];
+    if (!items.length) continue;
+    html += `<optgroup label="${rt}">`;
+    for (const r of items) {
+      html += `<option value="${r.url}">${r.title}</option>`;
+    }
+    html += '</optgroup>';
+  }
+  return html;
+}
+
+function pickResource(sel, type, idx) {
+  const url = sel.value;
+  if (!url) return;
+  sel.value = '';
+  const inputId = type === 'source' ? 'sourceUrl' : `targetUrl_${idx}`;
+  document.getElementById(inputId).value = url;
+  if (type === 'source') loadUrl('source');
+  else loadUrl('target', idx);
+}
+
 // ── State ─────────────────────────────────────────────────────────────────────
 let sourceCS  = null;   // {url, title, concepts:[{code,display,def}]}
 let targetCSs = [];     // [{url, title, concepts:[...]}]  — parallel to UI rows
@@ -333,6 +371,9 @@ function addTargetRow() {
     <span class="sep">or URL</span>
     <input class="url-input" type="text" id="targetUrl_${idx}" placeholder="https://… or relative path">
     <button class="btn-load" onclick="loadUrl('target',${idx})">Fetch</button>
+    <select class="pick-select" onchange="pickResource(this,'target',${idx})">
+      ${buildPickOptions(['CodeSystem','ValueSet'])}
+    </select>
     <span class="status-badge empty" id="targetStatus_${idx}">not loaded</span>
     <button class="btn-small" onclick="removeTargetRow(${idx})" title="Remove">✕</button>
   `;
@@ -508,7 +549,8 @@ function escAttr(s) {
   return String(s).replace(/"/g,'&quot;');
 }
 
-// ── Init: add one target row by default ──────────────────────────────────────
+// ── Init: add one target row by default, populate source pick ────────────────
+document.getElementById('sourcePick').innerHTML = buildPickOptions(['CodeSystem']);
 addTargetRow();
 </script>
 </body>

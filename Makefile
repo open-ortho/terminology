@@ -17,7 +17,6 @@ help:
 
 build:
 	oo-codes
-	cp tools/conceptmap-generator.html docs/conceptmap-generator.html
 
 serve:
 	@echo "Serving docs/ at http://localhost:8000 (simulates GitHub Pages)"
