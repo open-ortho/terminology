@@ -1,404 +1,404 @@
 {
     "resourceType": "ConceptMap",
-    "url": "https://terminology.open-ortho.org/fhir/sid/open-ortho/ConceptMap/orthodontic-photograph-views",
+    "url": "https://terminology.open-ortho.org/fhir/ConceptMap/orthodontic-photograph-views-reverse",
     "version": "0.1.0",
-    "name": "OrthodonticPhotographViewsConceptMap",
-    "title": "Orthodontic Photograph Views ConceptMap",
+    "name": "OrthodonticPhotographViewsReverseConceptMap",
+    "title": "Orthodontic Photograph Views Reverse ConceptMap",
     "status": "draft",
     "experimental": true,
     "date": "2026-04-26",
     "publisher": "OpenOrtho",
-    "description": "Mapping between Open Ortho photographic views and SNOMED CT photographic concepts.",
-    "sourceScopeUri": "https://terminology.open-ortho.org/fhir/sid/open-ortho",
-    "targetScopeUri": "http://snomed.info/sct",
+    "description": "Reverse mapping between SNOMED CT photographic concepts and Open Ortho photographic views.",
+    "sourceScopeUri": "http://snomed.info/sct",
+    "targetScopeUri": "https://terminology.open-ortho.org/fhir",
     "group": [
         {
-            "source": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
-            "target": "http://snomed.info/sct",
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
             "element": [
                 {
-                    "code": "EV01",
+                    "code": "1306623000",
                     "target": [
                         {
-                            "code": "1306623000",
+                            "code": "EV01",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV02",
+                    "code": "1306622005",
                     "target": [
                         {
-                            "code": "1306622005",
+                            "code": "EV02",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV03",
+                    "code": "1306621003",
                     "target": [
                         {
-                            "code": "1306621003",
+                            "code": "EV03",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV04",
+                    "code": "1306620002",
                     "target": [
                         {
-                            "code": "1306620002",
+                            "code": "EV04",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV05",
+                    "code": "1306628009",
                     "target": [
                         {
-                            "code": "1306628009",
+                            "code": "EV05",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV06",
+                    "code": "1306626008",
                     "target": [
                         {
-                            "code": "1306626008",
+                            "code": "EV06",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV07",
+                    "code": "1365795009",
                     "target": [
                         {
-                            "code": "1365795009",
+                            "code": "EV07",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV08",
+                    "code": "1306627004",
                     "target": [
                         {
-                            "code": "1306627004",
+                            "code": "EV08",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV09",
+                    "code": "1306625007",
                     "target": [
                         {
-                            "code": "1306625007",
+                            "code": "EV09",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV10",
+                    "code": "1306629001",
                     "target": [
                         {
-                            "code": "1306629001",
+                            "code": "EV10",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV11",
+                    "code": "1306631005",
                     "target": [
                         {
-                            "code": "1306631005",
+                            "code": "EV11",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV12",
+                    "code": "1306632003",
                     "target": [
                         {
-                            "code": "1306632003",
+                            "code": "EV12",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV13",
+                    "code": "1306633008",
                     "target": [
                         {
-                            "code": "1306633008",
+                            "code": "EV13",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV14",
+                    "code": "1306634002",
                     "target": [
                         {
-                            "code": "1306634002",
+                            "code": "EV14",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV15",
+                    "code": "1306630006",
                     "target": [
                         {
-                            "code": "1306630006",
+                            "code": "EV15",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV16",
+                    "code": "1306663004",
                     "target": [
                         {
-                            "code": "1306663004",
+                            "code": "EV16",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV17",
+                    "code": "1306624006",
                     "target": [
                         {
-                            "code": "1306624006",
+                            "code": "EV17",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV18",
+                    "code": "1306662009",
                     "target": [
                         {
-                            "code": "1306662009",
+                            "code": "EV18",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV19",
+                    "code": "1306664005",
                     "target": [
                         {
-                            "code": "1306664005",
+                            "code": "EV19",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV20",
+                    "code": "1306665006",
                     "target": [
                         {
-                            "code": "1306665006",
+                            "code": "EV20",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV21",
+                    "code": "787611004",
                     "target": [
                         {
-                            "code": "787611004",
+                            "code": "EV21",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV22",
+                    "code": "1306656004",
                     "target": [
                         {
-                            "code": "1306656004",
+                            "code": "EV22",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV23",
+                    "code": "1306648002",
                     "target": [
                         {
-                            "code": "1306648002",
+                            "code": "EV23",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV24",
+                    "code": "1306649005",
                     "target": [
                         {
-                            "code": "1306649005",
+                            "code": "EV24",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV25",
+                    "code": "1306650005",
                     "target": [
                         {
-                            "code": "1306650005",
+                            "code": "EV25",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV26",
+                    "code": "1306651009",
                     "target": [
                         {
-                            "code": "1306651009",
+                            "code": "EV26",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV27",
+                    "code": "1306652002",
                     "target": [
                         {
-                            "code": "1306652002",
+                            "code": "EV27",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV28",
+                    "code": "1365794008",
                     "target": [
                         {
-                            "code": "1365794008",
+                            "code": "EV28",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV29",
+                    "code": "1306644000",
                     "target": [
                         {
-                            "code": "1306644000",
+                            "code": "EV29",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV30",
+                    "code": "1306645004",
                     "target": [
                         {
-                            "code": "1306645004",
+                            "code": "EV30",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV31",
+                    "code": "1306646003",
                     "target": [
                         {
-                            "code": "1306646003",
+                            "code": "EV31",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV32",
+                    "code": "1306647007",
                     "target": [
                         {
-                            "code": "1306647007",
+                            "code": "EV32",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV33",
+                    "code": "1306643006",
                     "target": [
                         {
-                            "code": "1306643006",
+                            "code": "EV33",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV34",
+                    "code": "1306654001",
                     "target": [
                         {
-                            "code": "1306654001",
+                            "code": "EV34",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV35",
+                    "code": "1306655000",
                     "target": [
                         {
-                            "code": "1306655000",
+                            "code": "EV35",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV36",
+                    "code": "1306653007",
                     "target": [
                         {
-                            "code": "1306653007",
+                            "code": "EV36",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV37",
+                    "code": "1365796005",
                     "target": [
                         {
-                            "code": "1365796005",
+                            "code": "EV37",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV38",
+                    "code": "1365797001",
                     "target": [
                         {
-                            "code": "1365797001",
+                            "code": "EV38",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV39",
+                    "code": "1365798006",
                     "target": [
                         {
-                            "code": "1365798006",
+                            "code": "EV39",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV40",
+                    "code": "1365790004",
                     "target": [
                         {
-                            "code": "1365790004",
+                            "code": "EV40",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV41",
+                    "code": "1365791000",
                     "target": [
                         {
-                            "code": "1365791000",
+                            "code": "EV41",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV42",
+                    "code": "1365793002",
                     "target": [
                         {
-                            "code": "1365793002",
+                            "code": "EV42",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "EV43",
+                    "code": "1365792007",
                     "target": [
                         {
-                            "code": "1365792007",
+                            "code": "EV43",
                             "relationship": "equivalent"
                         }
                     ]
@@ -406,275 +406,275 @@
             ]
         },
         {
-            "source": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
-            "target": "http://snomed.info/sct",
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
             "element": [
                 {
-                    "code": "IV01",
+                    "code": "1365808006",
                     "target": [
                         {
-                            "code": "1365808006",
+                            "code": "IV01",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV02",
+                    "code": "1365814004",
                     "target": [
                         {
-                            "code": "1365814004",
+                            "code": "IV02",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV03",
+                    "code": "1365817006",
                     "target": [
                         {
-                            "code": "1365817006",
+                            "code": "IV03",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV04",
+                    "code": "1365800004",
                     "target": [
                         {
-                            "code": "1365800004",
+                            "code": "IV04",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV05",
+                    "code": "1365869001",
                     "target": [
                         {
-                            "code": "1365869001",
+                            "code": "IV05",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV06",
+                    "code": "1365870000",
                     "target": [
                         {
-                            "code": "1365870000",
+                            "code": "IV06",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV07",
+                    "code": "1365802007",
                     "target": [
                         {
-                            "code": "1365802007",
+                            "code": "IV07",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV08",
+                    "code": "1365801000",
                     "target": [
                         {
-                            "code": "1365801000",
+                            "code": "IV08",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV09",
+                    "code": "1365804008",
                     "target": [
                         {
-                            "code": "1365804008",
+                            "code": "IV09",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV10",
+                    "code": "1365803002",
                     "target": [
                         {
-                            "code": "1365803002",
+                            "code": "IV10",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV11",
+                    "code": "1365806005",
                     "target": [
                         {
-                            "code": "1365806005",
+                            "code": "IV11",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV12",
+                    "code": "1365807001",
                     "target": [
                         {
-                            "code": "1365807001",
+                            "code": "IV12",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV13",
+                    "code": "1365805009",
                     "target": [
                         {
-                            "code": "1365805009",
+                            "code": "IV13",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV14",
+                    "code": "1365824007",
                     "target": [
                         {
-                            "code": "1365824007",
+                            "code": "IV14",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV15",
+                    "code": "1365827000",
                     "target": [
                         {
-                            "code": "1365827000",
+                            "code": "IV15",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV16",
+                    "code": "1365826009",
                     "target": [
                         {
-                            "code": "1365826009",
+                            "code": "IV16",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV17",
+                    "code": "1365828005",
                     "target": [
                         {
-                            "code": "1365828005",
+                            "code": "IV17",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV18",
+                    "code": "1365809003",
                     "target": [
                         {
-                            "code": "1365809003",
+                            "code": "IV18",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV19",
+                    "code": "1365815003",
                     "target": [
                         {
-                            "code": "1365815003",
+                            "code": "IV19",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV20",
+                    "code": "1365818001",
                     "target": [
                         {
-                            "code": "1365818001",
+                            "code": "IV20",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV21",
+                    "code": "1365799003",
                     "target": [
                         {
-                            "code": "1365799003",
+                            "code": "IV21",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV22",
+                    "code": "1365868009",
                     "target": [
                         {
-                            "code": "1365868009",
+                            "code": "IV22",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV23",
+                    "code": "1365871001",
                     "target": [
                         {
-                            "code": "1365871001",
+                            "code": "IV23",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV24",
+                    "code": "1365863000",
                     "target": [
                         {
-                            "code": "1365863000",
+                            "code": "IV24",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV25",
+                    "code": "1365865007",
                     "target": [
                         {
-                            "code": "1365865007",
+                            "code": "IV25",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV26",
+                    "code": "1365864006",
                     "target": [
                         {
-                            "code": "1365864006",
+                            "code": "IV26",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV27",
+                    "code": "1365866008",
                     "target": [
                         {
-                            "code": "1365866008",
+                            "code": "IV27",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV28",
+                    "code": "1365867004",
                     "target": [
                         {
-                            "code": "1365867004",
+                            "code": "IV28",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV29",
+                    "code": "1365811007",
                     "target": [
                         {
-                            "code": "1365811007",
+                            "code": "IV29",
                             "relationship": "equivalent"
                         }
                     ]
                 },
                 {
-                    "code": "IV30",
+                    "code": "1365810008",
                     "target": [
                         {
-                            "code": "1365810008",
+                            "code": "IV30",
                             "relationship": "equivalent"
                         }
                     ]
@@ -682,13 +682,13 @@
             ]
         },
         {
-            "source": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/extraoral-3d-visible-light-scheduled-protocol",
-            "target": "http://snomed.info/sct",
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-3d-visible-light-scheduled-protocol",
             "element": []
         },
         {
-            "source": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-3d-visible-light-scheduled-protocol",
-            "target": "http://snomed.info/sct",
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-3d-visible-light-scheduled-protocol",
             "element": []
         }
     ]

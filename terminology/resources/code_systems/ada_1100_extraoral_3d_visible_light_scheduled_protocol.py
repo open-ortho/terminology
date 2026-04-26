@@ -1,6 +1,6 @@
 from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
-from terminology.resources.naming_systems import OpenOrthoNamingSystem
+from terminology.resources.naming_systems import ADA1100NamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.constants import CODE_SYSTEM_UIDS
 
@@ -10,11 +10,11 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        ns = OpenOrthoNamingSystem()
+        ns = ADA1100NamingSystem()
         return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
-        OPOR = OpenOrthoNamingSystem()
+        ADA = ADA1100NamingSystem()
         super().__init__(
             id=id,
             identifier=[
@@ -30,7 +30,7 @@ class Extraoral3DVisibleLightScheduledProtocolCodeSystem(CodeSystem):
             status="draft",
             experimental=True,
             date=datetime.now().date().isoformat(),
-            publisher=OPOR.publisher,
+            publisher=ADA.publisher,
             description="Common extraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the head and neck",
             caseSensitive=True,
             content="complete",

@@ -1,7 +1,7 @@
 {
     "resourceType": "CodeSystem",
     "id": "intraoral-2d-photographic-scheduled-protocol",
-    "url": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
+    "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
@@ -14,7 +14,7 @@
     "status": "draft",
     "experimental": false,
     "date": "2026-04-26",
-    "publisher": "OpenOrtho",
+    "publisher": "American Dental Association",
     "description": "Common intraoral 2D photographic views used in an orthodontic provider's practice",
     "caseSensitive": true,
     "content": "complete",

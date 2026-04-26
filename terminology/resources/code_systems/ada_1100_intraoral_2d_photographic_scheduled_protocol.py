@@ -1,6 +1,6 @@
 from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
-from terminology.resources.naming_systems import OpenOrthoNamingSystem
+from terminology.resources.naming_systems import ADA1100NamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.resources.code_systems import add_meta_to_resource
 from terminology.constants import CODE_SYSTEM_UIDS
@@ -11,11 +11,11 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        ns = OpenOrthoNamingSystem()
+        ns = ADA1100NamingSystem()
         return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
-        OPOR = OpenOrthoNamingSystem()
+        ADA = ADA1100NamingSystem()
         super().__init__(
             id=id,
             identifier=[
@@ -31,7 +31,7 @@ class Intraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
             status="draft",
             experimental=False,
             date=datetime.now().date().isoformat(),
-            publisher=OPOR.publisher,
+            publisher=ADA.publisher,
             description="Common intraoral 2D photographic views used in an orthodontic provider's practice",
             caseSensitive=True,
             content="complete",

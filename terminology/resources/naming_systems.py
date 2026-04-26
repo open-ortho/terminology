@@ -40,10 +40,48 @@ A custom set of codes used by various medoco Health products, as reccommended by
             ]
         )
 
+class ADA1100NamingSystem(NamingSystem):
+    def __init__(self):
+        super().__init__(
+            url="https://terminology.open-ortho.org/fhir/sid/ada1100",
+            name="ADA1100",
+            title="ANSI/ADA Standard No. 1100 Naming System",
+            identifier=[Identifier(
+                system="dicom",
+                value="99ADA1100"
+            )],
+            description="""
+## ANSI/ADA Standard No. 1100 — Dental Informatics: Orthodontic Records
+
+Codes defined in ANSI/ADA Standard No. 1100, hosted here by open-ortho on behalf
+of the American Dental Association Standards Committee (SC).
+The ADA does not operate a FHIR terminology server; open-ortho provides stable,
+resolvable canonical URLs for these codes.
+""",
+            status="active",
+            kind="codesystem",
+            date="2025-01-01",
+            publisher="American Dental Association",
+            responsible="ADA Standards Committee",
+            uniqueId=[
+                {
+                    "type": "uri",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/ada1100",
+                    "preferred": True
+                },
+                {
+                    "type": "dicom",
+                    "value": "99ADA1100",
+                    "preferred": True
+                }
+            ]
+        )
+
+
 class OpenOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="https://terminology.open-ortho.org/fhir/sid/open-ortho",
+            url="https://terminology.open-ortho.org/fhir",
             name="OpenOrtho",
             title="Open-Ortho",
             identifier=[Identifier(
@@ -74,7 +112,7 @@ A set of codes required to represent dental and orthodontic concepts for interop
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "https://terminology.open-ortho.org/fhir/sid/open-ortho",
+                    "value": "https://terminology.open-ortho.org/fhir",
                     "preferred": False
                 },
                 {

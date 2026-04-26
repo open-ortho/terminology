@@ -28,10 +28,10 @@ from terminology.fhir_types import (
 from terminology.resources.code_systems import (
     dentaleyepad_image_types,
     cwru_ortho_image_types,
-    extraoral_2d_photographic_scheduled_protocol,
-    extraoral_3d_visible_light_scheduled_protocol,
-    intraoral_3d_visible_light_scheduled_protocol,
-    intraoral_2d_photographic_scheduled_protocol,
+    ada_1100_extraoral_2d_photographic_scheduled_protocol,
+    ada_1100_extraoral_3d_visible_light_scheduled_protocol,
+    ada_1100_intraoral_3d_visible_light_scheduled_protocol,
+    ada_1100_intraoral_2d_photographic_scheduled_protocol,
     ada_1100_enumerated_terms,
     topsortho_ccd8ebb7_image_label_types,
 )
@@ -331,10 +331,10 @@ def main() -> int:
     # Dictionary mapping resource types to modules containing them
     resources = {
         CodeSystem: [
-            extraoral_2d_photographic_scheduled_protocol,
-            extraoral_3d_visible_light_scheduled_protocol,
-            intraoral_3d_visible_light_scheduled_protocol,
-            intraoral_2d_photographic_scheduled_protocol,
+            ada_1100_extraoral_2d_photographic_scheduled_protocol,
+            ada_1100_extraoral_3d_visible_light_scheduled_protocol,
+            ada_1100_intraoral_3d_visible_light_scheduled_protocol,
+            ada_1100_intraoral_2d_photographic_scheduled_protocol,
             dentaleyepad_image_types,
             cwru_ortho_image_types,
             ada_1100_enumerated_terms,
