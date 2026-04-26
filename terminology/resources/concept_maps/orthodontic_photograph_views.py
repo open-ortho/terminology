@@ -6,16 +6,16 @@ from typing import Dict, Iterable, List, TypedDict, cast
 from terminology.fhir_types import ConceptMap
 
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
-from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_extraoral_2d_photographic_scheduled_protocol import (
     Extraoral2DPhotographicScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_extraoral_3d_visible_light_scheduled_protocol import (
     Extraoral3DVisibleLightScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.intraoral_2d_photographic_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_intraoral_2d_photographic_scheduled_protocol import (
     Intraoral2DPhotographicScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.intraoral_3d_visible_light_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_intraoral_3d_visible_light_scheduled_protocol import (
     Intraoral3DVisibleLightScheduledProtocolCodeSystem,
 )
 

@@ -33,5 +33,5 @@ deploy: dist
 clean:
 	find $(DIST) -mindepth 1 ! -name 'CNAME' -delete
 	find . -name '*.pyc' -delete
-	find . -name '*.egg-info' -delete
 	rm -rf *.egg-info
+	find . -name '*.egg-info' -delete

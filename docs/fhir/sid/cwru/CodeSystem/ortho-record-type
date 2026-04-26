@@ -1,7 +1,7 @@
 {
     "resourceType": "CodeSystem",
-    "id": "cwru-ortho-record-type",
-    "url": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+    "id": "ortho-record-type",
+    "url": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
@@ -13,7 +13,7 @@
     "title": "Bolton-Brush Growth Study Center Collection Record Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-25",
+    "date": "2026-04-26",
     "publisher": "CWRU Orthodontics",
     "description": "Types for records which compose parts of longitudinal collections curated by the Bolton-Brush Growth Study Center at Case Western Reserve University.",
     "caseSensitive": true,

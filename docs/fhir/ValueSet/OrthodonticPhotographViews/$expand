@@ -1,6 +1,6 @@
 {
     "resourceType": "ValueSet",
-    "url": "http://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews",
+    "url": "https://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
@@ -29,7 +29,7 @@
     "compose": {
         "include": [
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol"
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol"
             },
             {
                 "system": "http://snomed.info/sct",
@@ -44,221 +44,221 @@
         ]
     },
     "expansion": {
-        "timestamp": "2026-04-25",
+        "timestamp": "2026-04-26",
         "total": 43,
         "contains": [
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV01",
                 "display": "Extraoral photo,right profile,lips relaxed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV02",
                 "display": "Extraoral photo,right profile,lips relaxed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV03",
                 "display": "Extraoral photo,right profile,lips closed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV04",
                 "display": "Extraoral photo,right profile,lips closed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV05",
                 "display": "Extraoral photo,right profile,full smile,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV06",
                 "display": "Extraoral photo,right profile,full smile,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV07",
                 "display": "Extraoral photo,right profile,mandible postured forward"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV08",
                 "display": "Extraoral photo,right profile 45,lips relaxed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV09",
                 "display": "Extraoral photo,right profile 45,lips relaxed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV10",
                 "display": "Extraoral photo,right profile 45,lips closed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV11",
                 "display": "Extraoral photo,right profile 45,lips closed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV12",
                 "display": "Extraoral photo,right profile 45,full smile,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV13",
                 "display": "Extraoral photo,right profile 45,full smile,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV14",
                 "display": "Extraoral photo,right profile 45,mandible postured forward"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV15",
                 "display": "Extraoral photo,full face,lips relaxed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV16",
                 "display": "Extraoral photo,full face,lips relaxed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV17",
                 "display": "Extraoral photo,full face,lips closed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV18",
                 "display": "Extraoral photo,full face,lips closed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV19",
                 "display": "Extraoral photo,full face,full smile,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV20",
                 "display": "Extraoral photo,full face,full smile,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV21",
                 "display": "Extraoral photo,full face,mandible postured forward"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV22",
                 "display": "Extraoral photo,left profile,lips relaxed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV23",
                 "display": "Extraoral photo,left profile,lips relaxed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV24",
                 "display": "Extraoral photo,left profile,lips closed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV25",
                 "display": "Extraoral photo,left profile,lips closed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV26",
                 "display": "Extraoral photo,left profile,full smile,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV27",
                 "display": "Extraoral photo,left profile,full smile,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV28",
                 "display": "Extraoral photo,left profile,mandible postured forward"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV29",
                 "display": "Extraoral photo,left profile 45,lips relaxed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV30",
                 "display": "Extraoral photo,left profile 45,lips relaxed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV31",
                 "display": "Extraoral photo,left profile 45,lips closed,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV32",
                 "display": "Extraoral photo,left profile 45,lips closed,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV33",
                 "display": "Extraoral photo,left profile 45,full smile,centric occlusion"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV34",
                 "display": "Extraoral photo,left profile 45,full smile,centric relation"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV35",
                 "display": "Extraoral photo,left profile 45,mandible postured forward"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV36",
                 "display": "Extraoral photo,other face,inferior view"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV37",
                 "display": "Extraoral photo,other face,superior view"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV38",
                 "display": "Extraoral photo,other face,close-up smile"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV39",
                 "display": "Extraoral photo,other face,occlusal cant"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV40",
                 "display": "Extraoral photo,other face,forensic interest"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV41",
                 "display": "Extraoral photo,other face,anomalies"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV42",
                 "display": "Extraoral photo,full face,mouth open"
             },
             {
-                "system": "http://terminology.open-ortho.org/fhir/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
                 "code": "EV43",
                 "display": "Extraoral photo,full face,demonstrating nerve weakness"
             }

@@ -6,7 +6,7 @@ from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.constants import CODE_SYSTEM_UIDS
 
 
-id = "cwru-ortho-record-type"
+id = "ortho-record-type"
 
 
 class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compatibility, but id now reflects record-type

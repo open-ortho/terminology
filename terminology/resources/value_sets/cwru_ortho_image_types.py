@@ -7,7 +7,7 @@ from terminology.resources.code_systems.cwru_ortho_image_types import (
 )
 from terminology.constants import VALUE_SET_UIDS
 
-id = "cwru-ortho-record-types"
+id = "ortho-record-types"
 
 class CWRUOrthoRecordTypesValueSet(ValueSet):
     @classmethod

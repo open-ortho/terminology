@@ -1,7 +1,7 @@
 {
     "resourceType": "CodeSystem",
     "id": "dentaleyepad",
-    "url": "https://dentaleyepad.de/en/dentaleyepad-image-types",
+    "url": "https://terminology.open-ortho.org/fhir/sid/dentaleyepad/CodeSystem/image-types",
     "identifier": [
         {
             "system": "dicom",
@@ -13,7 +13,7 @@
     "title": "DentalEyePad Image Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-25",
+    "date": "2026-04-26",
     "publisher": "DentalEyePad",
     "description": "Collection of codes for dental photography as defined by DentalEyePad",
     "caseSensitive": true,

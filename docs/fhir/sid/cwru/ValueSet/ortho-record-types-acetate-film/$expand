@@ -1,6 +1,6 @@
 {
     "resourceType": "ValueSet",
-    "url": "https://orthodontics.case.edu/fhir/ValueSet/cwru-ortho-record-types-acetate-film",
+    "url": "https://terminology.open-ortho.org/fhir/sid/cwru/ValueSet/ortho-record-types-acetate-film",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
@@ -12,13 +12,13 @@
     "title": "CWRU Ortho Record Types - Acetate Film",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-25",
+    "date": "2026-04-26",
     "publisher": "CWRU Orthodontics",
     "description": "Record types on acetate film for CWRU Bolton-Brush collections.",
     "compose": {
         "include": [
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "concept": [
                     {
                         "code": "L"
@@ -55,56 +55,56 @@
         ]
     },
     "expansion": {
-        "timestamp": "2026-04-25",
+        "timestamp": "2026-04-26",
         "total": 10,
         "contains": [
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "L",
                 "display": "Lateral Cephalogram"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "F",
                 "display": "Frontal Cephalogram"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "OB",
                 "display": "Oblique Cephalogram"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "OC",
                 "display": "Occlusal Dental Plain Radiograph"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "P",
                 "display": "Radiograph of Left Hip and Pelvis"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "FA",
                 "display": "Radiograph of Foot & Ankle"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "H",
                 "display": "Radiograph of Hand & Wrist"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "CS",
                 "display": "Radiograph of Left Shoulder and Chest"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "E",
                 "display": "Radiograph of Elbow"
             },
             {
-                "system": "https://orthodontics.case.edu/fhir/CodeSystem/cwru-ortho-record-type",
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
                 "code": "K",
                 "display": "Radiograph of Left Knee"
             }

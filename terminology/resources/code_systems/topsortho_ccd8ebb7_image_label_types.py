@@ -1,18 +1,19 @@
 from datetime import datetime
 
 from terminology.fhir_types import CodeSystem, CodeSystemConcept
-from terminology.resources.naming_systems import MedocoHealthNamingSystem
+from terminology.resources.naming_systems import MedocoHealthNamingSystem, TopsorthoNamingSystem
 from terminology.resources.code_systems import leave_code_as_is as make_code
 
 
 id = "image-label-types"
+_PRACTICE_UUID = "CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE"
 
 
-class MRosaImageLabelTypesCodeSystem(CodeSystem):
+class TopsorthoCCD8EBB7ImageLabelTypesCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        return "http://topsortho.com/fhir/practice/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types"
+        return f"{TopsorthoNamingSystem(_PRACTICE_UUID).url}/CodeSystem/{id}"
 
     def __init__(self):
         ns = MedocoHealthNamingSystem()

@@ -8,16 +8,16 @@ from terminology.resources import Code
 from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
 
-id = "dentaleyepad-image-types"
+id = "image-types"
 def make_code(s):
     return s
 
 class DentalEyePadCodeSystem(CodeSystem):
-    
+
     @classmethod
     def static_url(cls) -> str:
         ns = DentalEyePadNamingSystem()
-        return f"{ns.url}/{id}"
+        return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
         DEP = DentalEyePadNamingSystem()

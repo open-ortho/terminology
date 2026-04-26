@@ -1,0 +1,714 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "image-label-types",
+    "url": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.16.840.1.113883.3.12345.9.8"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "ImageLabelTypes",
+    "title": "topsOrtho Image Label Types",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-26",
+    "publisher": "medoco Health",
+    "description": "Image label types of topsOrtho. These define the types of images, such as panoramic x-ray or frontal smiling. The user can modify these.",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "1",
+            "display": "TELE P-A",
+            "definition": "Frontal Ceph X-Ray"
+        },
+        {
+            "code": "2",
+            "display": "Tracciato TELE P-A",
+            "definition": "Frontal Ceph X-Ray w/ Tracing"
+        },
+        {
+            "code": "4",
+            "display": "6 MIP",
+            "definition": "Left Intraoral Photo"
+        },
+        {
+            "code": "5",
+            "display": "STL 6",
+            "definition": "Left Models"
+        },
+        {
+            "code": "6",
+            "display": "1 MIP labbra rilassate",
+            "definition": "Portrait Profile"
+        },
+        {
+            "code": "9",
+            "display": "TELE",
+            "definition": "Lateral Ceph X-Ray"
+        },
+        {
+            "code": "10",
+            "display": "Tracciato TELE",
+            "definition": "Lateral Ceph X-Ray w/ Tracing"
+        },
+        {
+            "code": "11",
+            "display": "8",
+            "definition": "Occlusal Photo of Mandibular Dentition"
+        },
+        {
+            "code": "12",
+            "display": "Modello Occlusale Mandibola",
+            "definition": "Occlusal Photo of Mandibular Model"
+        },
+        {
+            "code": "13",
+            "display": "Tracciato Occlusale Mandibola (Modello)",
+            "definition": "Occlusal Tracing of Mandibular Model"
+        },
+        {
+            "code": "14",
+            "display": "7",
+            "definition": "Occlusal Photo of Maxillary Dentition"
+        },
+        {
+            "code": "15",
+            "display": "Modello Occlusale Mascella",
+            "definition": "Occlusal Photo of Maxillary Model"
+        },
+        {
+            "code": "18",
+            "display": "OPT",
+            "definition": "Panoramic X-Ray"
+        },
+        {
+            "code": "19",
+            "display": "4 MIP",
+            "definition": "Right Intraoral Photo"
+        },
+        {
+            "code": "20",
+            "display": "STL 4",
+            "definition": "Right Models"
+        },
+        {
+            "code": "25",
+            "display": "1 sovrapp tracciato/testa 1",
+            "definition": "Regional Lateral Ceph Tracing Superimposition A"
+        },
+        {
+            "code": "26",
+            "display": "1 sovrapp tracciato/testa 2",
+            "definition": "Regional Lateral Ceph Tracing Superimposition B"
+        },
+        {
+            "code": "27",
+            "display": "Tracciato Laterale di Prev. Crescita",
+            "definition": "Lateral Ceph VTO Tracing"
+        },
+        {
+            "code": "28",
+            "display": "postura",
+            "definition": "Full Body Photo"
+        },
+        {
+            "code": "29",
+            "display": "3",
+            "definition": "Portrait Smiling"
+        },
+        {
+            "code": "30",
+            "display": "2 MIP labbra rilassate",
+            "definition": "Portrait Relaxed Lips"
+        },
+        {
+            "code": "31",
+            "display": "5 MIP",
+            "definition": "Frontal Intraoral Photo"
+        },
+        {
+            "code": "32",
+            "display": "STL 5",
+            "definition": "Frontal Models"
+        },
+        {
+            "code": "33",
+            "display": "2 tracciato 1",
+            "definition": "Frontal Ceph Tracing"
+        },
+        {
+            "code": "34",
+            "display": "2 foto/tracciato",
+            "definition": "Portrait Relaxed Lips w/ Tracing"
+        },
+        {
+            "code": "35",
+            "display": "5 video",
+            "definition": "Frontal Intraoral Movie"
+        },
+        {
+            "code": "38",
+            "display": "2 tracciato 2",
+            "definition": "Frontal Ceph Tracing"
+        },
+        {
+            "code": "5001",
+            "display": "Foto Simpatica 1"
+        },
+        {
+            "code": "5002",
+            "display": "Legnetto PO"
+        },
+        {
+            "code": "5003",
+            "display": "1 RO"
+        },
+        {
+            "code": "5004",
+            "display": "2 SUB7"
+        },
+        {
+            "code": "5005",
+            "display": "2 RO"
+        },
+        {
+            "code": "5006",
+            "display": "1 S"
+        },
+        {
+            "code": "5007",
+            "display": "RX1"
+        },
+        {
+            "code": "5008",
+            "display": "RX2"
+        },
+        {
+            "code": "5009",
+            "display": "RX3"
+        },
+        {
+            "code": "5010",
+            "display": "RX4"
+        },
+        {
+            "code": "5011",
+            "display": "RX5"
+        },
+        {
+            "code": "5012",
+            "display": "GEN 1"
+        },
+        {
+            "code": "5013",
+            "display": "6 P da sotto"
+        },
+        {
+            "code": "5014",
+            "display": "5 BA"
+        },
+        {
+            "code": "5015",
+            "display": "4 P da sotto"
+        },
+        {
+            "code": "5016",
+            "display": "5 P sup / sfondo nero"
+        },
+        {
+            "code": "5017",
+            "display": "2 SV"
+        },
+        {
+            "code": "5018",
+            "display": "2 P"
+        },
+        {
+            "code": "5019",
+            "display": "3 P"
+        },
+        {
+            "code": "5020",
+            "display": "2 P RO"
+        },
+        {
+            "code": "5021",
+            "display": "PL DIGA 1"
+        },
+        {
+            "code": "5022",
+            "display": "SMORFIA"
+        },
+        {
+            "code": "5023",
+            "display": "SMORFIA1"
+        },
+        {
+            "code": "5024",
+            "display": "SMORFIA2"
+        },
+        {
+            "code": "5025",
+            "display": "5 CO"
+        },
+        {
+            "code": "5026",
+            "display": "6 CO"
+        },
+        {
+            "code": "5027",
+            "display": "extra 2"
+        },
+        {
+            "code": "5028",
+            "display": "4 CO"
+        },
+        {
+            "code": "5029",
+            "display": "3 BA"
+        },
+        {
+            "code": "5030",
+            "display": "extra 1"
+        },
+        {
+            "code": "5031",
+            "display": "2 CO"
+        },
+        {
+            "code": "5032",
+            "display": "Foto Simpatica 2"
+        },
+        {
+            "code": "5033",
+            "display": "4 P inf / sfondo nero"
+        },
+        {
+            "code": "5034",
+            "display": "9 MIP"
+        },
+        {
+            "code": "5035",
+            "display": "6 P inf / sfondo nero"
+        },
+        {
+            "code": "5036",
+            "display": "6 P sup / sfondo nero"
+        },
+        {
+            "code": "5037",
+            "display": "1 RO sx"
+        },
+        {
+            "code": "5038",
+            "display": "1 sx"
+        },
+        {
+            "code": "5039",
+            "display": "1 S sx"
+        },
+        {
+            "code": "5040",
+            "display": "PL DIGA 2"
+        },
+        {
+            "code": "5041",
+            "display": "PL DIGA 3"
+        },
+        {
+            "code": "5042",
+            "display": "3 P sx"
+        },
+        {
+            "code": "5043",
+            "display": "3 P dx"
+        },
+        {
+            "code": "5044",
+            "display": "3 P BA"
+        },
+        {
+            "code": "5045",
+            "display": "Modelli frontali da sotto"
+        },
+        {
+            "code": "5046",
+            "display": "3/4 dx RO "
+        },
+        {
+            "code": "5047",
+            "display": "3/4 sx RO "
+        },
+        {
+            "code": "5048",
+            "display": "extra 3"
+        },
+        {
+            "code": "5049",
+            "display": "GEN 2"
+        },
+        {
+            "code": "5050",
+            "display": "2 P BA"
+        },
+        {
+            "code": "5051",
+            "display": "9 CO"
+        },
+        {
+            "code": "5052",
+            "display": "5 P inf / sfondo nero"
+        },
+        {
+            "code": "5053",
+            "display": "extra 4"
+        },
+        {
+            "code": "5054",
+            "display": "BWdx"
+        },
+        {
+            "code": "5055",
+            "display": "BWsx"
+        },
+        {
+            "code": "5056",
+            "display": "DK"
+        },
+        {
+            "code": "5057",
+            "display": "3/4 sx"
+        },
+        {
+            "code": "5058",
+            "display": "3/4 dx"
+        },
+        {
+            "code": "5059",
+            "display": "3/4 S dx"
+        },
+        {
+            "code": "5060",
+            "display": "3/4 S sx"
+        },
+        {
+            "code": "5061",
+            "display": "1 CO"
+        },
+        {
+            "code": "5062",
+            "display": "GEN 7"
+        },
+        {
+            "code": "5063",
+            "display": "GEN 3"
+        },
+        {
+            "code": "5064",
+            "display": "2 P fonazione 1"
+        },
+        {
+            "code": "5065",
+            "display": "2 P fonazione 2"
+        },
+        {
+            "code": "5066",
+            "display": "2 P fonazione 3"
+        },
+        {
+            "code": "5067",
+            "display": "4 P sup / sfondo nero"
+        },
+        {
+            "code": "5068",
+            "display": "GEN 4"
+        },
+        {
+            "code": "5069",
+            "display": "GEN 5"
+        },
+        {
+            "code": "5070",
+            "display": "GEN 6"
+        },
+        {
+            "code": "5071",
+            "display": "GEN 8"
+        },
+        {
+            "code": "5072",
+            "display": "IP RP 5"
+        },
+        {
+            "code": "5073",
+            "display": "IP RP 4"
+        },
+        {
+            "code": "5074",
+            "display": "IP RP 6"
+        },
+        {
+            "code": "5075",
+            "display": "RX6"
+        },
+        {
+            "code": "5076",
+            "display": "RXE1"
+        },
+        {
+            "code": "5077",
+            "display": "RXE2"
+        },
+        {
+            "code": "5078",
+            "display": "RXE3"
+        },
+        {
+            "code": "5079",
+            "display": "RXE4"
+        },
+        {
+            "code": "5080",
+            "display": "RXE5"
+        },
+        {
+            "code": "5081",
+            "display": "RXE6"
+        },
+        {
+            "code": "5082",
+            "display": "RXE7"
+        },
+        {
+            "code": "5083",
+            "display": "RXE8"
+        },
+        {
+            "code": "5084",
+            "display": "RXE9"
+        },
+        {
+            "code": "5085",
+            "display": "RXE10"
+        },
+        {
+            "code": "5086",
+            "display": "RXE11"
+        },
+        {
+            "code": "5087",
+            "display": "RXE12"
+        },
+        {
+            "code": "5088",
+            "display": "RXE13"
+        },
+        {
+            "code": "5089",
+            "display": "RXE14"
+        },
+        {
+            "code": "5090",
+            "display": "RXE15"
+        },
+        {
+            "code": "5091",
+            "display": "RXE16"
+        },
+        {
+            "code": "5092",
+            "display": "RXE21"
+        },
+        {
+            "code": "5093",
+            "display": "RXE17"
+        },
+        {
+            "code": "5094",
+            "display": "RXE18"
+        },
+        {
+            "code": "5095",
+            "display": "RXE19"
+        },
+        {
+            "code": "5096",
+            "display": "RXE20"
+        },
+        {
+            "code": "5097",
+            "display": "PL 2 P social smile"
+        },
+        {
+            "code": "5098",
+            "display": "PL DIGA 4"
+        },
+        {
+            "code": "5099",
+            "display": "STL 7"
+        },
+        {
+            "code": "5100",
+            "display": "STL 8"
+        },
+        {
+            "code": "5101",
+            "display": "STL 9"
+        },
+        {
+            "code": "5102",
+            "display": "video 1"
+        },
+        {
+            "code": "5103",
+            "display": "video 2"
+        },
+        {
+            "code": "5104",
+            "display": "video 3"
+        },
+        {
+            "code": "5105",
+            "display": "extra 5"
+        },
+        {
+            "code": "5106",
+            "display": "extra 6"
+        },
+        {
+            "code": "5107",
+            "display": "PL 1 P dx"
+        },
+        {
+            "code": "5108",
+            "display": "PL 1 P RO dx"
+        },
+        {
+            "code": "5109",
+            "display": "PL 1 S P social smile dx"
+        },
+        {
+            "code": "5110",
+            "display": "PL 1 S P full smile dx"
+        },
+        {
+            "code": "5111",
+            "display": "PL sorriso da sopra"
+        },
+        {
+            "code": "5112",
+            "display": "PL 5 MIP  TQ dx"
+        },
+        {
+            "code": "5113",
+            "display": "PL 5 MIP TQ sx"
+        },
+        {
+            "code": "5114",
+            "display": "PL 5 P 2+2"
+        },
+        {
+            "code": "5115",
+            "display": "RS sonda 1"
+        },
+        {
+            "code": "5116",
+            "display": "RS sonda 2"
+        },
+        {
+            "code": "5117",
+            "display": "RS sonda 3"
+        },
+        {
+            "code": "5118",
+            "display": "RS sonda 4"
+        },
+        {
+            "code": "5119",
+            "display": "RS sonda 5"
+        },
+        {
+            "code": "5120",
+            "display": "RS sonda 6"
+        },
+        {
+            "code": "5121",
+            "display": "RS sonda 7"
+        },
+        {
+            "code": "5122",
+            "display": "RS sonda 8"
+        },
+        {
+            "code": "5123",
+            "display": "RS sonda 9"
+        },
+        {
+            "code": "5124",
+            "display": "RS sonda 10"
+        },
+        {
+            "code": "5125",
+            "display": "RS sonda 11"
+        },
+        {
+            "code": "5126",
+            "display": "RS sonda 12"
+        },
+        {
+            "code": "5127",
+            "display": "RS sonda 13"
+        },
+        {
+            "code": "5128",
+            "display": "RS sonda 14"
+        },
+        {
+            "code": "5129",
+            "display": "RS sonda 15"
+        },
+        {
+            "code": "5130",
+            "display": "RS sonda 16"
+        },
+        {
+            "code": "5131",
+            "display": "RS sonda 17"
+        },
+        {
+            "code": "5132",
+            "display": "RS sonda 18"
+        },
+        {
+            "code": "5133",
+            "display": "1 P sx"
+        },
+        {
+            "code": "5134",
+            "display": "1 P RO sx"
+        },
+        {
+            "code": "5135",
+            "display": "1 P S sx"
+        },
+        {
+            "code": "5136",
+            "display": "SDS 1"
+        },
+        {
+            "code": "5137",
+            "display": "SDS 2"
+        },
+        {
+            "code": "5138",
+            "display": "SDS 3"
+        },
+        {
+            "code": "5139",
+            "display": "PL 2 P  full smile"
+        }
+    ]
+}

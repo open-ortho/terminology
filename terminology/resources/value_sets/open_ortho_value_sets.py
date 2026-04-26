@@ -7,7 +7,7 @@ terminology server.
 """
 
 from terminology.fhir_types import ValueSet
-from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_extraoral_2d_photographic_scheduled_protocol import (
     Extraoral2DPhotographicScheduledProtocolCodeSystem,
 )
 
@@ -22,7 +22,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
     """
     @classmethod
     def static_url(cls) -> str:
-        return "http://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews"
+        return "https://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews"
 
     def __init__(self):
         url = self.static_url()
