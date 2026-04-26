@@ -17,7 +17,7 @@ CODE_SYSTEM_UIDS = {
     "extraoral-3d-visible-light-scheduled-protocol": CS_EXTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
     "intraoral-2d-photographic-scheduled-protocol": CS_INTRAORAL_2D_PHOTOGRAPHIC_SCHEDULED_PROTOCOL_UID,
     "intraoral-3d-visible-light-scheduled-protocol": CS_INTRAORAL_3D_VISIBLE_LIGHT_SCHEDULED_PROTOCOL_UID,
-    "cwru-ortho-record-type": CS_CWRU_ORTHO_RECORD_TYPE_UID,
+    "ortho-record-type": CS_CWRU_ORTHO_RECORD_TYPE_UID,
 }
 
 # Naming Systems (1.3.6.1.4.1.61741.11.3.1.*)
@@ -48,9 +48,9 @@ NAMING_SYSTEM_UIDS = {
 # Value Set short name to UID mapping
 VALUE_SET_UIDS = {
     "scheduled-protocol": VS_SCHEDULED_PROTOCOL_UID,
-    "cwru-ortho-record-types": VS_CWRU_ORTHO_RECORD_TYPE_UID,
-    "cwru-ortho-record-types-acetate-film": VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID,
-    "cwru-ortho-record-types-paper": VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID,
-    "cwru-ortho-record-types-gypsum": VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID
+    "ortho-record-types": VS_CWRU_ORTHO_RECORD_TYPE_UID,
+    "ortho-record-types-acetate-film": VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID,
+    "ortho-record-types-paper": VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID,
+    "ortho-record-types-gypsum": VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID
 
 }

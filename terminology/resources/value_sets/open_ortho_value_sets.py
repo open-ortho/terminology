@@ -22,7 +22,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
     """
     @classmethod
     def static_url(cls) -> str:
-        return "http://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews"
+        return "https://terminology.open-ortho.org/fhir/sid/open-ortho/ValueSet/OrthodonticPhotographViews"
 
     def __init__(self):
         url = self.static_url()

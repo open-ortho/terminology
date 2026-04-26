@@ -6,13 +6,13 @@ from terminology.fhir_types import CodeSystem, CodeSystemConcept
 from datetime import datetime
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
 
-id = "ada-1100-enumerated-terms"
+id = "1100-enumerated-terms"
 
 class ADA1100EnumeratedTermsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        return f"http://terminology.open-ortho.org/fhir/CodeSystem/{id}"
+        return f"https://terminology.open-ortho.org/fhir/sid/ada/CodeSystem/{id}"
 
     def __init__(self):
         OPOR = OpenOrthoNamingSystem()

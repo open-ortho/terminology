@@ -4,7 +4,7 @@ from terminology.constants import NAMING_SYSTEM_UIDS
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://terminology.medoco.health/fhir",
+            url="https://terminology.open-ortho.org/fhir/sid/medoco",
             name="medocoHEALTH",
             title="medoco Health Naming System",
             identifier=[Identifier(
@@ -24,7 +24,7 @@ A custom set of codes used by various medoco Health products, as reccommended by
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "http://terminology.medoco.health/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/medoco",
                     "preferred": True
                 },
                 {
@@ -43,7 +43,7 @@ A custom set of codes used by various medoco Health products, as reccommended by
 class OpenOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://terminology.open-ortho.org/fhir",
+            url="https://terminology.open-ortho.org/fhir/sid/open-ortho",
             name="OpenOrtho",
             title="Open-Ortho",
             identifier=[Identifier(
@@ -74,7 +74,7 @@ A set of codes required to represent dental and orthodontic concepts for interop
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "http://terminology.open-ortho.org/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/open-ortho",
                     "preferred": False
                 },
                 {
@@ -93,7 +93,7 @@ A set of codes required to represent dental and orthodontic concepts for interop
 class CWRUOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="https://orthodontics.case.edu/fhir",
+            url="https://terminology.open-ortho.org/fhir/sid/cwru",
             name="CWRUOrtho",
             title="CWRU Orthodontics Naming System",
             identifier=[Identifier(
@@ -113,7 +113,7 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "https://orthodontics.case.edu/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/cwru",
                     "preferred": True
                 },
                 {
@@ -132,7 +132,7 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
 class DentalEyePadNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="https://dentaleyepad.de/en",
+            url="https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
             name="DentalEyePad",
             identifier=[Identifier(
                 system="dicom",
@@ -154,7 +154,7 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "https://dentaleyepad.de/en",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
                     "preferred": True
                 },
                 {
@@ -164,3 +164,13 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
                 }
             ]
         )
+
+
+class TopsorthoNamingSystem:
+    """Lightweight URL helper for topsortho practice-specific code systems.
+
+    Not a published NamingSystem resource — the UUID anonymously identifies
+    the practice without leaking any identifying information.
+    """
+    def __init__(self, uuid: str):
+        self.url = f"https://terminology.open-ortho.org/fhir/sid/topsortho/{uuid}"

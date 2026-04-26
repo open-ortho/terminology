@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FHIR ConceptMap Editor</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; font-size: 13px; margin: 0; background: #f0f2f5; color: #222; }
+
+/* ── Setup panel ── */
+#setup {
+  background: #1a3a5c; color: #fff;
+  padding: 14px 18px; display: flex; flex-direction: column; gap: 10px;
+}
+#setup h1 { margin: 0 0 4px; font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+.load-row {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.load-label {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .5px; color: #a0c4e8; width: 170px; flex-shrink: 0;
+}
+.load-row input[type=file] { font-size: 11px; color: #fff; flex-shrink: 0; }
+.load-row input[type=file]::file-selector-button {
+  background: #2d6a9f; color: #fff; border: none; border-radius: 3px;
+  padding: 4px 10px; cursor: pointer; font-size: 11px;
+}
+.load-row input[type=file]::file-selector-button:hover { background: #1e5080; }
+.sep { color: #666; font-size: 11px; flex-shrink: 0; }
+.url-input {
+  flex: 1; min-width: 200px; max-width: 420px;
+  padding: 5px 8px; border-radius: 4px; border: none; font-size: 12px;
+  background: #0f2540; color: #dde; font-family: monospace;
+}
+.url-input::placeholder { color: #557; }
+.btn-load {
+  padding: 5px 12px; background: #2d6a9f; color: #fff; border: none;
+  border-radius: 3px; cursor: pointer; font-size: 11px; font-weight: 600; flex-shrink: 0;
+}
+.btn-load:hover { background: #1e5080; }
+.status-badge {
+  font-size: 11px; padding: 3px 8px; border-radius: 10px;
+  background: #0f2540; color: #80c4a0; white-space: nowrap;
+  max-width: 260px; overflow: hidden; text-overflow: ellipsis;
+}
+.status-badge.error { color: #f88; }
+.status-badge.empty { color: #557; }
+
+.target-rows { display: flex; flex-direction: column; gap: 6px; }
+.target-row-wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.btn-small {
+  padding: 3px 8px; background: #0f2540; color: #7ab; border: none;
+  border-radius: 3px; cursor: pointer; font-size: 11px; flex-shrink: 0;
+}
+.btn-small:hover { background: #1a3a5c; }
+
+.setup-footer { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+#buildBtn {
+  padding: 8px 22px; background: #2ecc71; color: #fff; border: none;
+  border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 700;
+}
+#buildBtn:disabled { background: #447; color: #99a; cursor: default; }
+#buildBtn:not(:disabled):hover { background: #27ae60; }
+.hint { font-size: 11px; color: #778; }
+
+/* ── Table header bar ── */
+#tableHeader {
+  display: none; background: #fff; border-bottom: 1px solid #ddd;
+  padding: 8px 14px; position: sticky; top: 0; z-index: 10;
+  align-items: center; gap: 10px;
+}
+#tableHeader.visible { display: flex; }
+#tableHeader input[type=search] {
+  padding: 5px 9px; border: 1px solid #ccc; border-radius: 4px;
+  font-size: 12px; width: 220px;
+}
+.count-badge { font-size: 12px; color: #888; margin-right: auto; }
+.btn-export {
+  padding: 6px 14px; border: none; border-radius: 4px; cursor: pointer;
+  font-size: 12px; font-weight: 600;
+}
+.btn-csv  { background: #2e7d32; color: #fff; }
+.btn-json { background: #1565c0; color: #fff; }
+.btn-csv:hover  { background: #1b5e20; }
+.btn-json:hover { background: #0d47a1; }
+
+/* ── Mapping table ── */
+#tableWrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  background: #e8eaf0; text-align: left; padding: 6px 8px;
+  border-bottom: 2px solid #ccc; white-space: nowrap; font-size: 12px;
+}
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover { background: #fffde7; }
+td { padding: 4px 8px; vertical-align: middle; border-bottom: 1px solid #eee; }
+td.code { font-family: monospace; font-weight: 700; white-space: nowrap; }
+td.display { max-width: 140px; }
+td.def { color: #555; max-width: 200px; font-size: 11px; }
+select.target { width: 100%; min-width: 260px; font-size: 12px; padding: 3px; }
+select.rel { font-size: 11px; padding: 3px; min-width: 100px; }
+input.comment {
+  width: 100%; font-size: 11px; padding: 3px 5px;
+  border: 1px solid #ccc; border-radius: 3px;
+}
+tr.mapped   td.code { color: #1a5c2a; }
+tr.unmapped td.code { color: #999; }
+
+#emptyMsg { padding: 60px; text-align: center; color: #aaa; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- ── Setup panel ──────────────────────────────────────────────────────────── -->
+<div id="setup">
+  <h1>FHIR ConceptMap Editor</h1>
+
+  <!-- Source -->
+  <div class="load-row">
+    <span class="load-label">Source CodeSystem</span>
+    <input type="file" accept=".json" id="sourceFile" onchange="loadFile(event,'source')">
+    <span class="sep">or URL</span>
+    <input class="url-input" type="text" id="sourceUrl" placeholder="https://… or relative path">
+    <button class="btn-load" onclick="loadUrl('source')">Fetch</button>
+    <span class="status-badge empty" id="sourceStatus">not loaded</span>
+  </div>
+
+  <!-- Targets (dynamic rows) -->
+  <div class="target-rows" id="targetRows"></div>
+  <div>
+    <button class="btn-small" onclick="addTargetRow()">+ Add target CodeSystem</button>
+  </div>
+
+  <!-- ConceptMap -->
+  <div class="load-row">
+    <span class="load-label">ConceptMap (optional)</span>
+    <input type="file" accept=".json" id="cmFile" onchange="loadFile(event,'cm')">
+    <span class="sep">or URL</span>
+    <input class="url-input" type="text" id="cmUrl" placeholder="https://… or relative path">
+    <button class="btn-load" onclick="loadUrl('cm')">Fetch</button>
+    <span class="status-badge empty" id="cmStatus">not loaded</span>
+  </div>
+
+  <div class="setup-footer">
+    <button id="buildBtn" onclick="buildTable()" disabled>▶ Build mapping table</button>
+    <span class="hint">
+      Local files: use the file picker. URLs: works when served
+      (<code>python3 -m http.server 8080</code>).
+    </span>
+  </div>
+</div>
+
+<!-- ── Table header bar ─────────────────────────────────────────────────────── -->
+<div id="tableHeader">
+  <input type="search" placeholder="Filter by code or display…" oninput="applyFilter(this.value)">
+  <span class="count-badge" id="countLabel"></span>
+  <button class="btn-export btn-csv"  onclick="exportCSV()">⬇ CSV</button>
+  <button class="btn-export btn-json" onclick="exportJSON()">⬇ ConceptMap JSON</button>
+</div>
+
+<!-- ── Table ─────────────────────────────────────────────────────────────────── -->
+<div id="tableWrap">
+  <div id="emptyMsg">Load a source CodeSystem and click ▶ Build mapping table.</div>
+  <table id="mainTable" style="display:none">
+    <thead>
+      <tr>
+        <th>source code</th>
+        <th>display</th>
+        <th>definition</th>
+        <th>target code</th>
+        <th>relationship</th>
+        <th>comment</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let sourceCS  = null;   // {url, title, concepts:[{code,display,def}]}
+let targetCSs = [];     // [{url, title, concepts:[...]}]  — parallel to UI rows
+let prefill   = {};     // {srcCode: {targetKey:"idx:code", rel, comment}}
+let targetRowCount = 0;
+
+// ── Utilities ─────────────────────────────────────────────────────────────────
+function flattenConcepts(concepts) {
+  const out = [];
+  for (const c of concepts || []) {
+    out.push({ code: c.code || "", display: c.display || "", def: c.definition || "" });
+    if (c.concept) out.push(...flattenConcepts(c.concept));
+  }
+  return out;
+}
+
+function resourceSummary(json) {
+  return (json.title || json.name || json.id || json.url || "?")
+       + (json.url ? ` (${json.url})` : "");
+}
+
+function setStatus(id, text, isError) {
+  const el = document.getElementById(id);
+  el.textContent = text;
+  el.className = "status-badge" + (isError ? " error" : "");
+}
+
+// ── File / URL loading ────────────────────────────────────────────────────────
+function loadFile(event, type, idx) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      handleJson(JSON.parse(e.target.result), type, idx);
+    } catch(err) {
+      const statusId = type === 'source' ? 'sourceStatus'
+                     : type === 'cm'     ? 'cmStatus'
+                     : `targetStatus_${idx}`;
+      setStatus(statusId, "Parse error: " + err.message, true);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function loadUrl(type, idx) {
+  const inputId = type === 'source' ? 'sourceUrl'
+                : type === 'cm'     ? 'cmUrl'
+                : `targetUrl_${idx}`;
+  const statusId = type === 'source' ? 'sourceStatus'
+                 : type === 'cm'     ? 'cmStatus'
+                 : `targetStatus_${idx}`;
+  const url = document.getElementById(inputId).value.trim();
+  if (!url) return;
+  setStatus(statusId, "fetching…", false);
+  fetch(url)
+    .then(r => { if (!r.ok) throw new Error(r.status + " " + r.statusText); return r.json(); })
+    .then(json => handleJson(json, type, idx))
+    .catch(err => {
+      const msg = err.message.includes("Failed to fetch")
+        ? "Blocked (CORS / file://). Use the file picker, or serve with: python3 -m http.server 8080"
+        : err.message;
+      setStatus(statusId, msg, true);
+    });
+}
+
+function handleJson(json, type, idx) {
+  if (type === 'source') {
+    if (json.resourceType !== 'CodeSystem')
+      return setStatus('sourceStatus', 'Not a CodeSystem (resourceType=' + json.resourceType + ')', true);
+    sourceCS = { url: json.url || '', title: json.title || json.name || '', concepts: flattenConcepts(json.concept) };
+    setStatus('sourceStatus', resourceSummary(json));
+    checkBuildReady();
+
+  } else if (type === 'target') {
+    if (json.resourceType === 'ValueSet') {
+      // Collect system URLs from expansion.contains[] or compose.include[]
+      let systems;
+      if (json.expansion) {
+        systems = [...new Set(
+          (function flat(arr) {
+            return (arr || []).flatMap(c => [c.system, ...flat(c.contains)]);
+          })(json.expansion.contains).filter(Boolean)
+        )];
+      } else if (json.compose) {
+        systems = [...new Set((json.compose.include || []).map(i => i.system).filter(Boolean))];
+      } else {
+        return setStatus(`targetStatus_${idx}`, 'ValueSet has no expansion or compose', true);
+      }
+      if (!systems.length)
+        return setStatus(`targetStatus_${idx}`, 'ValueSet has no system URLs', true);
+      setStatus(`targetStatus_${idx}`, `ValueSet → loading ${systems.length} CodeSystem(s)…`);
+      systems.forEach(sysUrl => {
+        addTargetRow();
+        const newIdx = targetRowCount - 1;
+        document.getElementById(`targetUrl_${newIdx}`).value = sysUrl;
+        loadUrl('target', newIdx);
+      });
+      return;
+    }
+    if (json.resourceType !== 'CodeSystem')
+      return setStatus(`targetStatus_${idx}`, 'Not a CodeSystem (resourceType=' + json.resourceType + ')', true);
+    targetCSs[idx] = { url: json.url || '', title: json.title || json.name || '', concepts: flattenConcepts(json.concept) };
+    setStatus(`targetStatus_${idx}`, resourceSummary(json));
+    checkBuildReady();
+
+  } else if (type === 'cm') {
+    if (json.resourceType !== 'ConceptMap')
+      return setStatus('cmStatus', 'Not a ConceptMap (resourceType=' + json.resourceType + ')', true);
+    prefill = parseConceptMap(json);
+    setStatus('cmStatus', resourceSummary(json));
+    // If table already built, re-populate
+    if (document.getElementById('mainTable').style.display !== 'none') buildTable();
+  }
+}
+
+// ── Parse ConceptMap into prefill map ─────────────────────────────────────────
+// Returns {srcCode: {targetKey:"idx:code", rel, comment}}
+function parseConceptMap(json) {
+  const result = {};
+  for (const group of json.group || []) {
+    // Find which loaded targetCS matches this group's target URL
+    const tIdx = targetCSs.findIndex(t => t.url === group.target);
+    for (const elem of group.element || []) {
+      for (const tgt of elem.target || []) {
+        if (!tgt.code) continue;
+        result[elem.code] = {
+          targetKey: tIdx >= 0 ? `${tIdx}:${tgt.code}` : `:${tgt.code}`,
+          rel: tgt.relationship || "inexact",
+          comment: tgt.comment || "",
+        };
+        break; // take first target only
+      }
+    }
+  }
+  return result;
+}
+
+function checkBuildReady() {
+  document.getElementById('buildBtn').disabled = !sourceCS;
+}
+
+// ── Target rows (dynamic) ─────────────────────────────────────────────────────
+function addTargetRow() {
+  const idx = targetRowCount++;
+  targetCSs.push(null);
+  const wrap = document.getElementById('targetRows');
+  const div = document.createElement('div');
+  div.className = 'load-row target-row-wrap';
+  div.id = `targetRow_${idx}`;
+  div.innerHTML = `
+    <span class="load-label">${idx === 0 ? 'Target CodeSystem' : 'Target CodeSystem ' + (idx+1)}</span>
+    <input type="file" accept=".json" id="targetFile_${idx}" onchange="loadFile(event,'target',${idx})">
+    <span class="sep">or URL</span>
+    <input class="url-input" type="text" id="targetUrl_${idx}" placeholder="https://… or relative path">
+    <button class="btn-load" onclick="loadUrl('target',${idx})">Fetch</button>
+    <span class="status-badge empty" id="targetStatus_${idx}">not loaded</span>
+    <button class="btn-small" onclick="removeTargetRow(${idx})" title="Remove">✕</button>
+  `;
+  wrap.appendChild(div);
+}
+
+function removeTargetRow(idx) {
+  document.getElementById(`targetRow_${idx}`).remove();
+  targetCSs[idx] = null;
+}
+
+// ── Build dropdown options from all loaded target CodeSystems ─────────────────
+function buildOptions(selectedKey) {
+  // selectedKey format: "idx:CODE"
+  let html = `<option value="">— no mapping —</option>`;
+  for (let i = 0; i < targetCSs.length; i++) {
+    const tcs = targetCSs[i];
+    if (!tcs) continue;
+    const label = tcs.title ? `${tcs.title}` : tcs.url;
+    html += `<optgroup label="${escAttr(label)}">`;
+    for (const c of tcs.concepts) {
+      const key = `${i}:${c.code}`;
+      const sel = key === selectedKey ? ' selected' : '';
+      const text = c.display ? `${c.code} · ${c.display}` : c.code;
+      html += `<option value="${escAttr(key)}"${sel}>${escHtml(text)}</option>`;
+    }
+    html += `</optgroup>`;
+  }
+  return html;
+}
+
+function buildRelOptions(selected) {
+  return ["equivalent","inexact","wider","narrower","not-related-to"]
+    .map(o => `<option value="${o}"${o===selected?' selected':''}>${o}</option>`)
+    .join('');
+}
+
+// ── Build table ───────────────────────────────────────────────────────────────
+function buildTable() {
+  if (!sourceCS) return;
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+
+  for (const row of sourceCS.concepts) {
+    const pre  = prefill[row.code] || {};
+    const key  = pre.targetKey || '';
+    const rel  = pre.rel || 'equivalent';
+    const cmnt = pre.comment || '';
+
+    const tr = document.createElement('tr');
+    tr.dataset.code    = row.code;
+    tr.dataset.display = (row.display || '').toLowerCase();
+    tr.className       = key ? 'mapped' : 'unmapped';
+    tr.innerHTML = `
+      <td class="code">${escHtml(row.code)}</td>
+      <td class="display">${escHtml(row.display)}</td>
+      <td class="def">${escHtml(row.def)}</td>
+      <td><select class="target" onchange="onTargetChange(this)">
+        ${buildOptions(key)}
+      </select></td>
+      <td><select class="rel">${buildRelOptions(rel)}</select></td>
+      <td><input class="comment" type="text" value="${escAttr(cmnt)}"></td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  document.getElementById('mainTable').style.display = '';
+  document.getElementById('emptyMsg').style.display = 'none';
+  document.getElementById('tableHeader').classList.add('visible');
+  updateCount();
+}
+
+function onTargetChange(sel) {
+  sel.closest('tr').className = sel.value ? 'mapped' : 'unmapped';
+  updateCount();
+}
+
+function updateCount() {
+  const rows = document.querySelectorAll('#tableBody tr');
+  let mapped = 0;
+  rows.forEach(r => { if (r.classList.contains('mapped')) mapped++; });
+  document.getElementById('countLabel').textContent =
+    `${mapped} / ${rows.length} mapped  ·  ${rows.length - mapped} unmapped`;
+}
+
+function applyFilter(q) {
+  q = q.toLowerCase();
+  document.querySelectorAll('#tableBody tr').forEach(tr => {
+    tr.style.display = (!q || tr.dataset.code.includes(q) || tr.dataset.display.includes(q)) ? '' : 'none';
+  });
+}
+
+// ── Read current state ────────────────────────────────────────────────────────
+function getCurrentMappings() {
+  return Array.from(document.querySelectorAll('#tableBody tr')).map(tr => {
+    const [code, display, def] = ['code','display','def'].map(
+      c => tr.querySelector('td.'+c)?.textContent || ''
+    );
+    const selVal = tr.querySelector('select.target').value; // "idx:CODE" or ""
+    let targetCode = '', targetSystem = '', targetDisplay = '';
+    if (selVal) {
+      const colon = selVal.indexOf(':');
+      const tIdx  = parseInt(selVal.slice(0, colon), 10);
+      targetCode  = selVal.slice(colon + 1);
+      const tcs   = targetCSs[tIdx];
+      if (tcs) {
+        targetSystem  = tcs.url;
+        targetDisplay = (tcs.concepts.find(c => c.code === targetCode) || {}).display || '';
+      }
+    }
+    return {
+      source_code: code, source_display: display, source_definition: def,
+      target_system: targetSystem, target_code: targetCode, target_display: targetDisplay,
+      relationship: tr.querySelector('select.rel').value,
+      comment: tr.querySelector('input.comment').value,
+    };
+  });
+}
+
+// ── Export CSV ────────────────────────────────────────────────────────────────
+function exportCSV() {
+  const fields = ['source_code','source_display','source_definition',
+                  'target_system','target_code','target_display','relationship','comment'];
+  const esc = v => `"${String(v).replace(/"/g,'""')}"`;
+  const lines = [fields.map(esc).join(','),
+    ...getCurrentMappings().map(m => fields.map(f => esc(m[f])).join(','))];
+  download('conceptmap-mappings.csv', lines.join('\n'), 'text/csv');
+}
+
+// ── Export ConceptMap JSON ────────────────────────────────────────────────────
+function exportJSON() {
+  const mapped = getCurrentMappings().filter(m => m.target_code);
+
+  // Group by target system
+  const groups = {};
+  for (const m of mapped) {
+    if (!groups[m.target_system])
+      groups[m.target_system] = { source: sourceCS?.url || '', target: m.target_system, element: [] };
+    const elem = { code: m.source_code };
+    if (m.source_display) elem.display = m.source_display;
+    const tgt = { code: m.target_code, relationship: m.relationship };
+    if (m.target_display) tgt.display = m.target_display;
+    if (m.comment) tgt.comment = m.comment;
+    elem.target = [tgt];
+    groups[m.target_system].element.push(elem);
+  }
+
+  const cm = {
+    resourceType: "ConceptMap",
+    url: "http://terminology.open-ortho.org/fhir/ConceptMap/custom",
+    version: "0.1.0",
+    status: "draft",
+    experimental: true,
+    date: new Date().toISOString().slice(0,10),
+    sourceScopeUri: sourceCS?.url || '',
+    targetScopeUri: '',
+    group: Object.values(groups),
+  };
+  download('conceptmap.json', JSON.stringify(cm, null, 4), 'application/json');
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function download(name, text, mime) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], {type: mime}));
+  a.download = name;
+  a.click();
+}
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function escAttr(s) {
+  return String(s).replace(/"/g,'&quot;');
+}
+
+// ── Init: add one target row by default ──────────────────────────────────────
+addTargetRow();
+</script>
+</body>
+</html>

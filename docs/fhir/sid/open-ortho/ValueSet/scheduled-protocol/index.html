@@ -1,0 +1,45 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://terminology.open-ortho.org/fhir/sid/open-ortho/ValueSet/scheduled-protocol",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.1"
+        }
+    ],
+    "version": "0.1.0",
+    "name": "Orthodontic2Dand3DVisibleLightScheduledProtocols",
+    "title": "Orthodontic 2D and 3D Visible Light Scheduled Protocols",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-26",
+    "publisher": "OpenOrtho",
+    "contact": [
+        {
+            "name": "Open-Ortho",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://open-ortho.org"
+                }
+            ]
+        }
+    ],
+    "description": "Scheduled protocols for orthodontic photographs and intraoral scans according to ADA-1100.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-2d-photographic-scheduled-protocol"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/extraoral-2d-photographic-scheduled-protocol"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-3d-visible-light-scheduled-protocol"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/extraoral-3d-visible-light-scheduled-protocol"
+            }
+        ]
+    }
+}

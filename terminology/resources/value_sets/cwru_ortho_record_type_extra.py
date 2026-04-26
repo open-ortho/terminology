@@ -16,7 +16,7 @@ class CWRUOrthoRecordTypesAcetateFilm(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/ValueSet/cwru-ortho-record-types-acetate-film"
+        return f"{ns.url}/ValueSet/ortho-record-types-acetate-film"
 
     def __init__(self):
         url = self.static_url()
@@ -26,7 +26,7 @@ class CWRUOrthoRecordTypesAcetateFilm(ValueSet):
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",
-                    "value": f"urn:oid:{VALUE_SET_UIDS['cwru-ortho-record-types-acetate-film']}"
+                    "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-acetate-film']}"
                 }
             ],
             version="1.0.0",
@@ -55,7 +55,7 @@ class CWRUOrthoRecordTypesPaper(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/ValueSet/cwru-ortho-record-types-paper"
+        return f"{ns.url}/ValueSet/ortho-record-types-paper"
 
     def __init__(self):
         url = self.static_url()
@@ -65,7 +65,7 @@ class CWRUOrthoRecordTypesPaper(ValueSet):
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",
-                    "value": f"urn:oid:{VALUE_SET_UIDS['cwru-ortho-record-types-paper']}"
+                    "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-paper']}"
                 }
             ],
             version="1.0.0",
@@ -92,7 +92,7 @@ class CWRUOrthoRecordTypesGypsum(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/ValueSet/cwru-ortho-record-types-gypsum"
+        return f"{ns.url}/ValueSet/ortho-record-types-gypsum"
 
     def __init__(self):
         url = self.static_url()
@@ -102,7 +102,7 @@ class CWRUOrthoRecordTypesGypsum(ValueSet):
             identifier=[
                 {
                     "system": "urn:ietf:rfc:3986",
-                    "value": f"urn:oid:{VALUE_SET_UIDS['cwru-ortho-record-types-gypsum']}"
+                    "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-gypsum']}"
                 }
             ],
             version="1.0.0",

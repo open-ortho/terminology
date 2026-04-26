@@ -1,0 +1,92 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "intraoral-3d-visible-light-scheduled-protocol",
+    "url": "https://terminology.open-ortho.org/fhir/sid/open-ortho/CodeSystem/intraoral-3d-visible-light-scheduled-protocol",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.4"
+        }
+    ],
+    "version": "1.1.1",
+    "name": "Intraoral3DVisibleLightScheduledProtocol",
+    "title": "Intraoral 3D Visible Light Scheduled Protocol",
+    "status": "draft",
+    "experimental": true,
+    "date": "2026-04-26",
+    "publisher": "OpenOrtho",
+    "description": "Common intraoral 3D visible light views used in an orthodontic provider's practice, producing a 3D surface of the dentition",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "IV3D01",
+            "display": "Intraoral 3D surface,maxillary dentition",
+            "definition": "Intraoral 3D Surface of the Maxillary Dentition",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IV3D-01"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IO.MX"
+                }
+            ]
+        },
+        {
+            "code": "IV3D02",
+            "display": "Intraoral 3D surface,mandibular dentition",
+            "definition": "Intraoral 3D Surface of the Mandibular Dentition",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IV3D-02"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IO.MD"
+                }
+            ]
+        },
+        {
+            "code": "IV3D03",
+            "display": "Intraoral 3D surface,occluding maxillary and mandibular teeth",
+            "definition": "Intraoral 3D Surface of Occluding Maxillary and Mandibular Teeth (showing how the teeth fit together, i.e. the bite)",
+            "designation": [
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IV3D-03"
+                },
+                {
+                    "use": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    },
+                    "value": "IO.BT"
+                }
+            ]
+        }
+    ]
+}
