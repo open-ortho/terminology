@@ -17,11 +17,12 @@ help:
 
 build:
 	oo-codes
+	cp tools/conceptmap-generator.html docs/conceptmap-generator.html
 
 serve:
 	@echo "Serving docs/ at http://localhost:8000 (simulates GitHub Pages)"
 	@echo "Press Ctrl+C to stop."
-	python3 -m http.server 8000 --directory docs
+	python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 dist:
 	python3 -m build 
