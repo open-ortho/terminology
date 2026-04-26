@@ -1,10 +1,10 @@
 from datetime import datetime
 from terminology.fhir_types import ValueSet
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
-from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import Extraoral2DPhotographicScheduledProtocolCodeSystem
-from terminology.resources.code_systems.intraoral_2d_photographic_scheduled_protocol import Intraoral2DPhotographicScheduledProtocolCodeSystem
-from terminology.resources.code_systems.intraoral_3d_visible_light_scheduled_protocol import Intraoral3DVisibleLightScheduledProtocolCodeSystem
-from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import Extraoral3DVisibleLightScheduledProtocolCodeSystem
+from terminology.resources.code_systems.ada_1100_extraoral_2d_photographic_scheduled_protocol import Extraoral2DPhotographicScheduledProtocolCodeSystem
+from terminology.resources.code_systems.ada_1100_intraoral_2d_photographic_scheduled_protocol import Intraoral2DPhotographicScheduledProtocolCodeSystem
+from terminology.resources.code_systems.ada_1100_intraoral_3d_visible_light_scheduled_protocol import Intraoral3DVisibleLightScheduledProtocolCodeSystem
+from terminology.resources.code_systems.ada_1100_extraoral_3d_visible_light_scheduled_protocol import Extraoral3DVisibleLightScheduledProtocolCodeSystem
 from terminology.constants import VALUE_SET_UIDS
 
 
@@ -16,7 +16,7 @@ class ScheduledProtocolValueSet(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = OpenOrthoNamingSystem()
-        return f"{ns.url}/{id}"
+        return f"{ns.url}/ValueSet/{id}"
 
     def __init__(self):
         url = self.static_url()
@@ -30,7 +30,7 @@ class ScheduledProtocolValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="0.1.0",
+            version="1.0.0",
             name="Orthodontic2Dand3DVisibleLightScheduledProtocols",
             title="Orthodontic 2D and 3D Visible Light Scheduled Protocols",
             status="active",

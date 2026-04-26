@@ -1,0 +1,695 @@
+{
+    "resourceType": "ConceptMap",
+    "url": "https://terminology.open-ortho.org/fhir/ConceptMap/orthodontic-photograph-views-reverse",
+    "version": "1.0.0",
+    "name": "OrthodonticPhotographViewsReverseConceptMap",
+    "title": "Orthodontic Photograph Views Reverse ConceptMap",
+    "status": "draft",
+    "experimental": true,
+    "date": "2026-04-26",
+    "publisher": "OpenOrtho",
+    "description": "Reverse mapping between SNOMED CT photographic concepts and Open Ortho photographic views.",
+    "sourceScopeUri": "http://snomed.info/sct",
+    "targetScopeUri": "https://terminology.open-ortho.org/fhir",
+    "group": [
+        {
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+            "element": [
+                {
+                    "code": "1306623000",
+                    "target": [
+                        {
+                            "code": "EV01",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306622005",
+                    "target": [
+                        {
+                            "code": "EV02",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306621003",
+                    "target": [
+                        {
+                            "code": "EV03",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306620002",
+                    "target": [
+                        {
+                            "code": "EV04",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306628009",
+                    "target": [
+                        {
+                            "code": "EV05",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306626008",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365795009",
+                    "target": [
+                        {
+                            "code": "EV07",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306627004",
+                    "target": [
+                        {
+                            "code": "EV08",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306625007",
+                    "target": [
+                        {
+                            "code": "EV09",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306629001",
+                    "target": [
+                        {
+                            "code": "EV10",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306631005",
+                    "target": [
+                        {
+                            "code": "EV11",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306632003",
+                    "target": [
+                        {
+                            "code": "EV12",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306633008",
+                    "target": [
+                        {
+                            "code": "EV13",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306634002",
+                    "target": [
+                        {
+                            "code": "EV14",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306630006",
+                    "target": [
+                        {
+                            "code": "EV15",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306663004",
+                    "target": [
+                        {
+                            "code": "EV16",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306624006",
+                    "target": [
+                        {
+                            "code": "EV17",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306662009",
+                    "target": [
+                        {
+                            "code": "EV18",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306664005",
+                    "target": [
+                        {
+                            "code": "EV19",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306665006",
+                    "target": [
+                        {
+                            "code": "EV20",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "787611004",
+                    "target": [
+                        {
+                            "code": "EV21",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306656004",
+                    "target": [
+                        {
+                            "code": "EV22",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306648002",
+                    "target": [
+                        {
+                            "code": "EV23",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306649005",
+                    "target": [
+                        {
+                            "code": "EV24",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306650005",
+                    "target": [
+                        {
+                            "code": "EV25",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306651009",
+                    "target": [
+                        {
+                            "code": "EV26",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306652002",
+                    "target": [
+                        {
+                            "code": "EV27",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365794008",
+                    "target": [
+                        {
+                            "code": "EV28",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306644000",
+                    "target": [
+                        {
+                            "code": "EV29",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306645004",
+                    "target": [
+                        {
+                            "code": "EV30",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306646003",
+                    "target": [
+                        {
+                            "code": "EV31",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306647007",
+                    "target": [
+                        {
+                            "code": "EV32",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306643006",
+                    "target": [
+                        {
+                            "code": "EV33",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306654001",
+                    "target": [
+                        {
+                            "code": "EV34",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306655000",
+                    "target": [
+                        {
+                            "code": "EV35",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1306653007",
+                    "target": [
+                        {
+                            "code": "EV36",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365796005",
+                    "target": [
+                        {
+                            "code": "EV37",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365797001",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365798006",
+                    "target": [
+                        {
+                            "code": "EV39",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365790004",
+                    "target": [
+                        {
+                            "code": "EV40",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365791000",
+                    "target": [
+                        {
+                            "code": "EV41",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365793002",
+                    "target": [
+                        {
+                            "code": "EV42",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365792007",
+                    "target": [
+                        {
+                            "code": "EV43",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
+            "element": [
+                {
+                    "code": "1365808006",
+                    "target": [
+                        {
+                            "code": "IV01",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365814004",
+                    "target": [
+                        {
+                            "code": "IV02",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365817006",
+                    "target": [
+                        {
+                            "code": "IV03",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365800004",
+                    "target": [
+                        {
+                            "code": "IV04",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365869001",
+                    "target": [
+                        {
+                            "code": "IV05",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365870000",
+                    "target": [
+                        {
+                            "code": "IV06",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365802007",
+                    "target": [
+                        {
+                            "code": "IV07",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365801000",
+                    "target": [
+                        {
+                            "code": "IV08",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365804008",
+                    "target": [
+                        {
+                            "code": "IV09",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365803002",
+                    "target": [
+                        {
+                            "code": "IV10",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365806005",
+                    "target": [
+                        {
+                            "code": "IV11",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365807001",
+                    "target": [
+                        {
+                            "code": "IV12",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365805009",
+                    "target": [
+                        {
+                            "code": "IV13",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365824007",
+                    "target": [
+                        {
+                            "code": "IV14",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365827000",
+                    "target": [
+                        {
+                            "code": "IV15",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365826009",
+                    "target": [
+                        {
+                            "code": "IV16",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365828005",
+                    "target": [
+                        {
+                            "code": "IV17",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365809003",
+                    "target": [
+                        {
+                            "code": "IV18",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365815003",
+                    "target": [
+                        {
+                            "code": "IV19",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365818001",
+                    "target": [
+                        {
+                            "code": "IV20",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365799003",
+                    "target": [
+                        {
+                            "code": "IV21",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365868009",
+                    "target": [
+                        {
+                            "code": "IV22",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365871001",
+                    "target": [
+                        {
+                            "code": "IV23",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365863000",
+                    "target": [
+                        {
+                            "code": "IV24",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365865007",
+                    "target": [
+                        {
+                            "code": "IV25",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365864006",
+                    "target": [
+                        {
+                            "code": "IV26",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365866008",
+                    "target": [
+                        {
+                            "code": "IV27",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365867004",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365811007",
+                    "target": [
+                        {
+                            "code": "IV29",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "1365810008",
+                    "target": [
+                        {
+                            "code": "IV30",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-3d-visible-light-scheduled-protocol",
+            "element": []
+        },
+        {
+            "source": "http://snomed.info/sct",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-3d-visible-light-scheduled-protocol",
+            "element": []
+        }
+    ]
+}

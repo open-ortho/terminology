@@ -2,7 +2,7 @@ NAME = terminology
 VERSION = $(shell grep -oP '(?<=version = ")[^"]*' pyproject.toml)
 DIST = docs
 
-.PHONY: clean deploy serve help
+.PHONY: clean deploy serve help tests
 
 help:
 	@echo "Usage: make <target>"
@@ -15,15 +15,15 @@ help:
 	@echo "  clean    Remove generated files from docs/ (preserves CNAME) and .pyc/.egg-info"
 	@echo "  help     Show this help message"
 
-build:
+build: tests
 	oo-codes
 
 serve:
 	@echo "Serving docs/ at http://localhost:8000 (simulates GitHub Pages)"
 	@echo "Press Ctrl+C to stop."
-	python3 -m http.server 8000 --directory docs
+	python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
-dist:
+dist: tests
 	python3 -m build 
 
 deploy: dist
@@ -32,5 +32,8 @@ deploy: dist
 clean:
 	find $(DIST) -mindepth 1 ! -name 'CNAME' -delete
 	find . -name '*.pyc' -delete
-	find . -name '*.egg-info' -delete
 	rm -rf *.egg-info
+	find . -name '*.egg-info' -delete
+
+tests:
+	python3 -m pytest tests/ -v

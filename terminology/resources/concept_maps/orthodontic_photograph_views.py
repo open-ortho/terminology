@@ -6,16 +6,16 @@ from typing import Dict, Iterable, List, TypedDict, cast
 from terminology.fhir_types import ConceptMap
 
 from terminology.resources.naming_systems import OpenOrthoNamingSystem
-from terminology.resources.code_systems.extraoral_2d_photographic_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_extraoral_2d_photographic_scheduled_protocol import (
     Extraoral2DPhotographicScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.extraoral_3d_visible_light_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_extraoral_3d_visible_light_scheduled_protocol import (
     Extraoral3DVisibleLightScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.intraoral_2d_photographic_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_intraoral_2d_photographic_scheduled_protocol import (
     Intraoral2DPhotographicScheduledProtocolCodeSystem,
 )
-from terminology.resources.code_systems.intraoral_3d_visible_light_scheduled_protocol import (
+from terminology.resources.code_systems.ada_1100_intraoral_3d_visible_light_scheduled_protocol import (
     Intraoral3DVisibleLightScheduledProtocolCodeSystem,
 )
 
@@ -183,7 +183,7 @@ class OrthodonticPhotographViewsConceptMap(ConceptMap):
         url = self.static_url()
         super().__init__(
             url=url,
-            version="0.1.0",
+            version="1.0.0",
             name="OrthodonticPhotographViewsConceptMap",
             title="Orthodontic Photograph Views ConceptMap",
             status="draft",
@@ -212,7 +212,7 @@ class OrthodonticPhotographViewsReverseConceptMap(ConceptMap):
         url = self.static_url()
         super().__init__(
             url=url,
-            version="0.1.0",
+            version="1.0.0",
             name="OrthodonticPhotographViewsReverseConceptMap",
             title="Orthodontic Photograph Views Reverse ConceptMap",
             status="draft",

@@ -1,0 +1,46 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://terminology.open-ortho.org/fhir/ValueSet/OrthodonticPhotographViews",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.2.840.10008.2.16.4"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "Orthodontic Photographic Views",
+    "title": "Orthodontic Photographic Views",
+    "status": "active",
+    "experimental": false,
+    "date": "2024-12-29",
+    "publisher": "open-ortho",
+    "contact": [
+        {
+            "name": "Open-Ortho",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://open-ortho.org"
+                }
+            ]
+        }
+    ],
+    "description": "A set of codes that describe Orhodontic Photographic Views for DICOM ",
+    "compose": {
+        "include": [
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "filter": [
+                    {
+                        "property": "concept",
+                        "op": "is-a",
+                        "value": "723394009"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,289 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "enumerated-terms",
+    "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/enumerated-terms",
+    "identifier": [
+        {
+            "system": "dicom",
+            "value": "99ADA1100"
+        }
+    ],
+    "version": "2.0.0",
+    "name": "ADA1100EnumeratedTerms",
+    "title": "ADA 1100 Enumerated Terms",
+    "status": "draft",
+    "experimental": false,
+    "date": "2026-04-26",
+    "publisher": "Open Ortho",
+    "description": "Enumerated terms used in ADA 1100.",
+    "copyright": "MIT License",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "IO",
+            "display": "IntraOral",
+            "definition": "IV - intraoral view"
+        },
+        {
+            "code": "EO",
+            "display": "ExtraOral",
+            "definition": "EV - extraoral view"
+        },
+        {
+            "code": "MD",
+            "display": "ManDibular",
+            "definition": "used to reference lower jaw or lower dental arch"
+        },
+        {
+            "code": "MX",
+            "display": "MaXillary",
+            "definition": "used to reference upper jaw or upper dental arch"
+        },
+        {
+            "code": "MO",
+            "display": "Mouth Open",
+            "definition": "used to document views taken with mouth wide open"
+        },
+        {
+            "code": "MC",
+            "display": "Mouth Closed",
+            "definition": "teeth together. DON'T USE; instead, use LC, CO or CR (see below)"
+        },
+        {
+            "code": "TA",
+            "display": "Teeth Apart",
+            "definition": "used to document intraoral views with teeth slightly apart"
+        },
+        {
+            "code": "CO",
+            "display": "Centric Occlusion",
+            "definition": "maximum intercuspation of teeth"
+        },
+        {
+            "code": "CR",
+            "display": "Centric Relation",
+            "definition": "the joint determined position of the mandible"
+        },
+        {
+            "code": "OJ",
+            "display": "showing OverJet",
+            "definition": "horizontal distance between maxillary and mandibular incisors"
+        },
+        {
+            "code": "RP",
+            "display": "Right Profile",
+            "definition": "used to document extraoral photographs of the subject's right profile"
+        },
+        {
+            "code": "LP",
+            "display": "Left Profile",
+            "definition": "used to document extraoral photographs of the subject's left profile"
+        },
+        {
+            "code": "FF",
+            "display": "Full Face",
+            "definition": "used to document extraoral views of the subject\u2019s frontal view"
+        },
+        {
+            "code": "LR",
+            "display": "Lips Relaxed",
+            "definition": "perioral muscles are relaxed, lips may or may not be touching"
+        },
+        {
+            "code": "LC",
+            "display": "Lips Closed",
+            "definition": "perioral muscles may or may not be relaxed, but lips are touching"
+        },
+        {
+            "code": "FS",
+            "display": "Full Smile",
+            "definition": "used to document extraoral views of the subject smiling"
+        },
+        {
+            "code": "PF",
+            "display": "mandible Postured Forward",
+            "definition": "used to document extraoral views of the subject with mandible protruding"
+        },
+        {
+            "code": "OF",
+            "display": "Other Face",
+            "definition": "some otherwise uncoded view of the face; e.g., with the face tipped back, or from above"
+        },
+        {
+            "code": "NM",
+            "display": "No Mirror",
+            "definition": "Used for intraoral views only. Image was acquired directly without the use of a mirror"
+        },
+        {
+            "code": "WM",
+            "display": "With Mirror",
+            "definition": "used for intraoral photographs only. Does not apply to extraoral photographs"
+        },
+        {
+            "code": "WM.BC",
+            "display": "With Mirror, But Corrected",
+            "definition": "image is flipped and/or rotated to appear as if it has been taken directly without a mirror. Used for intraoral photographs only. Does not apply to extraoral photographs"
+        },
+        {
+            "code": "RB",
+            "display": "Right Buccal",
+            "definition": "used to document posterior dental occlusion on the subject's right side"
+        },
+        {
+            "code": "LB",
+            "display": "Left Buccal",
+            "definition": "used to document posterior dental occlusion on the subject's left side"
+        },
+        {
+            "code": "RL",
+            "display": "Right Lateral",
+            "definition": "used to document the dental occlusion from the subject's right side"
+        },
+        {
+            "code": "LL",
+            "display": "Left Lateral",
+            "definition": "used to document the dental occlusion from the subject's left side"
+        },
+        {
+            "code": "FV",
+            "display": "Frontal View",
+            "definition": "Used to document intraoral view of the subject from the front"
+        },
+        {
+            "code": "IV",
+            "display": "Inferior View",
+            "definition": "use IO.IV to show depth of bite (vertical distance) and overjet (horizontal distance) from below. Use EO.IV to show lower border of mandible, nares, infraorbital rim contours, forehead contours from below."
+        },
+        {
+            "code": "SV",
+            "display": "Superior View",
+            "definition": "use EO.SV to show forehead, infraorbital rim contour, dorsum of nose, upper lip, chin taken from above"
+        },
+        {
+            "code": "45",
+            "display": "45\u00ba view",
+            "definition": "used to document extraoral view of the subject taken halfway between frontal and profile views"
+        },
+        {
+            "code": "OV",
+            "display": "Occlusal View",
+            "definition": "used to document intraoral views taken to show the subject\u2019s occlusal table either maxillary or mandibular"
+        },
+        {
+            "code": "CS",
+            "display": "Close-up Smile",
+            "definition": "extraoral view of the subject\u2019s frontal perioral area showing smile"
+        },
+        {
+            "code": "FW",
+            "display": "Frown",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "PK",
+            "display": "Pucker",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "CE",
+            "display": "Close Eyes",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "RE",
+            "display": "Raise eyebrows",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "JM",
+            "display": "Track jaw movements",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "SP",
+            "display": "Document speech",
+            "definition": "functional conditions for video or still images."
+        },
+        {
+            "code": "WH",
+            "display": "Whole Head",
+            "definition": "used for 3D Photographic (visible light) Image"
+        },
+        {
+            "code": "OC",
+            "display": "Occlusal Cant",
+            "definition": "used to document extraoral view showing occlusal cant, may utilize tongue depressor to help visualize the cant"
+        },
+        {
+            "code": "FI",
+            "display": "Forensic Interest",
+            "definition": "used to document extraoral view of the subject\u2019s unique features such as tattoos, jewelry, scars"
+        },
+        {
+            "code": "NW",
+            "display": "Nerve Weakness",
+            "definition": "Used to document extraoral view of the subject\u2019s signs of nerve abnormalities such as asymmetric muscle function or drooping"
+        },
+        {
+            "code": "AN",
+            "display": "Anomalies",
+            "definition": "used to document extraoral view of the subject\u2019s unusual anatomy or pathology"
+        },
+        {
+            "code": "FR",
+            "display": "Frenum",
+            "definition": "Used to document intraoral view of the subject\u2019s frenum and may include tooth numbers"
+        },
+        {
+            "code": "PA",
+            "display": "using Photo Accessory",
+            "definition": "such as a photo contraster providing a solid background or black mirror. Can be appended to any intraoral (IO) view code as needed"
+        },
+        {
+            "code": "TT",
+            "display": "Tongue Thrust",
+            "definition": "Used to document intraoral view of the subject with evidence of tongue thrust"
+        },
+        {
+            "code": "FTO",
+            "display": "First Time Observation",
+            "definition": "Patient has just registered with the practice for the first time and has not agreed any treatment yet. The provider collects first time records."
+        },
+        {
+            "code": "OBS",
+            "display": "Observation",
+            "definition": "Patient comes back for regular visits. The provider collects observation records."
+        },
+        {
+            "code": "PRT",
+            "display": "Pretreatment",
+            "definition": "Images acquired before treatment starts. Only used when the patient and doctor have agreed to start a treatment. This should be treated as Observation above."
+        },
+        {
+            "code": "IN",
+            "display": "Initial",
+            "definition": "Patient and provider agreed to start treatment. Records are taken to mark the Baseline for comparison with treatment progress."
+        },
+        {
+            "code": "P",
+            "display": "Progress",
+            "definition": "Images taken during treatment."
+        },
+        {
+            "code": "F",
+            "display": "Final",
+            "definition": "Image taken at the end of active treatment (after appliance removal, if applicable). Sequence number is not required."
+        },
+        {
+            "code": "FU",
+            "display": "Follow-Up",
+            "definition": "refers to Follow-Up time point, generally taken to show post-treatment changes"
+        },
+        {
+            "code": "PST",
+            "display": "Posttreatment",
+            "definition": "Image acquired after treatment."
+        }
+    ]
+}

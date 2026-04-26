@@ -6,15 +6,14 @@ from terminology.resources.code_systems import leave_code_as_is as make_code
 from terminology.constants import CODE_SYSTEM_UIDS
 
 
-id = "cwru-ortho-record-type"
-canonical_path = "identifier-system/record-type"
+id = "ortho-record-type"
 
 
 class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compatibility, but id now reflects record-type
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/{canonical_path}"
+        return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
         ns = CWRUOrthoNamingSystem()
@@ -27,7 +26,7 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                 }
             ],
             url=self.static_url(),
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordType",
             title="Bolton-Brush Growth Study Center Collection Record Types",
             status="active",
@@ -52,6 +51,11 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     code=f"{make_code('OB')}",
                     display="Oblique Cephalogram",
                     definition="Scan of Oblique Cephalogram"
+                ),
+                CodeSystemConcept(
+                    code=f"{make_code('OC')}",
+                    display="Occlusal Dental Plain Radiograph",
+                    definition="Scan of Occlusal Dental Plain Radiograph"
                 ),
                 CodeSystemConcept(
                     code=f"{make_code('P')}",
@@ -82,11 +86,6 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                     code=f"{make_code('K')}",
                     display="Radiograph of Left Knee",
                     definition="Scan of Radiograph of Left Knee"
-                ),
-                CodeSystemConcept(
-                    code=f"{make_code('OC')}",
-                    display="Occlusal Dental Plain Radiograph",
-                    definition="Scan of Occlusal Dental Plain Radiograph"
                 ),
                 CodeSystemConcept(
                     code=f"{make_code('PH')}",

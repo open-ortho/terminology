@@ -37,7 +37,7 @@
 
 This project serves as a centralized repository for orthodontic software developers, offering a curated collection of essential codes required for implementing healthcare standards like DICOM or HL7. Navigating through various terminologies to find the right codes can be challenging. Our project aims to simplify this process by providing a go-to source for these codes, readily available in JSON and CSV formats. Users can access these directly through GitHub releases or utilize them as a Python package on PyPI.
 
-The primary aim of this project is to implement in FHIR Terminology the views and view sets defined in *AMERICAN NATIONAL STANDARD INSTITUTE/AMERICAN DENTAL ASSOCIATION STANDARD NO. 1100 – 2D and 3D Orthodontic/Craniofacial/Forensic Photographic Views and View Sets*. By adhering to the ADA1100 standard, we ensure that the codes and terminologies used in orthodontic software are consistent, accurate, and interoperable across different systems. This is not an official FHIR CodeSystem. The purpose for this site is to provide developers codes necessary to move forward with their development, while the codes get added and approved in official nomenclatures (like SNOMED-CT).
+The primary aim of this project is to implement in FHIR Terminology the views and view sets defined in _AMERICAN NATIONAL STANDARD INSTITUTE/AMERICAN DENTAL ASSOCIATION STANDARD NO. 1100 – 2D and 3D Orthodontic/Craniofacial/Forensic Photographic Views and View Sets_. By adhering to the ADA1100 standard, we ensure that the codes and terminologies used in orthodontic software are consistent, accurate, and interoperable across different systems. This is not an official FHIR CodeSystem. The purpose for this site is to provide developers codes necessary to move forward with their development, while the codes get added and approved in official nomenclatures (like SNOMED-CT).
 
 Historically, many of the photographic view codes defined by ADA-1100 were submitted to and added in SNOMED CT at the request of the American Dental Association to enable standards-compliant implementations. Those SNOMED concepts are clinically precise, but they do not include the concise, developer-friendly keywords used in ADA-1100 workflows. Open Ortho collected the ADA-1100 terminology, published it in these FHIR CodeSystems and ValueSets, and provides ConceptMaps to translate between the ADA-1100 identifiers and SNOMED CT codes. This keeps software-friendly keywords available while maintaining interoperability with SNOMED CT.
 
@@ -115,10 +115,9 @@ print(ev.concept[0].model_dump())
 print(ev.concept)
 ```
 
-
 ## Releases
 
-- Each new release must be git tagged with v*.*.*. This triggers the Github actions to publish to PyPi and release in GitHub releases.
+- Each new release must be git tagged with v*.*.\*. This triggers the Github actions to publish to PyPi and release in GitHub releases.
 - Project version should only be stored in the `pyproject.toml` file in `project.version`, and imported accordingly when needed.
 - Each CodeSystem and CodeValue has its own version which depends on changes to that: remember to bump those individually.
 - No need for Github actions: just build with `make build`, which will build in `docs/`
@@ -127,6 +126,7 @@ print(ev.concept)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/open-ortho/terminology.svg?style=for-the-badge
 [contributors-url]: https://github.com/open-ortho/terminology/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/open-ortho/terminology.svg?style=for-the-badge

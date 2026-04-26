@@ -7,13 +7,13 @@ from terminology.resources.code_systems.cwru_ortho_image_types import (
 )
 from terminology.constants import VALUE_SET_UIDS
 
-id = "cwru-ortho-record-types"
+id = "ortho-record-types"
 
 class CWRUOrthoRecordTypesValueSet(ValueSet):
     @classmethod
     def static_url(cls) -> str:
         ns = CWRUOrthoNamingSystem()
-        return f"{ns.url}/{id}"
+        return f"{ns.url}/ValueSet/{id}"
 
     def __init__(self):
         url = self.static_url()
@@ -26,7 +26,7 @@ class CWRUOrthoRecordTypesValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordTypes",
             title="CWRU Ortho Record Types",
             status="active",

@@ -4,7 +4,7 @@ from terminology.constants import NAMING_SYSTEM_UIDS
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://terminology.medoco.health/fhir",
+            url="https://terminology.open-ortho.org/fhir/sid/medoco",
             name="medocoHEALTH",
             title="medoco Health Naming System",
             identifier=[Identifier(
@@ -24,7 +24,7 @@ A custom set of codes used by various medoco Health products, as reccommended by
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "http://terminology.medoco.health/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/medoco",
                     "preferred": True
                 },
                 {
@@ -40,10 +40,48 @@ A custom set of codes used by various medoco Health products, as reccommended by
             ]
         )
 
+class ADA1100NamingSystem(NamingSystem):
+    def __init__(self):
+        super().__init__(
+            url="https://terminology.open-ortho.org/fhir/sid/ada1100",
+            name="ADA1100",
+            title="ANSI/ADA Standard No. 1100 Naming System",
+            identifier=[Identifier(
+                system="dicom",
+                value="99ADA1100"
+            )],
+            description="""
+## ANSI/ADA Standard No. 1100 — Dental Informatics: Orthodontic Records
+
+Codes defined in ANSI/ADA Standard No. 1100, hosted here by open-ortho on behalf
+of the American Dental Association Standards Committee (SC).
+The ADA does not operate a FHIR terminology server; open-ortho provides stable,
+resolvable canonical URLs for these codes.
+""",
+            status="active",
+            kind="codesystem",
+            date="2025-01-01",
+            publisher="American Dental Association",
+            responsible="ADA Standards Committee",
+            uniqueId=[
+                {
+                    "type": "uri",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/ada1100",
+                    "preferred": True
+                },
+                {
+                    "type": "dicom",
+                    "value": "99ADA1100",
+                    "preferred": True
+                }
+            ]
+        )
+
+
 class OpenOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="http://terminology.open-ortho.org/fhir",
+            url="https://terminology.open-ortho.org/fhir",
             name="OpenOrtho",
             title="Open-Ortho",
             identifier=[Identifier(
@@ -74,7 +112,7 @@ A set of codes required to represent dental and orthodontic concepts for interop
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "http://terminology.open-ortho.org/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir",
                     "preferred": False
                 },
                 {
@@ -93,7 +131,7 @@ A set of codes required to represent dental and orthodontic concepts for interop
 class CWRUOrthoNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="https://orthodontics.case.edu/fhir",
+            url="https://terminology.open-ortho.org/fhir/sid/cwru",
             name="CWRUOrtho",
             title="CWRU Orthodontics Naming System",
             identifier=[Identifier(
@@ -113,7 +151,7 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "https://orthodontics.case.edu/fhir",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/cwru",
                     "preferred": True
                 },
                 {
@@ -132,7 +170,7 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
 class DentalEyePadNamingSystem(NamingSystem):
     def __init__(self):
         super().__init__(
-            url="https://dentaleyepad.de/en",
+            url="https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
             name="DentalEyePad",
             identifier=[Identifier(
                 system="dicom",
@@ -154,13 +192,57 @@ This eliminates tedious intermediate steps such as connecting the camera, assign
             uniqueId=[
                 {
                     "type": "uri",
-                    "value": "https://dentaleyepad.de/en",
+                    "value": "https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
                     "preferred": True
                 },
                 {
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["dental-eye-pad"],
                     "preferred": False
+                }
+            ]
+        )
+
+
+class TopsorthoNamingSystem(NamingSystem):
+    """NamingSystem for a specific topsOrtho server instance, identified by UUID.
+
+    The UUID anonymously identifies the practice without leaking any identifying
+    information. The DICOM coding scheme is derived from the UUID per the 99TOPS
+    convention: 99TOPS + first 8 hex chars of the UUID (uppercase, no hyphens).
+    """
+    def __init__(self, uuid: str):
+        dicom_scheme = f"99TOPS{uuid.replace('-', '').upper()[:8]}"
+        url = f"https://terminology.open-ortho.org/fhir/sid/topsortho/{uuid}"
+        super().__init__(
+            url=url,
+            name=f"TopsOrtho{uuid.replace('-', '').upper()[:8]}",
+            title=f"topsOrtho Server Instance {uuid}",
+            identifier=[Identifier(
+                system="dicom",
+                value=dicom_scheme
+            )],
+            description=(
+                f"Codes from topsOrtho server instance {uuid}. "
+                "These are practice-specific image label types defined locally "
+                "on a specific topsOrtho server installation. The UUID identifies "
+                "the server instance anonymously without revealing practice identity."
+            ),
+            status="active",
+            kind="codesystem",
+            date="2025-01-01",
+            publisher="topsOrtho",
+            responsible="topsOrtho",
+            uniqueId=[
+                {
+                    "type": "uri",
+                    "value": url,
+                    "preferred": True
+                },
+                {
+                    "type": "dicom",
+                    "value": dicom_scheme,
+                    "preferred": True
                 }
             ]
         )

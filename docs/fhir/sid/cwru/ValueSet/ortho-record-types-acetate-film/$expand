@@ -1,0 +1,113 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://terminology.open-ortho.org/fhir/sid/cwru/ValueSet/ortho-record-types-acetate-film",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.3"
+        }
+    ],
+    "version": "2.0.0",
+    "name": "CWRUOrthoRecordTypesAcetateFilm",
+    "title": "CWRU Ortho Record Types - Acetate Film",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-26",
+    "publisher": "CWRU Orthodontics",
+    "description": "Record types on acetate film for CWRU Bolton-Brush collections.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "concept": [
+                    {
+                        "code": "L"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "OB"
+                    },
+                    {
+                        "code": "OC"
+                    },
+                    {
+                        "code": "P"
+                    },
+                    {
+                        "code": "FA"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "CS"
+                    },
+                    {
+                        "code": "E"
+                    },
+                    {
+                        "code": "K"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "timestamp": "2026-04-26",
+        "total": 10,
+        "contains": [
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "L",
+                "display": "Lateral Cephalogram"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "F",
+                "display": "Frontal Cephalogram"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "OB",
+                "display": "Oblique Cephalogram"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "OC",
+                "display": "Occlusal Dental Plain Radiograph"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "P",
+                "display": "Radiograph of Left Hip and Pelvis"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "FA",
+                "display": "Radiograph of Foot & Ankle"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "H",
+                "display": "Radiograph of Hand & Wrist"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "CS",
+                "display": "Radiograph of Left Shoulder and Chest"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "E",
+                "display": "Radiograph of Elbow"
+            },
+            {
+                "system": "https://terminology.open-ortho.org/fhir/sid/cwru/CodeSystem/ortho-record-type",
+                "code": "K",
+                "display": "Radiograph of Left Knee"
+            }
+        ]
+    }
+}

@@ -4,23 +4,24 @@
 
 from terminology.fhir_types import CodeSystem, CodeSystemConcept
 from datetime import datetime
-from terminology.resources.naming_systems import OpenOrthoNamingSystem
+from terminology.resources.naming_systems import ADA1100NamingSystem
 
-id = "ada-1100-enumerated-terms"
+id = "enumerated-terms"
 
 class ADA1100EnumeratedTermsCodeSystem(CodeSystem):
 
     @classmethod
     def static_url(cls) -> str:
-        return f"http://terminology.open-ortho.org/fhir/{id}"
+        ns = ADA1100NamingSystem()
+        return f"{ns.url}/CodeSystem/{id}"
 
     def __init__(self):
-        OPOR = OpenOrthoNamingSystem()
+        ADA = ADA1100NamingSystem()
         super().__init__(
             id=id,
-            identifier=OPOR.identifier,
+            identifier=ADA.identifier,
             url=self.static_url(),
-            version="1.0.0",
+            version="2.0.0",
             name="ADA1100EnumeratedTerms",
             title="ADA 1100 Enumerated Terms",
             copyright="MIT License",
