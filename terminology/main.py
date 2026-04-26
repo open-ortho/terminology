@@ -32,7 +32,8 @@ from terminology.resources.code_systems import (
     extraoral_3d_visible_light_scheduled_protocol,
     intraoral_3d_visible_light_scheduled_protocol,
     intraoral_2d_photographic_scheduled_protocol,
-    ada_1100_enumerated_terms
+    ada_1100_enumerated_terms,
+    mrosa_image_label_types,
 )
 
 from terminology.resources.concept_maps import orthodontic_photograph_views
@@ -334,7 +335,8 @@ def main() -> int:
             intraoral_2d_photographic_scheduled_protocol,
             dentaleyepad_image_types,
             cwru_ortho_image_types,
-            ada_1100_enumerated_terms
+            ada_1100_enumerated_terms,
+            mrosa_image_label_types,
         ],
         ValueSet: [
             scheduled_protocol,
