@@ -26,7 +26,7 @@ class CWRUOrthoRecordTypesValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordTypes",
             title="CWRU Ortho Record Types",
             status="active",

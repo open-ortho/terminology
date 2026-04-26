@@ -26,7 +26,7 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                 }
             ],
             url=self.static_url(),
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordType",
             title="Bolton-Brush Growth Study Center Collection Record Types",
             status="active",

@@ -30,7 +30,7 @@ class ScheduledProtocolValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="0.1.0",
+            version="1.0.0",
             name="Orthodontic2Dand3DVisibleLightScheduledProtocols",
             title="Orthodontic 2D and 3D Visible Light Scheduled Protocols",
             status="active",

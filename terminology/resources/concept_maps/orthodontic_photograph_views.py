@@ -183,7 +183,7 @@ class OrthodonticPhotographViewsConceptMap(ConceptMap):
         url = self.static_url()
         super().__init__(
             url=url,
-            version="0.1.0",
+            version="1.0.0",
             name="OrthodonticPhotographViewsConceptMap",
             title="Orthodontic Photograph Views ConceptMap",
             status="draft",
@@ -212,7 +212,7 @@ class OrthodonticPhotographViewsReverseConceptMap(ConceptMap):
         url = self.static_url()
         super().__init__(
             url=url,
-            version="0.1.0",
+            version="1.0.0",
             name="OrthodonticPhotographViewsReverseConceptMap",
             title="Orthodontic Photograph Views Reverse ConceptMap",
             status="draft",

@@ -52,7 +52,7 @@ class DentalEyePadCodeSystem(CodeSystem):
             id="dentaleyepad",
             identifier=DEP.identifier,
             url=self.static_url(),
-            version="1.0.0",
+            version="2.0.0",
             name="DentalEyePadCodeSystem",
             title="DentalEyePad Image Types",
             status="active",
