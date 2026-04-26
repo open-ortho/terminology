@@ -26,7 +26,7 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
                 }
             ],
             url=self.static_url(),
-            version="1.2.2",
+            version="2.0.0",
             name="Extraoral2DPhotographicScheduledProtocol",
             title="Extraoral 2D Photographic Scheduled Protocol",
             status="draft",

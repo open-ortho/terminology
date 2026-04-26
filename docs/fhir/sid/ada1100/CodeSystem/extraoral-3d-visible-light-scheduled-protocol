@@ -8,7 +8,7 @@
             "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.2"
         }
     ],
-    "version": "1.2.1",
+    "version": "2.0.0",
     "name": "Extraoral3DVisibleLightScheduledProtocol",
     "title": "Extraoral 3D Visible Light Scheduled Protocol",
     "status": "draft",

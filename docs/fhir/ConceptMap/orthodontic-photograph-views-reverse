@@ -1,7 +1,7 @@
 {
     "resourceType": "ConceptMap",
     "url": "https://terminology.open-ortho.org/fhir/ConceptMap/orthodontic-photograph-views-reverse",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "name": "OrthodonticPhotographViewsReverseConceptMap",
     "title": "Orthodontic Photograph Views Reverse ConceptMap",
     "status": "draft",

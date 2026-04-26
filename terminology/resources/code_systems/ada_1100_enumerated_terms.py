@@ -21,7 +21,7 @@ class ADA1100EnumeratedTermsCodeSystem(CodeSystem):
             id=id,
             identifier=ADA.identifier,
             url=self.static_url(),
-            version="1.0.0",
+            version="2.0.0",
             name="ADA1100EnumeratedTerms",
             title="ADA 1100 Enumerated Terms",
             copyright="MIT License",

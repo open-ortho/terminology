@@ -8,7 +8,7 @@
             "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.5"
         }
     ],
-    "version": "1.0.0",
+    "version": "2.0.0",
     "name": "CWRUOrthoRecordType",
     "title": "Bolton-Brush Growth Study Center Collection Record Types",
     "status": "active",

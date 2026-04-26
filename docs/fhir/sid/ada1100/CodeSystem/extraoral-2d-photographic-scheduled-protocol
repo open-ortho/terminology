@@ -8,7 +8,7 @@
             "value": "urn:oid:1.3.6.1.4.1.61741.11.3.2.1"
         }
     ],
-    "version": "1.2.2",
+    "version": "2.0.0",
     "name": "Extraoral2DPhotographicScheduledProtocol",
     "title": "Extraoral 2D Photographic Scheduled Protocol",
     "status": "draft",

@@ -29,7 +29,7 @@ class CWRUOrthoRecordTypesAcetateFilm(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-acetate-film']}"
                 }
             ],
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordTypesAcetateFilm",
             title="CWRU Ortho Record Types - Acetate Film",
             status="active",
@@ -68,7 +68,7 @@ class CWRUOrthoRecordTypesPaper(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-paper']}"
                 }
             ],
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordTypesPaper",
             title="CWRU Ortho Record Types - Paper Records",
             status="active",
@@ -105,7 +105,7 @@ class CWRUOrthoRecordTypesGypsum(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS['ortho-record-types-gypsum']}"
                 }
             ],
-            version="1.0.0",
+            version="2.0.0",
             name="CWRUOrthoRecordTypesGypsum",
             title="CWRU Ortho Record Types - Gypsum Models",
             status="active",

@@ -34,7 +34,7 @@ class OrthodonticPhotographViewsValueSet(ValueSet):
                     "value": "urn:oid:1.2.840.10008.2.16.4"
                 }
             ],
-            version="0.1.0",
+            version="1.0.0",
             name="Orthodontic Photographic Views",
             title="Orthodontic Photographic Views",
             status="active",

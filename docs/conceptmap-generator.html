@@ -305,7 +305,7 @@ function pickResource(sel, type, idx) {
 // ── State ─────────────────────────────────────────────────────────────────────
 let sourceCS  = null;   // {url, title, concepts:[{code,display,def}]}
 let targetCSs = [];     // [{url, title, concepts:[...]}]  — parallel to UI rows
-let prefill   = {};     // {srcCode: {targetKey:"idx:code", rel, comment}}
+let rawCM     = null;   // raw ConceptMap JSON — prefill is re-derived at buildTable() time
 let targetRowCount = 0;
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
@@ -411,9 +411,29 @@ function handleJson(json, type, idx) {
   } else if (type === 'cm') {
     if (json.resourceType !== 'ConceptMap')
       return setStatus('cmStatus', 'Not a ConceptMap (resourceType=' + json.resourceType + ')', true);
-    prefill = parseConceptMap(json);
+    rawCM = json;
     setStatus('cmStatus', resourceSummary(json));
-    // If table already built, re-populate
+
+    // Auto-populate source URL from the ConceptMap's declared scope
+    const cmSourceUrl = json.sourceScopeUri || (json.group && json.group[0] && json.group[0].source) || '';
+    if (cmSourceUrl && !sourceCS) {
+      document.getElementById('sourceUrl').value = cmSourceUrl;
+    }
+
+    // Auto-populate target URL inputs from each group's target
+    const cmTargetUrls = [...new Set((json.group || []).map(g => g.target).filter(Boolean))];
+    if (cmTargetUrls.length && !targetCSs.some(Boolean)) {
+      // Remove existing empty target rows, add one per CM target
+      document.getElementById('targetRows').innerHTML = '';
+      targetRowCount = 0;
+      targetCSs = [];
+      for (const tUrl of cmTargetUrls) {
+        addTargetRow();
+        document.getElementById(`targetUrl_${targetRowCount - 1}`).value = tUrl;
+      }
+    }
+
+    // If table already built, re-populate with updated prefill
     if (document.getElementById('mainTable').style.display !== 'none') buildTable();
   }
 }
@@ -501,6 +521,8 @@ function buildRelOptions(selected) {
 // ── Build table ───────────────────────────────────────────────────────────────
 function buildTable() {
   if (!sourceCS) return;
+  // Re-derive prefill now that targetCSs may have changed since CM was loaded
+  const prefill = rawCM ? parseConceptMap(rawCM) : {};
   const tbody = document.getElementById('tableBody');
   tbody.innerHTML = '';
 
