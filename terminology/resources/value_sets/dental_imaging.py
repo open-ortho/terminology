@@ -70,6 +70,10 @@ class DentalImagingValueSet(ValueSet):
                                 "code": "1357743003",
                                 "display": "Three dimensional digital optical scan of oral cavity (procedure)"
                             },
+                            {
+                                "code": "371576000",
+                                "display": "Video imaging procedure (procedure)"
+                            },
                         ]
                     }
                 ]
