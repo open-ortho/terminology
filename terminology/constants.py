@@ -36,6 +36,7 @@ VS_CWRU_ORTHO_RECORD_TYPE_UID = f"{VS_BASE_UID}.2"
 VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID = f"{VS_BASE_UID}.3"
 VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID = f"{VS_BASE_UID}.4"
 VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID = f"{VS_BASE_UID}.5"
+VS_DENTAL_IMAGING_UID = f"{VS_BASE_UID}.6"
 
 # Naming System short name to UID mapping
 NAMING_SYSTEM_UIDS = {
@@ -51,6 +52,7 @@ VALUE_SET_UIDS = {
     "ortho-record-types": VS_CWRU_ORTHO_RECORD_TYPE_UID,
     "ortho-record-types-acetate-film": VS_CWRU_ORTHO_RECORD_TYPES_ACETATE_FILM_UID,
     "ortho-record-types-paper": VS_CWRU_ORTHO_RECORD_TYPES_PAPER_UID,
-    "ortho-record-types-gypsum": VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID
+    "ortho-record-types-gypsum": VS_CWRU_ORTHO_RECORD_TYPES_GYPSUM_UID,
+    "dental-imaging": VS_DENTAL_IMAGING_UID,
 
 }
