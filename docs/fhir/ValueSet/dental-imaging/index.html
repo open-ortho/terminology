@@ -1,0 +1,66 @@
+{
+    "resourceType": "ValueSet",
+    "url": "https://terminology.open-ortho.org/fhir/ValueSet/dental-imaging",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.61741.11.3.3.6"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "DentalImaging",
+    "title": "Dental Imaging",
+    "status": "active",
+    "experimental": false,
+    "date": "2026-04-27",
+    "publisher": "OpenOrtho",
+    "contact": [
+        {
+            "name": "Open-Ortho",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://open-ortho.org"
+                }
+            ]
+        }
+    ],
+    "description": "SNOMED CT procedure codes representing dental imaging modalities, including radiography, photography, transillumination, and 3D scanning.",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    {
+                        "code": "1293073005",
+                        "display": "Plain X-ray cephalometry (procedure)"
+                    },
+                    {
+                        "code": "105301000220109",
+                        "display": "Plain X-ray cephalometry, lateral (procedure)"
+                    },
+                    {
+                        "code": "241046008",
+                        "display": "Dental plain X-ray bitewing (procedure)"
+                    },
+                    {
+                        "code": "89846007",
+                        "display": "Orthopantogram (procedure)"
+                    },
+                    {
+                        "code": "1237138006",
+                        "display": "Dental photography (procedure)"
+                    },
+                    {
+                        "code": "309889005",
+                        "display": "Transillumination of tooth (procedure)"
+                    },
+                    {
+                        "code": "1357743003",
+                        "display": "Three dimensional digital optical scan of oral cavity (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}
