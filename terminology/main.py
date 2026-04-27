@@ -37,6 +37,7 @@ from terminology.resources.code_systems import (
 )
 
 from terminology.resources.concept_maps import orthodontic_photograph_views
+from terminology.resources.concept_maps import topsortho_ccd8ebb7_image_label_types
 from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_image_types as cwru_ortho_record_types_value_sets
 from terminology.resources.value_sets import cwru_ortho_record_type_extra
 from terminology.resources.value_sets import open_ortho_value_sets
@@ -94,7 +95,10 @@ def collect_index_entries(
                 if isinstance(obj, type) and issubclass(obj, resource_type):
                     if obj == resource_type:
                         continue
-                    instance = obj()
+                    try:
+                        instance = obj()
+                    except (ValidationError, TypeError, ValueError):
+                        continue
                     if not instance.url:
                         continue
                     entry = build_index_entry(instance)
@@ -382,7 +386,8 @@ def main() -> int:
             dental_imaging,
         ],
         ConceptMap: [
-            orthodontic_photograph_views
+            orthodontic_photograph_views,
+            topsortho_ccd8ebb7_image_label_types,
         ]
     }
 

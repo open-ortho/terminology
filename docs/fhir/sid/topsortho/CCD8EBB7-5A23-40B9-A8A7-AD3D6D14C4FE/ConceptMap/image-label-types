@@ -1,0 +1,1319 @@
+{
+    "resourceType": "ConceptMap",
+    "url": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/ConceptMap/image-label-types",
+    "version": "1.0.0",
+    "name": "TopsorthoCCD8EBB7ImageLabelTypesConceptMap",
+    "title": "topsOrtho CCD8EBB7 Image Label Types ConceptMap",
+    "status": "draft",
+    "experimental": true,
+    "date": "2026-04-27",
+    "publisher": "OpenOrtho",
+    "description": "Mapping from topsOrtho server CCD8EBB7 image label types to SNOMED CT procedure codes and ADA-1100 scheduled protocol codes.",
+    "sourceScopeUri": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",
+    "group": [
+        {
+            "source": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",
+            "target": "http://snomed.info/sct",
+            "element": [
+                {
+                    "code": "1",
+                    "display": "TELE P-A",
+                    "target": [
+                        {
+                            "code": "1293073005",
+                            "display": "Plain X-ray cephalometry (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "2",
+                    "display": "Tracciato TELE P-A",
+                    "target": [
+                        {
+                            "code": "1293073005",
+                            "display": "Plain X-ray cephalometry (procedure)",
+                            "relationship": "inexact",
+                            "comment": "With Cephaloemtric Tracing"
+                        }
+                    ]
+                },
+                {
+                    "code": "9",
+                    "display": "TELE",
+                    "target": [
+                        {
+                            "code": "105301000220109",
+                            "display": "Plain X-ray cephalometry, lateral (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "10",
+                    "display": "Tracciato TELE",
+                    "target": [
+                        {
+                            "code": "105301000220109",
+                            "display": "Plain X-ray cephalometry, lateral (procedure)",
+                            "relationship": "inexact",
+                            "comment": "With Cephaloemtric Tracing"
+                        }
+                    ]
+                },
+                {
+                    "code": "18",
+                    "display": "OPT",
+                    "target": [
+                        {
+                            "code": "89846007",
+                            "display": "Orthopantogram (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "35",
+                    "display": "5 video",
+                    "target": [
+                        {
+                            "code": "371576000",
+                            "display": "Video imaging procedure (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5007",
+                    "display": "RX1",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5056",
+                    "display": "DK",
+                    "target": [
+                        {
+                            "code": "309889005",
+                            "display": "Transillumination of tooth (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5076",
+                    "display": "RXE1",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5077",
+                    "display": "RXE2",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5078",
+                    "display": "RXE3",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5079",
+                    "display": "RXE4",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5080",
+                    "display": "RXE5",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5081",
+                    "display": "RXE6",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5082",
+                    "display": "RXE7",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5083",
+                    "display": "RXE8",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5084",
+                    "display": "RXE9",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5085",
+                    "display": "RXE10",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5086",
+                    "display": "RXE11",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5087",
+                    "display": "RXE12",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5088",
+                    "display": "RXE13",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5089",
+                    "display": "RXE14",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5090",
+                    "display": "RXE15",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5091",
+                    "display": "RXE16",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5092",
+                    "display": "RXE21",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5093",
+                    "display": "RXE17",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5094",
+                    "display": "RXE18",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5095",
+                    "display": "RXE19",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5096",
+                    "display": "RXE20",
+                    "target": [
+                        {
+                            "code": "241046008",
+                            "display": "Dental plain X-ray bitewing (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5098",
+                    "display": "PL DIGA 4",
+                    "target": [
+                        {
+                            "code": "1237138006",
+                            "display": "Dental photography (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5102",
+                    "display": "video 1",
+                    "target": [
+                        {
+                            "code": "371576000",
+                            "display": "Video imaging procedure (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5103",
+                    "display": "video 2",
+                    "target": [
+                        {
+                            "code": "371576000",
+                            "display": "Video imaging procedure (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5104",
+                    "display": "video 3",
+                    "target": [
+                        {
+                            "code": "371576000",
+                            "display": "Video imaging procedure (procedure)",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5111",
+                    "display": "PL sorriso da sopra",
+                    "target": [
+                        {
+                            "code": "1237138006",
+                            "display": "Dental photography (procedure)",
+                            "relationship": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "5112",
+                    "display": "PL 5 MIP  TQ dx",
+                    "target": [
+                        {
+                            "code": "1237138006",
+                            "display": "Dental photography (procedure)",
+                            "relationship": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "5113",
+                    "display": "PL 5 MIP TQ sx",
+                    "target": [
+                        {
+                            "code": "1237138006",
+                            "display": "Dental photography (procedure)",
+                            "relationship": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "5114",
+                    "display": "PL 5 P 2+2",
+                    "target": [
+                        {
+                            "code": "1237138006",
+                            "display": "Dental photography (procedure)",
+                            "relationship": "wider"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-2d-photographic-scheduled-protocol",
+            "element": [
+                {
+                    "code": "4",
+                    "display": "6 MIP",
+                    "target": [
+                        {
+                            "code": "IV18",
+                            "display": "Intraoral photo,left buccal,centric occl.,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5",
+                    "display": "STL 6",
+                    "target": [
+                        {
+                            "code": "IV18",
+                            "display": "Intraoral photo,left buccal,centric occl.,no mirror",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "11",
+                    "display": "8",
+                    "target": [
+                        {
+                            "code": "IV27",
+                            "display": "Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "14",
+                    "display": "7",
+                    "target": [
+                        {
+                            "code": "IV25",
+                            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "19",
+                    "display": "4 MIP",
+                    "target": [
+                        {
+                            "code": "IV01",
+                            "display": "Intraoral photo,right buccal,centric occl.,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "20",
+                    "display": "STL 4",
+                    "target": [
+                        {
+                            "code": "IV01",
+                            "display": "Intraoral photo,right buccal,centric occl.,no mirror",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "31",
+                    "display": "5 MIP",
+                    "target": [
+                        {
+                            "code": "IV07",
+                            "display": "Intraoral photo,frontal,centric occl.,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "32",
+                    "display": "STL 5",
+                    "target": [
+                        {
+                            "code": "IV07",
+                            "display": "Intraoral photo,frontal,centric occl.,no mirror",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "5014",
+                    "display": "5 BA",
+                    "target": [
+                        {
+                            "code": "IV09",
+                            "display": "Intraoral photo,frontal,teeth apart,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5025",
+                    "display": "5 CO",
+                    "target": [
+                        {
+                            "code": "IV08",
+                            "display": "Intraoral photo,frontal,centric relation,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5026",
+                    "display": "6 CO",
+                    "target": [
+                        {
+                            "code": "IV21",
+                            "display": "Intraoral photo,left buccal,centric relation,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5028",
+                    "display": "4 CO",
+                    "target": [
+                        {
+                            "code": "IV04",
+                            "display": "Intraoral photo,right buccal,centric relation,no mirror",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5034",
+                    "display": "9 MIP",
+                    "target": [
+                        {
+                            "code": "IV11",
+                            "display": "Intraoral photo,front view inferior,centric occl.,no mirror",
+                            "relationship": "inexact"
+                        }
+                    ]
+                },
+                {
+                    "code": "5051",
+                    "display": "9 CO",
+                    "target": [
+                        {
+                            "code": "IV12",
+                            "display": "Intraoral photo,front view inferior,centric relation,no mirror",
+                            "relationship": "inexact"
+                        }
+                    ]
+                },
+                {
+                    "code": "5099",
+                    "display": "STL 7",
+                    "target": [
+                        {
+                            "code": "IV25",
+                            "display": "Intraoral photo,maxillary,mouth open,occlusal,mirror,corrected",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "5100",
+                    "display": "STL 8",
+                    "target": [
+                        {
+                            "code": "IV27",
+                            "display": "Intraoral photo,mandibular,mouth open,occlusal,mirror,corrected",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "5101",
+                    "display": "STL 9",
+                    "target": [
+                        {
+                            "code": "IV11",
+                            "display": "Intraoral photo,front view inferior,centric occl.,no mirror",
+                            "relationship": "inexact",
+                            "comment": "View of 3D Digital Optical Surface Scan Rendering"
+                        }
+                    ]
+                },
+                {
+                    "code": "5115",
+                    "display": "RS sonda 1",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5116",
+                    "display": "RS sonda 2",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5117",
+                    "display": "RS sonda 3",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5118",
+                    "display": "RS sonda 4",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5119",
+                    "display": "RS sonda 5",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5120",
+                    "display": "RS sonda 6",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5121",
+                    "display": "RS sonda 7",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5122",
+                    "display": "RS sonda 8",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5123",
+                    "display": "RS sonda 9",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5124",
+                    "display": "RS sonda 10",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5125",
+                    "display": "RS sonda 11",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5126",
+                    "display": "RS sonda 12",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5127",
+                    "display": "RS sonda 13",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5128",
+                    "display": "RS sonda 14",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5129",
+                    "display": "RS sonda 15",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5130",
+                    "display": "RS sonda 16",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5131",
+                    "display": "RS sonda 17",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                },
+                {
+                    "code": "5132",
+                    "display": "RS sonda 18",
+                    "target": [
+                        {
+                            "code": "IV28",
+                            "display": "Intraoral photo,gingival recession",
+                            "relationship": "inexact",
+                            "comment": "With 462735007,SCT,Periodontal probe (physical object)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",
+            "target": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol",
+            "element": [
+                {
+                    "code": "6",
+                    "display": "1 MIP labbra rilassate",
+                    "target": [
+                        {
+                            "code": "EV03",
+                            "display": "Extraoral photo,right profile,lips closed,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "29",
+                    "display": "3",
+                    "target": [
+                        {
+                            "code": "EV19",
+                            "display": "Extraoral photo,full face,full smile,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "30",
+                    "display": "2 MIP labbra rilassate",
+                    "target": [
+                        {
+                            "code": "EV17",
+                            "display": "Extraoral photo,full face,lips closed,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "34",
+                    "display": "2 foto/tracciato",
+                    "target": [
+                        {
+                            "code": "EV17",
+                            "display": "Extraoral photo,full face,lips closed,centric occlusion",
+                            "relationship": "inexact",
+                            "comment": "With Cephaloemtric Tracing"
+                        }
+                    ]
+                },
+                {
+                    "code": "5002",
+                    "display": "Legnetto PO",
+                    "target": [
+                        {
+                            "code": "EV39",
+                            "display": "Extraoral photo,other face,occlusal cant",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5003",
+                    "display": "1 RO",
+                    "target": [
+                        {
+                            "code": "EV16",
+                            "display": "Extraoral photo,full face,lips relaxed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5004",
+                    "display": "2 SUB7",
+                    "target": [
+                        {
+                            "code": "EV36",
+                            "display": "Extraoral photo,other face,inferior view",
+                            "relationship": "inexact"
+                        }
+                    ]
+                },
+                {
+                    "code": "5005",
+                    "display": "2 RO",
+                    "target": [
+                        {
+                            "code": "EV16",
+                            "display": "Extraoral photo,full face,lips relaxed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5006",
+                    "display": "1 S",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "display": "Extraoral photo,right profile,full smile,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5017",
+                    "display": "2 SV",
+                    "target": [
+                        {
+                            "code": "EV36",
+                            "display": "Extraoral photo,other face,inferior view",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5018",
+                    "display": "2 P",
+                    "target": [
+                        {
+                            "code": "EV17",
+                            "display": "Extraoral photo,full face,lips closed,centric occlusion",
+                            "relationship": "equivalent",
+                            "comment": "Close-up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5019",
+                    "display": "3 P",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5020",
+                    "display": "2 P RO",
+                    "target": [
+                        {
+                            "code": "EV16",
+                            "display": "Extraoral photo,full face,lips relaxed,centric relation",
+                            "relationship": "equivalent",
+                            "comment": "Close-up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5029",
+                    "display": "3 BA",
+                    "target": [
+                        {
+                            "code": "EV20",
+                            "display": "Extraoral photo,full face,full smile,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5031",
+                    "display": "2 CO",
+                    "target": [
+                        {
+                            "code": "EV18",
+                            "display": "Extraoral photo,full face,lips closed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5037",
+                    "display": "1 RO sx",
+                    "target": [
+                        {
+                            "code": "EV23",
+                            "display": "Extraoral photo,left profile,lips relaxed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5038",
+                    "display": "1 sx",
+                    "target": [
+                        {
+                            "code": "EV22",
+                            "display": "Extraoral photo,left profile,lips relaxed,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5039",
+                    "display": "1 S sx",
+                    "target": [
+                        {
+                            "code": "EV27",
+                            "display": "Extraoral photo,left profile,full smile,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5042",
+                    "display": "3 P sx",
+                    "target": [
+                        {
+                            "code": "EV27",
+                            "display": "Extraoral photo,left profile,full smile,centric relation",
+                            "relationship": "equivalent",
+                            "comment": "Close-up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5043",
+                    "display": "3 P dx",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "display": "Extraoral photo,right profile,full smile,centric relation",
+                            "relationship": "equivalent",
+                            "comment": "Close-up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5044",
+                    "display": "3 P BA",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "display": "Extraoral photo,right profile,full smile,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-up, Teeth-Apart lower incisor visible"
+                        }
+                    ]
+                },
+                {
+                    "code": "5046",
+                    "display": "3/4 dx RO ",
+                    "target": [
+                        {
+                            "code": "EV09",
+                            "display": "Extraoral photo,right profile 45,lips relaxed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5047",
+                    "display": "3/4 sx RO ",
+                    "target": [
+                        {
+                            "code": "EV30",
+                            "display": "Extraoral photo,left profile 45,lips relaxed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5050",
+                    "display": "2 P BA",
+                    "target": [
+                        {
+                            "code": "EV16",
+                            "display": "Extraoral photo,full face,lips relaxed,centric relation",
+                            "relationship": "equivalent",
+                            "comment": "Close-up, Teeth-Apart lower incisor visible"
+                        }
+                    ]
+                },
+                {
+                    "code": "5057",
+                    "display": "3/4 sx",
+                    "target": [
+                        {
+                            "code": "EV31",
+                            "display": "Extraoral photo,left profile 45,lips closed,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5058",
+                    "display": "3/4 dx",
+                    "target": [
+                        {
+                            "code": "EV10",
+                            "display": "Extraoral photo,right profile 45,lips closed,centric occlusion",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5059",
+                    "display": "3/4 S dx",
+                    "target": [
+                        {
+                            "code": "EV13",
+                            "display": "Extraoral photo,right profile 45,full smile,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5060",
+                    "display": "3/4 S sx",
+                    "target": [
+                        {
+                            "code": "EV34",
+                            "display": "Extraoral photo,left profile 45,full smile,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5061",
+                    "display": "1 CO",
+                    "target": [
+                        {
+                            "code": "EV04",
+                            "display": "Extraoral photo,right profile,lips closed,centric relation",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5064",
+                    "display": "2 P fonazione 1",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "inexact",
+                            "comment": "While Speaking"
+                        }
+                    ]
+                },
+                {
+                    "code": "5065",
+                    "display": "2 P fonazione 2",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "inexact",
+                            "comment": "While Speaking"
+                        }
+                    ]
+                },
+                {
+                    "code": "5066",
+                    "display": "2 P fonazione 3",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "inexact",
+                            "comment": "While Speaking"
+                        }
+                    ]
+                },
+                {
+                    "code": "5097",
+                    "display": "PL 2 P social smile",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "5107",
+                    "display": "PL 1 P dx",
+                    "target": [
+                        {
+                            "code": "EV03",
+                            "display": "Extraoral photo,right profile,lips closed,centric occlusion",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5108",
+                    "display": "PL 1 P RO dx",
+                    "target": [
+                        {
+                            "code": "EV02",
+                            "display": "Extraoral photo,right profile,lips relaxed,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5109",
+                    "display": "PL 1 S P social smile dx",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "display": "Extraoral photo,right profile,full smile,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5110",
+                    "display": "PL 1 S P full smile dx",
+                    "target": [
+                        {
+                            "code": "EV06",
+                            "display": "Extraoral photo,right profile,full smile,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5133",
+                    "display": "1 P sx",
+                    "target": [
+                        {
+                            "code": "EV24",
+                            "display": "Extraoral photo,left profile,lips closed,centric occlusion",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5134",
+                    "display": "1 P RO sx",
+                    "target": [
+                        {
+                            "code": "EV23",
+                            "display": "Extraoral photo,left profile,lips relaxed,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5135",
+                    "display": "1 P S sx",
+                    "target": [
+                        {
+                            "code": "EV27",
+                            "display": "Extraoral photo,left profile,full smile,centric relation",
+                            "relationship": "inexact",
+                            "comment": "Close-Up"
+                        }
+                    ]
+                },
+                {
+                    "code": "5139",
+                    "display": "PL 2 P  full smile",
+                    "target": [
+                        {
+                            "code": "EV38",
+                            "display": "Extraoral photo,other face,close-up smile",
+                            "relationship": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
