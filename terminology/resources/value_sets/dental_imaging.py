@@ -27,7 +27,7 @@ class DentalImagingValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="1.0.0",
+            version="1.1.0",
             name="DentalImaging",
             title="Dental Imaging",
             status="active",
