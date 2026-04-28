@@ -27,7 +27,7 @@ class DentalImagingValueSet(ValueSet):
                     "value": f"urn:oid:{VALUE_SET_UIDS[id]}"
                 }
             ],
-            version="1.0.0",
+            version="1.1.0",
             name="DentalImaging",
             title="Dental Imaging",
             status="active",
@@ -69,6 +69,10 @@ class DentalImagingValueSet(ValueSet):
                             {
                                 "code": "1357743003",
                                 "display": "Three dimensional digital optical scan of oral cavity (procedure)"
+                            },
+                            {
+                                "code": "371576000",
+                                "display": "Video imaging procedure (procedure)"
                             },
                         ]
                     }
