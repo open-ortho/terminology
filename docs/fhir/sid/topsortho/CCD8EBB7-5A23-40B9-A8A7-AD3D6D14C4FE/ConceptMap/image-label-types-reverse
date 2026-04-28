@@ -6,7 +6,7 @@
     "title": "topsOrtho CCD8EBB7 Image Label Types Reverse ConceptMap",
     "status": "draft",
     "experimental": true,
-    "date": "2026-04-27",
+    "date": "2026-04-28",
     "publisher": "OpenOrtho",
     "description": "Reverse mapping from SNOMED CT procedure codes and ADA-1100 scheduled protocol codes to topsOrtho server CCD8EBB7 image label types.",
     "targetScopeUri": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/CodeSystem/image-label-types",

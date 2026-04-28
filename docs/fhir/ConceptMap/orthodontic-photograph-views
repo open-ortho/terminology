@@ -6,7 +6,7 @@
     "title": "Orthodontic Photograph Views ConceptMap",
     "status": "draft",
     "experimental": true,
-    "date": "2026-04-27",
+    "date": "2026-04-28",
     "publisher": "OpenOrtho",
     "description": "Mapping between Open Ortho photographic views and SNOMED CT photographic concepts.",
     "sourceScopeUri": "https://terminology.open-ortho.org/fhir",

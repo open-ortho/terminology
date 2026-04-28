@@ -12,7 +12,7 @@
     "title": "Dental Imaging",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-27",
+    "date": "2026-04-28",
     "publisher": "OpenOrtho",
     "contact": [
         {
@@ -68,7 +68,7 @@
         ]
     },
     "expansion": {
-        "timestamp": "2026-04-27",
+        "timestamp": "2026-04-28",
         "total": 0,
         "contains": []
     }
