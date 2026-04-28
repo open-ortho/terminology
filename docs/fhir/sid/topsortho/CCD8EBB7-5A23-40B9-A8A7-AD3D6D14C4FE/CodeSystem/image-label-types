@@ -13,7 +13,7 @@
     "title": "topsOrtho Image Label Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-27",
+    "date": "2026-04-28",
     "publisher": "medoco Health",
     "description": "Image label types of topsOrtho. These define the types of images, such as panoramic x-ray or frontal smiling. The user can modify these.",
     "caseSensitive": true,

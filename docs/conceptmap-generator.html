@@ -210,8 +210,18 @@ const KNOWN_RESOURCES = [
   },
   {
     "type": "CodeSystem",
+    "title": "Extraoral 2D Photographic Scheduled Protocol",
+    "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol"
+  },
+  {
+    "type": "CodeSystem",
     "title": "Extraoral 3D Visible Light Scheduled Protocol",
     "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/extraoral-3d-visible-light-scheduled-protocol"
+  },
+  {
+    "type": "CodeSystem",
+    "title": "Intraoral 2D Photographic Scheduled Protocol",
+    "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/intraoral-2d-photographic-scheduled-protocol"
   },
   {
     "type": "CodeSystem",
@@ -279,6 +289,16 @@ const KNOWN_RESOURCES = [
     "type": "ConceptMap",
     "title": "Orthodontic Photograph Views Reverse ConceptMap",
     "url": "https://terminology.open-ortho.org/fhir/ConceptMap/orthodontic-photograph-views-reverse"
+  },
+  {
+    "type": "ConceptMap",
+    "title": "topsOrtho CCD8EBB7 Image Label Types ConceptMap",
+    "url": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/ConceptMap/image-label-types"
+  },
+  {
+    "type": "ConceptMap",
+    "title": "topsOrtho CCD8EBB7 Image Label Types Reverse ConceptMap",
+    "url": "https://terminology.open-ortho.org/fhir/sid/topsortho/CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE/ConceptMap/image-label-types-reverse"
   }
 ];
 
@@ -335,6 +355,19 @@ function setStatus(id, text, isError) {
   el.className = "status-badge" + (isError ? " error" : "");
 }
 
+// ── URL resolver: rewrite remote origin to relative path on localhost ─────────
+// This lets `make serve` (python3 -m http.server) work for local testing:
+// https://terminology.open-ortho.org/fhir/... → /fhir/...
+const REMOTE_ORIGIN = 'https://terminology.open-ortho.org';
+function resolveUrl(url) {
+  if (!url) return url;
+  const h = window.location.hostname;
+  if ((h === 'localhost' || h === '127.0.0.1') && url.startsWith(REMOTE_ORIGIN)) {
+    return url.slice(REMOTE_ORIGIN.length) || '/';
+  }
+  return url;
+}
+
 // ── File / URL loading ────────────────────────────────────────────────────────
 function loadFile(event, type, idx) {
   const file = event.target.files[0];
@@ -363,7 +396,7 @@ function loadUrl(type, idx) {
   const url = document.getElementById(inputId).value.trim();
   if (!url) return;
   setStatus(statusId, "fetching…", false);
-  fetch(url)
+  fetch(resolveUrl(url))
     .then(r => { if (!r.ok) throw new Error(r.status + " " + r.statusText); return r.json(); })
     .then(json => handleJson(json, type, idx))
     .catch(err => {
@@ -384,28 +417,58 @@ function handleJson(json, type, idx) {
 
   } else if (type === 'target') {
     if (json.resourceType === 'ValueSet') {
-      // Collect system URLs from expansion.contains[] or compose.include[]
-      let systems;
-      if (json.expansion) {
-        systems = [...new Set(
-          (function flat(arr) {
-            return (arr || []).flatMap(c => [c.system, ...flat(c.contains)]);
-          })(json.expansion.contains).filter(Boolean)
-        )];
+      if (json.expansion && json.expansion.contains && json.expansion.contains.length > 0) {
+        // Group inline concepts by system from expansion — no fetch needed
+        const bySystem = {};
+        (function flat(arr) {
+          for (const c of arr || []) {
+            if (c.system && c.code) {
+              if (!bySystem[c.system]) bySystem[c.system] = [];
+              bySystem[c.system].push({ code: c.code, display: c.display || '', def: '' });
+            }
+            flat(c.contains);
+          }
+        })(json.expansion.contains);
+        const systems = Object.keys(bySystem);
+        if (!systems.length)
+          return setStatus(`targetStatus_${idx}`, 'ValueSet expansion has no concepts', true);
+        setStatus(`targetStatus_${idx}`, `ValueSet → ${systems.length} system(s) from expansion`);
+        for (const sysUrl of systems) {
+          addTargetRow();
+          const newIdx = targetRowCount - 1;
+          targetCSs[newIdx] = { url: sysUrl, title: sysUrl, concepts: bySystem[sysUrl] };
+          document.getElementById(`targetUrl_${newIdx}`).value = sysUrl;
+          setStatus(`targetStatus_${newIdx}`, `${bySystem[sysUrl].length} concept(s) from expansion`);
+          checkBuildReady();
+        }
       } else if (json.compose) {
-        systems = [...new Set((json.compose.include || []).map(i => i.system).filter(Boolean))];
+        // Process each include: use inline concepts if present, else fetch the system URL
+        const includes = json.compose.include || [];
+        if (!includes.length)
+          return setStatus(`targetStatus_${idx}`, 'ValueSet has no usable includes', true);
+        setStatus(`targetStatus_${idx}`, `ValueSet → ${includes.length} include(s) processing…`);
+        for (const inc of includes) {
+          addTargetRow();
+          const newIdx = targetRowCount - 1;
+          document.getElementById(`targetUrl_${newIdx}`).value = inc.system || '';
+          if (inc.concept && inc.concept.length > 0) {
+            // Inline concepts (e.g. explicit SNOMED picks) — no fetch needed
+            targetCSs[newIdx] = {
+              url: inc.system || '',
+              title: inc.system || '',
+              concepts: inc.concept.map(c => ({ code: c.code || '', display: c.display || '', def: '' }))
+            };
+            setStatus(`targetStatus_${newIdx}`, `${inc.concept.length} concept(s) from compose (inline)`);
+            checkBuildReady();
+          } else if (inc.system) {
+            loadUrl('target', newIdx);
+          } else {
+            setStatus(`targetStatus_${newIdx}`, 'include has no system or concepts', true);
+          }
+        }
       } else {
         return setStatus(`targetStatus_${idx}`, 'ValueSet has no expansion or compose', true);
       }
-      if (!systems.length)
-        return setStatus(`targetStatus_${idx}`, 'ValueSet has no system URLs', true);
-      setStatus(`targetStatus_${idx}`, `ValueSet → loading ${systems.length} CodeSystem(s)…`);
-      systems.forEach(sysUrl => {
-        addTargetRow();
-        const newIdx = targetRowCount - 1;
-        document.getElementById(`targetUrl_${newIdx}`).value = sysUrl;
-        loadUrl('target', newIdx);
-      });
       return;
     }
     if (json.resourceType !== 'CodeSystem')
@@ -450,7 +513,7 @@ function parseConceptMap(json) {
   const result = {};
   for (const group of json.group || []) {
     // Find which loaded targetCS matches this group's target URL
-    const tIdx = targetCSs.findIndex(t => t.url === group.target);
+    const tIdx = targetCSs.findIndex(t => t && t.url === group.target);
     for (const elem of group.element || []) {
       for (const tgt of elem.target || []) {
         if (!tgt.code) continue;
