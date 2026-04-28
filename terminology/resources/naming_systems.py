@@ -31,11 +31,6 @@ A custom set of codes used by various medoco Health products, as reccommended by
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["medoco-health"],
                     "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99MDOC",
-                    "preferred": True
                 }
             ]
         )
@@ -67,11 +62,6 @@ resolvable canonical URLs for these codes.
                 {
                     "type": "uri",
                     "value": "https://terminology.open-ortho.org/fhir/sid/ada1100",
-                    "preferred": True
-                },
-                {
-                    "type": "dicom",
-                    "value": "99ADA1100",
                     "preferred": True
                 }
             ]
@@ -119,11 +109,6 @@ A set of codes required to represent dental and orthodontic concepts for interop
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["open-ortho"],
                     "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99OPOR",
-                    "preferred": True
                 }
             ]
         )
@@ -157,11 +142,6 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
                 {
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["cwru-ortho"],
-                    "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99CWRU-ORTHO",
                     "preferred": False
                 }
             ]
@@ -237,11 +217,6 @@ class TopsorthoNamingSystem(NamingSystem):
                 {
                     "type": "uri",
                     "value": url,
-                    "preferred": True
-                },
-                {
-                    "type": "dicom",
-                    "value": dicom_scheme,
                     "preferred": True
                 }
             ]
