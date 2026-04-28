@@ -3,9 +3,10 @@
 Used whenever a code is necessary, for various implementations.
 """
 
-from terminology.resources.naming_systems import DentalEyePadNamingSystem
+from terminology.resources.naming_systems import DentalEyePadNamingSystem, get_dicom_identifier
 from terminology.resources import Code
 from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
+from terminology.constants import DICOM_UID_SYSTEM
 from datetime import datetime
 
 id = "image-types"
@@ -50,7 +51,12 @@ class DentalEyePadCodeSystem(CodeSystem):
 
         super().__init__(
             id="dentaleyepad",
-            identifier=DEP.identifier,
+            identifier=[
+                {
+                    "system": DICOM_UID_SYSTEM,
+                    "value": get_dicom_identifier(DEP)
+                }
+            ],
             url=self.static_url(),
             version="2.0.0",
             name="DentalEyePadCodeSystem",

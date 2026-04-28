@@ -1,5 +1,5 @@
 from terminology.fhir_types import NamingSystem, Identifier
-from terminology.constants import NAMING_SYSTEM_UIDS
+from terminology.constants import NAMING_SYSTEM_UIDS, DICOM_UID_SYSTEM
 
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
@@ -8,7 +8,7 @@ class MedocoHealthNamingSystem(NamingSystem):
             name="medocoHEALTH",
             title="medoco Health Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99MDOC"
             )],
             description="""
@@ -42,7 +42,7 @@ class ADA1100NamingSystem(NamingSystem):
             name="ADA1100",
             title="ANSI/ADA Standard No. 1100 Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99ADA1100"
             )],
             description="""
@@ -75,7 +75,7 @@ class OpenOrthoNamingSystem(NamingSystem):
             name="OpenOrtho",
             title="Open-Ortho",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99OPOR"
             )],
             description="""
@@ -120,7 +120,7 @@ class CWRUOrthoNamingSystem(NamingSystem):
             name="CWRUOrtho",
             title="CWRU Orthodontics Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99CWRU-ORTHO"
             )],
             description="""
@@ -153,7 +153,7 @@ class DentalEyePadNamingSystem(NamingSystem):
             url="https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
             name="DentalEyePad",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99DEYE"
             )],
             title="Dental Eyepad Naming System",
@@ -199,7 +199,7 @@ class TopsorthoNamingSystem(NamingSystem):
             name=f"TopsOrtho{uuid.replace('-', '').upper()[:8]}",
             title=f"topsOrtho Server Instance {uuid}",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value=dicom_scheme
             )],
             description=(
@@ -221,3 +221,14 @@ class TopsorthoNamingSystem(NamingSystem):
                 }
             ]
         )
+
+
+def get_dicom_identifier(ns: NamingSystem) -> str:
+    """Return the DICOM coding scheme designator value from a NamingSystem's identifier list.
+
+    Raises ValueError if no DICOM identifier is found.
+    """
+    for ident in (ns.identifier or []):
+        if ident.system == DICOM_UID_SYSTEM:
+            return ident.value
+    raise ValueError(f"No DICOM identifier found in NamingSystem {ns.name!r}")

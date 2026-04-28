@@ -20,6 +20,7 @@ from pydantic import ValidationError
 from terminology.fhir_types import (
     CodeSystem,
     ConceptMap,
+    NamingSystem,
     ValueSet,
     ValueSetExpansion,
     ValueSetExpansionContains,
@@ -42,6 +43,8 @@ from terminology.resources.value_sets import scheduled_protocol, cwru_ortho_imag
 from terminology.resources.value_sets import cwru_ortho_record_type_extra
 from terminology.resources.value_sets import open_ortho_value_sets
 from terminology.resources.value_sets import dental_imaging
+
+import terminology.resources.naming_systems as naming_systems_module
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -80,13 +83,15 @@ def build_index_entry(resource: Resource) -> dict[str, str]:
     }
 
 def collect_index_entries(
-    resources: dict[Type[Resource], list[Any]]
+    resources: dict[Type[Resource], list[Any]],
+    naming_system_entries: list[dict[str, str]] | None = None,
 ) -> dict[str, list[dict[str, str]]]:
     """Collect metadata for all resources — shared by index and tool generators."""
     index_entries: dict[str, list[dict[str, str]]] = {
         "CodeSystem": [],
         "ValueSet": [],
         "ConceptMap": [],
+        "NamingSystem": [],
     }
     for resource_type, modules in resources.items():
         for module in modules:
@@ -103,6 +108,9 @@ def collect_index_entries(
                         continue
                     entry = build_index_entry(instance)
                     index_entries[entry["resource_type"]].append(entry)
+    # Add NamingSystem entries if provided
+    if naming_system_entries:
+        index_entries["NamingSystem"].extend(naming_system_entries)
     return index_entries
 
 
@@ -110,6 +118,7 @@ def generate_conceptmap_tool(
     index_entries: dict[str, list[dict[str, str]]],
     template_path: Path,
     output_path: Path,
+    naming_system_entries: list[dict[str, str]] | None = None,
 ) -> None:
     """Generate the ConceptMap editor tool with known resources injected."""
     import json as _json
@@ -118,6 +127,14 @@ def generate_conceptmap_tool(
     for rt in ("CodeSystem", "ValueSet", "ConceptMap"):
         for entry in sorted(index_entries[rt], key=lambda e: e["title"].lower()):
             item = {"type": rt, "title": entry["title"] or entry["url"], "url": entry["url"]}
+            if entry.get("expand_url"):
+                item["expandUrl"] = entry["expand_url"]
+            known.append(item)
+
+    # Add NamingSystem entries if provided
+    if naming_system_entries:
+        for entry in sorted(naming_system_entries, key=lambda e: e["title"].lower()):
+            item = {"type": "NamingSystem", "title": entry["title"] or entry["url"], "url": entry["url"]}
             if entry.get("expand_url"):
                 item["expandUrl"] = entry["expand_url"]
             known.append(item)
@@ -134,6 +151,7 @@ def generate_conceptmap_tool(
 def generate_index(
     index_entries: dict[str, list[dict[str, str]]],
     output_path: Path,
+    naming_system_entries: list[dict[str, str]] | None = None,
 ) -> None:
     def escape_html(text: str) -> str:
         return (
@@ -193,6 +211,26 @@ def generate_index(
             else:
                 lines.append(f"<tr><td>{title}</td><td>{link}</td><td>{desc}</td></tr>")
         lines.append("</table>")
+
+    # Render NamingSystems section if provided
+    if naming_system_entries:
+        entries = sorted(
+            naming_system_entries,
+            key=lambda item: (item["title"].lower(), item["url"]),
+        )
+        lines.append("<h2>NamingSystems</h2>")
+        if entries:
+            lines.append("<table>")
+            lines.append("<tr><th>Title</th><th>URL</th><th>Description</th></tr>")
+            for entry in entries:
+                title = escape_html(entry["title"]) or entry["url"]
+                desc = escape_html(entry["description"]) if entry["description"] else ""
+                url = entry["url"]
+                link = f'<a href="{url}">{url}</a>' if url else ""
+                lines.append(f"<tr><td>{title}</td><td>{link}</td><td>{desc}</td></tr>")
+            lines.append("</table>")
+        else:
+            lines.append("<p>(None)</p>")
 
     lines.append("</body>")
     lines.append("</html>")
@@ -396,12 +434,38 @@ def main() -> int:
         for module in modules:
             save_fhir_resource(module, resource_type, build_path / "fhir", all_code_systems)
 
-    index_entries = collect_index_entries(resources)
-    generate_index(index_entries, build_path / "index.html")
+    # Instantiate and save NamingSystems
+    naming_systems: list[NamingSystem] = [
+        naming_systems_module.MedocoHealthNamingSystem(),
+        naming_systems_module.ADA1100NamingSystem(),
+        naming_systems_module.OpenOrthoNamingSystem(),
+        naming_systems_module.CWRUOrthoNamingSystem(),
+        naming_systems_module.DentalEyePadNamingSystem(),
+        naming_systems_module.TopsorthoNamingSystem("CCD8EBB7-5A23-40B9-A8A7-AD3D6D14C4FE"),
+    ]
+
+    naming_system_entries: list[dict[str, str]] = []
+    for ns in naming_systems:
+        # Derive output path from canonical URL relative to FHIR base
+        relative_path = str(ns.url).removeprefix(FHIR_BASE_URL).lstrip("/")
+        output_file = build_path / "fhir" / relative_path
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+
+        logger.info(f"Saving {ns.__class__.__name__} to {output_file}")
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(ns.model_dump(mode="json"), f, indent=4)
+
+        # Build index entry for this NamingSystem
+        entry = build_index_entry(ns)
+        naming_system_entries.append(entry)
+
+    index_entries = collect_index_entries(resources, naming_system_entries)
+    generate_index(index_entries, build_path / "index.html", naming_system_entries)
     generate_conceptmap_tool(
         index_entries,
         Path("tools", "conceptmap-generator.html"),
         build_path / "conceptmap-generator.html",
+        naming_system_entries,
     )
 
     return 0

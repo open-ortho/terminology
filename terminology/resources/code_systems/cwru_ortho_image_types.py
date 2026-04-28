@@ -1,9 +1,9 @@
 from datetime import datetime
 
 from terminology.fhir_types import CodeSystem, CodeSystemConcept
-from terminology.resources.naming_systems import CWRUOrthoNamingSystem
+from terminology.resources.naming_systems import CWRUOrthoNamingSystem, get_dicom_identifier
 from terminology.resources.code_systems import leave_code_as_is as make_code
-from terminology.constants import CODE_SYSTEM_UIDS
+from terminology.constants import CODE_SYSTEM_UIDS, DICOM_UID_SYSTEM
 
 
 id = "ortho-record-type"
@@ -23,6 +23,10 @@ class CWRUOrthoRecordTypeCodeSystem(CodeSystem):  # Naming preserved for compati
                 {
                     "system": "urn:ietf:rfc:3986",
                     "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
+                },
+                {
+                    "system": DICOM_UID_SYSTEM,
+                    "value": get_dicom_identifier(ns)
                 }
             ],
             url=self.static_url(),
