@@ -6,6 +6,10 @@
         {
             "system": "urn:ietf:rfc:3986",
             "value": "urn:oid:2.16.840.1.113883.3.12345.9.8"
+        },
+        {
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "value": "99TOPSCCD8EBB7"
         }
     ],
     "version": "1.0.0",
@@ -13,7 +17,7 @@
     "title": "topsOrtho Image Label Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-28",
+    "date": "2026-07-04",
     "publisher": "medoco Health",
     "description": "Image label types of topsOrtho. These define the types of images, such as panoramic x-ray or frontal smiling. The user can modify these.",
     "caseSensitive": true,

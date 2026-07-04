@@ -4,7 +4,7 @@
     "url": "https://terminology.open-ortho.org/fhir/sid/ada1100/CodeSystem/enumerated-terms",
     "identifier": [
         {
-            "system": "dicom",
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
             "value": "99ADA1100"
         }
     ],
@@ -13,7 +13,7 @@
     "title": "ADA 1100 Enumerated Terms",
     "status": "draft",
     "experimental": false,
-    "date": "2026-04-28",
+    "date": "2026-07-04",
     "publisher": "Open Ortho",
     "description": "Enumerated terms used in ADA 1100.",
     "copyright": "MIT License",

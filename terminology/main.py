@@ -45,6 +45,7 @@ from terminology.resources.value_sets import open_ortho_value_sets
 from terminology.resources.value_sets import dental_imaging
 
 import terminology.resources.naming_systems as naming_systems_module
+from terminology.resources.concept_maps.base import MappedConceptMap
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -236,7 +237,7 @@ def generate_index(
     lines.append("</html>")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text("\n".join(lines), encoding="ascii")
+    output_path.write_text("\n".join(lines), encoding="utf-8")
 
 def expand_valueset(valueset: ValueSet, all_code_systems: dict[str, CodeSystem]) -> ValueSet:
     """Expand a ValueSet by including all codes from referenced CodeSystems.
@@ -320,8 +321,8 @@ def save_fhir_resource(
         return
 
     for _, resource_class in resources.items():
-        if resource_class == resource_type:
-            # Skip the base classes
+        if resource_class in (resource_type, MappedConceptMap):
+            # Skip abstract/base classes that are not concrete resources
             continue
         try:
             resource_instance = resource_class()
@@ -446,10 +447,15 @@ def main() -> int:
 
     naming_system_entries: list[dict[str, str]] = []
     for ns in naming_systems:
-        # Derive output path from canonical URL relative to FHIR base
+        # Derive output path from canonical URL relative to FHIR base.
+        # Write as index.html inside the namespace directory so child resources
+        # (CodeSystem/, ValueSet/, etc.) can coexist under the same path.
         relative_path = str(ns.url).removeprefix(FHIR_BASE_URL).lstrip("/")
-        output_file = build_path / "fhir" / relative_path
-        output_file.parent.mkdir(parents=True, exist_ok=True)
+        ns_dir = build_path / "fhir" / relative_path if relative_path else build_path / "fhir"
+        if ns_dir.exists() and ns_dir.is_file():
+            ns_dir.unlink()
+        ns_dir.mkdir(parents=True, exist_ok=True)
+        output_file = ns_dir / "index.html"
 
         logger.info(f"Saving {ns.__class__.__name__} to {output_file}")
         with open(output_file, "w", encoding="utf-8") as f:
