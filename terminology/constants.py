@@ -46,6 +46,9 @@ NAMING_SYSTEM_UIDS = {
     "cwru-ortho": NS_CWRU_ORTHO_UID
 }
 
+# External system URIs
+DICOM_UID_SYSTEM = "http://dicom.nema.org/resources/ontology/DCM"
+
 # Value Set short name to UID mapping
 VALUE_SET_UIDS = {
     "scheduled-protocol": VS_SCHEDULED_PROTOCOL_UID,

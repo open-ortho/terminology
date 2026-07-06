@@ -1,5 +1,5 @@
 from terminology.fhir_types import NamingSystem, Identifier
-from terminology.constants import NAMING_SYSTEM_UIDS
+from terminology.constants import NAMING_SYSTEM_UIDS, DICOM_UID_SYSTEM
 
 class MedocoHealthNamingSystem(NamingSystem):
     def __init__(self):
@@ -8,7 +8,7 @@ class MedocoHealthNamingSystem(NamingSystem):
             name="medocoHEALTH",
             title="medoco Health Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99MDOC"
             )],
             description="""
@@ -31,11 +31,6 @@ A custom set of codes used by various medoco Health products, as reccommended by
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["medoco-health"],
                     "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99MDOC",
-                    "preferred": True
                 }
             ]
         )
@@ -47,7 +42,7 @@ class ADA1100NamingSystem(NamingSystem):
             name="ADA1100",
             title="ANSI/ADA Standard No. 1100 Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99ADA1100"
             )],
             description="""
@@ -68,11 +63,6 @@ resolvable canonical URLs for these codes.
                     "type": "uri",
                     "value": "https://terminology.open-ortho.org/fhir/sid/ada1100",
                     "preferred": True
-                },
-                {
-                    "type": "dicom",
-                    "value": "99ADA1100",
-                    "preferred": True
                 }
             ]
         )
@@ -85,7 +75,7 @@ class OpenOrthoNamingSystem(NamingSystem):
             name="OpenOrtho",
             title="Open-Ortho",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99OPOR"
             )],
             description="""
@@ -119,11 +109,6 @@ A set of codes required to represent dental and orthodontic concepts for interop
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["open-ortho"],
                     "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99OPOR",
-                    "preferred": True
                 }
             ]
         )
@@ -135,7 +120,7 @@ class CWRUOrthoNamingSystem(NamingSystem):
             name="CWRUOrtho",
             title="CWRU Orthodontics Naming System",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99CWRU-ORTHO"
             )],
             description="""
@@ -158,11 +143,6 @@ Local coding scheme for radiographic imaging used at Case Western Reserve Univer
                     "type": "oid",
                     "value": NAMING_SYSTEM_UIDS["cwru-ortho"],
                     "preferred": False
-                },
-                {
-                    "type": "dicom",
-                    "value": "99CWRU-ORTHO",
-                    "preferred": False
                 }
             ]
         )
@@ -173,7 +153,7 @@ class DentalEyePadNamingSystem(NamingSystem):
             url="https://terminology.open-ortho.org/fhir/sid/dentaleyepad",
             name="DentalEyePad",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value="99DEYE"
             )],
             title="Dental Eyepad Naming System",
@@ -219,7 +199,7 @@ class TopsorthoNamingSystem(NamingSystem):
             name=f"TopsOrtho{uuid.replace('-', '').upper()[:8]}",
             title=f"topsOrtho Server Instance {uuid}",
             identifier=[Identifier(
-                system="dicom",
+                system=DICOM_UID_SYSTEM,
                 value=dicom_scheme
             )],
             description=(
@@ -238,11 +218,17 @@ class TopsorthoNamingSystem(NamingSystem):
                     "type": "uri",
                     "value": url,
                     "preferred": True
-                },
-                {
-                    "type": "dicom",
-                    "value": dicom_scheme,
-                    "preferred": True
                 }
             ]
         )
+
+
+def get_dicom_identifier(ns: NamingSystem) -> str:
+    """Return the DICOM coding scheme designator value from a NamingSystem's identifier list.
+
+    Raises ValueError if no DICOM identifier is found.
+    """
+    for ident in (ns.identifier or []):
+        if ident.system == DICOM_UID_SYSTEM:
+            return ident.value
+    raise ValueError(f"No DICOM identifier found in NamingSystem {ns.name!r}")

@@ -4,6 +4,7 @@ from pathlib import Path
 import tempfile
 
 from terminology.main import (
+    build_index_entry,
     collect_index_entries,
     generate_index,
     get_all_code_systems,
@@ -34,6 +35,7 @@ from terminology.resources.concept_maps.orthodontic_photograph_views import (
     OrthodonticPhotographViewsConceptMap,
     OrthodonticPhotographViewsReverseConceptMap,
 )
+from terminology.resources.naming_systems import ADA1100NamingSystem
 
 
 def _make_resources():
@@ -85,6 +87,21 @@ class TestMain(unittest.TestCase):
             self.assertIn("<h2>ConceptMaps</h2>", content)
             # New sid/ URL structure
             self.assertIn("sid/ada1100/CodeSystem/extraoral-2d-photographic-scheduled-protocol", content)
+
+    def test_generate_index_with_naming_systems_uses_utf8(self):
+        resources = _make_resources()
+        naming_system = ADA1100NamingSystem()
+        naming_system_entries = [build_index_entry(naming_system)]
+        index_entries = collect_index_entries(resources, naming_system_entries)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = Path(temp_dir) / "index.html"
+            generate_index(index_entries, output_path, naming_system_entries)
+            self.assertTrue(output_path.exists())
+            content = output_path.read_text(encoding="utf-8")
+            self.assertIn("<h2>NamingSystems</h2>", content)
+            self.assertIn(str(naming_system.url), content)
+            self.assertIn("ANSI/ADA Standard No. 1100 — Dental Informatics", content)
 
     def test_valueset_output_uses_directory_structure(self):
         """ValueSets are written as <slug>/index.html and <slug>/$expand, not flat files."""

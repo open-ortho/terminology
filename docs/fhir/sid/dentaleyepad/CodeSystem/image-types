@@ -4,7 +4,7 @@
     "url": "https://terminology.open-ortho.org/fhir/sid/dentaleyepad/CodeSystem/image-types",
     "identifier": [
         {
-            "system": "dicom",
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
             "value": "99DEYE"
         }
     ],
@@ -13,7 +13,7 @@
     "title": "DentalEyePad Image Types",
     "status": "active",
     "experimental": false,
-    "date": "2026-04-28",
+    "date": "2026-07-04",
     "publisher": "DentalEyePad",
     "description": "Collection of codes for dental photography as defined by DentalEyePad",
     "caseSensitive": true,

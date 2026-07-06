@@ -1,8 +1,8 @@
 from terminology.fhir_types import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
 from datetime import datetime
-from terminology.resources.naming_systems import ADA1100NamingSystem
+from terminology.resources.naming_systems import ADA1100NamingSystem, get_dicom_identifier
 from terminology.resources.code_systems import leave_code_as_is as make_code
-from terminology.constants import CODE_SYSTEM_UIDS
+from terminology.constants import CODE_SYSTEM_UIDS, DICOM_UID_SYSTEM
 
 
 id = "extraoral-2d-photographic-scheduled-protocol"
@@ -23,6 +23,10 @@ class Extraoral2DPhotographicScheduledProtocolCodeSystem(CodeSystem):
                 {
                     "system": "urn:ietf:rfc:3986",
                     "value": f"urn:oid:{CODE_SYSTEM_UIDS[id]}"
+                },
+                {
+                    "system": DICOM_UID_SYSTEM,
+                    "value": get_dicom_identifier(ADA)
                 }
             ],
             url=self.static_url(),
