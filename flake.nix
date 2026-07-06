@@ -24,7 +24,7 @@
               ${python}/bin/python -m venv .venv
             fi
             source .venv/bin/activate
-            pip install -e . build twine --quiet
+            pip install -e . build twine pytest --quiet
           '';
         };
       }
